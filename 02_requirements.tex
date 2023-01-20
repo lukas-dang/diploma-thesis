@@ -1,0 +1,98 @@
+\chapter{Funkční a nefunkční požadavky}
+
+\setcounter{page}{1}
+
+\begin{chapterabstract}
+	V této kapitole popisuji funkční a nefunkční požadavky na mobilní aplikaci a backendu. Funkční požadavky specifikují funkcionality, které by měl daný software poskytovat. Nefunkční požadavky určují omezení kladená na daný software. \cite{Kopka2004}
+\end{chapterabstract}
+
+\section{Funkční požadavky}
+V této podkapitole uvádím funkční požadavky pro mobilní aplikaci (\ref{table:func_req_app}) a backend (\ref{table:func_req_be}). Ke každému požadavku uvádím identifikátor pro pozdější odkazování k požadavku.
+
+\def\arraystretch{1.5}
+\begin{longtable}{|l|p{9cm}|} \hline
+	\multicolumn{2}{|l|}{\textbf{Funkční požadavky pro mobilní aplikaci}} \\ \hline
+	
+	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
+	
+	FP\textunderscore01	& Aplikace bude umět zobrazit seznam výsledků hlasování. Prvky v tomto seznamu budou obsahovat stručné informace o daném hlasování. Tyto informace budou zahrnovat název, datum a čas a výsledek hlasování. \\ \hline
+	
+	FP\textunderscore02	& Aplikace bude umět zobrazit detail hlasování. Detail hlasování bude obsahovat název, datum a čas, odkaz na stenoprotokol a celkovou statistiku hlasování. Celkovou statistikou hlasování rozumíme počet hlasování pro ano, ne, nepřihlášeno, omluveno a zdrženo od hlasování. Dále bude obsahovat to, jak v daném hlasování hlasovaly jednotlivé poslanecké kluby a členy těchto klubů. \\ \hline
+	
+	FP\textunderscore03	& Aplikace bude umět zobrazit seznam členů poslanecké sněmovny. Prvky v tomto seznam budou obsahovat stručné informace o daném poslanci. Tyto informace budou obsahovat jméno a příjmení, volební kraj, název klubu a profilovou fotku. \\ \hline
+	
+	FP\textunderscore04	& Aplikace bude umět zobrazit detail poslance. Detail poslance bude obsahovat jméno a příjemní, datum narození, profilovou fotku, datum nabytí statusu poslance, poslanecký klub a volební kraj. Dále bude obsahovat seznam výsledků hlasování a to, jak v nich hlasoval daný poslanec\\ \hline
+	
+	FP\textunderscore05	& Aplikace bude poskytovat možnost nastavení volební období, při kterém se nastaví hlasování a poslanci daného volebního období.\\ \hline
+	
+	FP\textunderscore06	& Aplikace bude poskytovat možnost vyhledávání hlasování podle jeho názvu.\\ \hline
+	
+	FP\textunderscore07	& Aplikace bude poskytovat možnost vyhledávání poslance / poslankyně podle jeho / jejího jména.\\ \hline
+	
+	\caption{Funkční požadavky pro mobilní aplikaci.}
+	\label{table:func_req_app}
+\end{longtable}
+
+
+
+\def\arraystretch{1.5}
+\begin{longtable}{|l|p{9cm}|} \hline
+	\multicolumn{2}{|l|}{\textbf{Funkční požadavky pro back-end}} \\ \hline
+	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
+	
+	FP\textunderscore01	& Backend bude v databázi ukládat data potřebna pro dosažení funkčních požadavků mobilní aplikace.  \\ \hline
+	
+	FP\textunderscore02	& Backend bude zdrojová zdrojová data získávat z oficiálního portálu psp.cz.  \\ \hline
+	
+	FP\textunderscore03	& Backend bude v rámci výpočetního výkonu přístroje stažená data transformovat do takové podoby, aby jejichfetchování mobilní aplikcí netrvalo příliš dlouho. \\ \hline
+
+	FP\textunderscore05	& Backend bude vyžadovat API klíč pro využití svého REST API. \\ \hline
+	
+	\caption{Funkční požadavky pro back-end.}
+	\label{table:func_req_be}
+\end{longtable}
+
+\section{Nefunkční požadavky}
+
+V této podkapitole uvádím nefunkční požadavky pro mobilní aplikaci (\ref{table:nonfunc_req_app}) a backend (\ref{table:nonfunc_req_be}).
+
+
+\def\arraystretch{1.5}
+\begin{longtable}{|l|p{9cm}|} \hline
+	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro mobilní aplikaci}} \\ \hline
+	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
+	
+	NP\textunderscore 00	& Aplikace nebude provádět výpočetně náročná zpracování dat. To bude mít na starosti backend. \\ \hline
+	
+	FP\textunderscore01	& Aplikace bude každé návštěvě obrazovky znovunačitát data z REST API.\\ \hline
+
+	NP\textunderscore 03	& Aplikace bude podporovat pouze časovou lokalizaci. \\ \hline
+
+	NP\textunderscore 04	& Aplikace bude mít jednoduché a intuitivní uživatelské rozhraní. \\ \hline
+	
+	NP\textunderscore 05	& Aplikace bude fungovat na zařízeních s OS Android 5.1 a výš. \\ \hline
+	
+	NP\textunderscore 06	& Aplikace nebude sbírat uživatelská data. \\ \hline
+	
+	NP\textunderscore 07	& Aplikace bude používat architekturu podle oficiální dokumentece Androidu. \\ \hline
+	
+	\caption{Nefunkční požadavky pro mobilní aplikaci.}
+	\label{table:nonfunc_req_app}
+\end{longtable}
+
+\def\arraystretch{1.5}
+\begin{longtable}{|l|p{9cm}|} \hline
+	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro back-end}} \\ \hline
+	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
+	
+	NP\textunderscore 01	& Backend bude data vystavovat prostřednictvím REST API. \\ \hline
+	
+	NP\textunderscore 02	& Backend bude data ukládat do databáze. \\ \hline
+	
+	NP\textunderscore 03	& Backend bude data v databázi aktualizovat podle zdrojových dat dostupných na portálu psp.cz, a to každý den. \\ \hline	
+	
+	NP\textunderscore 05	& Backend bude data posílat ve formatu JSON. \\ \hline	
+	
+	\caption{Nefunkční požadavky pro back-end.}
+	\label{table:nonfunc_req_be}
+\end{longtable}

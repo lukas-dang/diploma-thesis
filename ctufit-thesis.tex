@@ -1,0 +1,252 @@
+%% This is the ctufit-thesis example file. It is used to produce theses
+%% for submission to Czech Technical University, Faculty of Information Technology.
+%%
+%% Get the newest version from
+%% https://gitlab.fit.cvut.cz/theses-templates/FITthesis-LaTeX
+%%
+%%
+%% Copyright 2021, Eliska Sestakova and Ondrej Guth
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public Licenese, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%  https://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The current maintainer of this work is Ondrej Guth.
+%% Contact ondrej.guth@fit.cvut.cz for bug reports.
+%% Alternatively, submit bug reports into the tracker at
+%% https://gitlab.fit.cvut.cz/theses-templates/FITthesis-LaTeX/issues
+%%
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CLASS OPTIONS
+% language: czech/english/slovak
+% thesis type: bachelor/master/dissertation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[czech,bachelor,unicode]{ctufit-thesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FILL IN THIS INFORMATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ctufittitle{Mobilní aplikace pro zobrazení výsledků hlasování Poslanecké sněmovny} % replace with the title of your thesis
+\ctufitauthorfull{Bc. Lukáš Dang} % replace with your full name (first name(s) and then family name(s) / surname(s)) including academic degrees
+\ctufitauthorsurnames{Dang} % replace with your surname(s) / family name(s)
+\ctufitauthorgivennames{Lukáš} % replace with your first name(s) / given name(s)
+\ctufitsupervisor{Ing. Ondřej John} % replace with name of your supervisor/advisor (include academic degrees)
+\ctufitdepartment{Katedra webového inženýrství} % replace with the department of your defence
+\ctufityear{2023} % replace with the year of your defence
+\ctufitdeclarationplace{Praze} % replace with the place where you sign the declaration
+\ctufitdeclarationdate{\today} % replace with the date of signature of the declaration
+\ctufitabstractCZE{Diplomová práce popisuje návrh a implementaci mobilní aplikace, která slouží k zobrazení výsledků hlasování poslanců Poslanecké sněmovny Parlementu ČR. Součástí práce je i návrh a implementace REST API, který bude poskytovat data pro mobilní aplikaci. V teoretické části specifikuji požadavky po aplikaci a backendu, analyzuji již existující či podobná řešení a popisuji potřebné koncepty pro pochopení praktické části. V praktické části pak popisuji implementaci mobilní aplikace v jazyce Kotlin a REST API v jazyce Java. }
+\ctufitabstractENG{}
+\ctufitkeywordsCZE{poslanecká sněmovna, poslanecká sněmovna parlamentu ČR, hlasování, poslanec, REST, backend}
+\ctufitkeywordsENG{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END FILL IN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CUSTOMIZATION of this template
+% Skip this part or alter it if you know what you are doing.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{iftex}[2020/03/06]
+\iftutex % XeLaTeX and LuaLaTeX
+    \RequirePackage{ellipsis}[2020/05/22] %ellipsis workaround for XeLaTeX
+\else
+    \RequirePackage[utf8]{inputenc}[2018/08/11] %this file encoding
+    \RequirePackage{lmodern}[2009/10/30] % vector flavor of Computer Modern font
+\fi
+
+% hyperlinks
+\RequirePackage[pdfpagelayout=TwoPageRight,colorlinks=false,allcolors=decoration,pdfborder={0 0 0.1}]{hyperref}[2020-05-15]
+
+% uncomment the following to hide all hyperlinks
+% \RequirePackage[pdfpagelayout=TwoPageRight,hidelinks]{hyperref}[2020-05-15]
+
+\RequirePackage{pdfpages}[2020/01/28]
+
+\setcounter{secnumdepth}{4} % numbering sections; 4: subsubsection
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CUSTOMIZATION of this template END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% DEMO CONTENTS SETTINGS
+% You may choose to modify this part.
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{dirtree}
+\usepackage{lipsum,tikz}
+\usepackage{csquotes}
+\usepackage[style=iso-numeric]{biblatex}
+\addbibresource{text/bib-database.bib}
+\usepackage{listings} % typesetting of sources
+% \usepackage{minted} % typesetting of sources
+\usepackage{longtable}
+
+%theorems, definitions, etc.
+\theoremstyle{plain}
+\newtheorem{theorem}{Věta}
+\newtheorem{lemma}[theorem]{Tvrzení}
+\newtheorem{corollary}[theorem]{Důsledek}
+\newtheorem{proposition}[theorem]{Návrh}
+\newtheorem{definition}[theorem]{Definice}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Příklad}
+\theoremstyle{remark}
+\newtheorem{note}[theorem]{Poznámka}
+\newtheorem*{note*}{Poznámka}
+\newtheorem{remark}[theorem]{Pozorování}
+\newtheorem*{remark*}{Pozorování}
+\numberwithin{theorem}{chapter}
+%theorems, definitions, etc. END
+%%%%%%%%%%%%%%%%%%%%%%
+% DEMO CONTENTS SETTINGS END
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} 
+\frontmatter\frontmatterinit % do not remove these two commands
+
+\includepdf{assignment-include.pdf} % replace that file with your thesis assignment provided by study office
+
+\thispagestyle{empty}\cleardoublepage\maketitle % do not remove these three commands
+
+\imprintpage % do not remove this command
+
+\tableofcontents % do not remove this command
+%%%%%%%%%%%%%%%%%%%%%%
+% list of other contents: figures, tables, code listings, algorithms, etc.
+% add/remove commands accordingly
+%%%%%%%%%%%%%%%%%%%%%%
+\listoffigures % list of figures
+\begingroup
+\let\clearpage\relax
+\listoftables % list of tables
+\lstlistoflistings % list of source code listings generated by the listings package
+% \listoflistings % list of source code listings generated by the minted package
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%
+% list of other contents END
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGMENT
+% FILL IN / MODIFY
+% This is a place to thank people for helping you. It is common to thank your supervisor.
+%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgmentpage}
+	Rád bych tímto poděkoval svému vedoucímu, Ing. Ondřej John, za jeho vstřícnost, trpělivost a čas, který mi věnoval při vedení mé diplomové práce. Dále bych chtěl poděkovat své rodině, která mě při psaní podporovala.
+\end{acknowledgmentpage} 
+%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGMENT END
+%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%
+% DECLARATION
+% FILL IN / MODIFY
+%%%%%%%%%%%%%%%%%%%
+% INSTRUCTIONS
+% ENG: choose one of approved texts of the declaration. DO NOT CREATE YOUR OWN. Find the approved texts at https://courses.fit.cvut.cz/SFE/download/index.html#_documents (document Declaration for FT in English)
+% CZE/SLO: Vyberte jedno z fakultou schvalenych prohlaseni. NEVKLADEJTE VLASTNI TEXT. Schvalena prohlaseni najdete zde: https://courses.fit.cvut.cz/SZZ/dokumenty/index.html#_dokumenty (prohlášení do ZP)
+\begin{declarationpage}
+Prohla\v suji, \v ze jsem p\v redlo\v zenou pr\'aci vypracoval samostatn\v e a \v ze jsem uvedl ve\v sker\'e
+pou\v zit\'e informa\v cn\'\i{} zdroje v~souladu s~Metodick\'ym pokynem o~do\-dr\v zo\-v\'an\'\i{} etick\'ych
+princip\accent23u p\v ri p\v r\'\i{}prav\v e vysoko\v skolsk\'ych z\'av\v ere\v cn\'ych prac\'\i{}.
+
+Beru na v\v edom\'\i{}, \v ze se na moji pr\'aci vztahuj\'\i{} pr\'ava a povinnosti vy\-pl\'y\-va\-j\'\i{}c\'\i{} ze z\'akona
+\v c.\,121/2000~Sb., autorsk\'eho z\'akona, ve zn\v en\'\i{} pozd\v ej\v s\'\i{}ch p\v redpis\accent23u. V~souladu s~ust.\,\S{}\,2373 odst.\,2 z\'akona \v c.\,89/2012~Sb., ob\v cansk\'y z\'akon\'\i{}k, ve zn\v en\'\i{} pozd\v ej\v s\'\i{}ch p\v redpis\accent23u,
+t\'\i{}mto ud\v eluji nev\'yhradn\'\i{} opr\'avn\v en\'\i{} (licenci) k~u\v zit\'\i{} t\'eto moj\'\i{} pr\'ace, a to v\v cetn\v e v\v sech
+po\v c\'\i{}ta\v cov\'ych program\accent23u, je\v z jsou jej\'\i{} sou\v c\'ast\'\i{} \v ci p\v r\'\i{}lohou a ve\v sker\'e jejich
+dokumentace (d\'ale souhrnn\v e jen \uv{D\'\i{}lo}), a to v\v sem osob\'am, kter\'e si p\v rej\'\i{} D\'\i{}lo u\v z\'\i{}t.
+Tyto osoby jsou opr\'avn\v eny D\'\i{}lo u\v z\'\i{}t jak\'ymkoli zp\accent23usobem, kter\'y nesni\v zuje hodnotu
+D\'\i{}la a za jak\'ymkoli \'u\v celem (v\v cetn\v e u\v zit\'\i{} k~v\'yd\v ele\v cn\'ym \'u\v cel\accent23um). Toto opr\'avn\v en\'\i{} je
+\v casov\v e, teritori\'aln\v e i mno\v zstevn\v e neomezen\'e. 
+
+\end{declarationpage}
+%%%%%%%%%%%%%%%%%%%
+% DECLARATION END
+%%%%%%%%%%%%%%%%%%%
+
+\printabstractpage % do not remove this command
+
+%%%%%%%%%%%%%%%%%%%
+% SUMMARY
+% FILL IN / MODIFY
+% OR REMOVE ENTIRELY (upon agreement with your supervisor)
+% (appropriate to remove in most theses)
+%%%%%%%%%%%%%%%%%%%
+\begin{summarypage}
+\section*{Úvod}
+
+\section*{Funkční a nefunkční požadavky}
+V první kapitole popisuji funkční a nefunkční požadavky kladené na mobilní aplikaci a backendu.
+
+\section*{Analýza}
+V této kapitole analyzuji aplikace, které se také zabývají agregací a zobrazování výsledků hlasování. Konkrétně se podíváme na mobilní aplikace politiscope, Election Tracker - US election a Election Polls US. Budu analyzovat především zobrazovaná data a uživatelské rozhraní. V další části analyzuji zdrojová data, které poslanecka sněmovna poskytuje na jejich oficiálním portálu www.psp.cz.
+
+\section*{Návrh}
+Na základě funkčních a nefunkčních požadavků a analýzy zdrojových dat navrhnu v této kapitole uživatelské rozhraní mobilní aplikaci. Součástí návrhu jsou wireframy. Následně popíši návrh REST API pro poskytování dat pro mobilní aplikaci. REST API bude navrženo tak, aby co nejlépě vyhovělo požadavkům mobilní aplikace a jejímu uživatelskému rozhraní. Na konci popíši návrh datové struktury backend služby, tedy jaká data a v jakém formátu budou v databázi na backendu ukládána. Zároveň popíši transformaci zdrojových dat do této struktury.
+
+\section*{Implementace}
+V této kapitole popisuji implementaci mobilní aplikace a backendové služby. Popíši zde strukturu a architekturu projektu, způsob implementace na základě návrhů, odůvodnění některých implementačních rozhodnuí a konkrétne využité technologie.
+
+\section*{Testování}
+V této kapitole popisuji testy pro ověření korektnosti mobilní aplikace a backendové služby.
+
+
+\section*{Shrnutí}
+V této kapitole shrnuji celou práci a ujasňuji, jaké byly na práci kladeny požadavky a které požadavky byly splněny. Uvádím možná vylepšení do budoucnosti.
+
+\end{summarypage}
+%%%%%%%%%%%%%%%%%%%
+% SUMMARY END
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+% ABBREVIATIONS
+% FILL IN / MODIFY
+% OR REMOVE ENTIRELY
+% List the abbreviations in lexicography order.
+%%%%%%%%%%%%%%%%%%%
+\chapter{Seznam zkratek}
+	
+\begin{tabular}{rl}
+PSP & Poslanecká sněmovná Parlamentu ČR\\
+REST & Representational state transfer\\
+API & Application Programming Interface
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%
+% ABBREVIATIONS END
+%%%%%%%%%%%%%%%%%%%
+
+\mainmatter\mainmatterinit % do not remove these two commands
+
+%%%%%%%%%%%%%%%%%%%
+% THE THESIS
+% MODIFY ANYTHING BELOW THIS LINE
+%%%%%%%%%%%%%%%%%%%
+
+\include{text/text} % include `text.tex' from `text/' subdirectory
+
+\appendix\appendixinit % do not remove these two commands
+
+\include{text/appendix} % include `appendix.tex' from `text/' subdirectory
+
+\backmatter % do not remove this command
+
+\printbibliography % print out the BibLaTeX-generated bibliography list
+
+\include{text/medium} % include `medium.tex' from `text/' subdirectory
+
+\end{document}

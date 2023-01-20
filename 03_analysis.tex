@@ -1,0 +1,84 @@
+\chapter{Analýza}
+
+\setcounter{page}{1}
+
+\begin{chapterabstract}
+	V této kapitole analyzuji aplikace ze zahraničí, které se také zabývají agregací výsledků hlasování.
+\end{chapterabstract}
+
+\section{Podobné aplikace}
+Popis podobných aplikaců
+
+\subsection{politiscope}
+Mobilní aplikace politiscope
+
+\subsection{Election Tracker - US election}
+Mobilní aplikace Election Tracker - US election
+
+\subsection{Election Polls US}
+Mobilní aplikace Election Polls US
+
+\section{Zdrojová data}
+
+\subsection{Zdroj}
+
+Zdrojová data PS jsou volně ke stažení na https://www.psp.cz/sqw/hp.sqw?k=1300. Data jsou strukturovaná a pochází z agend PS a Senátu jako např. agenda poslanců, osob, hlasování a tisků. Pro účely této práce nás však budou zajímat pouze podmnožina dat agend z PS, které popíši později. 
+
+\subsection{Formát dat}
+Data jsou poskytována v souborech ve formátu UNL, tj.:
+
+\begin{itemize}
+	\item Každý řádek v souboru odpovídá jednom řádku v databázi.
+	\item Oddělovačem je znak roury (|).
+	\item Pokud je sloupec prázdný, je jeho hodnota typu null.
+	\item V sloupcích jsou používány tzv. escape sekvence k zápisu speciálních znaků s úvodním znakem \ (backslash) následovaný znakem.
+\end{itemize}
+
+Tyto soubory jsou podle typu seskupeny do souborů ve formátu zip, např. poslanci.zip pro data o poslancích a hl-2021ps.zip pro data o hlasováních v 9. volebním období.
+
+\subsection{Aktualizace}
+
+Data obsahují úplný stav, rozdílové aktualizace nejsou poskytovány. To pro nás znamená, že při aktualizaci dat musíme rozdíly mezi zdrojovými daty a daty v databázi najít sami a podle toho aktualizovat databázi. Důležité při tom je to, aby data, která na sobě závisí, byla aktualizována tak, aby byla zaručena jejich konzistence. Tedy pokud při aktualizaci nějakého údaje musíme aktualizovat i všechny údaje, které na tom údaji závisí.
+
+Pokud bude strunktura dat doplňována, budou nové sloupce přidávány na konec. Nové sloupce pro nás nebudou důležitá. Budeme pracovat pouze s daty, které tam jsou v době psaní diplomové práce.
+
+\subsection{Kódování}
+Kódování je windows-1250. Ten obsahuje mimo jiné všechny znaky z české abecedy. Na to bude potřeba brát ohled při ukládání dat do databáze, aby se toto kódování zachovalo.
+
+\subsection{Datové typy}
+Na stránce je uvedena tabulka obsahující typy dat sloupců v tabulkách a popis jejich významu.
+
+\def\arraystretch{1.5}
+\begin{longtable}{|l|p{9cm}|} \hline
+	\multicolumn{2}{|l|}{\textbf{Typy dat sloupců v tabulkách}} \\ \hline
+	\textbf{Typ} & \textbf{Popis} \\ \hline
+	
+	int	& integer \\ \hline
+	
+	char(X)		& textový řetězec, s blíže neuvedenou délkou
+	 \\ \hline
+	
+	char(N)		& textový řetězec, s konktrétní délkou
+	 \\ \hline	
+	
+	date	& datum, ve formátu DD.MM.YYYY
+	 \\ \hline	
+	 
+ 	datetime(year to hour)		& datum a čas, do úrovně hodin, ve formátu YYYY-MM-DD HH
+ 	
+	 \\ \hline
+	 
+ 	datetime(year to second)		& datum a čas, do úrovně vteřin, ve formátu YYYY-MM-DD HH:TT:SS
+ 	
+	 \\ \hline
+	 
+ 	datetime(..., fraction)		& Doplnění formátu o zlomky vteřiny, odděleno tečkou od původního formátu
+ 	
+	 \\ \hline
+	 
+ 	datetime(hour to minute)		& čas, ve formátu HH:MM
+	 \\ \hline
+	
+	\caption{Typy dat sloupců v tabulkách}
+	\label{table:nonfunc_req_be}
+\end{longtable}
