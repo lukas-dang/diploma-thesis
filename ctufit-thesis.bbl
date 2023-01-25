@@ -19,39 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{Kopka2004}{book}{}
+    \entry{Husek2019-p40}{book}{}
       \name{author}{2}{}{%
-        {{hash=7ad513520366785f926861843001ed4e}{%
-           family={Kopka},
-           familyi={K\bibinitperiod},
-           given={Helmut},
-           giveni={H\bibinitperiod}}}%
-        {{hash=8d668f2ff08c48a82cff87c087cdf12e}{%
-           family={Daly},
-           familyi={D\bibinitperiod},
-           given={Patrick\bibnamedelima W.},
-           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=50b2a63a5fca3592d8d4660e5a7f6c02}{%
+           family={Hušek},
+           familyi={H\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f069a94ebba84b17346d7251b05b9242}{%
+           family={Smolík},
+           familyi={S\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Brno}%
+        {Zemědělská 1, 613 00 Brno}%
       }
       \list{publisher}{1}{%
-        {Computer Press}%
+        {Mendelova univerzita v Brně}%
       }
-      \strng{namehash}{787774515110f46e582c206f217ae671}
-      \strng{fullhash}{787774515110f46e582c206f217ae671}
-      \strng{bibnamehash}{787774515110f46e582c206f217ae671}
-      \strng{authorbibnamehash}{787774515110f46e582c206f217ae671}
-      \strng{authornamehash}{787774515110f46e582c206f217ae671}
-      \strng{authorfullhash}{787774515110f46e582c206f217ae671}
+      \strng{namehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{fullhash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{bibnamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{authorbibnamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{authornamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{authorfullhash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{80-7226-973-9}
-      \field{subtitle}{podrobný průvodce}
-      \field{title}{LATEX}
-      \field{year}{2004}
+      \field{isbn}{978-80-7509-665-4}
+      \field{title}{POLITICKÝ SYSTÉM A POLITICKÉ STRANY ČESKÉ REPUBLIKY}
+      \field{year}{2019}
     \endentry
   \enddatalist
 \endrefsection

@@ -2141,8 +2141,10 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">text/bib-database.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Kopka2004</bcf:citekey>
-    <bcf:citekey order="2">Kopka2004</bcf:citekey>
+    <bcf:citekey order="1">Husek2019-p40</bcf:citekey>
+    <bcf:citekey order="2">Husek2019-p40</bcf:citekey>
+    <bcf:citekey order="3">Husek2019-p40</bcf:citekey>
+    <bcf:citekey order="4">Husek2019-p40</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
