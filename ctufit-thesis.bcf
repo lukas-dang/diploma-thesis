@@ -2144,7 +2144,18 @@
     <bcf:citekey order="1">Husek2019-p40</bcf:citekey>
     <bcf:citekey order="2">Husek2019-p40</bcf:citekey>
     <bcf:citekey order="3">Husek2019-p40</bcf:citekey>
-    <bcf:citekey order="4">Husek2019-p40</bcf:citekey>
+    <bcf:citekey order="4">politiscope</bcf:citekey>
+    <bcf:citekey order="5">propublica</bcf:citekey>
+    <bcf:citekey order="6">unitedstates</bcf:citekey>
+    <bcf:citekey order="7">congress</bcf:citekey>
+    <bcf:citekey order="8">openfec</bcf:citekey>
+    <bcf:citekey order="9">congress</bcf:citekey>
+    <bcf:citekey order="10">Husek2019-p40</bcf:citekey>
+    <bcf:citekey order="11">politiscope</bcf:citekey>
+    <bcf:citekey order="12">propublica</bcf:citekey>
+    <bcf:citekey order="13">unitedstates</bcf:citekey>
+    <bcf:citekey order="14">congress</bcf:citekey>
+    <bcf:citekey order="15">openfec</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

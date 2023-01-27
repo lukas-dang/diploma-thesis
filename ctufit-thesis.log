@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.3)  25 JAN 2023 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.3)  27 JAN 2023 22:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1254,16 +1254,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./ctufit-thesis.aux (./text/text.aux
 
-LaTeX Warning: Label `table:organy' multiply defined.
+LaTeX Warning: Label `fig:politoscope' multiply defined.
 
 
-LaTeX Warning: Label `table:osoby' multiply defined.
+LaTeX Warning: Label `table:typ_organu' multiply defined.
 
 
-LaTeX Warning: Label `table:poslanec' multiply defined.
-
-
-LaTeX Warning: Label `table:hl_hlasovani' multiply defined.
+LaTeX Warning: Label `table:zarazeni' multiply defined.
 
 
 LaTeX Warning: Label `table:hl_hlasovani' multiply defined.
@@ -1433,7 +1430,7 @@ Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
 (./ctufit-thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 161.
 Package biblatex Info: Reference segment=0 on input line 161.
-<assignment-include.pdf, id=183, 597.50829pt x 845.0471pt>
+<assignment-include.pdf, id=276, 597.50829pt x 845.0471pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 164.
@@ -1442,7 +1439,7 @@ File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 164.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<assignment-include.pdf, id=186, page=1, 597.50829pt x 845.0471pt>
+<assignment-include.pdf, id=279, page=1, 597.50829pt x 845.0471pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
 Package pdftex.def Info: assignment-include.pdf , page1 used on input line 164.
@@ -1536,36 +1533,38 @@ l.170 \tableofcontents
 
 
 ] (./ctufit-thesis.toc
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+0.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-9.
+10.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-9.
+10.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 9.
+(Font)              <10> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 9.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+(Font)              <5> on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1606,22 +1605,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `text/text.aux'.
 
- (./text/text.tex (./01_uvod.tex
+ (./text/text.tex (./01_goals.tex
 Kapitola 1.
-) (./02_requirements.tex [1
+) (./01_uvod.tex [1
 
+
+] [2
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.87001pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.87001pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.87001pt}.
-
-[2]
 Kapitola 2.
+) (./02_requirements.texpdfTeX warning (ext4): destination with the same identi
+fier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Funkční a nefunkční požadavky} [1]pdfTeX warning (ext4): dest
+ination with the same identifier (name{page.2}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Funkční a nefunkční požadavky} [2]
+Kapitola 3.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
 32.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
@@ -1652,36 +1657,65 @@ l.81 \end{longtable}
                      [2]) (./03_analysis.tex [3] [4
 
 ]
-Kapitola 3.
-<images//politiscope.png, id=407, 460.72125pt x 725.71124pt>
+Kapitola 4.
+<images//politiscope.png, id=536, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
-Package pdftex.def Info: images//politiscope.png  used on input line 19.
-(pdftex.def)             Requested size: 209.12683pt x 329.40184pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+Package pdftex.def Info: images//politiscope.png  used on input line 33.
+(pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
+<images//politiscope2.jpg, id=537, 461.725pt x 739.76375pt>
+File: images//politiscope2.jpg Graphic file (type jpg)
+<use images//politiscope2.jpg>
+Package pdftex.def Info: images//politiscope2.jpg  used on input line 34.
+(pdftex.def)             Requested size: 167.2989pt x 268.04178pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 \subsection{Congress}
-                           [1]
-<images//congress.jpg, id=411, 481.8pt x 803.0pt>
-File: images//congress.jpg Graphic file (type jpg)
-<use images//congress.jpg>
-Package pdftex.def Info: images//congress.jpg  used on input line 24.
-(pdftex.def)             Requested size: 209.12683pt x 348.54251pt.
-<images//congress-2.jpg, id=412, 481.8pt x 803.0pt>
-File: images//congress-2.jpg Graphic file (type jpg)
-<use images//congress-2.jpg>
-Package pdftex.def Info: images//congress-2.jpg  used on input line 25.
-(pdftex.def)             Requested size: 209.12683pt x 348.54251pt.
+l.42 
+      [1]pdfTeX warning (ext4): destination with the same identifier (name{page
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60 
+      [2 <./images//politiscope.png> <./images//politiscope2.jpg>]
+<images//congress_1.jpg, id=550, 1084.05pt x 2348.775pt>
+File: images//congress_1.jpg Graphic file (type jpg)
+<use images//congress_1.jpg>
+Package pdftex.def Info: images//congress_1.jpg  used on input line 68.
+(pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
+<images//congress_2.jpg, id=551, 1084.05pt x 2348.775pt>
+File: images//congress_2.jpg Graphic file (type jpg)
+<use images//congress_2.jpg>
+Package pdftex.def Info: images//congress_2.jpg  used on input line 69.
+(pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.77 
+      [3 <./images//congress_1.jpg> <./images//congress_2.jpg>])
+(./03_analysis_data.texpdfTeX warning (ext4): destination with the same identif
+ier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Analýza zdrojových dat} [4]
+Kapitola 5.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 \section{Datové typy}
+                            [1
 
-Overfull \hbox (17.2222pt too wide) in paragraph at lines 24--26
-[][] [] 
- []
-
+]
+<images//source_data_diagram.png, id=562, 1014.79124pt x 1039.885pt>
+File: images//source_data_diagram.png Graphic file (type png)
+<use images//source_data_diagram.png>
+Package pdftex.def Info: images//source_data_diagram.png  used on input line 73
+.
+(pdftex.def)             Requested size: 418.25368pt x 428.59291pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1689,97 +1723,115 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \section{Zdrojová data}
-                              [2 <./images//politiscope.png>]pdfTeX warning (ex
-t4): destination with the same identifier (name{page.3}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.45 \subsection{Aktualizace}
-                              [3 <./images//congress.jpg> <./images//congress-2
-.jpg>]
-<images//source_data_diagram.png, id=419, 1014.79124pt x 1039.885pt>
-File: images//source_data_diagram.png Graphic file (type png)
-<use images//source_data_diagram.png>
-Package pdftex.def Info: images//source_data_diagram.png  used on input line 97
-.
-(pdftex.def)             Requested size: 418.25368pt x 428.59291pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.99 \subsubsection{typ\textunderscore organu}
-                                               [4]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+l.75 \subsection{typ\textunderscore organu}
+                                            [2]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 []|\OT1/lmr/m/n/10 Identifik^^Sator nad^^Trazen^^Seho typu org^^Sanu
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 123--124
+Underfull \hbox (badness 2334) in paragraph at lines 99--100
 \OT1/lmr/m/n/10 (typ[]organu:id[]typ[]org), po-kud je null ^^Tci ne-vy-pln^^Ten
 o,
  []
 
-[5 <./images//source_data_diagram.png>] [6]
-Overfull \hbox (12.7551pt too wide) in alignment at lines 281--293
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.119 	\end{longtable}
+                       [3 <./images//source_data_diagram.png>]pdfTeX warning (e
+xt4): destination with the same identifier (name{page.4}) has been already used
+, duplicate ignored
+<to be read again> 
+                   \relax 
+l.190 \subsection{osoby}
+                         [4]
+Overfull \hbox (12.7551pt too wide) in alignment at lines 257--269
  [] [] [] 
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 301--303
+Underfull \hbox (badness 1259) in paragraph at lines 277--279
 \OT1/lmr/m/n/10 veno za-ra-zeni:cl[]funkce == 0, pak id[]o od-pov^^S^^Pd^^Sa or
 -
  []
 
 
-Underfull \hbox (badness 2253) in paragraph at lines 301--303
+Underfull \hbox (badness 2253) in paragraph at lines 277--279
 \OT1/lmr/m/n/10 gany:id[]organ, po-kud cl[]funkce == 1, pak od-pov^^S^^Pd^^Sa
  []
 
 
-Overfull \hbox (12.7551pt too wide) in alignment at lines 293--331
+Overfull \hbox (12.7551pt too wide) in alignment at lines 269--307
  [] [] [] 
  []
 
-[7]
-Overfull \hbox (50.03203pt too wide) in alignment at lines 419--431
- [] [] [] 
- []
-
-
-Overfull \hbox (50.03203pt too wide) in alignment at lines 431--517
- [] [] [] 
- []
-
-[8] [9]
-Overfull \hbox (34.72652pt too wide) in alignment at lines 564--576
+[5]
+Overfull \hbox (50.03203pt too wide) in alignment at lines 395--407
  [] [] [] 
  []
 
 
-Overfull \hbox (34.72652pt too wide) in alignment at lines 576--607
+Overfull \hbox (50.03203pt too wide) in alignment at lines 407--493
  [] [] [] 
  []
 
-) (./04_design.tex [10]
-Kapitola 4.
-<images//vote_list.png, id=459, 1084.05pt x 2228.325pt>
+[6] [7]
+Overfull \hbox (34.72652pt too wide) in alignment at lines 540--552
+ [] [] [] 
+ []
+
+
+Overfull \hbox (34.72652pt too wide) in alignment at lines 552--583
+ [] [] [] 
+ []
+
+) (./03_analysis_technologies.tex [8]
+Kapitola 6.
+
+Overfull \hbox (4.28363pt too wide) in paragraph at lines 22--23
+\OT1/lmr/m/n/10 webov^^Sych slu^^Tzeb. Zdroje: https://docs.spring.io/spring-fr
+amework/docs/current/reference/html/,
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 
+      [1
+
+]
+Overfull \hbox (26.86139pt too wide) in paragraph at lines 27--28
+[]\OT1/lmr/m/n/10 Zdroje: https://docs.spring.io/spring-framework/docs/current/
+reference/html/, https://spring.io/) 
+ []
+
+) (./04_design.texpdfTeX warning (ext4): destination with the same identifier (
+name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Návrh} [2]
+Kapitola 7.
+<images//vote_list.png, id=598, 1084.05pt x 2228.325pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 12.
 (pdftex.def)             Requested size: 108.41135pt x 222.84555pt.
-<images//vote_list_search.png, id=460, 1084.05pt x 2228.325pt>
+<images//vote_list_search.png, id=599, 1084.05pt x 2228.325pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 17.
 (pdftex.def)             Requested size: 108.41135pt x 222.84555pt.
-<images//vote_details_general.png, id=461, 1084.05pt x 2228.325pt>
+<images//vote_details_general.png, id=600, 1084.05pt x 2228.325pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 8.
 (pdftex.def)             Requested size: 108.41135pt x 222.84555pt.
-<images//vote_details_party_opened.png, id=462, 1084.05pt x 2228.325pt>
+<images//vote_details_party_opened.png, id=601, 1084.05pt x 2228.325pt>
 File: images//vote_details_party_opened.png Graphic file (type png)
 <use images//vote_details_party_opened.png>
 Package pdftex.def Info: images//vote_details_party_opened.png  used on input l
@@ -1788,12 +1840,12 @@ ine 33.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_list.png, id=463, 1084.05pt x 2228.325pt>
+<images//member_list.png, id=602, 1084.05pt x 2228.325pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 44.
 (pdftex.def)             Requested size: 108.41135pt x 222.84555pt.
-<images//member_list_search.png, id=464, 1084.05pt x 2228.325pt>
+<images//member_list_search.png, id=603, 1084.05pt x 2228.325pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 49.
@@ -1814,12 +1866,12 @@ Package pdftex.def Info: images//member_list_search.png  used on input line 65.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//settings.png, id=465, 1084.05pt x 2228.325pt>
+<images//settings.png, id=604, 1084.05pt x 2228.325pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 76.
 (pdftex.def)             Requested size: 108.41135pt x 222.84555pt.
-<images//settings_election_period.png, id=466, 1084.05pt x 2228.325pt>
+<images//settings_election_period.png, id=605, 1084.05pt x 2228.325pt>
 File: images//settings_election_period.png Graphic file (type png)
 <use images//settings_election_period.png>
 Package pdftex.def Info: images//settings_election_period.png  used on input li
@@ -1907,20 +1959,10 @@ identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Implementace} [8]pdfTeX warning (ext4): destination with the same 
-identifier (name{page.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Implementace} [9]pdfTeX warning (ext4): destination with the same 
-identifier (name{page.10}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Implementace} [10
+            {Implementace} [8] [9] [10
 
 ]
-Kapitola 5.
+Kapitola 8.
 ) (./06_testing.texpdfTeX warning (ext4): destination with the same identifier 
 (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1934,7 +1976,7 @@ l.1 \chapter
             {Testování} [2
 
 ]
-Kapitola 6.
+Kapitola 9.
 ) (./07_deploy.texpdfTeX warning (ext4): destination with the same identifier (
 name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1948,7 +1990,7 @@ l.1 \chapter
             {Nasazení} [2
 
 ]
-Kapitola 7.
+Kapitola 10.
 ) (./08_run.texpdfTeX warning (ext4): destination with the same identifier (nam
 e{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1962,7 +2004,7 @@ l.1 \chapter
             {Spuštění} [2
 
 ]
-Kapitola 8.
+Kapitola 11.
 ) (./09_conclusion.texpdfTeX warning (ext4): destination with the same identifi
 er (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1976,12 +2018,12 @@ l.1 \chapter
             {Závěr} [2
 
 ]
-Kapitola 9.
+Kapitola 12.
 ))pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \include{text/text}
+l.287 \include{text/text}
                           % include `text.tex' from `text/' subdirectory
 [1]
 \openout2 = `text/appendix.aux'.
@@ -2002,22 +2044,30 @@ P\v {r}\'{\i }loha A.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.288 \include{text/appendix}
+l.291 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [3]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.290 \backmatter
+l.293 \backmatter
                   % do not remove this command [4
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
- been already used, duplicate ignored
+]
+
+Package biblatex Warning: '\mainlang' is deprecated in favour of
+(biblatex)                '\textmainlang'.
+(biblatex)                Please consider using the new command,
+(biblatex)                but note that the syntax is different.
+(biblatex)                Using the old, problematic definition.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.294 \include{text/medium}
+l.297 \include{text/medium}
                             % include `medium.tex' from `text/' subdirectory
 [5
 
@@ -2036,7 +2086,7 @@ l.1 \chapter
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.294 \include{text/medium}
+l.297 \include{text/medium}
                             % include `medium.tex' from `text/' subdirectory
 [7] (./ctufit-thesis.aux (./text/text.aux) (./text/appendix.aux)
 (./text/medium.aux))
@@ -2047,19 +2097,19 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E1D47507F28EBF02424F64FA3D1E3AEC;5277.
+(rerunfilecheck)             Checksum: 9B97AE05814777DC6E3DAB1BF552D594;7824.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37175 strings out of 478287
- 695154 string characters out of 5849290
- 1680750 words of memory out of 5000000
- 54434 multiletter control sequences out of 15000+600000
+ 37266 strings out of 478287
+ 697138 string characters out of 5849290
+ 1681076 words of memory out of 5000000
+ 54494 multiletter control sequences out of 15000+600000
  531942 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,17n,92p,1351b,2117s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,17n,92p,1351b,4570s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1
@@ -2072,10 +2122,10 @@ m/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on ctufit-thesis.pdf (55 pages, 1602319 bytes).
+Output written on ctufit-thesis.pdf (61 pages, 2340597 bytes).
 PDF statistics:
- 828 PDF objects out of 1000 (max. 8388607)
- 709 compressed objects within 8 object streams
- 250 named destinations out of 1000 (max. 500000)
- 445 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 982 PDF objects out of 1000 (max. 8388607)
+ 855 compressed objects within 9 object streams
+ 272 named destinations out of 1000 (max. 500000)
+ 634 words of extra memory for PDF output out of 10000 (max. 10000000)
 

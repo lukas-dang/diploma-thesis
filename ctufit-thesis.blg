@@ -1,14 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'ctufit-thesis.blg'
-[37] biber:340> INFO - === St led 25, 2023, 18:21:59
-[44] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
-[76] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
-[83] Biber.pm:4383> INFO - Processing section 0
-[89] Biber.pm:4574> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
-[90] bibtex.pm:1713> INFO - LaTeX decoding ...
-[112] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
-[136] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[136] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[136] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
-[137] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
-[138] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
+[48] biber:340> INFO - === Pá led 27, 2023, 14:20:15
+[60] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
+[100] Biber.pm:972> INFO - Found 6 citekeys in bib section 0
+[108] Biber.pm:4383> INFO - Processing section 0
+[115] Biber.pm:4574> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
+[116] bibtex.pm:1713> INFO - LaTeX decoding ...
+[142] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
+[176] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[176] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[176] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[182] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
+[184] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
+[184] Biber.pm:130> WARN - Duplicate entry key: 'congress' in file 'text/bib-database.bib', skipping ...
+[184] Biber.pm:130> WARN - legacy year field 'Jan 2020' in entry 'politiscope' is not an integer - this will probably not sort properly.
+[184] Biber.pm:130> WARN - legacy year field 'Jan 2019' in entry 'congress' is not an integer - this will probably not sort properly.
+[184] Biber.pm:132> INFO - WARNINGS: 3

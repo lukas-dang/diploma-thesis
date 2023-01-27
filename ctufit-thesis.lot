@@ -7,36 +7,68 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Funkční požadavky pro mobilní aplikaci.\relax }}{2}{table.2.1}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Funkční požadavky pro back-end.\relax }}{2}{table.2.2}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Nefunkční požadavky pro mobilní aplikaci.\relax }}{3}{table.2.3}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Nefunkční požadavky pro back-end.\relax }}{3}{table.2.4}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Typy dat sloupců v tabulkách\relax }}{4}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Tabulka typ\textunderscore organu\relax }}{5}{table.3.2}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Tabulka typ\textunderscore organu\relax }}{6}{table.3.2}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Tabulka organy\relax }}{6}{table.3.3}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Tabulka osoby \relax }}{7}{table.3.4}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Tabulka zarazeni\relax }}{7}{table.3.5}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Tabulka zarazeni\relax }}{8}{table.3.5}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Tabulka poslanec\relax }}{8}{table.3.6}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Tabulka hl\textunderscore hlasovani\relax }}{9}{table.3.7}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Tabulka hl\textunderscore poslanec\relax }}{9}{table.3.8}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Tabulka hl\textunderscore poslanec\relax }}{10}{table.3.8}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces Tabulka omluvy\relax }}{10}{table.3.9}%
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Struktura agency}}{7}{table.caption.15}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Struktura agency\textunderscore type}}{7}{table.caption.16}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Struktura excuse}}{7}{table.caption.17}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Struktura member}}{8}{table.caption.18}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Struktura member\textunderscore vote}}{8}{table.caption.19}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Struktura membership}}{8}{table.caption.20}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Struktura party}}{8}{table.caption.21}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Struktura vote}}{9}{table.caption.22}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Funkční požadavky pro mobilní aplikaci.\relax }}{2}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Funkční požadavky pro back-end.\relax }}{2}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Nefunkční požadavky pro mobilní aplikaci.\relax }}{3}{table.3.3}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Nefunkční požadavky pro back-end.\relax }}{3}{table.3.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Typy dat sloupců v tabulkách\relax }}{2}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Tabulka typ\textunderscore organu\relax }}{3}{table.5.2}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Tabulka typ\textunderscore organu\relax }}{4}{table.5.2}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Tabulka organy\relax }}{4}{table.5.3}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Tabulka osoby \relax }}{5}{table.5.4}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Tabulka zarazeni\relax }}{5}{table.5.5}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Tabulka zarazeni\relax }}{6}{table.5.5}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Tabulka poslanec\relax }}{6}{table.5.6}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Tabulka hl\textunderscore hlasovani\relax }}{7}{table.5.7}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Tabulka hl\textunderscore poslanec\relax }}{8}{table.5.8}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Tabulka omluvy\relax }}{8}{table.5.9}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Struktura agency}}{7}{table.caption.17}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Struktura agency\textunderscore type}}{7}{table.caption.18}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Struktura excuse}}{7}{table.caption.19}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Struktura member}}{8}{table.caption.20}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Struktura member\textunderscore vote}}{8}{table.caption.21}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Struktura membership}}{8}{table.caption.22}%
+\contentsline {table}{\numberline {7.7}{\ignorespaces Struktura party}}{8}{table.caption.23}%
+\contentsline {table}{\numberline {7.8}{\ignorespaces Struktura vote}}{9}{table.caption.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
 \addvspace {10\p@ }

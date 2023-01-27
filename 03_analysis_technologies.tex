@@ -1,0 +1,44 @@
+\chapter{Technologie}
+
+\setcounter{page}{1}
+
+\section{Programovací jazyky}
+
+\subsection{Java}
+
+Java je objektově-orientovaný, staticky typovaný programovací jazyk  jazyk, který byl navržen tak, aby byl portabilní a bezpečný. Portabilní a bezpečný je díky tomu, že běží na virtuálním stroji, který interpretuje mezikód, do kterého je kód Javy kompilován. Ten funguje na mnoha platformách včetně Windows, Mac OS a Linux. Java používá automatickou správu paměti, díky které není potřeba manuálně uvolňovat naalokované paměti, které by jinak způsobily memory leak. Java se používá mimo jiné pro enterprise aplikace a je hlavním jazykem pro vývoj Androidích aplikací. Od roku 2017 začal Google však podporovat Kotlin jako hlavní programoací jazyk pro vývoj v Androidu. 
+
+\subsection{Kotlin}
+Kotlin je staticky-typovaný jazyk, který klade důraz na bezpečnost, čitelnost a stručnost kódu. Narozdíl od Javy podporuje např. null safety, extension funkce a coroutines. Je s Javou plně interoperabilní, tj. dokážeme v Kotlinu volat metody a používat knihovny napsaně v Javě. Kotlin byl Googlem uznán jako hlavní jazyk pro vývoj aplikací pro Android. 
+
+\subsection{Závěr}
+Pro vývoj mobilní aplikace pro Android jsem se rozhodl používat programovací jazyk Kotlin. Prvním důvodem je to, že Kotlin je od roku 2017 Googlem uznán jako hlavní programovací jazyk pro Android. To mělo podle mě za následky, že většina dokumentací, tutoriálů a diskuzí ohledně vývoji androidích aplikací budou používat kód v Kotlinu. Druhým důvodem je to, že kód psaný v Kotlinu je bezpečnější, čitelnější a stručnější. Oba důvody přispívají k snadnější implementaci.
+
+Pro vývoj backendu jsem se rozhodl pro Javu. Důvod pro toto rozhodnutí souvisí s výběrem technologie Spring Boot, kterou jsem použil pro implementaci REST API. Ten popíši v následující podkapitole.
+
+\section{Backend}
+
+\subsection{Spring Framework}
+Spring Framework je framework pro vývoj enterprise aplikací. Je založený na principu inversion of control (dále jen IoC), který umožňuje oddělit odpověděnosti a decouplovat komponenty v aplikaci. Díky tomu je aplikace udržitelnější, protože změna jedné komponenty nerozbije ostatní komponenty, pokud jsou rozhraní, přes které komponenty mezi sebou komunikují, nezměněné. Také se aplikace díky tomu lépe testují, protože pro závislosti mezi komponentami lze používat mocky. Zároveň Spring poskytuje různé fíčury pro snazší přístup k datům, implementaci bezpečnosti a webových služeb. Zdroje: https://docs.spring.io/spring-framework/docs/current/reference/html/, https://spring.io/)
+
+\subsection{Spring Boot}
+Spring Boot je framework pro vývoj enterprise aplikací. Je postaven nad Spring Frameworkem a klade důraz na konvence nad konfigurací. To znamená, že ve Spring Bootu má mnoho konfigurací defaultní hodnoty, a není třeba je tedy konfigurovat. Konvence byly vybrány podle toho, jak vývojáři většinou používají klasický Spring. Díky tomu je vývoj ve Spring Bootu o dost rychlejší. Dále umožňuje automaticky nakonfigurovat a najít závislosti mezi komponentammi, a tím je objekty mezi sebou pospojovat. Vyžaduje minimální setup a snadnou integraci s technologiemi. 
+
+Zdroje: https://docs.spring.io/spring-framework/docs/current/reference/html/, https://spring.io/)
+
+\subsection{Závěr}
+
+Pro vývoj backendu jsem zvolil technologii Spring Boot. Díky důrazu na konvenci byla implementace mnohem snazší.
+
+Hlavním programovacím jazykem pro vývoj ve Spring Bootu je Java. Nicméně existuje integrace s Kotlinem, která umožňuje psát ve Spring Bootu pomocí Kotlinu. Výhody Kotlinu oproti Javě jsme si popsali v sekci o programovacích jazycích. Nicméně výhoda Javy v kontextu Spring Bootu je ta, že Java ma větší podporu v komunitě, co se týče Spring Bootu. Dokumentace a tutoriály pro Spring Boot jsou psané v Javě (v málo případech pro Kotlin), diskuze jsou také v Javě a když při vývoji narazím na chybu, je snazší nalézt řešení, pokud se chyba týče Javy než Kotlinu. vývoj aplikace ve Spring Bootu v Javě mi tedy připadal rychlejší než v Kotlinu, přestože Kotlin jako programovací jazyk je pro mě lepší.
+
+\section{Databáze}
+
+\subsection{MySQL}
+MySQL je systém pro správu relačních databází. Je známá pro svoji spolehlivost, jednoduché použití a výkon. Pro dotazování nad daty používá jazyk SQL. Je multiplatformní, dokáže běžet na operačních systémech Windows, Linux a Mac OS. Je poskytován pod licencí GNU/GPL. Umožňuje transakční zpracování dat. Zdroje: https://www.mysql.com/
+
+\subsection{Závěr}
+Pro účely této práce je jediným požadavkem po databázi persistení uložení dat. Databáze MySQL tento požadavek splňuje a mám s ním zkušenosti, a tudíž další varianty již neanalyzuji.
+
+\section{DI framework}
+
