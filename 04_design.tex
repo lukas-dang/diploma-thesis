@@ -32,190 +32,130 @@ Na obrazovce pro nastavení (\ref{fig:settings_opened}) je seznam nastavení dan
 
 \section{REST API}
 
-Stav aplikace
+Mobilní aplikace komunikuje s backendem pomocí REST API. Tato kapitola popisuje endpointy této API, její vstupy a výstupy.
 
-\begin{lstlisting}[]
+\subsection*{HTTP hlavička}
+
+\begin{itemize}
+	\item prev - Odkaz na předchozí stránku. Null, pokud aktuální stránka je první.
+	\item next - Odkaz na následující stránku. Null, pokud aktuální stránka je poslední.
+	\item last - Odkaz na poslední stránku.
+	\item self - Odkaz na aktuální stránku.
+\end{itemize}
+
+\subsection*{Endpointy}
+
+\begin{lstlisting}
 GET /api/app
 \end{lstlisting}
 
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-{
-	"menu": {
-		"id": "file",
-		"value": "File",
-		"popup": {
-			"menuitem": [
-				{"value": "New", "onclick": "CreateNewDoc()"},
-				{"value": "Open", "onclick": "OpenDoc()"},
-				{"value": "Close", "onclick": "CloseDoc()"}
-			]
-		}
-	}
-}
-\end{lstlisting}
+\noindent Vrací následující informace o stavu aplikace (\ref{fig:app}):
 
-Seznam hlasování
+\begin{itemize}
+	\item Volební roky
+\end{itemize}
 
-\begin{lstlisting}[]
+\vspace{10px}
+
+\begin{lstlisting}
 GET /api/vote
 \end{lstlisting}
 
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-[
-	{
-		"id": 1,
-		"date_time": "16. 12. 2022 13:29",
-		"description": "Hlasovani 1",
-		"result": "A"
-	},
-	{
-		"id": 2,
-		"date_time": "16. 12. 2022 13:26",
-		"description": "Hlasovani 2",
-		"result": "A"
-	},
-]
+\noindent Vrací seznam hlasování s následujícími informace (\ref{fig:vote}):
+\begin{itemize}
+	\item identifikátor hlasování
+	\item datum a čas hlasování
+	\item popis hlasování
+	\item výsledek hlasování (A - přijato, R - zamítnuto, jinak zmatečné hlasování)
+\end{itemize}
+
+\vspace{10px}
+
+\begin{lstlisting}
+GET /api/vote{id}
 \end{lstlisting}
 
-Detail hlasování
+\noindent Vrací následující informace o detailu hlasování (\ref{fig:vote-1}):
+\begin{itemize}
+	\item identifikátor hlasování
+	\item datum a čas hlasování
+	\item popis hlasování
+	\item výsledek hlasování (A - přijato, R - zamítnuto, jinak zmatečné hlasování)
+	\item URL odkaz na příslušný stenoprotokol
+	\item počet hlasování pro
+	\item počet hlasování proti
+	\item počet nepřihlášených
+	\item počet omluvených
+	\item počet zdržených
+	\item volební rok
+\end{itemize}
 
-\begin{lstlisting}[]
-GET /api/vote/1
+\vspace{10px}
+
+\begin{lstlisting}
+GET /api/party/vote/{id}
 \end{lstlisting}
 
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-{
-	"id": 1,
-	"date_time": "16. 12. 2022 13:29",
-	"description": "Hlasovani 1,
-	"result": "A",
-	"steno_protocol_url": "http://www.psp.cz/eknih/2021ps/stenprot/048schuz/s048109.htm#h76",
-	"yes_count": 100,
-	"no_count": 0,
-	"logged_off_count": 64,
-	"excused_count": 0,
-	"refrained_count": 36,
-	"election_year": 0
-}
-\end{lstlisting}
+\noindent Vrací následující informace o hlasováních poslaneckých klubů v daném hlasování (\ref{fig:party-vote-1}):
 
-Jak hlasovaly kluby a jejich členové v daném hlasování
+\begin{itemize}
+	\item název klubu
+	\item URL odkaz na logo klubu
+	\item identifikátor hlasování
+	\item výsledky hlasování klubu
+	\item výsledky hlasování členů klubu
+\end{itemize}
 
-\begin{lstlisting}[]
-GET /api//party/vote/1
-\end{lstlisting}
+\vspace{10px}
 
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-[
-	{
-		"party_name": "Nazev klubu",
-		"logo_url": "https://www.psp.cz/pics/klub/l-cps.jpg",
-		"vote_id": 1,
-		"party_results": {
-			"yes_count": 2,
-			"no_count": 0,
-			"logged_off_count": 1,
-			"excused_count": 0,
-			"refrained_count": 0
-		},
-		"member_results": [
-		{
-			"member_name": "Poslanec 1",
-			"vote_result": "@"
-		},
-		{
-			"member_name": "Poslanec 2",
-			"vote_result": "C"
-		},
-		{
-			"member_name": "Poslanec 3",
-			"vote_result": "A"
-		},
-		{
-			"member_name": "Poslanec 4",
-			"vote_result": "A"
-		}
-		]
-	}
-]
-\end{lstlisting}
-
-Seznam poslanců
-
-\begin{lstlisting}[]
+\begin{lstlisting}
 GET /api/member
 \end{lstlisting}
 
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-[
-	{
-		"id": 1,
-		"name": "Poslanec 1",
-		"party": "ANO",
-		"photo_url": "https://www.psp.cz/eknih/cdrom/2021ps/eknih/2021ps/poslanci/i6474.jpg",
-		"election_region": "Volebni kraj 1",
-		"election_year": 2021
-	},
-	{
-		"id": 2,
-		"name": "Poslanec 2",
-		"party": "ODS",
-		"photo_url": "https://www.psp.cz/eknih/cdrom/2021ps/eknih/2021ps/poslanci/i6804.jpg",
-		"election_region": "Volebni kraj 2",
-		"election_year": 2021
-	},
-]
-\end{lstlisting}
+\noindent Vrací seznam poslanců s následujícími informacemi:
 
-Detail poslance
+\begin{itemize}
+	\item identifikátor
+	\item jméno a příjmení
+	\item poslanecký klub
+	\item URL odkaz na profilovou fotku
+	\item volební kraj
+	\item volební rok
+\end{itemize}
 
-\begin{lstlisting}[]
-GET /api/member/1
-\end{lstlisting}
-
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-{
-	"id": 1,
-	"name": "Poslanec 1",
-	"gender": "M",
-	"party": "Poslanecky klub",
-	"member_from": "12. 10. 2021",
-	"member_to": null,
-	"date_of_birth": "25. 09. 1970",
-	"election_region": "Volebni kraj 1",
-	"photo_url": "https://www.psp.cz/eknih/cdrom/2021ps/eknih/2021ps/poslanci/i6474.jpg",
-	"election_year": 2021
-}
-\end{lstlisting}
-
-Jak hlasoval poslanec
+\vspace{10px}
 
 \begin{lstlisting}
-	GET /api/member/1/vote
+GET /api/member/{id}
 \end{lstlisting}
 
-\begin{lstlisting}[language=json,firstnumber=1,tabsize=2]
-[
-	{
-		"vote": {
-			"id": 1,
-			"date_time": "16. 12. 2022 13:29",
-			"description": "Hlasovani 1",
-			"result": "A"
-		},
-		"how_member_voted": "@"
-	},
-	{
-		"vote": {
-			"id": 2,
-			"date_time": "16. 12. 2022 13:26",
-			"description": "Hlasovani 2",
-			"result": "A"
-		},
-		"how_member_voted": "@"
-	}
-]
+\noindent Vrací následující informace o detailu poslance:
+
+\begin{itemize}
+	\item identifikátor
+	\item jméno a příjmení
+	\item pohlaví (M - muž, Ž - ostatní)
+	\item poslanecký klub
+	\item začátek mandátu
+	\item konec mandátu
+	\item datum narození
+	\item volební kraj
+	\item URL odkaz na profilovou fotku, pokud existuje, jinak null
+	\item volební rok
+\end{itemize}
+
+\vspace{10px}
+
+\begin{lstlisting}
+GET /api/member/1/vote
 \end{lstlisting}
+
+\noindent Vrací následující informace o hlasováních daného poslance:
+
+\begin{itemize}
+\item obecné informace o hlasování
+\item výsledek hlasování poslance (A - ano, B nebo N - ne, C - zdržel se, F - nehlasoval, @ - nepřihlášen, K - zdržel se / nehlasoval)
+\end{itemize}
 
 \section{Databázové datové struktury}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.3)  31 JAN 2023 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.3)  31 JAN 2023 22:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1585,12 +1585,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lot=\write8
 \openout8 = `ctufit-thesis.lot'.
 
- (./ctufit-thesis.lol)
+ (./ctufit-thesis.lol
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+1.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
 \tf@lol=\write9
 \openout9 = `ctufit-thesis.lol'.
 
- [6]
-[7
+ [6] [7
 
 ] [8
 
@@ -1605,7 +1610,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `text/text.aux'.
 
- (./text/text.tex (./01_goals.tex
+
+(./text/text.tex (./01_goals.tex
 Kapitola 1.
 ) (./01_uvod.tex [1
 
@@ -1670,12 +1676,12 @@ l.76 \end{longtable}
 
 ]
 Kapitola 4.
-<images//politiscope.png, id=537, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=552, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 33.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=538, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=553, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 34.
@@ -1691,12 +1697,12 @@ l.42
                    \relax 
 l.60 
       [2 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=551, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=566, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 68.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=552, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=567, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 69.
@@ -1722,7 +1728,7 @@ l.30 \section{Datové typy}
                             [1
 
 ]
-<images//source_data_diagram.png, id=563, 1014.79124pt x 1039.885pt>
+<images//source_data_diagram.png, id=578, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 73
@@ -1841,49 +1847,30 @@ been already used, duplicate ignored
 l.22 
       [1
 
-]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-37.
- (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmtt on input line 
-42.
-LaTeX Font Info:    No file OMSlmtt.fd. on input line 42.
-
-
-LaTeX Font Warning: Font shape `OMS/lmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 42.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 		"i
-         d": 1, [2]pdfTeX warning (ext4): destination with the same identifier 
-(name{page.3}) has been already used, duplicate ignored
+l.64 \noindent
+               Vrací seznam hlasování s následujícími informace (\ref{...
+[2]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 		{
-          [3]pdfTeX warning (ext4): destination with the same identifier (name{
-page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.185 	"e
-         lection_region": "Volebni kraj 1", [4]
+l.124 \end{itemize}
+                    [3]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.282 \end{table}
-                  [5]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1897,7 +1884,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./05_implementace.texpdfTeX warning (ext4): destination with the same identi
-fier (name{page.6}) has been already used, duplicate ignored
+fier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Implementace} [4]pdfTeX warning (ext4): destination with the same 
+identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Implementace} [5]pdfTeX warning (ext4): destination with the same 
+identifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
@@ -1911,17 +1908,17 @@ identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Implementace} [8]
+            {Implementace} [8
+
+]
 Kapitola 8.
 ) (./06_testing.texpdfTeX warning (ext4): destination with the same identifier 
 (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Testování} [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
+            {Testování} [1]pdfTeX warning (ext4): destination with the same i
+dentifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
@@ -1992,29 +1989,29 @@ l.1 \chapter
 
 ]
 P\v {r}\'{\i }loha A.
-<images//vote_list.png, id=816, 357.335pt x 727.71875pt>
+<images//vote_list.png, id=702, 357.335pt x 727.71875pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 6.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=817, 357.335pt x 727.71875pt>
+<images//vote_list_search.png, id=703, 357.335pt x 727.71875pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 12.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_details_general.png, id=818, 357.335pt x 727.71875pt>
+<images//vote_details_general.png, id=704, 357.335pt x 727.71875pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 2.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=819, 357.335pt x 727.71875pt>
+<images//vote_details_party_votes.png, id=705, 357.335pt x 727.71875pt>
 File: images//vote_details_party_votes.png Graphic file (type png)
 <use images//vote_details_party_votes.png>
 Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
 ne 28.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=820, 357.335pt x 727.71875pt
+<images//vote_details_party_votes_expanded.png, id=706, 357.335pt x 727.71875pt
 >
 File: images//vote_details_party_votes_expanded.png Graphic file (type png)
 <use images//vote_details_party_votes_expanded.png>
@@ -2032,12 +2029,12 @@ LaTeX Warning: Float too large for page by 16.3355pt on input line 39.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_list.png, id=821, 357.335pt x 727.71875pt>
+<images//member_list.png, id=707, 357.335pt x 727.71875pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 44.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=822, 357.335pt x 727.71875pt>
+<images//member_list_search.png, id=708, 357.335pt x 727.71875pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 50.
@@ -2046,13 +2043,13 @@ Package pdftex.def Info: images//member_list_search.png  used on input line 50.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_details_general.png, id=823, 357.335pt x 727.71875pt>
+<images//member_details_general.png, id=709, 357.335pt x 727.71875pt>
 File: images//member_details_general.png Graphic file (type png)
 <use images//member_details_general.png>
 Package pdftex.def Info: images//member_details_general.png  used on input line
  60.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=824, 357.335pt x 727.71875pt>
+<images//member_details_votes.png, id=710, 357.335pt x 727.71875pt>
 File: images//member_details_votes.png Graphic file (type png)
 <use images//member_details_votes.png>
 Package pdftex.def Info: images//member_details_votes.png  used on input line 6
@@ -2061,12 +2058,12 @@ Package pdftex.def Info: images//member_details_votes.png  used on input line 6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//settings.png, id=825, 357.335pt x 727.71875pt>
+<images//settings.png, id=711, 357.335pt x 727.71875pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 76.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=826, 357.335pt x 727.71875pt>
+<images//settings_opened.png, id=712, 357.335pt x 727.71875pt>
 File: images//settings_opened.png Graphic file (type png)
 <use images//settings_opened.png>
 Package pdftex.def Info: images//settings_opened.png  used on input line 82.
@@ -2074,52 +2071,57 @@ Package pdftex.def Info: images//settings_opened.png  used on input line 82.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
- been already used, duplicate ignored
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 89.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.89 ...p}, language=json,firstnumber=1,tabsize=2]
+                                                   [3 <./images//vote_list.png>
+ <./images//vote_list_search.png>]
+LaTeX Font Info:    Trying to load font information for OMS+lmtt on input line 
+90.
+LaTeX Font Info:    No file OMSlmtt.fd. on input line 90.
+
+
+LaTeX Font Warning: Font shape `OMS/lmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 90.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.143 		"v
+          ote_id": 1, [4]pdfTeX warning (ext4): destination with the same ident
+ifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.192 \end{lstlisting}
+                       [5])pdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.291 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
-[3 <./images//vote_list.png> <./images//vote_list_search.png>]pdfTeX warning (e
-xt4): destination with the same identifier (name{page.4}) has been already used
-, duplicate ignored
+[6]pdfTeX warning (ext4): destination with the same identifier (name{page.7}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.291 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
-[4 <./images//vote_details_general.png> <./images//vote_details_party_votes.png
+[7 <./images//vote_details_general.png> <./images//vote_details_party_votes.png
 > <./images//vote_details_party_votes_expanded.png>]pdfTeX warning (ext4): dest
-ination with the same identifier (name{page.5}) has been already used, duplicat
+ination with the same identifier (name{page.8}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
 l.291 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
-[5 <./images//member_list.png> <./images//member_list_search.png>]pdfTeX warnin
-g (ext4): destination with the same identifier (name{page.6}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.291 \include{text/appendix}
-                              % include `appendix.tex' from `text/' subdirec...
-[6 <./images//member_details_general.png> <./images//member_details_votes.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.291 \include{text/appendix}
-                              % include `appendix.tex' from `text/' subdirec...
-[7 <./images//settings.png> <./images//settings_opened.png>]pdfTeX warning (ext
-4): destination with the same identifier (name{page.8}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.293 \backmatter
-                  % do not remove this command [8
-
-
-
-]
+[8 <./images//member_list.png> <./images//member_list_search.png>] [9 <./images
+//member_details_general.png> <./images//member_details_votes.png>] [10 <./imag
+es//settings.png> <./images//settings_opened.png>]
 
 Package biblatex Warning: '\mainlang' is deprecated in favour of
 (biblatex)                '\textmainlang'.
@@ -2127,15 +2129,18 @@ Package biblatex Warning: '\mainlang' is deprecated in favour of
 (biblatex)                but note that the syntax is different.
 (biblatex)                Using the old, problematic definition.
 
-[9
+[11
+
+
+
 
 ]
 \openout2 = `text/medium.aux'.
 
- (./text/medium.tex [10
+ (./text/medium.tex [12
 
 
-]) [11] (./ctufit-thesis.aux (./text/text.aux)
+]) [13] (./ctufit-thesis.aux (./text/text.aux)
 (./text/appendix.aux) (./text/medium.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2150,15 +2155,15 @@ Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37302 strings out of 478287
- 698290 string characters out of 5849290
- 1678699 words of memory out of 5000000
- 54526 multiletter control sequences out of 15000+600000
+ 37313 strings out of 478287
+ 698485 string characters out of 5849290
+ 1686215 words of memory out of 5000000
+ 54535 multiletter control sequences out of 15000+600000
  531942 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,92p,1351b,4572s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></us
@@ -2169,10 +2174,10 @@ m/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on ctufit-thesis.pdf (63 pages, 2065105 bytes).
+Output written on ctufit-thesis.pdf (65 pages, 2069759 bytes).
 PDF statistics:
- 1007 PDF objects out of 1200 (max. 8388607)
- 872 compressed objects within 9 object streams
- 273 named destinations out of 1000 (max. 500000)
+ 1026 PDF objects out of 1200 (max. 8388607)
+ 889 compressed objects within 9 object streams
+ 275 named destinations out of 1000 (max. 500000)
  649 words of extra memory for PDF output out of 10000 (max. 10000000)
 
