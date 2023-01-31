@@ -33,20 +33,12 @@ V této podkapitole uvádím funkční požadavky pro mobilní aplikaci (\ref{ta
 	\label{table:func_req_app}
 \end{longtable}
 
-
-
 \def\arraystretch{1.5}
 \begin{longtable}{|l|p{9cm}|} \hline
 	\multicolumn{2}{|l|}{\textbf{Funkční požadavky pro back-end}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	FP\textunderscore01	& Backend bude v databázi ukládat data potřebna pro dosažení funkčních požadavků mobilní aplikace.  \\ \hline
-	
-	FP\textunderscore02	& Backend bude zdrojová zdrojová data získávat z oficiálního portálu psp.cz.  \\ \hline
-	
-	FP\textunderscore03	& Backend bude v rámci výpočetního výkonu přístroje stažená data transformovat do takové podoby, aby jejichfetchování mobilní aplikcí netrvalo příliš dlouho. \\ \hline
-
-	FP\textunderscore05	& Backend bude vyžadovat API klíč pro využití svého REST API. \\ \hline
+	FP\textunderscore01	& Backend bude prostřednictvím volně dostupného rozhraní poskytovat mobilní aplikaci všechna data, která bude potřebovat.  \\ \hline
 	
 	\caption{Funkční požadavky pro back-end.}
 	\label{table:func_req_be}
@@ -62,19 +54,22 @@ V této podkapitole uvádím nefunkční požadavky pro mobilní aplikaci (\ref{
 	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro mobilní aplikaci}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	NP\textunderscore 00	& Aplikace nebude provádět výpočetně náročná zpracování dat. To bude mít na starosti backend. \\ \hline
+	NP\textunderscore 00	& Aplikace nebude provádět výpočetně náročná zpracování dat z důvodu šetření aplikace. Toto zpracování bude delegováno na backend. \\ \hline
 	
-	FP\textunderscore01	& Aplikace bude každé návštěvě obrazovky znovunačitát data z REST API.\\ \hline
+	NP\textunderscore01	& Aplikace bude data stahovat pouze po spuštění aplikace z důvodu úspory dat a šetření BE. \\ \hline
 
-	NP\textunderscore 03	& Aplikace bude podporovat pouze časovou lokalizaci. \\ \hline
+	NP\textunderscore 02 & 
+	Aplikace bude podporovat pouze čas v ČR, jelikož cílí na hlasování o zákonech v ČR. Tj. pokud používáme aplikaci v zahraničí, zobrazené časy budou stále lokální vzhledem k ČR. \\ \hline
 
-	NP\textunderscore 04	& Aplikace bude mít jednoduché a intuitivní uživatelské rozhraní. \\ \hline
+	NP\textunderscore 03 & Aplikace bude mít jednoduché a intuitivní uživatelské rozhraní. \\ \hline
 	
-	NP\textunderscore 05	& Aplikace bude fungovat na zařízeních s OS Android 5.1 a výš. \\ \hline
+	NP\textunderscore 04 & Aplikace bude fungovat na zařízeních s OS Android 5.1 a výš pro cílení většího množství uživatelů. \\ \hline
 	
-	NP\textunderscore 06	& Aplikace nebude sbírat uživatelská data. \\ \hline
+	NP\textunderscore 05 & Aplikace nebude sbírat uživatelská data. \\ \hline
 	
-	NP\textunderscore 07	& Aplikace bude používat architekturu podle oficiální dokumentece Androidu. \\ \hline
+	NP\textunderscore 06 & Aplikace bude používat architekturu doporučenou v oficiální dokumenteci Androidu (https://developer.android.com/topic/architecture). \\ \hline
+	
+	NP\textunderscore07	& Backend bude zdrojová data zpracovávat tak, aby se nemusely zpracovávat v mobilní aplikaci. Zpracování dat na straně klienta by mohlo aplikaci zpomalit. Část dat, jejichž zpracování bude trvat příliš dlouho (např. půl dne), lze zpracovávat za běhu, pokud to nebude trvat příliš dlouho, a tím zhoršovat user experience uživatele. Rozhodnutí o to, kdy budou data zpracvávána při startu backendu a kdy až za běhu, je na pocitu programátora user testování mobilní aplikace. \\ \hline
 	
 	\caption{Nefunkční požadavky pro mobilní aplikaci.}
 	\label{table:nonfunc_req_app}
@@ -85,13 +80,17 @@ V této podkapitole uvádím nefunkční požadavky pro mobilní aplikaci (\ref{
 	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro back-end}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	NP\textunderscore 01	& Backend bude data vystavovat prostřednictvím REST API. \\ \hline
+	NP\textunderscore 01 & Backend bude data stahovat z oficiální portálu PSP. \\ \hline
 	
-	NP\textunderscore 02	& Backend bude data ukládat do databáze. \\ \hline
+	NP\textunderscore 02 & Backend bude data stažená z portálu PSP transformovat do databázového modelu, který bude popsán v kapitole o návrhu aplikace a backendu. Cílem je, aby data byla předzpracovaná a připravená pro rychlý přistup z mobilní aplikace. \\ \hline
 	
-	NP\textunderscore 03	& Backend bude data v databázi aktualizovat podle zdrojových dat dostupných na portálu psp.cz, a to každý den. \\ \hline	
+	NP\textunderscore 03 & Backend bude ztransformovaná data ukládat do databáze pro jejich perzistenci a připravu pro použití mobilní aplikací kdykoliv. \\ \hline
 	
-	NP\textunderscore 05	& Backend bude data posílat ve formatu JSON. \\ \hline	
+	NP\textunderscore 04 & Backend bude ztransformovaná a uložena data vystavovat prostřednictvím REST API. \\ \hline
+	
+	NP\textunderscore 03 & Backend bude každý den stahovat nová data z portálu PSP a aktualizovat databázi. \\ \hline
+	
+	NP\textunderscore 05 & Backend bude data vystavovat ve formatu JSON. \\ \hline	
 	
 	\caption{Nefunkční požadavky pro back-end.}
 	\label{table:nonfunc_req_be}

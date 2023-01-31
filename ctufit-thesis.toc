@@ -51,7 +51,7 @@
 \contentsline {chapter}{\numberline {7}Návrh}{1}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Uživatelské rozhraní}{1}{section.7.1}%
 \contentsline {section}{\numberline {7.2}REST API}{2}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Databázové datové struktury}{7}{section.7.3}%
+\contentsline {section}{\numberline {7.3}Databázové datové struktury}{5}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Implementace}{1}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mobilní aplikace}{1}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Backend}{1}{section.8.2}%
@@ -65,7 +65,7 @@
 \contentsline {section}{\numberline {11.1}Aplikace}{1}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Backend}{1}{section.11.2}%
 \contentsline {chapter}{\numberline {12}Závěr}{1}{chapter.12}%
-\contentsline {chapter}{\numberline {A}Nějaká příloha}{3}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Příloha}{3}{appendix.A}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -96,4 +96,4 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Obsah přiloženého média}{7}{appendix*.26}%
+\contentsline {chapter}{Obsah přiloženého média}{11}{appendix*.26}%

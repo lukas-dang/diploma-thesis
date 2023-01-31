@@ -4,85 +4,31 @@
 
 \section{Uživatelské rozhraní}
 
-Seznam hlasování
+\subsection*{Seznam hlasování}
 
-\begin{figure}[h]
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{vote_list.png}
-		\caption{Obrazovka pro seznam hlasování}
-	\end{minipage}%
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{vote_list_search.png}
-		\caption{Obrazovka vyhledávání v seznamu hlasování}
-	\end{minipage}
-	\caption{Obrazovka pro seznam hlasování}
-\end{figure}
+Na obrázku (\ref{fig:vote_list}) je návrh obrazovky pro seznam hlasování. Ta je složena z hlavičky, seznamu hlasování a dolní navigace. Hlavička obsahuje titul identifikující danou obrazovku,  aktuálně nastavené volební období a tlačítko pro vyhledávání hlasování. Titul slouží pro snazší orientaci v aplikaci. Volební období slouží pro snazší kontrolu, jaké volební období je aktuálně nastaveno. Jednotlivá hlasování v seznamu jsou rozdělena do jednotlivých boxů. Každý box obsahuje krátký popis návrhu zákona, datum a čas hlasování, výsledek hlasování znázorněný ikonkou a textem, a indikátor pro kliknutí na dané hlasování. Dolní navigace pak slouží pro navigaci mezi hlavními obrazovkami, tj. mezi obrazovkou pro seznam hlasování, seznam poslanců a nastavení.
 
-Detail hlasování
+Kliknutím na tlačítko pro vyhledávání se zobrazí vyhledávací pole (\ref{fig:vote_list_search}), které slouží pro vyhledávání seznamu hlasování podle jejich popisu. Do pole uživatel zadává klíčová slova. Pole obsahuje placeholder text, tlačítko pro smazání textu a tlačítko pro schování vyhledávacího pole.%
 
-\begin{figure}[h]
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{vote_details_general.png}
-		\caption{Obrazovka pro seznam hlasování}
-	\end{minipage}%
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{vote_details_party_opened.png}
-		\caption{Obrazovka vyhledávání v seznamu hlasování}
-	\end{minipage}
-	\caption{Obrazovka pro detail hlasování}
-\end{figure}
+\subsection*{Detail hlasování}
 
-Seznam poslanců
+Obrazovka pro detail hlasování (\ref{fig:vote_details_party_votes}) je složena z hlavičky a obsahu. Hlavička obsahuje tlačítko pro navigaci zpět. Obsah je rozdělen do dvou tabů, mezi kterými lze navigovat pomocí dvou tlačítek pod hlavičkou. V prvním tabu se nachází obecné údaje o daném návrhu zákona a výsledích jeho hlasování. Tyto údaje zahrnují popis návrhu zákona, datum a čas hlasování, odkaz na oficiální portál se stenoprotokolem a tabulku s informacemi ohledně toho, jak se hlasovalo. Každý typ hlasování (ano, ne, nepřihlášen, omluven, zdržel se) je popsáno textově i pomocí ikonky.
 
-\begin{figure}[h]
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{member_list.png}
-		\caption{Obrazovka pro seznam hlasování}
-	\end{minipage}%
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{member_list_search.png}
-		\caption{Obrazovka vyhledávání v seznamu hlasování}
-	\end{minipage}
-	\caption{Obrazovka pro seznam poslanců}
-\end{figure}
+Druhý tab (\ref{fig:vote_details_party_votes}) obsahuje seznam poslaneckých klubů v daném volebním období, rozdělených do boxů. V každém boxu je název klubu, jeho logo, pokud je k dispozici, a indikátor pro expandování boxu pro zobrazení informací o tom, jak daný klub a jeho členové hlasovali (\ref{fig:vote_details_party_votes}). Expandovaný box obsahuje navíc tabulku se statistikou hlasování jako v prvním tabu, ale pro konkrétní poslanecký klub. Pod tabulkou je seznam členů klubu a to, jak pro daný návrh zákona hlasovali. Výsledek hlasování členů je znázorněno ikonkou.
 
-Detail poslance
+\subsection*{Seznam poslanců}
 
-\begin{figure}[h]
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{member_list.png}
-		\caption{Obrazovka pro seznam hlasování}
-	\end{minipage}%
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{member_list_search.png}
-		\caption{Obrazovka vyhledávání v seznamu hlasování}
-	\end{minipage}
-	\caption{Obrazovka pro detail poslance}
-\end{figure}
+Obrazovka pro seznam poslanců (\ref{fig:member_list_search}) vypadá podobně jako obrazovka pro seznam hlasování. Obsahuje hlavičku s titulem, aktuálně nastaveným volebním obdobím a tlačítkém pro vyhledávání, seznam poslanců a dolní navigaci. Poslanci jsou rozděleny do boxů, které obsahují profilovou fotku poslance, jméno a příjmení, volební kraj, poslanecký klub a indikátor pro kliknutí. Kliknutím se dostaneme na obrazovku s detailem daného poslance. 
 
-Nastavení
+Pomocí vyhledávacího pole (\ref{fig:member_list_search}) lze poslance filtrovat podle jejich jména a příjmení.
 
-\begin{figure}[h]
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{settings.png}
-		\caption{Obrazovka pro seznam hlasování}
-	\end{minipage}%
-	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[scale = 0.1]{settings_election_period.png}
-		\caption{Obrazovka vyhledávání v seznamu hlasování}
-	\end{minipage}
-	\caption{Obrazovka pro nastavení}
-\end{figure}
+\subsection*{Detail poslance}
+
+Na obrazovce s detailem poslance (\ref{fig:member_details_general}) můžeme vidět údaje o daném poslanci a informace o tom, jak hlasoval pro návrhy zákonů. Obrazovka je rozdělena na hlavičku a obsah. Hlavička obsahuje tlačítko pro navigaci zpět. Obsah je rozdělen do dvou tabů. První z tabů obsahuje údaje o daném poslanci, tj. profilovou fotku, jméno a příjmení, datum a narození, datum mandátu poslance, poslanecký klub, do kterého přísluší, a volební kraj. Druhý tab (\ref{fig:member_details_votes}) obsahuje údaje o tom, jak daný poslanec hlasoval pro jednotlivé návrhy zákonů. Návrh je podobný jako návrh seznamu hlasování, obsahuje navíc údaj o tom, jak hlasoval daný poslanec.
+
+\subsection*{Nastavení}
+	
+Na obrazovce pro nastavení (\ref{fig:settings_opened}) je seznam nastavení dané aplikace. V době psaní této práce obsahuje pouze jedno možné nastavení, kterým je volební období. Nastavení obsahuje ikonku znázorňující typ nastavení (v tomto případě volební období), název nastavení a text nastaveného volebního obdobi. Kliknutím na toto nastavení naskočí okno (\ref{fig:settings_opened}) se seznamem volebních období. Po zvolení volebního období uživatel může kliknout na tlačítko Uložit, kterým se dané volební období nastaví, nebo Zrušit, čímž se zruší aktuální výběr v seznamu.
 
 \section{REST API}
 
