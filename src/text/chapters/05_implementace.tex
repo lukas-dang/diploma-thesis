@@ -1,0 +1,161 @@
+\chapter{Implementace}
+\setcounter{page}{1}
+
+Tato kapitola se zabývá popisem použitých technologií při vývoji mobilní aplikace a backendu,
+a způsoby jejich aplikace.
+
+\section{Mobilní aplikace}
+
+\subsection{Programocí jazyk}
+
+\subsubsection *{Kotlin}
+Pro mobilní aplikaci byl použit programovací jayzk Kotlin (zdroj: https://kotlinlang.org/), který je od roku 2017 preferovaným jazykem pro Android (zdroj: https://techcrunch.com/2019/05/07/kotlin-is-now-googles-preferred-language-for-android-app-development/). Původním programovacím jayzkem pro Android byla Java (zdroj: https://www.oracle.com/java/), Kotlin má však oproti němu několik výhod. Kód psaný v Kotlin je:
+
+\begin{itemize}
+    \item \textbf{stručný} - Kotlin umožňuje vytvořit 
+    singleton pomocí klíčového slova \lstinline{object}. (zdroj: https://kotlinlang.org/docs/object-declarations.html)
+    \item \textbf{bezpečný} - Kotlin rozlišuje null a non-null datové typy. Non-null typy lze dereferencovat vždy, null typy pouze po kontrole výskytu hodnoty null. To je vynuceno typovým systémem Kotlinu. Díky tomu není možné zkompilovat kód, v kterém by se dereferencovala hodnota null, kvůli čemuž by aplikace spadla. (zdroj: https://kotlinlang.org/docs/null-safety.html)
+    \item \textbf{expresivní} - Kotlin byl navržen s důrazem na výstižnost kódu, což přispívá k čitelnosti kódu
+\end{itemize}
+
+\subsubsection *{Kotlin Coroutine}
+Kotin Coroutine je návrhový vzor, který umožňuje psaní asynchronního kódu, který je intuitivní a efektivní. Asynchronní kód je takový kód, který neblokuje aktuální vlákno. Takový kód se hodí např. pro síťové nebo databázové operace. Z uživatelského hlediska je zajištění asynchronicity dlouhotrvajícího kódu důležité především proto, aby se nezablokovalo vlákno, které má na starosti vykreslování obrazovky a obsluhu událostí jako kliknutí na tlačítko. U Androidí aplikace se tomuto vláknu říká hlavní vlákno a při jejím delším zablokování může uživatelovi naskočit chyba, že aplikace nereaguje na události.
+
+Asynchronní kód lze implementovat i pommocí vláken. Coroutines však mají oproti vláknům následující výhody:
+
+\begin{itemize}
+	\item Zabírají méně paměti a lze jich spustit více najednou než vláken. Při vytvoření příliš velkého množství vláken se může zahltit procesor. Vytvořením coroutine se však nevytvoří nové vlákno, ale běží v rámci něj. To znamená, že lze vytvořit tisíce coroutines v rámci jednoho vlákna, které by běžely všechny plynule a asynchronně.
+	\item Mají lepší ochranu proti úniku paměti.
+	Coroutina může volat další coroutiny. Rodičovská vždy před jejím ukončením počká na to, až dojedou všechny potomkové coroutiny, díky čemuž se vyhneme úniku dat.
+\end{itemize}
+
+\subsubsection* {Kotlin Flows}
+
+\subsection{Android SDK}
+Android SDK open-source platforma, která poskytuje kolekce nástrojů a API pro vývoj a testování mobilních aplikací, včetně vývojového prostředí, knihoven, emulátoru a testovacích nástrojů.
+
+\subsection {Android Studio \& Android Emulator}
+
+\subsubsection *{Android Studio}
+
+Mobilní aplikace byla vyvíjena ve vývojovém prostředí (dále jen IDE) Android Studio. Byl vyvinut Googlem v roce 2013 a je to preferované IDE pro vývoj Androidích aplikací. Poskytuje napovídání při psaní kódu, automatické dokončování kódu, kontrolu chyb a možnost snadného refaktoringu. Dále poskytuje nástroje pro testování a debugování mobilní aplikace. Obsahuje podporu pro často používané frameworky jako Gradle pro automatické sestavování programu a Android SDK pro sadu vývojových nástrojů.
+
+zdroj: https://developer.android.com/studio
+
+\subsubsection *{Android Emulator}
+
+Pro manuální testování mobilní aplikace byl použit Android Emulator, který simuluje fyzické mobilní zařízení. Jeho výhodou je možnost spouštění, testování a debugování různých modelů zařízení bez jejich vlastnictví. Další výhodou je, že emulátor je vestavěný do IDE vedle zdrojového kódu. Nevýhodou je jeho paměťová a výpočetní náročnost. Při 8 GB operační paměti se emulátor a celé zařízení sekalo, jelikož paměť byla téměř celá využita. od 12 GB již běžel plynule. Emulátor je součástí knihovny Android SDK.
+
+
+
+zdroj: https://developer.android.com/studio/run/emulator
+
+\subsection {Implementace uživatelského rozhraní}
+Uživatelské rozhraní lze implementovat dvěma způsoby:
+
+\subsubsection*{XML layouty}
+Implementace uživatelského rozhraní pomocí XML layoutů využívá externí XML soubor, v kterém je rozhraní popisováno pomocí strukturováním tagů a jejich atributů. Android tento soubor zparsuje a na základě neho vykreslí obrazovku. Hlavní myšlenkou tohoto přístupu je to, že oddělujeme popis uživatelského rozhraní od programového kódu, díky čemuž je kód čitelnější a udržitelnější. Příklad použití XML layoutu lze vidět na (\ref{lst:xml-layout}).
+
+\begin{lstlisting}[caption={XML layout vykreslující vedle sebe text a tlačítko.}, label={lst:xml-layout}]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:text="Hello World!" />
+
+	<Button	android:text="Click Me" />
+
+</LinearLayout>
+\end{lstlisting}
+
+zdroj: https://developer.android.com/develop/ui/views/layout/declaring-layout
+
+\subsubsection*{Jetpack Compose}
+Jetpack Compose je Androidem doporučený způsob pro implementaci uživatelského rozhraní. Narozdíl od XML layoutů nevytváříme rozhraní pomocí tagů, ale voláním funkcí, které reprezentují určité elementy jako např. řádek, sloupec, text, obrázek a tlačítko. Tyto funkce psány jsou psány přímo v programovacím jazyce, v kterém je aplikace vyvíjena (v mém případě je to Kotlin). Pomocí parametrů těchto funkcí lze pak měnit vzhled těchto elementů, např. barvu, velikost, text, ale také callback funkce pro různé událost jako kliknutí na tlačítko. Tyto základní funkce lze skládat a tím vytvořit vlastně definovanou funkci. Všem funkcím, které reprezentují nějaký vykresletelný element, ať už nativní nebo vlastní definovaný, říkáme compose funkce a anotujeme je anotací @compose.  Síla tohoto přístupu spočívá v tom, že rozhraní "programujeme" pomocí programovacího jazyka, a tudíž můžeme využít sílu programové konstrukty tohoto jazyka jako např. cykly pro vykreslení více elementů najednou nebo podmínky pro podmíněné vykreslování. Vytváření rozhraní je díky tomu rychlejší a intuitivnější.
+
+zdroj: https://developer.android.com/jetpack/compose
+
+\vspace*{10px}
+\noindent Po analýze obou způsobů pro implementaci uživatelského rozhraní jsem se rozhodl pro použití knihovny Jetpack Compose. Android ho doporučuje a vývoj v něm je intuitivnější a rychlejší. Přestože XML layouty mají za cíl oddělení odpovědností, musí být přesto nějakým způsobem propojeny s programovaným kódem minimálně kvůli tomu, aby se layoutům nastavily data, která se mají zobrazit. Rozhraní a kód tedy nikdy nebudou úplně oddělena. Dále pro vytvoření dynamického seznamu s XML layouty je potřeba vytvořit několik souborů a ty mezi sebou propojit. Pomocí Jetpack Composu toho lze dosáhnout pomocí pár řádků kódu.
+
+\vspace*{10px}
+\noindent zdroj: https://developer.android.com/develop/ui/views/layout/recyclerview
+
+\noindent zdroj: https://developer.android.com/jetpack/compose/lists
+
+\vspace*{10px}
+
+\subsubsection*{Kompozice a rekompozice}
+Kompozice funkce je proces, kdy se zavolají všechny její funkce, které volá. Rekompozice funkce je pak proces, kdy se znovu zavolají všechny funkce, které volá, v reakci na změnu jejího stavu nebo na rekompzici rodiče. Důsledkem je to, že změna funkce spustí  rekompozici pouze jejího podstromu. Ostatní funkce zůstanou nezměněné. Prakticky to znamená efektivní vykreslování obrazovky, kdy změna jedné části uživatelského rozhraní spustí znovuvykreslování pouze této části a všech jejích podčástí. Ostatní části se nevykreslí znovu.
+
+\noindent zdroj:
+https://developer.android.com/jetpack/compose/mental-model
+
+\subsubsection*{Základní composable funkce}
+
+\noindent Pro sestavení komponent pro uživatelské rozhraní byly použity následující nativní composable funkce:
+
+\begin{itemize}
+	\item \textbf{Column} - Slouží pro umístění  komponent do sloupce. Tato funkce má dvě nevýhody. První je ta, že komponenty, které se nevejdou do obrazovky, přetečou a nelze k nim nascrollovat. Druhá je ta, že komponenty mimo obrazovku jsou stále vykreslovány a stále dochází u nich zbytečně k rekompozici, což má negativní vliv na výkon aplikace. Funkce se tedy hodí na pozicování komponent různých typů (např. hlavička, pod ní obsah a pod něm dolní navigace) a nehodí se pro dlouhé seznamy.
+
+	\item \textbf{LazyColumn} - Slouží pro umístění velkého množství komponent do sloupce. Sloupcem lze scrollovat, pokud komponenty přesahují obrazovku. Ke kompozici a rekompozici dochází pouze u komponent, které jsou viditelné na obrazovce. Výhodou této funkce je tedy dobrý výkon i při velkém množství elementů ve sloupci. Používá se pro vytváření dlouhých seznamů.
+
+	\item \textbf{Row} - Slouží pro umístění  elementů do sloupce. Jinak funguje stejně jako composable funkce Column.
+
+	\item \textbf{Text} - Slouží pro vykreslení textu.
+
+	\item \textbf{Icon} - Slouží pro vykreslení obrázku.
+
+	\item \textbf{Button} - Slouží pro vykreslení tlačítka. 
+\end{itemize}
+
+\subsubsection*{Pomocné composable funkce}
+
+\begin{itemize}
+	\item \textbf{Scaffold}
+	\item \textbf{Divider}
+	\item \textbf{CompositionLocalProvider}
+	\item \textbf{IconButton}
+	\item \textbf{FloatingActionButton}
+\end{itemize}
+
+\subsubsection*{Composable funkce z externích knihoven}
+
+
+\begin{itemize}
+	\item \textbf{TabRow}
+	\item \textbf{Tab}
+	\item \textbf{HorizontalPager}
+\end{itemize}
+
+\subsection {Použité knihovny}
+
+\subsection {Aplikační vrstvy}
+
+
+
+
+\section{Backend}
+
+\subsection {Programovací jazyk}
+
+\subsubsection *{Java}
+Pro backend byl použit programovací jazyk Java. Důvodem je použití technologie Spring Boot, která se primárně používá v kombinaci s Javou. Spring Boot detailnějši bude popsán v následující kapitole.
+
+\subsection {Framework}
+
+\subsubsection *{Spring}
+Spring je open-source aplikační rámec (dále jen framework) pro vývoj enterprise aplikací používající architekturu MVC. Hlavními benefity tohoto frameworku jsou:
+
+\begin{itemize}
+	\item DI
+	\item Služby
+\end{itemize}
+
+\subsubsection *{Spring Boot}
+
+Spring Boot je framework založený na Springu a je opinionated s cílem zjednodušit a urychlit vývoj  aplikací.
+
+\subsection {Použité knihovny}
+
+\subsection*{Aplikační vrtvy}
+
+
+

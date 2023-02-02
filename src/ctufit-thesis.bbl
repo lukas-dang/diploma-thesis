@@ -1,0 +1,162 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Husek2019-p40}{book}{}
+      \name{author}{2}{}{%
+        {{hash=50b2a63a5fca3592d8d4660e5a7f6c02}{%
+           family={Hušek},
+           familyi={H\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f069a94ebba84b17346d7251b05b9242}{%
+           family={Smolík},
+           familyi={S\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zemědělská 1, 613 00 Brno}%
+      }
+      \list{publisher}{1}{%
+        {Mendelova univerzita v Brně}%
+      }
+      \strng{namehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{fullhash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{bibnamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{authorbibnamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{authornamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \strng{authorfullhash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-80-7509-665-4}
+      \field{title}{POLITICKÝ SYSTÉM A POLITICKÉ STRANY ČESKÉ REPUBLIKY}
+      \field{year}{2019}
+    \endentry
+    \entry{politiscope}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=88900adbdf9ed381d7995fe1328d2ad8}{%
+           family={Developer},
+           familyi={D\bibinitperiod},
+           given={Android\bibnamedelima Politiscope},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{88900adbdf9ed381d7995fe1328d2ad8}
+      \strng{fullhash}{88900adbdf9ed381d7995fe1328d2ad8}
+      \strng{bibnamehash}{88900adbdf9ed381d7995fe1328d2ad8}
+      \strng{authorbibnamehash}{88900adbdf9ed381d7995fe1328d2ad8}
+      \strng{authornamehash}{88900adbdf9ed381d7995fe1328d2ad8}
+      \strng{authorfullhash}{88900adbdf9ed381d7995fe1328d2ad8}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{politiscope}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{Jan 2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=com.junkie.android.politiscope&hl=en&gl=US
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=com.junkie.android.politiscope&hl=en&gl=US
+      \endverb
+    \endentry
+    \entry{propublica}{misc}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.propublica.org/
+      \endverb
+      \verb{url}
+      \verb https://www.propublica.org/
+      \endverb
+    \endentry
+    \entry{unitedstates}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://theunitedstates.io/
+      \endverb
+      \verb{url}
+      \verb https://theunitedstates.io/
+      \endverb
+    \endentry
+    \entry{congress}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ce3a1bdaef25e5fb32e4583d414d6130}{%
+           family={Mill},
+           familyi={M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce3a1bdaef25e5fb32e4583d414d6130}
+      \strng{fullhash}{ce3a1bdaef25e5fb32e4583d414d6130}
+      \strng{bibnamehash}{ce3a1bdaef25e5fb32e4583d414d6130}
+      \strng{authorbibnamehash}{ce3a1bdaef25e5fb32e4583d414d6130}
+      \strng{authornamehash}{ce3a1bdaef25e5fb32e4583d414d6130}
+      \strng{authorfullhash}{ce3a1bdaef25e5fb32e4583d414d6130}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Congress}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{Jan 2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=com.sunlightlabs.android.congress&hl=en&gl=US
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=com.sunlightlabs.android.congress&hl=en&gl=US
+      \endverb
+    \endentry
+    \entry{openfec}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://api.open.fec.gov/developers/
+      \endverb
+      \verb{url}
+      \verb https://api.open.fec.gov/developers/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

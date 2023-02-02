@@ -1,0 +1,18 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'ctufit-thesis.blg'
+[119] biber-MSWIN64:340> INFO - === 
+[165] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
+[270] Biber.pm:978> INFO - Found 6 citekeys in bib section 0
+[284] Biber.pm:4401> INFO - Processing section 0
+[296] Biber.pm:4592> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
+[364] bibtex.pm:1713> INFO - LaTeX decoding ...
+[424] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
+[504] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[504] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[504] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[515] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
+[518] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
+[518] Biber.pm:130> WARN - Duplicate entry key: 'congress' in file 'text/bib-database.bib', skipping ...
+[518] Biber.pm:130> WARN - legacy year field 'Jan 2020' in entry 'politiscope' is not an integer - this will probably not sort properly.
+[518] Biber.pm:130> WARN - legacy year field 'Jan 2019' in entry 'congress' is not an integer - this will probably not sort properly.
+[518] Biber.pm:132> INFO - WARNINGS: 3

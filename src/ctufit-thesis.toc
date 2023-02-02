@@ -40,7 +40,17 @@
 \contentsline {section}{\numberline {6.2}REST API}{2}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Databázové datové struktury}{4}{section.6.3}%
 \contentsline {chapter}{\numberline {7}Implementace}{1}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Technologie mobilní aplikace}{1}{section.7.1}%
+\contentsline {section}{\numberline {7.1}Mobilní aplikace}{1}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Programocí jazyk}{1}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Android SDK}{2}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Android Studio \& Android Emulator}{2}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Implementace uživatelského rozhraní}{2}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Použité knihovny}{4}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Aplikační vrstvy}{4}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}Backend}{4}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Programovací jazyk}{4}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Framework}{5}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Použité knihovny}{5}{subsection.7.2.3}%
 \contentsline {chapter}{\numberline {8}Testování}{1}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mobilní aplikace}{1}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Backend}{1}{section.8.2}%
@@ -82,10 +92,4 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\babel@toc {czech}{}\relax 
-\babel@toc {czech}{}\relax 
-\babel@toc {czech}{}\relax 
-\babel@toc {czech}{}\relax 
-\babel@toc {czech}{}\relax 
-\babel@toc {czech}{}\relax 
-\contentsline {chapter}{Obsah přiloženého média}{13}{appendix*.26}%
+\contentsline {chapter}{Obsah přiloženého média}{17}{appendix*.26}%

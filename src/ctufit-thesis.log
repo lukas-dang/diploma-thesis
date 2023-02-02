@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  1 FEB 2023 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  2 FEB 2023 21:31
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **./ctufit-thesis.tex
 (ctufit-thesis.tex
@@ -1329,13 +1328,12 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'czech'.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-29.
+59.
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.aux
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\text/text.aux
+(ctufit-thesis.aux (text/text.aux
 
 LaTeX Warning: Label `fig:politoscope' multiply defined.
 
@@ -1348,30 +1346,29 @@ LaTeX Warning: Label `table:zarazeni' multiply defined.
 
 LaTeX Warning: Label `table:hl_hlasovani' multiply defined.
 
-) (C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\text/appendix.aux)
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\text/medium.aux))
+) (text/appendix.aux) (text/medium.aux))
 \openout1 = `ctufit-thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Info: Redefining \lstlistingname on input line 129.
-LaTeX Info: Redefining \lstlistlistingname on input line 129.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Info: Redefining \lstlistingname on input line 159.
+LaTeX Info: Redefining \lstlistlistingname on input line 159.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1442,10 +1439,9 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 129.
+Package hyperref Info: Link coloring OFF on input line 159.
 
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.out)
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.out)
+(ctufit-thesis.out) (ctufit-thesis.out)
 \@outlinefile=\write5
 \openout5 = `ctufit-thesis.out'.
 
@@ -1507,47 +1503,46 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
- (C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 129.
-Package biblatex Info: Reference segment=0 on input line 129.
+ (ctufit-thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 159.
+Package biblatex Info: Reference segment=0 on input line 159.
 \c@lstlisting=\count494
-<assignment-include.pdf, id=218, 597.50829pt x 845.0471pt>
+<assignment-include.pdf, id=258, 597.50829pt x 845.0471pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
-Package pdftex.def Info: assignment-include.pdf  used on input line 132.
+Package pdftex.def Info: assignment-include.pdf  used on input line 162.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
-Package pdftex.def Info: assignment-include.pdf  used on input line 132.
+Package pdftex.def Info: assignment-include.pdf  used on input line 162.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<assignment-include.pdf, id=221, page=1, 597.50829pt x 845.0471pt>
+<assignment-include.pdf, id=261, page=1, 597.50829pt x 845.0471pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 132.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 162.
 
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 132.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 162.
 
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 132.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 162.
 
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 132.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 162.
 
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 132.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 162.
 
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-
-[1
+ [1
 
 
  <./assignment-include.pdf{C:/Users/lddan/AppData/Local/MiKTeX/fonts/map/pdftex
@@ -1591,17 +1586,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.135 
+l.165 
        [1
 
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-36.
+66.
  (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (1.42198pt too wide) in paragraph at lines 136--137
+Overfull \hbox (1.42198pt too wide) in paragraph at lines 166--167
 \OT1/lmr/m/n/9 Odkaz na tuto pr^^Saci: Dang Luk^^Sa^^Ts. \OT1/lmr/m/it/9 Mo-bil
 n^^S^^P apli-kace pro zob-ra-zen^^S^^P v^^Sysledk^^Wu hla-sov^^San^^S^^P Po-sla
 -neck^^Se sn^^Temovny\OT1/lmr/m/n/9 .
@@ -1612,12 +1607,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \tableofcontents
+l.168 \tableofcontents
                        % do not remove this command [2
 
 
-]
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.toc
+] (ctufit-thesis.toc
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 0.
 
@@ -1660,21 +1654,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write6
 \openout6 = `ctufit-thesis.toc'.
 
- [4] (C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.lof)
+ [4] (ctufit-thesis.lof)
 \tf@lof=\write7
 \openout7 = `ctufit-thesis.lof'.
 
-
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.lot [5
+ (ctufit-thesis.lot [5
 
 ])
 \tf@lot=\write8
 \openout8 = `ctufit-thesis.lot'.
 
-
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.lol
+ (ctufit-thesis.lol
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-3.
+2.
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1766,12 +1758,12 @@ l.76 \end{longtable}
 
 ]
 Kapitola 4.
-<images//politiscope.png, id=485, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=530, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 33.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=486, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=531, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 34.
@@ -1789,12 +1781,12 @@ been already used, duplicate ignored
                    \relax 
 l.60 
       [2 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=499, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=544, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 68.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=500, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=545, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 69.
@@ -1823,7 +1815,7 @@ l.30 \section{Datové typy}
                             [1
 
 ]
-<images//source_data_diagram.png, id=511, 1014.79124pt x 1039.885pt>
+<images//source_data_diagram.png, id=556, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 73
@@ -1932,164 +1924,89 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.124 \end{itemize}
-                    [3]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (text/chapters/05_implementace.tex
+                    [3]) (text/chapters/05_implementace.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Implementace}\label{ch:implementace} [4]
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Implementace}\label{ch:implementace} [5]
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Implementace}\label{ch:implementace} [6]
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Implementace}\label{ch:implementace} [7]
-pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Implementace}\label{ch:implementace} [8
-
-]
+            {Implementace} [4]
 Kapitola 7.
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
 
-text/chapters/05_implementace.tex:20: Package Listings Error: Couldn't load req
-uested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 ...}, label={lst:data-class},language=Kotlin]
-                                                  
-The following languages weren't loadable:
-    ,kotlin$
-This may cause errors in the sequel.
+Overfull \hbox (25.05531pt too wide) in paragraph at lines 12--13
+\OT1/lmr/m/n/10 je od roku 2017 pre-fe-ro-van^^Sym ja-zy-kem pro An-droid (zdro
+j: https://techcrunch.com/2019/05/07/kotlin-
+ []
 
 
-text/chapters/05_implementace.tex:20: Package Listings Error: language kotlin u
-ndefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 ...}, label={lst:data-class},language=Kotlin]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 20.
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/chapters/05_implementace.tex:32: Package Listings Error: Couldn't load req
-uested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ..., label={lst:singletonn}, language=Kotlin]
-                                                  
-The following languages weren't loadable:
-    ,kotlin$
-This may cause errors in the sequel.
-
-
-text/chapters/05_implementace.tex:32: Package Listings Error: language kotlin u
-ndefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ..., label={lst:singletonn}, language=Kotlin]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-text/chapters/05_implementace.tex:38: Misplaced alignment tab character &.
-<argument> Android Studio &
-                            Android Emulator
-l.38 ...ction *{Android Studio & Android Emulator}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+Overfull \hbox (113.40169pt too wide) in paragraph at lines 15--17
+[]\OT1/lmr/bx/n/10 stru[]cn[]y \OT1/lmr/m/n/10 - Kot-lin umo^^Tz^^Tnuje vy-tvo^
+^Trit sin-gle-ton po-moc^^S^^P kl^^S^^P^^Tcov^^Seho slova [][][]. (zdroj: https
+://kotlinlang.org/docs/object-
+ []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 \subsubsection *{Java}
-                            [1]) (text/chapters/06_testing.tex
+l.28 	\item M
+             ají lepší ochranu proti úniku paměti. [1
+
+]
+Overfull \hbox (6.19559pt too wide) in paragraph at lines 35--36
+\OT1/lmr/m/n/10 tov^^San^^S^^P mo-biln^^S^^Pch apli-kac^^S^^P, v^^Tcetn^^Te v^^
+Syvojov^^Seho prost^^Tred^^S^^P, kniho-ven, emul^^Satoru a tes-to-vac^^S^^Pch n
+^^Sastroj^^Wu. 
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 59.
+
+Overfull \hbox (1.65953pt too wide) in paragraph at lines 60--61
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.63 	<B
+        utton	android:text="Click Me" /> [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.97 
+      [3]
+Overfull \hbox (6.80225pt too wide) in paragraph at lines 145--146
+\OT1/lmr/m/n/10 Spring je open-source aplika^^Tcn^^S^^P r^^Samec (d^^Sale jen f
+ra-mework) pro v^^Syvoj en-ter-prise apli-kac^^S^^P pou^^Tz^^S^^Pvaj^^S^^Pc^^S^
+^P
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.149 	\item S
+              lužby [4]) (text/chapters/06_testing.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.1 \chapter
-            {Testování} [2]
+            {Testování} [5]
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Testování} [6
+
+]
 Kapitola 8.
 ) (text/chapters/07_deploy.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -2097,9 +2014,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Nasazení} [1
-
-]
+            {Nasazení} [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -2146,7 +2061,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.255 \include{text/text}
+l.285 \include{text/text}
                           % include `text.tex' from `text/' subdirectory
 [1]
 \openout2 = `text/appendix.aux'.
@@ -2164,29 +2079,29 @@ l.1 \chapter
 
 ]
 P\v {r}\'{\i }loha A.
-<images//vote_list.png, id=640, 357.335pt x 727.71875pt>
+<images//vote_list.png, id=678, 357.335pt x 727.71875pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 6.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=641, 357.335pt x 727.71875pt>
+<images//vote_list_search.png, id=679, 357.335pt x 727.71875pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 12.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_details_general.png, id=642, 357.335pt x 727.71875pt>
+<images//vote_details_general.png, id=680, 357.335pt x 727.71875pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 2.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=643, 357.335pt x 727.71875pt>
+<images//vote_details_party_votes.png, id=681, 357.335pt x 727.71875pt>
 File: images//vote_details_party_votes.png Graphic file (type png)
 <use images//vote_details_party_votes.png>
 Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
 ne 28.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=644, 357.335pt x 727.71875pt
+<images//vote_details_party_votes_expanded.png, id=682, 357.335pt x 727.71875pt
 >
 File: images//vote_details_party_votes_expanded.png Graphic file (type png)
 <use images//vote_details_party_votes_expanded.png>
@@ -2204,12 +2119,12 @@ LaTeX Warning: Float too large for page by 16.3355pt on input line 39.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_list.png, id=645, 357.335pt x 727.71875pt>
+<images//member_list.png, id=683, 357.335pt x 727.71875pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 44.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=646, 357.335pt x 727.71875pt>
+<images//member_list_search.png, id=684, 357.335pt x 727.71875pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 50.
@@ -2218,13 +2133,13 @@ Package pdftex.def Info: images//member_list_search.png  used on input line 50.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_details_general.png, id=647, 357.335pt x 727.71875pt>
+<images//member_details_general.png, id=685, 357.335pt x 727.71875pt>
 File: images//member_details_general.png Graphic file (type png)
 <use images//member_details_general.png>
 Package pdftex.def Info: images//member_details_general.png  used on input line
  60.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=648, 357.335pt x 727.71875pt>
+<images//member_details_votes.png, id=686, 357.335pt x 727.71875pt>
 File: images//member_details_votes.png Graphic file (type png)
 <use images//member_details_votes.png>
 Package pdftex.def Info: images//member_details_votes.png  used on input line 6
@@ -2233,53 +2148,18 @@ Package pdftex.def Info: images//member_details_votes.png  used on input line 6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//settings.png, id=649, 357.335pt x 727.71875pt>
+<images//settings.png, id=687, 357.335pt x 727.71875pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 76.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=650, 357.335pt x 727.71875pt>
+<images//settings_opened.png, id=688, 357.335pt x 727.71875pt>
 File: images//settings_opened.png Graphic file (type png)
 <use images//settings_opened.png>
 Package pdftex.def Info: images//settings_opened.png  used on input line 82.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/appendix.tex:89: Package Listings Error: Couldn't load requested language.
-
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 ...p}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
-
-
-text/appendix.tex:89: Package Listings Error: language json undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 ...p}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
@@ -2289,340 +2169,133 @@ been already used, duplicate ignored
 l.89 ...p}, language=json,firstnumber=1,tabsize=2]
                                                    [3 <./images//vote_list.png>
  <./images//vote_list_search.png>]
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/appendix.tex:105: Package Listings Error: Couldn't load requested language
-.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
+LaTeX Font Info:    Trying to load font information for OMS+lmtt on input line 
+90.
+LaTeX Font Info:    No file OMSlmtt.fd. on input line 90.
 
 
-text/appendix.tex:105: Package Listings Error: language json undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/appendix.tex:122: Package Listings Error: Couldn't load requested language
-.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
-
-
-text/appendix.tex:122: Package Listings Error: language json undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (103.72032pt too wide) in paragraph at lines 128--129
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/appendix.tex:138: Package Listings Error: Couldn't load requested language
-.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
-
-
-text/appendix.tex:138: Package Listings Error: language json undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Font Warning: Font shape `OMS/lmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 90.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.148 			"e
-           xcused_count": 0, [4]
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/appendix.tex:173: Package Listings Error: Couldn't load requested language
-.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
-
-
-text/appendix.tex:173: Package Listings Error: language json undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (92.38023pt too wide) in paragraph at lines 179--180
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (92.38023pt too wide) in paragraph at lines 187--188
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-text/appendix.tex:194: Package Listings Error: Couldn't load requested language
-.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.194 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
-
-
-text/appendix.tex:194: Package Listings Error: language json undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.194 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (81.04015pt too wide) in paragraph at lines 204--205
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
+l.143 		"v
+          ote_id": 1, [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.205 	"e
-         lection_year": 2021 [5]
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
+l.192 \end{lstlisting}
+                       [5]
 
-text/appendix.tex:209: Package Listings Error: Couldn't load requested language
-.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The following languages weren't loadable:
-    ,json$
-This may cause errors in the sequel.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-text/appendix.tex:209: Package Listings Error: language json undefined.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...}, language=json,firstnumber=1,tabsize=2]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 \include{text/appendix}
+l.289 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [6]
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 \include{text/appendix}
+l.289 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
-[7 <./images//vote_details_general.png> <./images//vote_details_party_votes.png
-> <./images//vote_details_party_votes_expanded.png>]
+[7]
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 \include{text/appendix}
+l.289 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
-[8 <./images//member_list.png> <./images//member_list_search.png>] [9 <./images
-//member_details_general.png> <./images//member_details_votes.png>] [10 <./imag
-es//settings.png> <./images//settings_opened.png>] [11
+[8 <./images//vote_details_general.png> <./images//vote_details_party_votes.png
+> <./images//vote_details_party_votes_expanded.png>] [9 <./images//member_list.
+png> <./images//member_list_search.png>] [10 <./images//member_details_general.
+png> <./images//member_details_votes.png>] [11 <./images//settings.png> <./imag
+es//settings_opened.png>] [12] [13] [14
 
 
 
+] [15
 
 ]
 \openout2 = `text/medium.aux'.
 
- (text/medium.tex
-[12
+ (text/medium.tex [16
 
 
-]) [13] (C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\ctufit-thesis.aux
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\text/text.aux)
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\text/appendix.aux)
-(C:/Users\lddan\IdeaProjects\diploma-thesis\auxil\text/medium.aux))
+]) [17]
+(ctufit-thesis.aux (text/text.aux) (text/appendix.aux) (text/medium.aux))
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `ctufit-thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ctufit-thesis.out':
-(rerunfilecheck)             Before: 3B1EEF85E203469370C281FBAA8E2C50;6382
-(rerunfilecheck)             After:  2F6CBB063A0B4DEAFB748276A9248065;6382.
-
-Package biblatex Warning: Please rerun LaTeX.
-
+Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 2CD6921ED9F73649E56E16D01D429BCA;7889.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37621 strings out of 476375
- 720005 string characters out of 5788976
- 1922299 words of memory out of 5000000
- 56973 multiletter control sequences out of 15000+600000
+ 37589 strings out of 476375
+ 714996 string characters out of 5788976
+ 2060299 words of memory out of 5000000
+ 56991 multiletter control sequences out of 15000+600000
  574970 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,92p,1353b,2821s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
-:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}{C:/
-Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Us
+{C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}
+{C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C
+:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
 ers/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
 /lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><
-C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><
-C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb>
-<C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
-C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C
-:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/
-Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Us
-ers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Us
-ers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Use
-rs/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/U
-sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/U
-sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on C:/Users\lddan\IdeaProjects\diploma-thesis\out\ctufit-thesis.
-pdf (63 pages, 2148713 bytes).
+C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb
+x10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb
+x12.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmc
+sc10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7
+.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
+fb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.p
+fb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pf
+b><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.
+pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.
+pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.p
+fb>
+Output written on ctufit-thesis.pdf (67 pages, 2183522 bytes).
 PDF statistics:
- 956 PDF objects out of 1000 (max. 8388607)
- 273 named destinations out of 1000 (max. 500000)
- 537 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1017 PDF objects out of 1200 (max. 8388607)
+ 282 named destinations out of 1000 (max. 500000)
+ 617 words of extra memory for PDF output out of 10000 (max. 10000000)
 
