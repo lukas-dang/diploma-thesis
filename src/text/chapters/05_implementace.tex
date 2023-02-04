@@ -52,7 +52,9 @@ Pro mobilní aplikaci byl použit programovací jayzk Kotlin, který je od roku 
 
 \noindent Dalším důvodem pro použití Kotlinu souvisí s dlouze běžícími blokujícími operacemi jako např. síťovými a databázovými operacemi. Aplikace běží defaultně na hlavním vláknu, které má na starosti vykreslování obrazovky a obsluhu událostí (např. kliknutí na tlačítko a scrollování). Pokud na něm provedeme dlouze běžící blokující operaci, vlákno se zablokuje na delší dobu a nebude moct obsluhovat události. Uživatelovi se pak aplikace jeví jako zamrznutá. Možným řešením pro tento problém je vytvoření nového vlákna, které bude běžet paralelně s hlavním vlákenm a které bude provádět danou blokující operaci. Operace bude blokovat nově vytvořené vlákno, nebude však blokovat hlavní vlákno, díky čemuž bude uživatel stále moct interagovat s aplikací, i když blokující operace stále běží. Tvorba vláken a jejich správa jsou však drahé operace. 
 
-Alternativním řešením jsou proto \textbf{Kotlin Coroutines}, které umožňují provádět operace paralelně bez nutnosti vytvoření nového vlákna. Coroutina je kus kódu, který je suspendovatelný. To znamená, že ho lze pomocí určitých metod pozastavit (také suspendovat), dokud nebude operace hotová, a tím uvolnit aktuální vlákno pro použití jinde. To se hodí např. pro síťové operace, která stahuje data z internetu. Fungovalo by to tak, že danou síťovou operaci obalíme do coroutiny a až pak operaci provedeme. Ve chvíli kdy operace začne stahovat data z internetu, coroutinu suspendujeme, čímž uvolníme aktuální vlákno pro použití jinde. Jakmile jsou data stažena, kód v suspendované coroutině automaticky pokračuje. To vše probíhá na jednom vlákně. Ukážeme si příklad použití coroutiny je na (\ref{lst:coroutine}).
+\vspace{10px}
+
+\noindent\textbf{Kotlin Coroutines} - Alternativním řešením jsou proto Kotlin Coroutines, které umožňují provádět operace paralelně bez nutnosti vytvoření nového vlákna. Coroutina je kus kódu, který je suspendovatelný. To znamená, že ho lze pomocí určitých metod pozastavit (také suspendovat), dokud nebude operace hotová, a tím uvolnit aktuální vlákno pro použití jinde. To se hodí např. pro síťové operace, která stahuje data z internetu. Fungovalo by to tak, že danou síťovou operaci obalíme do coroutiny a až pak operaci provedeme. Ve chvíli kdy operace začne stahovat data z internetu, coroutinu suspendujeme, čímž uvolníme aktuální vlákno pro použití jinde. Jakmile jsou data stažena, kód v suspendované coroutině automaticky pokračuje. To vše probíhá na jednom vlákně. Ukážeme si příklad použití coroutiny je na (\ref{lst:coroutine}).
 
 \begin{lstlisting}[caption={Příklad použití coroutiny}, label={lst:coroutine}, tabsize=2]
 fun main() = runBlocking {
@@ -66,20 +68,96 @@ fun main() = runBlocking {
 
 \noindent Metoda \lstinline|runBlocking| vytvoří tzv. scope, v rámci kterého je vytvořena coroutina pomocí metody \lstinline|launch|. Scope vymezuje životnost coroutinů, které v něm běží. To je užitečné pro zabránění úniku dat. Např. když uživatel spustí aplikaci a pomocí coroutinu se začnou stahovat data z internetu, a aplikaci hned zavře, díky scopu coroutina přestane stahovat data a je zrušena. V rámci metody \lstinline|launch| specifikujeme funkci, která je suspendovatelná, tj. lze ji pozastavit, a tím uvolnit aktuálkní vlákno. Coroutina v tuto chvíli běží sekvenčně se zbytkem kódu, dokud není suspendována. V tomto případě je suspendována pomocí funkce \lstinline|delay|, která ji suspenduje na 1 sekundu. V tuto chvíli je aktuální vlákno uvolněno a je proveden kód následující bezprostředně za coroutinou a vypíše se Hello. V tuto chvíli program ještě neskončí, scope totiž vždy čeká na to, až všechny její coroutiny doběžely. Po 1 sekundě suspendovaná coroutina opět pokračuje a vypíše řetězec World.
 
-Kód (\ref{lst:coroutine-practical}) ilustruje praktičtější příklad, kdy voláme funkci \lstinline|fetchDataFromApi()|, která stahuje data z API a interně operaci suspenduje, díky čemuž se uvolní vlákno a funkce \lstinline|handleUserInteraction()| pro interakci s uživatelem může být spuštěna ještě před tím, než přijdou data. Až přijdou data, coroutina opět poběží a na základě získaných dat aktualizuje UI pomocí funkce \lstinline|updateUi()|.
+Kód (\ref{lst:coroutine-practical}) ilustruje praktičtější příklad, kdy voláme funkci \lstinline|fetchDataFromApi()|, která stahuje data z API a interně operaci suspenduje, díky čemuž se uvolní vlákno a funkce \lstinline|handleUserInteraction()| pro interakci s uživatelem může být spuštěna ještě před tím, než přijdou data. Až přijdou data, coroutina opět poběží a na základě získaných dat aktualizuje UI pomocí funkce \lstinline|updateUi()|. Klíčové slovo \lstinline|suspend| u deklarace funkce znamená, že je suspendovatelná a lze z ní volat funkce, které jsou také suspendovatelné.
 
 \begin{lstlisting}[caption={Praktický příklad použití coroutiny}, label={lst:coroutine-practical}, tabsize=2]
-	fun main() = runBlocking {
-		launch {
-			val data = fetchDataFromApi()
-			updateUi(data)
-		}
-		handleUserInteraction()
+fun main() = runBlocking {
+	launch {
+		val data = fetchDataFromApi()
+		updateUi(data)
 	}
+	handleUserInteraction()
+}
+
+suspend fun fetchDataFromApi() {...}
 \end{lstlisting}
 
-Coroutines mají narozdíl od vláken několik výhod: a zabírají méně paměti a zabraňují lépe únikům dat. 
+\noindent Výhoda coroutines oproti vláknům je tedy menší paměťová náročnost a menší zátěž na procesoru.
 
+\vspace*{10px}
+
+\noindent \textbf{Kotlin Flow} - Pro zvýšení čitelnosti a expresivnosti kódu a implementaci stránkování je v aplikaci používán datový typ Kotlin Flow, který reprezentuje sekvenci hodnot, které jsou produkovány a konzumovány asynchronně pomocí suspend funkcí. Příkladem použití je získání aktuálního volebního roku každou sekundu (\ref{lst:flow-general}).
+
+\begin{lstlisting}[caption={Příklad použití flow}, label={lst:flow-general}, tabsize=2]
+              
+fun fetchData(): Flow<Int> = flow {
+	while(true) {
+		val year = fetchLatestElectionYear()
+		emit(year)
+		delay(1000)
+	}
+}
+
+fun main() = {
+	fetchData().collect { data -> println(data) } 
+}
+\end{lstlisting}
+
+\noindent Funkce \lstinline|flow| vytvoří flow, který v nekonečném cyklu získá data, emitne je a počká 1 s, než postup zoopakuje. Vidíme tedy, že funkce \lstinline|emit| vrací data, ale funkce pokračuje dál. Funkce skončí až tehdy, kdy doběhne na konec. Funkce vrací flow, v tuto chvíli však kód dané flow ještě neběží. Až po zavolání funkce \lstinline|collect| začne flow provádět svůj kód a emitovat data. Takovým funkcím, které spustí kód ve flow říkáme terminální operátory. Terminální operátor konzumuje všechny hodnoty emitované danou flow, s kterými lze dále pracovat. Výhodou kotlin flow je tedy jednoduchá implementace pro zpracovávání potenciálně nekonečných streamů dat, které jsou produkovány a konzumovány asynchronním způsobem pomocí coroutinů.
+
+Další výhodou kotlin flowů je možnost použití tzv. \textit{intermediate} operátorů, které s hodnoty emitované flowem nějakým způsobem manipulují. Mohou je např. filtrovat, mapovat na jiné hodnoty, kešovat je a další. V (\ref{lst:flow-intermediate}) voláme funkci, \lstinline|getMembers()|, která vrací flow Votů. Na ní se zavolá intermediate operátor \lstinline|filter|, který z hodnot emitovaných danou flow vyfiltruje takové voty, jejichý popis začíná písmenem A. V tuto chvíli flow ještě neběží. Následně se zavolá terminální operátor \lstinline|collect|, který flow spustí a zkonzumuje.
+
+Kotlin flows se používají také pro implementaci stránkování, které bude poposáno v sekci Implementace uživatelského rozhraní.
+
+\begin{lstlisting}[caption={Příklad intermediate operátoru pro flow}, label={lst:flow-intermediate}, tabsize=2]
+fun main() = {
+	getVote()
+		.filter(vote -> vote.description.startsWith("A"))
+		.collect { vote -> updateUi(vote)
+	}
+
+	fun getVote(): Flow<Vote> {...}
+}
+\end{lstlisting}
+
+\subsubsection *{Android komponenty}
+Aplikace v Androidu jsou složeny z Android komponentů, které mají na starosti různé odpovědnosti:
+
+\begin{itemize}
+	\item Application - Reprezentuje celou aplikaci. V rámci práce je používaná pouze pro nakonfigurování DI pomocí Hiltu, které bude popsáno v následující sekci.
+	\item Activity - Reprezentuje obrazovku. Je to vstupní bod pro vytvoření UI a pro počáteční inicializace.
+	\item ViewModel - Reprezentuje komponentu, která definuje business logiku a drží si stav UI elementů. Změna stavu komponenty ViewModel způsobí i změnu UI. ViewModel si pamatuje data i po konfiguračních změnách (např. otočení mobilu).
+\end{itemize}
+
+\subsubsection *{Hilt}
+Hilt je DI knihovna pro Android. Poskytuje kontejnery pro každou Android komponenty. Tyto kontejnery spravují objekty a jejich závislosti a jsou použity pro injektování závislostí. Příkladem injektování kódu lze vidět na (\ref{lst:hilt}). Do třídy \lstinline|GetAppStateUseCase| injektujeme pomocí anotace \lstinline|@Inject| implementataci rozhraní \lstinline|AppStateRepository|.
+
+\begin{lstlisting}[caption={Příklad použití DI pomocí knihovny Hilt}, label={lst:hilt}, tabsize=2]
+class GetAppStateUseCase @Inject constructor(
+	val appStateRepository: AppStateRepository,
+) {...}
+
+interface AppStateRepository {...}
+\end{lstlisting}
+
+\noindent Pro konfiguraci závislostí, na základě kterého Hilt sestaví kontejnery, jsou používány tzv. moduly - objekty pro konfiguraci závislostí. V konfigurace (\ref{lst:hilt-module}) říkáme, že do proměnných typu \lstinline|AppStateRepository| budou injektován objekt \lstinline|AppStateRepositoryImpl|. Objekt je přiom instanciován jako singleton. Objekt zároveň potřebuje závislost na \lstinline|PspRemoteDataSource|, který musí být opět někde nakonfigurován, aby tu mohl být injektován. Buď v tom samém modulu nebo v jiném, pokud chceme moduly pro čitelnost nějakým způsobem rozdělit.
+
+\begin{lstlisting}[caption={Příklad konfigurace závislostí pro Hilt}, label={lst:hilt-module}, tabsize=2]
+@Module
+@InstallIn(SingletonComponent::class)
+object DataModule {
+	
+	@Provides
+	fun provideAppStateRepository(
+	pspRemoteDataSource: PspRemoteDataSource
+	): AppStateRepository {
+		return AppStateRepositoryImpl(pspRemoteDataSource)
+	}
+
+}
+\end{lstlisting}
+	
+zdroj: https://kotlinlang.org/docs/flow.html
 zdroj: https://kotlinlang.org/docs/object-declarations.html
 zdroj: https://kotlinlang.org/docs/null-safety.html
 zdroj: https://kotlinlang.org/
@@ -87,53 +165,34 @@ zdroj: https://techcrunch.com/2019/05/07/kotlin-is-now-googles-preferred-languag
 zdroj: zdroj: https://www.oracle.com/java/
 zdroj: https://developer.android.com/kotlin/coroutine
 
-\subsubsection*{Activity}
-Aktivita je jedna z hlavních komponent aplikace a reprezentuje obrazovku, do které vkládáme naše uživatelské rozhraní. V rámci aplikace je použita především jako vstupní bod pro vytvoření UI a pro počáteční inicializace stavu aplikace. Aktivita se může nacházet v různých stavech podle toho, zda ji má uživatel v popředí nebo pozadí, nebo zda ji vypíná. Nás bude zajímat především stav, kdy je aktivita poprvé vytvořena, tedy když je aplikace spuštěna. Pro detekci tohoto stavu poskytuje aktivita funkci \lstinline|onCreate|, která se zavolá, když je aktivita vytvořena. V této funkci lze pak provádět žádané operace.
-
-zdroj: https://developer.android.com/reference/android/app/Activity
-
-\subsubsection*{Lifecycles}
-
 \subsection {Implementace uživatelského rozhraní}
-Uživatelské rozhraní lze implementovat dvěma způsoby:
-
-\subsubsection*{XML layouty}
-Implementace uživatelského rozhraní pomocí XML layoutů využívá externí XML soubor, v kterém je rozhraní popisováno pomocí strukturováním tagů a jejich atributů. Android tento soubor zparsuje a na základě neho vykreslí obrazovku. Hlavní myšlenkou tohoto přístupu je to, že oddělujeme popis uživatelského rozhraní od programového kódu, díky čemuž je kód čitelnější a udržitelnější. Příklad použití XML layoutu lze vidět na (\ref{lst:xml-layout}).
-
-\begin{lstlisting}[caption={XML layout vykreslující vedle sebe text a tlačítko.}, label={lst:xml-layout}]
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
-	<TextView android:text="Hello World!" />
-
-	<Button	android:text="Click Me" />
-
-</LinearLayout>
-\end{lstlisting}
-
-zdroj: https://developer.android.com/develop/ui/views/layout/declaring-layout
+V této sekci bude popsána implementace uživatelského rozhraní.
 
 \subsubsection*{Jetpack Compose}
 \label{sssec:jetpack-compose}
-Jetpack Compose je Androidem doporučený způsob pro implementaci uživatelského rozhraní. Rozhraní je implementováno voláním speciálních funkcí, které reprezentují určité komponenty jako např. řádek, sloupec, text, obrázek, tlačítko. Na základě těchto funkcí knihovna Jetpack Compose vykreslí dané komponenty na obrazovku. Knihovna poskytuje funkce pro vykreslování základních komponent. Tyto základní komponenty lze mezi sebou kombinovat, a tím vytvořit vlastně složitější, vlastně definované komponenty.  Pomocí parametrů těchto funkcí lze měnit vzhled nebo chování komponent jako např. barvu, velikost, text, nebo callback funkce, která se zavolá v reakci na kliknutí na tlačítko. Výhodou tohoto přístupu spočívá v tom, že uživatelské rozhraní je vytvářeno pomocí programovacího jazyka, a tudíž lze používat programové konstrukty jako např. cykly pro vykreslení seznamu elementů nebo podmínky pro podmíněné vykreslování. Implementace rozhraní je díky tomu jednodušší.
+Jetpack Compose je Androidem doporučený způsob pro implementaci uživatelského rozhraní. Rozhraní je implementováno voláním tzv \textit{composable} funkcí, což jsou funkce anotované anotací @composable a reprezentují nějaký UI element na obrazovce. Jetpack Compose nám již poskytuje nativní UI elementy jako text a tlačítko nebo kontejnery pro seskupení element do řádku či sloupců. Tyto nativní UI elementy lze kombinovat, a tím vytvořit složitější komponenty. Tyto složitější komponenty lze pak zapouzdřit do vlastně definované composable funkce. Důsledkem je to, že celé UI popisováno pomocí composable funkcí, které volají další composable funkce. Díky tomu je kód pro vytvoření UI modulární. 
 
-zdroj: https://developer.android.com/jetpack/compose
+Jelikož composable funkce jsou vlastně jenom funkce napsané v programovacím jazyce, lze jim předávat parametry, které určují vzhled či chování daného UI elementu. Které parametry composable funkce přijímá a co určuji závisí na implementaci dané funkce. Jsou parametry, které mění např. barvu a velikost daného elementu. Dále jsou parametry, kterým předáváme funkci. Tato funkce může být volána např. když je na daný element kliknuto. Také jsou parametry, které určují textový obsah nějakého textového elementu. Výhodou použití knihovny Jetpack Compose je možnost definovat UI pomocí programovacího jazyka. To znamená, že lze využít cykly (např. pro vytvoření seznamu elementů) nebo podmínky (např. pro podmíněné vykreslování). Implementace rozhraní je díky tomu jednoduchá a intuitivní.
 
-\vspace*{10px}
-\noindent Po analýze obou způsobů pro implementaci uživatelského rozhraní jsem se rozhodl pro použití knihovny Jetpack Compose. Android ho doporučuje a vývoj v něm je intuitivnější a rychlejší. Přestože XML layouty mají za cíl oddělení odpovědností, musí být přesto nějakým způsobem propojeny s programovaným kódem minimálně kvůli tomu, aby se layoutům nastavily data, která se mají zobrazit. Rozhraní a kód tedy nikdy nebudou úplně oddělena. Dále pro vytvoření dynamického seznamu s XML layouty je potřeba vytvořit několik souborů a ty mezi sebou propojit. Pomocí Jetpack Composu toho lze dosáhnout pomocí pár řádků kódu.
+Alternativou k Jetpack Composu jsou XML layouty, které k popisu UI používají externí XML soubor, kde je rozhraní popisováno pomoxí XML tagů a jejich atributů. Hlavní myšlenkou tohoto přístupu je to, že oddělujeme popis uživatelského rozhraní od programového kódu, díky čemuž je kód čitelnější a udržitelnější. Míchání popisu UI a programového kódu se však nikdy nevyhneme, jelikož layoutům se musí minimálně předat aspoň data. Toho lze dosáhnout pouze propojením programového kódu s layoutem. Pokud implementujeme dynamický seznam, situace pro XML layouty je ještě horší, neboť implementace vyžaduje hodně boilerplate kódu. Pro Jetpack Composu je vytvoření takového seznamu otázkou pár řádků kódu.
+
+Z výše uvedených důvodů jsem se rozhodl uživatelské rozhraní implementovat pomocí Jetack Compose.
 
 \vspace*{10px}
 \noindent zdroj: https://developer.android.com/develop/ui/views/layout/recyclerview
 \noindent zdroj: https://developer.android.com/jetpack/compose/lists
+zdroj: https://developer.android.com/jetpack/compose
 
 \vspace*{10px}
 
 \subsubsection*{Composable funkce}
-Jak již bylo popsáno v (\ref{sssec:jetpack-compose}), základním stavebním kamenem pro tvorbu uživatelského rozhraní pomocí knihovny Jetpack Compose jsou funkce. Těmto funkcím se říká \textit{composable} funkce a poznáme je tak, že v deklaraci mají anotaci @Composable. Jednoduchým příkladem composable funkce, kterou knihovna poskytuje, je funkce \lstinline|Text|, která vykreslí text předaný pomocí parametru \lstinline|text|. (\ref{lst:jc-text})
+Základním stavebním kamenem pro tvorbu uživatelského rozhraní pomocí knihovny Jetpack Compose jsou composable funkce. V (\ref{lst:jc-text}) lze vidět použití nativní composable funkce \lstinline|Text|, která slouží pro vytvoření textového UI elementu. Vidíme, že funkce přijímá parametr \lstinline|text|, který určuje textový obsah.
 
 \begin{lstlisting}[caption={Příklad použití composable funkce Text.}, label={lst:jc-text}]
 Text(text = "Vysledky hlasovani")
 \end{lstlisting}
 
-\noindent Composable funkce lze kombinovat do složitější composable funkce (\ref{lst:jc-combine}).
+\noindent Composable funkce lze kombinovat pro vytvoření složitějších composable funkcí (\ref{lst:jc-combine}). Vytváříme zde ikonku pomocí funkce \lstinline|Icon| a text. Ikonka přijímá parametr specifikující objekt reprezentující danou ikonku a text používaný pro přístupové služby. Oba elementy jsou pak seskupeny do řádku pomocí kontejnerové composable funkce \lstinline|Row|.
 
 \begin{lstlisting}[caption={Příklad skládání composable funkcí. Vykreslí ikonku a text vedle sebe.}, label={lst:jc-combine}, tabsize=2]
 Row {
@@ -145,7 +204,7 @@ Row {
 }
 \end{lstlisting}
 
-\noindent Pomocí parametrů lze měnit i vzhled a chování composable funkce. (\ref{lst:jc-parameters})
+\noindent Pomocí parametrů lze měnit i vzhled a chování composable funkce. (\ref{lst:jc-parameters}). Vytváříme zde tlačítko  s textem a černým okrajem, které při kliknutí vypíše do konzole text.
 
 \begin{lstlisting}[caption={Příklad parametrů pro změnu vzhledu a chování.}, label={lst:jc-parameters}, tabsize=2]
 Button(
@@ -159,55 +218,239 @@ Button(
 \vspace*{10px}
 
 \subsubsection*{Kompozice a rekompozice}
-Kompozice funkce je proces, kdy se zavolají všechny její funkce, které volá. Rekompozice funkce je pak proces, kdy se znovu zavolají všechny funkce, které volá, v reakci na změnu jejího stavu nebo na rekompzici rodiče. Důsledkem je to, že změna funkce spustí  rekompozici pouze jejího podstromu. Ostatní funkce zůstanou nezměněné. Prakticky to znamená efektivní vykreslování obrazovky, kdy změna jedné části uživatelského rozhraní spustí znovuvykreslování pouze této části a všech jejích podčástí. Ostatní části se nevykreslí znovu.
+Kompozice funkce je proces, kdy se zavolá. Rekompozice funkce je pak proces, kdy se zavolá znovu v reakci na změnu jejího lokálního stavu nebo stavu ve ViewModelu, na kterém je závislý, nebo na rekompzici rodiče. Lokální stav composable funkce je popsána v následující sekci. Důsledkem je to, že změna composable funkce (jejího stavu) spustí rekompozici pouze této funkce a všech funkcí, které volá. Ostatní funkce zůstanou nedotčené. Díky tomu dojde k rekompozici pouze u funkcí, kde se něco změnilo nebo potěnciálně změnilo.
+
+\vspace*{10px}
+
+\subsubsection*{Stav composable funkce}
+Composable funkce mohou v sobě držet lokální stav. Kód (\ref{lst:jc-state}) ukazuje příklad jeho použití. Zde vidíme text a tlačítko. Text se vykresluje podmíněně podle aktuální hodnoty proměnné \lstinline|expanded|. Defaultní hodnota proměnné \lstinline|expanded| je \lstinline|false|, a tudíž při první kompozici funkce se text nevykreslí. Tlačítko v reakci na kliknutí této proměnné nastaví opačnou hodnotu, což spustí rekompozici funkce. Aby změna této proměnné spustila rekompozici, musí být typu \lstinline|State|. Aby se proměnná však vůbec dala měnit, musí být typu \lstinline|MutableState|, a proto je defaultní hodnota \lstinline|false| obalena do funkce \lstinline|mutableStateOf|. Aby se při rekompozici nenastavila opět defaultní hodnota \lstinline|false|, ale nová hodnota, musí si composable funkce tento stav pamatovat napříř rekompozicemi, a toho dosáhneme pomocí funkce \lstinline|remember|. Klíčové slovo \lstinline|by| je syntactic sugar, který deleguje vrácení hodnoty na funkci \lstinline|remember|. Pro nás to znamená jenom to, že typ proměnné \lstinline|expanded| je Boolean a ne State<Boolean>. Pracuje se s tím pak lépe. 
+
+\begin{lstlisting}[caption={Příklad composable funkce používající lokální stav.}, label={lst:jc-state}, tabsize=2]
+	@Composable
+	private fun MyExpandableContent() {
+		var expanded by remember {mutableStateOf(false)}
+		
+		Row {
+			if (expanded) {
+				Text(text = "Zbytek obsahu")
+			}
+			Button(onClick = { expanded = !expanded },
+			) {
+				Text(text = "Klikni pro zobrazeni zbytku obsahu")
+			}
+		}
+	}
+\end{lstlisting}
+
+\noindent Mnohem obvyklejší je však stav zapouzdřit do ViewModelu, který je určený k ukládání stavu UI, jak je ukázáno na (\ref{lst:jc-viewmodel}). ViewModel si pamatuje stav i při navigaci na jinou obrazovku a zpět. Díky může data stažená např. z internetu přepoužít a nemusí je zbytečně stahovat vícekrát, pokud se data málo mění.
+
+\begin{lstlisting}[caption={Příklad composable funkce používající stav z ViewModelu.}, label={lst:jc-viewmodel}, tabsize=2]
+@Composable
+private fun MyExpandableContent(viewModel: MyViewModel) {
+    val expanded = viewModel.expandeed
+
+		Row {
+			if (expanded) {
+				Text(text = "Zbytek obsahu")
+			}
+			Button(onClick = { viewModel.toggleExpanded() },
+			) {
+				Text(text = "Klikni pro zobrazeni zbytku obsahu")
+			}
+		}
+}
+
+class MyViewModel : ViewModel() {
+	val expanded = mutableStateOf(false)
+	
+	fun toggleExpanded() {
+		expanded = !expanded
+	}
+}
+\end{lstlisting}
 
 \noindent zdroj:
 https://developer.android.com/jetpack/compose/mental-model
 
-\subsubsection*{Základní composable funkce}
+\subsubsection*{Activity}
+Aktivita je jedna z hlavních komponent aplikace a reprezentuje obrazovku, do které vkládáme naše uživatelské rozhraní. V rámci aplikace je použita především jako vstupní bod pro vytvoření UI a pro počáteční inicializace stavu aplikace. Aktivita se může nacházet v různých stavech podle toho, zda ji má uživatel v popředí nebo pozadí, nebo zda ji vypíná. Nás bude zajímat především stav, kdy je aktivita poprvé vytvořena, tedy když je aplikace spuštěna. Pro detekci tohoto stavu poskytuje aktivita funkci \lstinline|onCreate|, která se zavolá, když je aktivita vytvořena. V této funkci lze pak provádět žádané operace (\ref{lst:main-activity}). Funkce \lstinline|setcontent| vezme composable funkci \lstinline|PspApp|, zakomponuje ji do aktuální aktivity a nastaví ji jako kořenovou composable funkci.
 
-\noindent Pro sestavení komponent pro uživatelské rozhraní byly použity následující nativní composable funkce:
+\begin{lstlisting}[caption={Třída MainActivity. (Soubor \lstinline|psp_fe/app/MainActivity|}), label={lst:main-activity}, tabsize=2]
+class MainActivity : ComponentActivity() {
 
-\begin{itemize}
-	\item \textbf{Column} - Slouží pro umístění  komponent do sloupce. Tato funkce má dvě nevýhody. První je ta, že komponenty, které se nevejdou do obrazovky, přetečou a nelze k nim nascrollovat. Druhá je ta, že komponenty mimo obrazovku jsou stále vykreslovány a stále dochází u nich zbytečně k rekompozici, což má negativní vliv na výkon aplikace. Funkce se tedy hodí na pozicování komponent různých typů (např. hlavička, pod ní obsah a pod něm dolní navigace) a nehodí se pro dlouhé seznamy.
-
-	\item \textbf{LazyColumn} - Slouží pro umístění velkého množství komponent (více než se vejde na obrazovku) do sloupce. Sloupcem lze scrollovat, pokud komponenty přesahují obrazovku. Ke kompozici a rekompozici dochází pouze u komponent, které jsou viditelné na obrazovce. Výhodou této funkce je tedy dobrý výkon i při velkém množství elementů ve sloupci. Používá se pro vytváření dlouhých seznamů.
-
-	\item \textbf{Row} - Slouží pro umístění komponentů do řádku. Jinak funguje obdobně jako funkce Column.
-
-	\item \textbf{Text} - Slouží pro vykreslení textu.
-
-	\item \textbf{Image} - Slouží pro vykreslení obrázku. Obrázek specifikujeme pomocí URL adresy nebo cesty k souboru v souborovém systému.
+	...
 	
-	\item \textbf{Icon} - Slouží pro vykreslení ikonky. Používáme se pro ikonky. Od funkce Image se liší tím, že lze využít ikonky poskytované knihovnou Material Design, která bude popsána v následujících sekcí.
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		
+		...
+		
+		setContent {
+			PspApp()
+		}
+	}
 
-	\item \textbf{Button} - Slouží pro vykreslení tlačítka. 
-\end{itemize}
+	...
+\end{lstlisting}
 
-\subsubsection*{Další použité composable funkce}
+\subsubsection*{Implementace prezentační vrstvy}
+\label{sssec:impl-ui}
+Popis implementace prezentační vrstvy je rozděleno na popis implementace uživatelského rozhraní a popis implementace držitelů stavů a logiky. Nejdřív bude popsána první implementace a po ní druhá. 
+
+Uživatelské rozhraní bylo implementováno pomocí knihovny Jetpack Compose. Pro implementaci byly použity následující composable funkce:
 
 \begin{itemize}
-	\item \textbf{Scaffold} - Tato funkce poskytuje rozhraní pro strukturování obrazovky do různých sekcí. Tato aplikace ji využívá ke umísťování horní lišty, hlavního obsahu, dolní navigace a plovoucího tlačítka.
-	\item \textbf{BottomNavigation} - Dolní navigační lišta pro navigace mezi různými obrazovkami. 
-	\item \textbf{Divider} - Vizuální oddělovač oddělující různé sekce obrazovky pro lepší orientování se v UI.
-	\item \textbf{CompositionLocalProvider} - 
-	\item \textbf{IconButton} - Tlačítko vizuálně reprezentované ikonkou. 
-	\item \textbf{FloatingActionButton} - Plovoucí tlačítko reprezentující hlavní akci na obrazovce jako např. vytvoření nebo ukládání nějakého objektu. Používá se také pro skok na začátek scrollovatelného seznamu.
-	\item \textbf{TabRow} - Lišta karet pro navigaci mezi různými obrazovkami. Obrazovkám se v kontextu této funkce říká taby.
-	\item \textbf{Tab} - Tab, ke které se naviguje pomocí funkce \lstinline|TabRow|
-	\item \textbf{HorizontalPager} - Kontejner pro horizontální scrollování mezi taby.
+	\item Column - Sloupcový kontejner pro elementy. Hodí se pro pozicování UI elementů na obrazovce. Nehodí se pro dlouhé seznamy elementů ve sloupci, jelikož nedělá rekompozici pouze viditelných elementů, ale všech. Nejde jím scrollovat. Používám ji ve všech místech, kde je potřeba napozicovat UI elementy pod sebou.
+	\item LazyColumn - Sloupcový kontejner pro element zoptimalizovaný pro dlouhé seznamy. Dělá rekompozici pouze pro viditelné elementy. Lze jím scrollovat. Používám ji pro zobrazení seznamů, tedy na obrazovce pro seznam hlasování, seznam poslanců, seznam hlasování jednotlivých klubů a seznam hlasování poslance.
+	\item Row - Řádkový kontejner pro elementy.
+	\item Text - Textový element.
+	\item Image - Obrázkový element. Obrázek lze získat pomocí URL adresy. Používám ho pro zobrazení profilové fotky poslance a logů klubů.
+	\item Icon - Funkce pro různé ikonky, např. pro ikonky v hlavičce nebo v dolní liště.
+	\item IconButton - Tlačítko, který má místo textu ikonky. Používám ji hlavičce pro vytvoření ikonky pro vyhledávání v seznamu hlasování nebo poslanců.
+	\item OutlinedButton - Tlačítko s kontrastem barev mezi pozadím a obvodem.
+	\item OutlinedTextField - Textové pole s kontrastem barev mezi pozadím a obvodem.
+	\item FloatingActionButton - Plovoucí tlačítko. Používám ji pro skok na začátek seznamu.
+	\item Scaffold - Kontejner umožňující jednoduchým způsobem sdílet UI element mezi více obrazovkami. Umožňuje také jednoduchým způsobem přidat plovoucí tlačítko.
+	\item TopAppBar - Horní lišta.
+	\item Spacer - Vytváří mezeru mezi dvěma UI elementy. zda je mezera horizontální nebo veritkální, specifikujeme skrz parametr.
+	\item Divider - Oddělovač. Dá se nastavit na vertikální nebo horizontální.
+	\item CompositionLocalProvider - Umožňuje přepsat hodnotu kontextu. Používám ji pro lokální přepsání globálních barev.
+	\item Box - Kontejner umožňující skládat UI elementy na sebe. Používám ho pro vytvoření popupu s nastavením volebního období v nastavení. Na pozadí je seznam nastavení a na něm se objeví daný popup.
+	\item SettingsMenuLink - Composable funkce z knihovny Alorma pro snadné vytvoření prvku v seznamu nastavení přesně podle návrhu. Knihovna ji definuje defaultní vzhled.
+	\item ListItemPicker - Composable funkce z knihovny Alorma reprezentující seznam hodnot, kterým lze scrollovat. Knihovna ji definuje defaultní vzhled.
+	\item Card - Karta obsahující libovolný obsah a prvek pro akci. Používám ji např. pro elementy v seznam hlasování.
+	\item TabRow - Lišta s taby. Používám ji na obrazovce s detailem hlasování a na obrazovce s detailem poslance.
+	\item Tab - Reprezentuje konkrétní obrazovku v rámci tabu.
+	\item HorizontalPager - Layout umožňující horizontálne scrollovat obsahem. Používám ho pro scrollování mezi taby.
 \end{itemize}
 
-\subsection {Komunikace s API}
+\vspace{10px}
 
-\subsection {Doménová vrstva}
+\noindent Stav UI a logika pro obsluhu změn UI jsou zapouzdřeny v držitelích stavů a logiky, což jsou view modely. Jsou to objekty, s kterými komunikuje Jetpack Compose pro získání dat nebo pro informování o nějaké události. Na (\ref{lst:view-model}) lze vidět ukázku využití view modelu. Na začátku view modelu se nachází stav pro seznam hlasování. \lstinline|PagingData| je datový typ pro stránkovaný obsah. \lstinline|MutableStateFlow| je datový typ pro flow, který lze měnit. Flow je vyžadován pro implementaci stránkování pomocí \lstinline|PagingData|. Vně view je viditelná pouze imutabilní verze stavu \lstinline|StateFlow|. Pro bezpečnost se se stavem dá manipulovat pouze uvnitř view modelu. Při spuštění view modelu se proveden coroutinová operace v rámci scopu view modelu. To znamená, že pokud je view model odstraněn, zruší se i coroutinová operace. Coroutina získává data pomocí funkce \lstinline|getVotes|. Ta vyžaduje volební rok a klíčová slova pro filtrování seznamu. Jakmile se změní jedna z těchto dvou hodnot, měly by se stáhnout nová data. Obě hodnoty jsou implementeovány jako flow, a proto je nejdřív kombinujeme a zavoláme na nich terminální operátor \lstinline|collectLatest|. Emitované hodnoty se pomocí \lstinline|cachedIn(viewModelScope)|zakešují v rámci view modelu. To znamená, že pokud se na daném flow opět zavolá terminální operátor v jiné části kódu, vrátí se zakešovaná hodnota. 
 
-\subsection {Repozitář}
+\begin{lstlisting}[caption={Ukázka využití view modelu}, label={lst:view-model}, tabsize=2]
+// Soubor VoteListViewModel.kt
+class VoteListViewModel(
+...
+): ListViewModel(...) {
+	
+	private val _votes: MutableStateFlow<PagingData<Vote>> =
+	MutableStateFlow(PagingData.empty())
+	val votes: StateFlow<PagingData<Vote>> = _votes
+	
+	init {
+		viewModelScope.launch {
+			currentElectionYear.combine(searchText, ::Pair)
+			.collectLatest { pair ->
+				getVotes(pair.first, pair.second)
+				.cachedIn(viewModelScope)
+				.collect { votes ->
+					_votes.value = votes
+				}
+				
+			}
+		}
+	}
+	
+}
+\end{lstlisting}
 
-\subsection {Komunikace s API}
+\vspace{10px}
 
-\subsection*{Adresářová struktura}
-Zde bude popsána adresářová struktura. Popsány budou pouze takové soubory a složky, které stačí pro pochopení projektu. Projekt totiž obsahuje mnoho souborů, které jsou vygenerované Android Studiem, ale nejsou důležité pro pochopení projektu.
+\noindent Navigace mezi obrazovkami je implementována pomocí composable funkce \lstinline|NavHost|, která definuje jednotlivé destinace. Destinace reprezentuje obrazovku, ke které lze pomocí této funkce navigovat. Destinace je reprezentována řetězcem. Např. destinace pro seznam hlasování se nazývá "votes". Pro samotnou navigaci se používá objekt \lstinline|NavHostController|, na které zavoláme metodu \lstinline|navigate| a předáme ji název destinace, ke které chceme navigovat. Pro navigaci k detailu hlasování nebo poslance používá sepcifičtější název destinace, např. "votes/1234" nebo "member/5678".
+
+\subsubsection*{Implementace doménové vrstvy}
+Ukázka implementace doménové vrstvy pro seznam hlasování (\ref{lst:use-case-vote}). Objekt \lstinline|Pager| je vstupním bodem pro stránkovací mechanizmus. Nastavujeme mu defaultní velikost stránky, v době psaní práce je to 20. Dále mu předáme \lstinline|VotesPagingSource| reprezentující zdroj stránkovaných dat. Pager poskytuje proměnnou flow, která bude emitovat stránky. \lstinline|flowOn| nastaví, aby sbírání flow probíhalo na speciálním vlákně IO, aby neprobíhalo na hlavním vlákně. Není to nutné díky používání coroutinů, ale je to dobrá praxe to používat pro síťové operace.
+
+\begin{lstlisting}[caption={Ukázka využití use caseu pro získání seznamu hlasování}, label={lst:use-case-vote}, tabsize=2]
+// Soubor GetVotesUseCase.kt
+class GetVotesUseCase @Inject constructor(...) {
+	
+	operator fun invoke(electionYear: Int, searchText: String) = Pager(
+		PagingConfig(pageSize = DEFAULT_PAGE_SIZE)
+	) {
+		VotesPagingSource(
+			voteRepository = voteRepository,
+			electionYear = electionYear,
+			searchText = searchText
+		)
+	}
+	.flow
+	.flowOn(Dispatchers.IO)
+	
+}
+\end{lstlisting}
+
+\noindent Doménové vrstvy pro obrazovky, které nepoužívají seznam, jsou přímočařejší. Ukázku takového use caseu lze vidět na (\ref{lst:use-case-vote-detail}).
+
+\begin{lstlisting}[caption={Ukázka využití use caseu pro získání detailu hlasování}, label={lst:use-case-vote-detail}, tabsize=2]
+// Soubor GetVoteDetailUseCase.kt
+class GetVoteDetailUseCase @Inject constructor(...) {
+	
+	operator fun invoke(id: Int): Flow<VoteDetails> =
+		voteRepository.getVoteDetail(id)
+		.flowOn(Dispatchers.IO)	
+}
+\end{lstlisting}
+
+\subsubsection*{Implementace datové vrstvy}
+Datová vrstva slouží pro abstrahování doménové vrstvy od konkrétních datových zdrojů. V aplikaci je použit jediný datový zdroj, a to vzdálený pro získání data z backendu. V datové vrstvě jsou získávána data z datového zdroje v podobě síťových entit. Ty jsou následně namapována na doménové entity pro použití doménovou vrstvou. Ukázka použití je na (\ref{lst:use-case-repository}).
+
+\begin{lstlisting}[caption={Ukázka datové vrstvy pro data o hlasováních}, label={lst:use-case-repository}, tabsize=2]
+class VoteRepositoryImpl @Inject constructor(...) : VoteRepository {
+	
+	override suspend fun getVotes(
+		page: Int,
+		size: Int,
+		electionYear: Int,
+		searchText: String
+	): List<Vote> =
+	pspRemoteDataSource.getVotes(
+		page = page,
+		size = size,
+		electionYear = electionYear,
+		searchText = searchText
+	).map { it.toDomain() }
+	
+	...
+}
+\end{lstlisting}
+
+\vspace{10px}
+\noindent Datové zdroje jsou pouze abstrakcí nad konkrétním rozhraním pro získání daného zdroje. Vzdálený datový zdroj tedy abstrahuje datovou vrstvu od přímé komunikace s knihovnou pro získání dat z internetu. Na (\ref{lst:data-source}) je ukázka datového zdroje. Funkce \lstinline|getAppState()| pouze zavolá funkci definovanou pomocí knihovny Retrofit, která bude popsána v následující sekci.
+
+\begin{lstlisting}[caption={Ukázka datového zdroje}, label={lst:data-source}, tabsize=2]
+class PspRemoteDataSourceImpl @Inject constructor(
+	private val pspApi: PspApi
+) : PspRemoteDataSource {
+	
+	override suspend fun getAppState() = 
+		pspApi.getAppState()
+		
+	...
+}
+\end{lstlisting}
+
+\subsubsection*{Implementace síťové vrstvy}
+
+\noindent Síťová vrstva je implementována pomocí knihovny Retrofit. Je to HTTP klient pro komunikaci se zdroji na internetu. Aplikaci ho používá pro získání veškerých dat z backendu. Na (\ref{lst:retrofit-votes}) je ukázka použití. URL adresu daného zdroje specifikujeme pomocí anotace \lstinline|@GET|. Pomocí anotací \lstinline|Query| specifikujeme query parametry pro jako číslo stránky a počet stránek. Návratovou hodnotou je seznam API entit. Implementaci této funkce má na starosti knihovna. Data z backendu jsou ve formátu JSON a jsou namapována na objekt v návratovém typu.
+
+\begin{lstlisting}[caption={Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}, label={lst:retrofit-votes}, tabsize=2]
+interface PspApi {
+	
+	@GET("/api/vote")
+	suspend fun getVotes(
+		@Query("page") page: Int,
+		@Query("size") size: Int = DEFAULT_PAGE_SIZE,
+		@Query("sortBy") sortBy: String = DEFAULT_VOTE_SORT_BY,
+		@Query("order") order: String = DEFAULT_ORDER,
+		@Query("electionYear") electionYear: Int
+	): List<VoteApiEntity>
+	
+}
+\end{lstlisting}
+
+zdroj: https://square.github.io/retrofit/
 
 \section{Backend}
 
@@ -239,5 +482,3 @@ Spring Boot je framework založený na Springu a je opinionated s cílem zjednod
 	\item Mají lepší ochranu proti úniku paměti.
 	Coroutina může volat další coroutiny. Rodičovská vždy před jejím ukončením počká na to, až dojedou všechny potomkové coroutiny, díky čemuž se vyhneme úniku dat.
 \end{itemize}
-
-\subsubsection* {Kotlin Flows}
