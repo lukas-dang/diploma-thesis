@@ -1,54 +1,98 @@
 \chapter{Implementace}
 \setcounter{page}{1}
 
-Tato kapitola se zabývá popisem použitých technologií při vývoji mobilní aplikace a backendu,
-a způsoby jejich aplikace.
+Tato kapitola se zabývá implementací mobilní aplikace a backendu. Kapitola je rozdělena na dvě podkapitoly: jednu pro popis implementace mobilní aplikace a druhou pro popis implementace backendu.
 
 \section{Mobilní aplikace}
 
-\subsection{Programocí jazyk}
+V rámci této podkapitoly bude popsána implementace mobilní aplikace. Kapitola je rozdělena do několika sekcí. Na začátku budou popsány nástroje a technologie použité pro implementaci. Následné bude popsána adresářová struktura projektu. Poté bude popsána implementace uživatelského rozhraní. Na konci bude popsána implementace síťové vrstvy pro komunikaci s backendem.
 
-\subsubsection *{Kotlin}
-Pro mobilní aplikaci byl použit programovací jayzk Kotlin (zdroj: https://kotlinlang.org/), který je od roku 2017 preferovaným jazykem pro Android (zdroj: https://techcrunch.com/2019/05/07/kotlin-is-now-googles-preferred-language-for-android-app-development/). Původním programovacím jayzkem pro Android byla Java (zdroj: https://www.oracle.com/java/), Kotlin má však oproti němu několik výhod. Kód psaný v Kotlin je:
-
-\begin{itemize}
-    \item \textbf{stručný} - Kotlin umožňuje vytvořit 
-    singleton pomocí klíčového slova \lstinline{object}. (zdroj: https://kotlinlang.org/docs/object-declarations.html)
-    \item \textbf{bezpečný} - Kotlin rozlišuje null a non-null datové typy. Non-null typy lze dereferencovat vždy, null typy pouze po kontrole výskytu hodnoty null. To je vynuceno typovým systémem Kotlinu. Díky tomu není možné zkompilovat kód, v kterém by se dereferencovala hodnota null, kvůli čemuž by aplikace spadla. (zdroj: https://kotlinlang.org/docs/null-safety.html)
-    \item \textbf{expresivní} - Kotlin byl navržen s důrazem na výstižnost kódu, což přispívá k čitelnosti kódu
-\end{itemize}
-
-\subsubsection *{Kotlin Coroutine}
-Kotin Coroutine je návrhový vzor, který umožňuje psaní asynchronního kódu, který je intuitivní a efektivní. Asynchronní kód je takový kód, který neblokuje aktuální vlákno. Takový kód se hodí např. pro síťové nebo databázové operace. Z uživatelského hlediska je zajištění asynchronicity dlouhotrvajícího kódu důležité především proto, aby se nezablokovalo vlákno, které má na starosti vykreslování obrazovky a obsluhu událostí jako kliknutí na tlačítko. U Androidí aplikace se tomuto vláknu říká hlavní vlákno a při jejím delším zablokování může uživatelovi naskočit chyba, že aplikace nereaguje na události.
-
-Asynchronní kód lze implementovat i pommocí vláken. Coroutines však mají oproti vláknům následující výhody:
-
-\begin{itemize}
-	\item Zabírají méně paměti a lze jich spustit více najednou než vláken. Při vytvoření příliš velkého množství vláken se může zahltit procesor. Vytvořením coroutine se však nevytvoří nové vlákno, ale běží v rámci něj. To znamená, že lze vytvořit tisíce coroutines v rámci jednoho vlákna, které by běžely všechny plynule a asynchronně.
-	\item Mají lepší ochranu proti úniku paměti.
-	Coroutina může volat další coroutiny. Rodičovská vždy před jejím ukončením počká na to, až dojedou všechny potomkové coroutiny, díky čemuž se vyhneme úniku dat.
-\end{itemize}
-
-\subsubsection* {Kotlin Flows}
-
-\subsection{Android SDK}
-Android SDK open-source platforma, která poskytuje kolekce nástrojů a API pro vývoj a testování mobilních aplikací, včetně vývojového prostředí, knihoven, emulátoru a testovacích nástrojů.
-
-\subsection {Android Studio \& Android Emulator}
+\subsection{Použité nástroje a technologie}
+V této sekci budou popsány použité nástroje a technologie, včetně použitých knihoven pro implementaci mobilní aplikace.
 
 \subsubsection *{Android Studio}
+Mobilní aplikace byla vytvořena ve vývojovém prostředí Android Studio, což je oficiální IDE pro vývoj mobilních aplikací pro Android. Některé jeho vlastnosti:
 
-Mobilní aplikace byla vyvíjena ve vývojovém prostředí (dále jen IDE) Android Studio. Byl vyvinut Googlem v roce 2013 a je to preferované IDE pro vývoj Androidích aplikací. Poskytuje napovídání při psaní kódu, automatické dokončování kódu, kontrolu chyb a možnost snadného refaktoringu. Dále poskytuje nástroje pro testování a debugování mobilní aplikace. Obsahuje podporu pro často používané frameworky jako Gradle pro automatické sestavování programu a Android SDK pro sadu vývojových nástrojů.
+\begin{itemize}
+	\item \textbf{Podpora pro Android} - Pro vývoj mobilních aplikací pro Android je Android Studio velmi uživatelsky přívětivé. Po spuštění IDE se hned zobrazí průvodce pro instalaci Android SDK obsahující nástroje potřebné pro vývoj aplikací. Po instalaci lze SDK rovnou použít. Není tedy třeba Android SDK manuálně instalovat z internetu a nakonfigurovat s IDE. IDE Dále poskytuje průvodce pro vytvoření projektu, pomocí kterého lze vybrat jednu z existujích šablon pro různé typy projektů. Konfiguraci projektu si uživatel tedy nakliká a IDE se postará o zbytek, tedy vytvoří projektový adresář se všemi potřebnými konfiguračními soubory a počáteční kostru aplikace. Po vytvoření projektu je již k dispozici zatím prázdná, ale spustitelná aplikace.
+	
+	\item \textbf{Emulátor} - Android Studio poskytuje vestavěný emulátor, který emuluje fyzicka mobilní zařízení. Díky tomu může uživatel testovat své aplikace na různých zařízeních s různými konfiguracemi (např. rozměry zařízení, verze Androidu).
+		
+	\item \textbf{Klávesové zkratky} - Jeden z hlavních důvodů pro používání IDE založených od JetBrains jsou klávesové zkratky, které jsou stejné pro všechna IDE od JetBrains. Tyto zkratky zrychlují navigaci v kódu a zvyšují produktivitu vývojáře.
+\end{itemize}
 
-zdroj: https://developer.android.com/studio
+\noindent zdroj: https://developer.android.com/studio
 
-\subsubsection *{Android Emulator}
+\subsubsection *{Gradle}
+Gradle je nástroj pro automatizaci sestavování programu, tj. automatizace kompilace zdrojového kódu a zabalení výsledného binárního kódu spolu s dalšími zdroji, které zdrojový kód využívá. Toto jsou další výhody Gradlu: 
 
-Pro manuální testování mobilní aplikace byl použit Android Emulator, který simuluje fyzické mobilní zařízení. Jeho výhodou je možnost spouštění, testování a debugování různých modelů zařízení bez jejich vlastnictví. Další výhodou je, že emulátor je vestavěný do IDE vedle zdrojového kódu. Nevýhodou je jeho paměťová a výpočetní náročnost. Při 8 GB operační paměti se emulátor a celé zařízení sekalo, jelikož paměť byla téměř celá využita. od 12 GB již běžel plynule. Emulátor je součástí knihovny Android SDK.
+\begin{itemize}
+	\item \textbf{Gradle Pluginy} - Poskytují Gradlu další nástroje jako např. možnost kompilovat Kotlinu, parsovat anotace nebo generovat kód na základě konfiguračního souboru. 
+	
+	\item \textbf{Externí knihovny} - Pomocí Gradlu lze specifikovat externí knihovny, které se mají automaticky nainstalovat a naimportovat do aplikace pro použití.
+	
+	\item \textbf{Konfigurace} - Gradle umožňuje konfigurovat pluginy a Android. konfigurace pluginu závisí na daném pluginu. U Androidu lze konfigurovat např. SDK verzi, verzi Kotlinu, aktivaci Jetpack Compose toolkitu. Konfigurací se detailněji zabývá podkapitola o konfiguraci Androidu.
+\end{itemize}
 
+zdroj: https://gradle.org/
 
+\noindent Alternativou nástroje Gradle je Maven, který lze také použít pro vývoj mobilní aplikace pro Android. Oba mají své výhody a nevýhody pro různé situace. Rozhodl jsem se však pro Gradle, jelikož při vytváření projektu v Android Studiu nebyla možnost výběru mezi Gradlem a Mavenem. Projekt byl automaticky nakonfigurován pomocí Gradlu. Předpokládám tedy, že Google preferuje Gradle jako nástroj pro tento účel. Maven by se musel nakonfigurovat manuálně, což by pro zprovoznění aplikace bylo časově náročné, a nejspíš i zbytečné. Pokud by však byla jednoduchá možnost, jak zvolit Maven jako nástroj, přesto bych zvolil Gradle, jelikož konfigurace v Gradlu je psána v programovacím jazyce Groovy, který je pro mě mnohem čitelnější než XML, v kterém je psána konfigurace pro Maven.
 
-zdroj: https://developer.android.com/studio/run/emulator
+\subsubsection *{Kotlin}
+Pro mobilní aplikaci byl použit programovací jayzk Kotlin, který je od roku 2017 preferovaným jazykem pro Android. Původním programovacím jayzkem pro Android byla Java.	 Kotlin má však oproti němu několik výhod. Toto jsou výhody Kotlinu:
+
+\begin{itemize}
+    \item \textbf{Je stručný} - Kotlin umožňuje vytvořit 
+    singleton pomocí klíčového slova \lstinline{object}.
+    
+    \item \textbf{Je bezpečný} - Kotlin rozlišuje null a non-null datové typy. Non-null typy lze dereferencovat vždy, null typy pouze po kontrole výskytu hodnoty null. To je vynuceno typovým systémem Kotlinu. Díky tomu není možné zkompilovat kód, v kterém by se dereferencovala hodnota null, kvůli čemuž by aplikace spadla.
+    
+    \item \textbf{Je expresivní} - Kotlin byl navržen s důrazem na výstižnost kódu, což přispívá k čitelnosti kódu
+\end{itemize}
+
+\noindent Dalším důvodem pro použití Kotlinu souvisí s dlouze běžícími blokujícími operacemi jako např. síťovými a databázovými operacemi. Aplikace běží defaultně na hlavním vláknu, které má na starosti vykreslování obrazovky a obsluhu událostí (např. kliknutí na tlačítko a scrollování). Pokud na něm provedeme dlouze běžící blokující operaci, vlákno se zablokuje na delší dobu a nebude moct obsluhovat události. Uživatelovi se pak aplikace jeví jako zamrznutá. Možným řešením pro tento problém je vytvoření nového vlákna, které bude běžet paralelně s hlavním vlákenm a které bude provádět danou blokující operaci. Operace bude blokovat nově vytvořené vlákno, nebude však blokovat hlavní vlákno, díky čemuž bude uživatel stále moct interagovat s aplikací, i když blokující operace stále běží. Tvorba vláken a jejich správa jsou však drahé operace. 
+
+Alternativním řešením jsou proto \textbf{Kotlin Coroutines}, které umožňují provádět operace paralelně bez nutnosti vytvoření nového vlákna. Coroutina je kus kódu, který je suspendovatelný. To znamená, že ho lze pomocí určitých metod pozastavit (také suspendovat), dokud nebude operace hotová, a tím uvolnit aktuální vlákno pro použití jinde. To se hodí např. pro síťové operace, která stahuje data z internetu. Fungovalo by to tak, že danou síťovou operaci obalíme do coroutiny a až pak operaci provedeme. Ve chvíli kdy operace začne stahovat data z internetu, coroutinu suspendujeme, čímž uvolníme aktuální vlákno pro použití jinde. Jakmile jsou data stažena, kód v suspendované coroutině automaticky pokračuje. To vše probíhá na jednom vlákně. Ukážeme si příklad použití coroutiny je na (\ref{lst:coroutine}).
+
+\begin{lstlisting}[caption={Příklad použití coroutiny}, label={lst:coroutine}, tabsize=2]
+fun main() = runBlocking {
+	launch {
+		delay(1000L)
+		println("World!")
+	}
+	println("Hello")
+}
+\end{lstlisting}
+
+\noindent Metoda \lstinline|runBlocking| vytvoří tzv. scope, v rámci kterého je vytvořena coroutina pomocí metody \lstinline|launch|. Scope vymezuje životnost coroutinů, které v něm běží. To je užitečné pro zabránění úniku dat. Např. když uživatel spustí aplikaci a pomocí coroutinu se začnou stahovat data z internetu, a aplikaci hned zavře, díky scopu coroutina přestane stahovat data a je zrušena. V rámci metody \lstinline|launch| specifikujeme funkci, která je suspendovatelná, tj. lze ji pozastavit, a tím uvolnit aktuálkní vlákno. Coroutina v tuto chvíli běží sekvenčně se zbytkem kódu, dokud není suspendována. V tomto případě je suspendována pomocí funkce \lstinline|delay|, která ji suspenduje na 1 sekundu. V tuto chvíli je aktuální vlákno uvolněno a je proveden kód následující bezprostředně za coroutinou a vypíše se Hello. V tuto chvíli program ještě neskončí, scope totiž vždy čeká na to, až všechny její coroutiny doběžely. Po 1 sekundě suspendovaná coroutina opět pokračuje a vypíše řetězec World.
+
+Kód (\ref{lst:coroutine-practical}) ilustruje praktičtější příklad, kdy voláme funkci \lstinline|fetchDataFromApi()|, která stahuje data z API a interně operaci suspenduje, díky čemuž se uvolní vlákno a funkce \lstinline|handleUserInteraction()| pro interakci s uživatelem může být spuštěna ještě před tím, než přijdou data. Až přijdou data, coroutina opět poběží a na základě získaných dat aktualizuje UI pomocí funkce \lstinline|updateUi()|.
+
+\begin{lstlisting}[caption={Praktický příklad použití coroutiny}, label={lst:coroutine-practical}, tabsize=2]
+	fun main() = runBlocking {
+		launch {
+			val data = fetchDataFromApi()
+			updateUi(data)
+		}
+		handleUserInteraction()
+	}
+\end{lstlisting}
+
+Coroutines mají narozdíl od vláken několik výhod: a zabírají méně paměti a zabraňují lépe únikům dat. 
+
+zdroj: https://kotlinlang.org/docs/object-declarations.html
+zdroj: https://kotlinlang.org/docs/null-safety.html
+zdroj: https://kotlinlang.org/
+zdroj: https://techcrunch.com/2019/05/07/kotlin-is-now-googles-preferred-language-for-android-app-development/
+zdroj: zdroj: https://www.oracle.com/java/
+zdroj: https://developer.android.com/kotlin/coroutine
+
+\subsubsection*{Activity}
+Aktivita je jedna z hlavních komponent aplikace a reprezentuje obrazovku, do které vkládáme naše uživatelské rozhraní. V rámci aplikace je použita především jako vstupní bod pro vytvoření UI a pro počáteční inicializace stavu aplikace. Aktivita se může nacházet v různých stavech podle toho, zda ji má uživatel v popředí nebo pozadí, nebo zda ji vypíná. Nás bude zajímat především stav, kdy je aktivita poprvé vytvořena, tedy když je aplikace spuštěna. Pro detekci tohoto stavu poskytuje aktivita funkci \lstinline|onCreate|, která se zavolá, když je aktivita vytvořena. V této funkci lze pak provádět žádané operace.
+
+zdroj: https://developer.android.com/reference/android/app/Activity
+
+\subsubsection*{Lifecycles}
 
 \subsection {Implementace uživatelského rozhraní}
 Uživatelské rozhraní lze implementovat dvěma způsoby:
@@ -68,7 +112,8 @@ Implementace uživatelského rozhraní pomocí XML layoutů využívá externí 
 zdroj: https://developer.android.com/develop/ui/views/layout/declaring-layout
 
 \subsubsection*{Jetpack Compose}
-Jetpack Compose je Androidem doporučený způsob pro implementaci uživatelského rozhraní. Narozdíl od XML layoutů nevytváříme rozhraní pomocí tagů, ale voláním funkcí, které reprezentují určité elementy jako např. řádek, sloupec, text, obrázek a tlačítko. Tyto funkce psány jsou psány přímo v programovacím jazyce, v kterém je aplikace vyvíjena (v mém případě je to Kotlin). Pomocí parametrů těchto funkcí lze pak měnit vzhled těchto elementů, např. barvu, velikost, text, ale také callback funkce pro různé událost jako kliknutí na tlačítko. Tyto základní funkce lze skládat a tím vytvořit vlastně definovanou funkci. Všem funkcím, které reprezentují nějaký vykresletelný element, ať už nativní nebo vlastní definovaný, říkáme compose funkce a anotujeme je anotací @compose.  Síla tohoto přístupu spočívá v tom, že rozhraní "programujeme" pomocí programovacího jazyka, a tudíž můžeme využít sílu programové konstrukty tohoto jazyka jako např. cykly pro vykreslení více elementů najednou nebo podmínky pro podmíněné vykreslování. Vytváření rozhraní je díky tomu rychlejší a intuitivnější.
+\label{sssec:jetpack-compose}
+Jetpack Compose je Androidem doporučený způsob pro implementaci uživatelského rozhraní. Rozhraní je implementováno voláním speciálních funkcí, které reprezentují určité komponenty jako např. řádek, sloupec, text, obrázek, tlačítko. Na základě těchto funkcí knihovna Jetpack Compose vykreslí dané komponenty na obrazovku. Knihovna poskytuje funkce pro vykreslování základních komponent. Tyto základní komponenty lze mezi sebou kombinovat, a tím vytvořit vlastně složitější, vlastně definované komponenty.  Pomocí parametrů těchto funkcí lze měnit vzhled nebo chování komponent jako např. barvu, velikost, text, nebo callback funkce, která se zavolá v reakci na kliknutí na tlačítko. Výhodou tohoto přístupu spočívá v tom, že uživatelské rozhraní je vytvářeno pomocí programovacího jazyka, a tudíž lze používat programové konstrukty jako např. cykly pro vykreslení seznamu elementů nebo podmínky pro podmíněné vykreslování. Implementace rozhraní je díky tomu jednodušší.
 
 zdroj: https://developer.android.com/jetpack/compose
 
@@ -77,8 +122,39 @@ zdroj: https://developer.android.com/jetpack/compose
 
 \vspace*{10px}
 \noindent zdroj: https://developer.android.com/develop/ui/views/layout/recyclerview
-
 \noindent zdroj: https://developer.android.com/jetpack/compose/lists
+
+\vspace*{10px}
+
+\subsubsection*{Composable funkce}
+Jak již bylo popsáno v (\ref{sssec:jetpack-compose}), základním stavebním kamenem pro tvorbu uživatelského rozhraní pomocí knihovny Jetpack Compose jsou funkce. Těmto funkcím se říká \textit{composable} funkce a poznáme je tak, že v deklaraci mají anotaci @Composable. Jednoduchým příkladem composable funkce, kterou knihovna poskytuje, je funkce \lstinline|Text|, která vykreslí text předaný pomocí parametru \lstinline|text|. (\ref{lst:jc-text})
+
+\begin{lstlisting}[caption={Příklad použití composable funkce Text.}, label={lst:jc-text}]
+Text(text = "Vysledky hlasovani")
+\end{lstlisting}
+
+\noindent Composable funkce lze kombinovat do složitější composable funkce (\ref{lst:jc-combine}).
+
+\begin{lstlisting}[caption={Příklad skládání composable funkcí. Vykreslí ikonku a text vedle sebe.}, label={lst:jc-combine}, tabsize=2]
+Row {
+	Icon(
+		imageVector = Icons.Filled.ArrowBack,
+		contentDescription = "Tlacitko zpet",
+	)
+	Text(text = "Detail hlasovani)
+}
+\end{lstlisting}
+
+\noindent Pomocí parametrů lze měnit i vzhled a chování composable funkce. (\ref{lst:jc-parameters})
+
+\begin{lstlisting}[caption={Příklad parametrů pro změnu vzhledu a chování.}, label={lst:jc-parameters}, tabsize=2]
+Button(
+	onClick = { println("Kod pro ulozeni") },
+	border = BorderStroke(0.dp, Color.Black)
+) {
+	Text(text = "Ulozit")
+}
+\end{lstlisting}
 
 \vspace*{10px}
 
@@ -95,42 +171,43 @@ https://developer.android.com/jetpack/compose/mental-model
 \begin{itemize}
 	\item \textbf{Column} - Slouží pro umístění  komponent do sloupce. Tato funkce má dvě nevýhody. První je ta, že komponenty, které se nevejdou do obrazovky, přetečou a nelze k nim nascrollovat. Druhá je ta, že komponenty mimo obrazovku jsou stále vykreslovány a stále dochází u nich zbytečně k rekompozici, což má negativní vliv na výkon aplikace. Funkce se tedy hodí na pozicování komponent různých typů (např. hlavička, pod ní obsah a pod něm dolní navigace) a nehodí se pro dlouhé seznamy.
 
-	\item \textbf{LazyColumn} - Slouží pro umístění velkého množství komponent do sloupce. Sloupcem lze scrollovat, pokud komponenty přesahují obrazovku. Ke kompozici a rekompozici dochází pouze u komponent, které jsou viditelné na obrazovce. Výhodou této funkce je tedy dobrý výkon i při velkém množství elementů ve sloupci. Používá se pro vytváření dlouhých seznamů.
+	\item \textbf{LazyColumn} - Slouží pro umístění velkého množství komponent (více než se vejde na obrazovku) do sloupce. Sloupcem lze scrollovat, pokud komponenty přesahují obrazovku. Ke kompozici a rekompozici dochází pouze u komponent, které jsou viditelné na obrazovce. Výhodou této funkce je tedy dobrý výkon i při velkém množství elementů ve sloupci. Používá se pro vytváření dlouhých seznamů.
 
-	\item \textbf{Row} - Slouží pro umístění  elementů do sloupce. Jinak funguje stejně jako composable funkce Column.
+	\item \textbf{Row} - Slouží pro umístění komponentů do řádku. Jinak funguje obdobně jako funkce Column.
 
 	\item \textbf{Text} - Slouží pro vykreslení textu.
 
-	\item \textbf{Icon} - Slouží pro vykreslení obrázku.
+	\item \textbf{Image} - Slouží pro vykreslení obrázku. Obrázek specifikujeme pomocí URL adresy nebo cesty k souboru v souborovém systému.
+	
+	\item \textbf{Icon} - Slouží pro vykreslení ikonky. Používáme se pro ikonky. Od funkce Image se liší tím, že lze využít ikonky poskytované knihovnou Material Design, která bude popsána v následujících sekcí.
 
 	\item \textbf{Button} - Slouží pro vykreslení tlačítka. 
 \end{itemize}
 
-\subsubsection*{Pomocné composable funkce}
+\subsubsection*{Další použité composable funkce}
 
 \begin{itemize}
-	\item \textbf{Scaffold}
-	\item \textbf{Divider}
-	\item \textbf{CompositionLocalProvider}
-	\item \textbf{IconButton}
-	\item \textbf{FloatingActionButton}
+	\item \textbf{Scaffold} - Tato funkce poskytuje rozhraní pro strukturování obrazovky do různých sekcí. Tato aplikace ji využívá ke umísťování horní lišty, hlavního obsahu, dolní navigace a plovoucího tlačítka.
+	\item \textbf{BottomNavigation} - Dolní navigační lišta pro navigace mezi různými obrazovkami. 
+	\item \textbf{Divider} - Vizuální oddělovač oddělující různé sekce obrazovky pro lepší orientování se v UI.
+	\item \textbf{CompositionLocalProvider} - 
+	\item \textbf{IconButton} - Tlačítko vizuálně reprezentované ikonkou. 
+	\item \textbf{FloatingActionButton} - Plovoucí tlačítko reprezentující hlavní akci na obrazovce jako např. vytvoření nebo ukládání nějakého objektu. Používá se také pro skok na začátek scrollovatelného seznamu.
+	\item \textbf{TabRow} - Lišta karet pro navigaci mezi různými obrazovkami. Obrazovkám se v kontextu této funkce říká taby.
+	\item \textbf{Tab} - Tab, ke které se naviguje pomocí funkce \lstinline|TabRow|
+	\item \textbf{HorizontalPager} - Kontejner pro horizontální scrollování mezi taby.
 \end{itemize}
 
-\subsubsection*{Composable funkce z externích knihoven}
+\subsection {Komunikace s API}
 
+\subsection {Doménová vrstva}
 
-\begin{itemize}
-	\item \textbf{TabRow}
-	\item \textbf{Tab}
-	\item \textbf{HorizontalPager}
-\end{itemize}
+\subsection {Repozitář}
 
-\subsection {Použité knihovny}
+\subsection {Komunikace s API}
 
-\subsection {Aplikační vrstvy}
-
-
-
+\subsection*{Adresářová struktura}
+Zde bude popsána adresářová struktura. Popsány budou pouze takové soubory a složky, které stačí pro pochopení projektu. Projekt totiž obsahuje mnoho souborů, které jsou vygenerované Android Studiem, ale nejsou důležité pro pochopení projektu.
 
 \section{Backend}
 
@@ -157,5 +234,10 @@ Spring Boot je framework založený na Springu a je opinionated s cílem zjednod
 
 \subsection*{Aplikační vrtvy}
 
+\begin{itemize}
+	\item Zabírají méně paměti a lze jich spustit více najednou než vláken. Při vytvoření příliš velkého množství vláken se může zahltit procesor. Vytvořením coroutine se však nevytvoří nové vlákno, ale běží v rámci něj. To znamená, že lze vytvořit tisíce coroutines v rámci jednoho vlákna, které by běžely všechny plynule a asynchronně.
+	\item Mají lepší ochranu proti úniku paměti.
+	Coroutina může volat další coroutiny. Rodičovská vždy před jejím ukončením počká na to, až dojedou všechny potomkové coroutiny, díky čemuž se vyhneme úniku dat.
+\end{itemize}
 
-
+\subsubsection* {Kotlin Flows}

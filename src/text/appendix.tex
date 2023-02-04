@@ -334,3 +334,39 @@
 		\texttt{id}		& \texttt{int}	& identifikátor hlasování \tabularnewline \hline
 	\end{tabular}
 \end{table}
+
+\begin{figure}
+	\centering
+	\begin{minipage}{\textwidth}
+		\dirtree{%
+			.1 app.
+			.2 src.
+			.3 main.
+			.4 java.
+			.5 com.lukas\_dang.psp\_fe.
+			.6 app.
+			.7 navigation\DTcomment{Zdrojové kódy pro navigaci mezi obrazovkami}.
+			.7 ui.
+			.8 theme\DTcomment{Barvy, typografie, barevné režimy, tvary}.
+			.8 PspApp.kt\DTcomment{Hlavní komponenta aplikace}.
+			.8 PspAppState.kt\DTcomment{Stav aplikace}.
+			.7 MainActivity\DTcomment{Hlavní aktivita}.
+			.7 PspApplication\DTcomment{Třída reprezentující aplikaci}.
+			.6 core\DTcomment{Stav aplikace}.
+			.6 feature.
+			.4 proto.
+			.5 user\_prefs.proto.
+			.4 res.
+			.5 drawable.
+			.5 values.
+			.6 strings.xml.
+			.4 AndroidManifest.xml.
+			.3 test\DTcomment{Unit testy}.
+			.3 androidTest\DTcomment{Instrumentované testy}.
+			.2 build.gradle.
+			.1 build.gradle.
+		}
+	\end{minipage}
+	\caption{Adresářová struktura mobilní aplikace}
+	\label{fig:dir_struct}
+\end{figure}
