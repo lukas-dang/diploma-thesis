@@ -16,6 +16,24 @@
 \contentsline {lstlisting}{\numberline {7.16}{\ignorespaces Ukázka datové vrstvy pro data o hlasováních}}{11}{lstlisting.7.16}%
 \contentsline {lstlisting}{\numberline {7.17}{\ignorespaces Ukázka datového zdroje}}{12}{lstlisting.7.17}%
 \contentsline {lstlisting}{\numberline {7.18}{\ignorespaces Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}}{12}{lstlisting.7.18}%
+\contentsline {lstlisting}{\numberline {7.19}{\ignorespaces Ukázka kódu pro vytvoření endpointu}}{14}{lstlisting.7.19}%
+\contentsline {lstlisting}{\numberline {7.20}{\ignorespaces Ukázka endpointu s request parametrem}}{15}{lstlisting.7.20}%
+\contentsline {lstlisting}{\numberline {7.21}{\ignorespaces Ukázka nastavení hlaviček pro stránkování}}{15}{lstlisting.7.21}%
+\contentsline {lstlisting}{\numberline {7.22}{\ignorespaces Ukázka kódu pro získání detailu poslance}}{16}{lstlisting.7.22}%
+\contentsline {lstlisting}{\numberline {7.23}{\ignorespaces Ukázka doménové vrstvy pro vrácení seznamu poslanců}}{16}{lstlisting.7.23}%
+\contentsline {lstlisting}{\numberline {7.24}{\ignorespaces Ukázka kódu pro sestavení objektu pro stránkování}}{16}{lstlisting.7.24}%
+\contentsline {lstlisting}{\numberline {7.25}{\ignorespaces Ukázka dopočtu statistik pro detail hlasování za běhu v doménové vrstvě}}{17}{lstlisting.7.25}%
+\contentsline {lstlisting}{\numberline {7.26}{\ignorespaces Entita Vote reprezentující hlasování}}{17}{lstlisting.7.26}%
+\contentsline {lstlisting}{\numberline {7.27}{\ignorespaces Repozitář pro hlasování}}{18}{lstlisting.7.27}%
+\contentsline {lstlisting}{\numberline {7.28}{\ignorespaces Ukázka query metody pro dotazování se nad stránkovaným obsahem}}{18}{lstlisting.7.28}%
+\contentsline {lstlisting}{\numberline {7.29}{\ignorespaces Ukázka query metody s dvěma podmínkami}}{18}{lstlisting.7.29}%
+\contentsline {lstlisting}{\numberline {7.30}{\ignorespaces Třída pro stahování zdrojových souborů}}{19}{lstlisting.7.30}%
+\contentsline {lstlisting}{\numberline {7.31}{\ignorespaces Ukázka stahování dat pomocí knihovny \lstinline |commons-io|}}{19}{lstlisting.7.31}%
+\contentsline {lstlisting}{\numberline {7.32}{\ignorespaces Ukázka extrakce souborů ze zipu}}{19}{lstlisting.7.32}%
+\contentsline {lstlisting}{\numberline {7.33}{\ignorespaces Skript pro odstranění duplicitních řádků}}{20}{lstlisting.7.33}%
+\contentsline {lstlisting}{\numberline {7.34}{\ignorespaces Parsování datového souboru omluvy.unl}}{21}{lstlisting.7.34}%
+\contentsline {lstlisting}{\numberline {7.35}{\ignorespaces Parsování datového souboru omluvy.unl}}{21}{lstlisting.7.35}%
+\contentsline {lstlisting}{\numberline {7.36}{\ignorespaces Transformace objektu Omluva na databázový objekt Excuse}}{21}{lstlisting.7.36}%
 \contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/app}.}}{3}{lstlisting.A.1}%
 \contentsline {lstlisting}{\numberline {A.2}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote}}}{4}{lstlisting.A.2}%
 \contentsline {lstlisting}{\numberline {A.3}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote{id}}}}{4}{lstlisting.A.3}%

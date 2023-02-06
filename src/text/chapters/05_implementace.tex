@@ -293,7 +293,7 @@ class MainActivity : ComponentActivity() {
 	...
 \end{lstlisting}
 
-\subsubsection*{Implementace prezentační vrstvy}
+\subsection {Implementace prezentační vrstvy}
 \label{sssec:impl-ui}
 Popis implementace prezentační vrstvy je rozděleno na popis implementace uživatelského rozhraní a popis implementace držitelů stavů a logiky. Nejdřív bude popsána první implementace a po ní druhá. 
 
@@ -359,7 +359,7 @@ class VoteListViewModel(
 
 \noindent Navigace mezi obrazovkami je implementována pomocí composable funkce \lstinline|NavHost|, která definuje jednotlivé destinace. Destinace reprezentuje obrazovku, ke které lze pomocí této funkce navigovat. Destinace je reprezentována řetězcem. Např. destinace pro seznam hlasování se nazývá "votes". Pro samotnou navigaci se používá objekt \lstinline|NavHostController|, na které zavoláme metodu \lstinline|navigate| a předáme ji název destinace, ke které chceme navigovat. Pro navigaci k detailu hlasování nebo poslance používá sepcifičtější název destinace, např. "votes/1234" nebo "member/5678".
 
-\subsubsection*{Implementace doménové vrstvy}
+\subsection {Implementace doménové vrstvy}
 Ukázka implementace doménové vrstvy pro seznam hlasování (\ref{lst:use-case-vote}). Objekt \lstinline|Pager| je vstupním bodem pro stránkovací mechanizmus. Nastavujeme mu defaultní velikost stránky, v době psaní práce je to 20. Dále mu předáme \lstinline|VotesPagingSource| reprezentující zdroj stránkovaných dat. Pager poskytuje proměnnou flow, která bude emitovat stránky. \lstinline|flowOn| nastaví, aby sbírání flow probíhalo na speciálním vlákně IO, aby neprobíhalo na hlavním vlákně. Není to nutné díky používání coroutinů, ale je to dobrá praxe to používat pro síťové operace.
 
 \begin{lstlisting}[caption={Ukázka využití use caseu pro získání seznamu hlasování}, label={lst:use-case-vote}, tabsize=2]
@@ -393,7 +393,7 @@ class GetVoteDetailUseCase @Inject constructor(...) {
 }
 \end{lstlisting}
 
-\subsubsection*{Implementace datové vrstvy}
+\subsection {Implementace datové vrstvy}
 Datová vrstva slouží pro abstrahování doménové vrstvy od konkrétních datových zdrojů. V aplikaci je použit jediný datový zdroj, a to vzdálený pro získání data z backendu. V datové vrstvě jsou získávána data z datového zdroje v podobě síťových entit. Ty jsou následně namapována na doménové entity pro použití doménovou vrstvou. Ukázka použití je na (\ref{lst:use-case-repository}).
 
 \begin{lstlisting}[caption={Ukázka datové vrstvy pro data o hlasováních}, label={lst:use-case-repository}, tabsize=2]
@@ -431,7 +431,7 @@ class PspRemoteDataSourceImpl @Inject constructor(
 }
 \end{lstlisting}
 
-\subsubsection*{Implementace síťové vrstvy}
+\subsection{Implementace síťové vrstvy}
 
 \noindent Síťová vrstva je implementována pomocí knihovny Retrofit. Je to HTTP klient pro komunikaci se zdroji na internetu. Aplikaci ho používá pro získání veškerých dat z backendu. Na (\ref{lst:retrofit-votes}) je ukázka použití. URL adresu daného zdroje specifikujeme pomocí anotace \lstinline|@GET|. Pomocí anotací \lstinline|Query| specifikujeme query parametry pro jako číslo stránky a počet stránek. Návratovou hodnotou je seznam API entit. Implementaci této funkce má na starosti knihovna. Data z backendu jsou ve formátu JSON a jsou namapována na objekt v návratovém typu.
 
@@ -454,31 +454,441 @@ zdroj: https://square.github.io/retrofit/
 
 \section{Backend}
 
-\subsection {Programovací jazyk}
-
-\subsubsection *{Java}
-Pro backend byl použit programovací jazyk Java. Důvodem je použití technologie Spring Boot, která se primárně používá v kombinaci s Javou. Spring Boot detailnějši bude popsán v následující kapitole.
-
-\subsection {Framework}
-
-\subsubsection *{Spring}
-Spring je open-source aplikační rámec (dále jen framework) pro vývoj enterprise aplikací používající architekturu MVC. Hlavními benefity tohoto frameworku jsou:
+\subsection {Použité nástroje a technologie}
+\subsubsection*{Intellij IDEA}
+Backend byl vyvíjen ve vývojovém prostředí Intellij IDEA. Hlavní důvody pro výběr tohoto IDE:
 
 \begin{itemize}
-	\item DI
-	\item Služby
+	\item Vestavěný inicializátor Spring Boot aplikací - Pomocí tohoto inicializátor lze nakonfigurovat a nastavit potřebné závislosti ve Spring Boot\footnote{Technologie Spring Boot bude popsána později.} aplikaci jednoduše naklikáním v průvodci.
+	
+	\item Klávesové zkratky - Toto IDE je vyvíjeno společností JetBrains, a tudíž obsahuje stejné klávesové zkratky jako Android Studio.
 \end{itemize}
 
-\subsubsection *{Spring Boot}
+zdroj: https://www.jetbrains.com/idea/
 
-Spring Boot je framework založený na Springu a je opinionated s cílem zjednodušit a urychlit vývoj  aplikací.
+\subsubsection*{Maven}
+Maven je stejně jako Gradle nástroj pro automatizaci sestavování programu. Původně byl použit Gradle kvůli čitelnější syntaxi. Maven byl zvolen z historických důvodů. Původně bylo v plánu backend nasadit na Cloud Azure. Ten poskytoval plugin pro maven, který umožňoval backend nasadit a zprovoznit pomocí jednoho příkazu. Kvůli omezeného free tieru však byl backend nakonec nasazen na jiný cloud (více v kapitole o nasazení). Maven je tedy pozůstatek historického rozhodnutí. Na funkčnosti aplikace to však nemá žádný vliv, a proto se už nepřešlo z Mavenu na Gradle. 
 
-\subsection {Použité knihovny}
+zdroj: https://maven.apache.org/
 
-\subsection*{Aplikační vrtvy}
+https://azure.microsoft.com/en-us
+
+\subsubsection*{Spring Boot}
+Před popisem technologie Spring Boot si popíšeme technologii Spring, na které je Spring Boot založen. Spring je open-source framework pro vývoj enterprise aplikací. Je to seskupení různých nástrojů pro řešení různých problémů. Pro účely této práce byly využity nástroje pro vytvoření webových aplikacím, ale umožňují implementovat i backend s REST API. Hlavními benefity Springu je množství použitelných nástrojů a dependency injection pomocí anotací.
+
+Spring Boot je framework, který je postavený na Springu a který má za cíl redukci boilerplate kódu a nutnost konfigurace, a tím urychlit vývoj aplikace. Toho dosahuje pomocí autokonfigurace, což je vlastnost Spring Bootu, kdy jsou jednotlivé komponenty (např. rozhraní pro komunikaci s databází, webový server, ORM) automaticky nakonfigurovány Spring Bootem pomocí defaultních hodnot. Defaultní hodnoty jsou Spring Bootem nastaveny na nejčastější hodnoty, aby se tím pokrylo co nejvíce situací, na které může vývojář narazit. Důsledkem je to, že pro zprovoznění komponent je potřeba pouze nainstalovat jejich závislost. Pokud bude potřeba použít jinou konfiguraci (např. pro připojení k databázi chceme použít jiný než defaultní port), Spring Boot to umožňuje. Pointa je však, že knihovnu pouze stáhneme bez nutnosti konfigurace nebo s minimální konfigurací a aplikace lze hned spustit.
+
+Alternativou ke knihovně Spring Boot je knihovna Ktor, pomcí které lze taktéž vytvořit backend s REST API. Výhodou této knihovny je, že je určená pro psaní v Kotlinu. Lze tedy využít všechny výhody tohoto jazyka. Nevýhodou je, že nepodporuje defaultně dependency injection. Pro něj se musí zvlášť stáhnout knihovna a a tu nakonfigurovat. Další nevýhodou oproti Spring Bootu je chybějící autokonfigurace. Vše se tedy musí manuálně nakonfigurovat.
+
+zdroj:
+
+https://spring.io/
+
+https://spring.io/why-spring
+
+https://spring.io/web-applications
+
+https://ktor.io/
+
+\subsubsection*{Java}
+Java byla od začátku hlavním programovacím jazykem pro vývoj aplikací pomocí technologie Spring Boot. Od roku 2017 přišla integrace jazyka Kotlin do Spring Bootu a v dokumentaci jsou ukázkové kódy psány jak v Javě tak i Kotlinu. Java má oproti Kotlin větší podporu v komunitě, co se týče vývoji ve Spring Bootu. Když jsem při psaní v Javě narazil na nějaký problém, mnohem šlo najít na internetu řešení než při psaní v Kotlinu. Jedním řešením je hledat řešení v Javě a javovský kód pomocí automatického nástroje ztransfomovat do Kotlinu, výsledný kód bylo však potřeba vždy prošistit, jelikož u všech proměnných vždy obsahoval datové typy, které lze v Kotlinu v některých případech vynechat. Zároveň výstupní kód někdy nebyl kvůli nějaké drobnosti kompilovatelný. Z toho důvodu jsem se rozhodl pro použití Java. Zdá se však, že podpora pro psaní aplikací Spring Boot pomocí Kotlinu je čím dál tím větší. Když bych měl možnost backend přepsat, znovu bych zauvažoval o použití Kotlinu, jelikož je to velmi dobrý programovací jazyk.
+
+zdroj:
+ https://spring.io/guides/tutorials/spring-boot-kotlin/
+
+https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0
+
+zdroj:
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/index.html\textbf{}
+
+\subsubsection*{MySQL}
+Na databázi backendu nebyly kladeny velké nároky. Pouze bylo potřeba data perzistentní uložit, aby byly připravené pro použití mobilní aplikací. Zvolil jsem tedy MySQL, s kterým jsem měl zkušenosti. Bylo by však možné použít např. i PostreSQL. Na funkčnosti backendu by to však nemělo vliv.
+
+\subsection {Prezentační vrstva}
+V prezentační vrstvě byly implementovány jednotlivé endpointy REST API, které přijímají dotazy od mobilní aplikace a vrací ji předzpracovaná data uložena v databázi. Ukázku implementace endpointu pro získání detailu konkrétního hlasování lze vidět na (\ref{lst:controller-votes}). Endpoint pro HTTP GET požadavky je ve Spring Bootu implementován tak, že vytvoříme metodu s libovolným názvem a označíme ji anotací \lstinline|@GetMapping|. V parametru této anotace pak specifikujeme URL adresu daného endpointu. Celá metoda se musí nacházet ve tříde s anotací \lstinline|@RestController|. Endpointy jsou rozděleny do několika tříd podle typu dat (jedna třída pro entity hlasování, druhá pro entity poslance a třetí pro entity klubů). Pokud URL adresa obsahuje parametr identifikující daný zdroj, musí být obsažen v parametru metody a oanotován pomocí \lstinline|@PathVariable|
+
+\begin{lstlisting}[caption={Ukázka kódu pro vytvoření endpointu}, label={lst:controller-votes}, tabsize=2]
+// Soubor VoteController.java
+@RestController
+public class VoteController {
+	
+	private final VoteService service;
+	private final VoteMapper mapper;
+	
+	...
+	
+ 	@GetMapping("/vote/{id}")
+	public DetailedVote getVote(@PathVariable Integer id) {
+		Vote vote = service.getVote(id);
+		return mapper.toDetailedVote(vote);
+	}
+
+\end{lstlisting}
+
+\noindent Query parametry jsou implementovány pomocí anotace \lstinline|RequestParam|, kterému je v parametru předán název parametru: 
+
+\begin{lstlisting}[caption={Ukázka endpointu s request parametrem}, label={lst:request-param}, tabsize=2]
+// Soubor VoteController.java
+@RestController
+public class VoteController {
+	
+	private final VoteService service;
+	private final VoteMapper mapper;
+	
+	...
+	
+	@GetMapping("/vote")
+	public ResponseEntity<List<GeneralVote>> getVotes(
+		@RequestParam(name = "description") String description
+		...
+	) {
+		...
+	}
+}
+\end{lstlisting}
+
+\noindent Podobným způsobem jsou implementovány query parametry pro stránkování (číslo a velikost stránky). Kromě povinného parametru pro název query parametru lze specifikovat i parametr \lstinline|required| pro nastavení volitelnosti nebo  \lstinline|defaultValue| pro nastavení defaultní hodnoty query parametru.
+
+\vspace{10px}
+\noindent Na dvou předchozích ukázkách lze vidět použití hodnot \lstinline|service| a \lstinline|mapper|. První reprezentuje doménovou vrstvu, která získá data z databázové vrstvy a druhá obsahuje metody pro mapování objektů, pokud je to potřeba (pokud je struktura entit uložených v databázi jiná než struktura entit pro REST API). Takto jsou implementovány všechny controllery. Controllery, které obsahují endpoint, který vrací seznam, navíc sestavují hlavičky pro HTTP odpověď. K tomu je použita třída \lstinline|HttpHeaders|, kterou poskytuje Spring framework. Instanci této třídy se jednoduchým způsobem nastaví potřebné hodnoty a objekt je controllorem vracen:
+
+\begin{lstlisting}[caption={Ukázka nastavení hlaviček pro stránkování}, label={lst:headers-paging}, tabsize=2]
+// Soubor PaginationHeaderGenerator.java
+public static HttpHeaders buildHeaders(...) {
+	HttpHeaders responseHeaders = new HttpHeaders();
+
+	...
+	
+	responseHeaders.set(previousPageString, String.valueOf(prevPage));
+	responseHeaders.set(nextPageString, String.valueOf(nextPage));
+	responseHeaders.set(lastPageString, String.valueOf(lastPage));
+	
+	return responseHeaders;
+}
+
+// Soubor VoteController.java
+@GetMapping("/vote")
+public ResponseEntity<List<GeneralVote>> getVotes(...) {
+
+	...
+	
+	HttpHeaders headers = GenericAndPaginationHeaderGenerator
+		.buildHeaders(pagedResult.getTotalPages(), page);
+	
+	...	
+	
+	return ResponseEntity
+		.ok()
+		.headers(headers)
+		.body(generalVotes);
+}
+\end{lstlisting}
+
+\subsection {Doménová vrstva}
+Doménová vrstva má na starosti business logiku aplikace a abstrahování prezentační vrstvy od implementačních detailů databázové vrstvy. V našem případě backend neobsahuje business logoiku, pouze filtruje data. Ukázka kódu pro získání detailu poslance:
+
+\begin{lstlisting}[caption={Ukázka kódu pro získání detailu poslance}, label={lst:headers-paging}, tabsize=2]
+
+// Soubor MemberService.java
+public Member getMember(int id) {
+	return memberRepository
+	.findById(id)
+	.orElseThrow(() -> new MemberNotFoundException(id));
+}
+	
+\end{lstlisting}
+
+\noindent Pro získání seznamů je použito stránkování, které je implementováno pomocí třídy \lstinline|Pageable|. Ta se předá repozitáři, který bude popsán v následující sekci:
+
+\begin{lstlisting}[caption={Ukázka doménové vrstvy pro vrácení seznamu poslanců}, label={lst:headers-paging}, tabsize=2]
+
+// Soubor MemberService.java
+public Page<Member> getMembers(PagingParams pagingParams) {
+	
+	Pageable pageable = PageableGenerator.buildPageable(pagingParams);
+	
+	if (filterName == null) {
+		return memberRepository
+			.findByElectionYear(electionYear, pageable);
+	} else {
+		// kod pro filtrovani poslancu
+	}
+}
+\end{lstlisting}
+
+\noindent Instance třídy \lstinline|Pageable| je vytvořena následovně:
+
+\begin{lstlisting}[caption={Ukázka kódu pro sestavení objektu pro stránkování}, label={lst:paging-object}, tabsize=2]
+	
+public static Pageable buildPageable(...) {
+	Pageable pageable;
+	
+	...
+	
+	pageable = PageRequest.of(page, size, sort);
+	// napr. page = 2, size = 20, sort = Sort.by("dateTime").descending())
+	
+	return pageable;
+}
+
+\end{lstlisting}
+
+\noindent Doménová vrstva pro ostatní entity jsou implementovány obdobně jako bylo popsáno výše. Výjimkou je metoda pro získání detailu hlasování. Jedním z atributů hlasování jsou statistky hlasování. Výpočet počtu omluvených a nepřihlášených poslanců příliš zpomalovalo zpracování zdrojových dat přes uložením do databáze. Z toho důvodu je tento výpočet prováděn až za běhu, kdy se mobilní aplikace nad daným detailem hlasování dotazuje:
+
+\begin{lstlisting}[caption={Ukázka dopočtu statistik pro detail hlasování za běhu v doménové vrstvě}, label={lst:excused-count}, tabsize=2]
+	
+public Vote getVote(int id) throws IOException {
+	...
+	
+	int excusedCount = ... 	
+	int loggedOffCount = ...
+	
+	...
+	
+	// nastaveni hodnot excusedCount a loggedOffCount
+	// vraceni vysledku
+}
+	
+\end{lstlisting}
+
+\subsection {Databázová vrstva}
+V databázové vrstvě získávám data z databáze pomocí dotazů. Pro komunikaci s databází je použita knihovna Hibernate, která poskytuje objektově-relační mapování, díky kterému jsme abstrahování od databázových tabulek a místo toho pracujeme s objekty (entitami), které jsou danou knihovnou namapovány na dané tabulky. Příkladem takového objektu je entita pro hlasování, jejíž ukázka je na (\ref{vote-entity}). Pomocí anotace \lstinline|Entity| říkáme, že daný objekt je databázovou entitou. Hibernate nám automaticky vytvoří tabulku s danými atributy v databázi. Anotace \lstinline|@Getter| je z knihovny Lombok a slouží pro vygenerování getterů pro všechny atributy. Anotací \lstinline|@Id| specifikujeme atribut, který má být primárním klíčem v tabulce.
+
+\begin{lstlisting}[caption={Entita Vote reprezentující hlasování}, label={lst:vote-entity}, tabsize=2]
+
+// dalsi anotace
+@Entity(name = VOTE)
+@Getter
+public class Vote {
+	
+	@Id
+	private int id;
+
+ 	private LocalDateTime dateTime;
+
+	// zbytek atributu
+}
+
+\end{lstlisting}
+
+\noindent Pro dotazování se nad daty používám knihovnu spring-data-jpa, která poskytuje rozhraní \lstinline|JpaRepository|, který obsahuje základní metody pro manipulaci s danou entitou jako např. \lstinline|findAll()| pro získání všech záznamů z tabulky nebo \lstinline|findById()| pro získání záznamu s daným id. Největší sílou této knihovny je však možnost vytvoření vlastních metod, kterým se říká query metody. Dotaz se sestaví na základě pojmenování query metody podle určitých pravidel. Např. následující metoda vrací seznam hlasování ve volebním období, který začal daným volebním rokem:
+
+\begin{lstlisting}[caption={Repozitář pro hlasování}, label={lst:be-repository-vote}, tabsize=2]
+// Soubor VoteRepository.java
+@Repository
+public interface VoteRepository extends JpaRepository<Vote, Integer> {
+	
+	...
+	
+	List<Vote> findByElectionYear(int electionYear);
+	
+}
+\end{lstlisting}
+
+\noindent Přitom nebylo potřeba metodu implementovat. Knihovna si na základě názvu metody implementaci vygeneruje. Metodu lze modifikovat, aby vracela stránkovaný obsah:
+
+\begin{lstlisting}[caption={Ukázka query metody pro dotazování se nad stránkovaným obsahem}, label={lst:repository-paging}, tabsize=2]
+// Soubor VoteRepository.java
+Page<Vote> findByElectionYear(int electionYear, Pageable pageable);
+\end{lstlisting}
+
+\noindent Lze i vytvořit komplexnější dotaz, který se dotazuje nad entitou na základě dvou podmínek:
+
+\begin{lstlisting}[caption={Ukázka query metody s dvěma podmínkami}, label={lst:repository-paging}, tabsize=2]
+// Soubor MembershipRepository.java
+boolean existsByPersonIdAndAgencyId(int personId, int agencyId);
+\end{lstlisting}
+
+zdroj: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+
+
+\section{Zpracování dat}
+Backend každý den o půl noci aktualizuje databázi podle zdrojových dat na webu PSP. Aktualizace probíhá v následujících krocích:
 
 \begin{itemize}
-	\item Zabírají méně paměti a lze jich spustit více najednou než vláken. Při vytvoření příliš velkého množství vláken se může zahltit procesor. Vytvořením coroutine se však nevytvoří nové vlákno, ale běží v rámci něj. To znamená, že lze vytvořit tisíce coroutines v rámci jednoho vlákna, které by běžely všechny plynule a asynchronně.
-	\item Mají lepší ochranu proti úniku paměti.
-	Coroutina může volat další coroutiny. Rodičovská vždy před jejím ukončením počká na to, až dojedou všechny potomkové coroutiny, díky čemuž se vyhneme úniku dat.
+	\item \textbf{Stažení zdrojových souborů} - Zdrojové soubory jsou ve formátu zip a jsou stažené z webu PSP (https://www.psp.cz/sqw/hp.sqw?k=1300).
+	\item \textbf{Extrakce datových souborů} - Ze zdrojových souborů jsou vyextrahovány datové soubory, které jsou ve formátu UNL.
+	\item \textbf{Pročištění dat} - Některé datové soubory obsahují duplicitní záznamy. Ty jsou pro snadnější parsování odstraněny.
+	\item \textbf{Parsování dat} - Datové soubory jsou zparsovány a načteny do Java objektů.
+	\item \textbf{Transformace dat} -  Objekty jsou ztransformovány do požadované podoby.
+	\item \textbf{Uložení dat do databáze} - Ztransfomovaná data jsou perzistentně uložena do databáze.
 \end{itemize}
+
+\subsection{Stahování zdrojových souborů}
+Stahování zdrojových souborů má na starosti třída následující třída:
+
+\begin{lstlisting}[caption={Třída pro stahování zdrojových souborů}, label={lst:psp-downloader}, tabsize=2]
+// Soubor PspFilesDownloader.java
+public class PspFilesDownloader {
+	public static void downloadFiles() throws IOException {
+		downloadHlasovani();
+		downloadPoslanci();
+	}
+
+	// dalsi metody
+}
+\end{lstlisting}
+
+\noindent Tato třída pro stahování souborů na základě URL interně používá knihovnu \lstinline|commons-io| (\ref{lst:common-io-downloader}). Knihovna poskytuje metodu \lstinline|copyURLToFile|, která akceptuje parametr pro URL zdrojového souboru a parametr pro lokální soubor, do kterého se má zdrojový soubor nakopírovat.
+
+\begin{lstlisting}[caption={Ukázka stahování dat pomocí knihovny \lstinline|commons-io|}, label={lst:common-io-downloader}, tabsize=2]
+// Soubor FileDownloader.java
+public class FileDownloader {
+	
+	public static void download(
+		String downloadUrlString, 
+		String downloadDestination) {
+		
+		File file = new File(downloadDestination);
+		URL downloadUrl = new URL(downloadUrlString);
+		
+		FileUtils.copyURLToFile(downloadUrl, file);
+	
+		...
+	}
+}
+\end{lstlisting}
+
+zdroj: https://commons.apache.org/proper/commons-io/
+
+\subsection{Extrakce datových souborů}
+Pro extrakci datových souborů byla použita knihovna \lstinline|zip4j|. Ta poskytuje třídu \lstinline|ZipFile| pro vytvoření objektu reprezentujícího lokální soubor ve formátu zip. Konstruktoru této třídy je předána lokace souboru v souborovém systému. Tato třída poskytuje metodu \lstinline|extractFile()| pro extrakci souborů ze zipu. Akceptuje tři parametry:
+
+\begin{itemize}
+	\item Název souboru, který se má vyextrahovat.
+	\item Adresář, do které se má soubor vyextrahovaný soubor uložit.
+	\item Výsledný název ukládaného souboru. V našem případě je stejný jako název před vyextrahováním souboru.
+\end{itemize}
+
+\noindent Zde je ukázka kódu pro popsanou extrakci souborů:
+
+\begin{lstlisting}[caption={Ukázka extrakce souborů ze zipu}, label={lst:zip4j}, tabsize=2]
+// Soubor ZipExtractor.java
+public class ZipExtractor {
+
+	public static void extract(
+		String pathToZip, 
+		String fileToExtract, 
+		String destinationDir
+	) {
+		ZipFile zipFile = new ZipFile(pathToZip)
+		zipFile.extractFile(fileToExtract, destinationDir, fileToExtract);
+		
+	}
+		
+}
+\end{lstlisting}
+
+zdroj: https://github.com/srikanth-lingala/zip4j
+
+\subsection{Pročištění dat}
+Některé datové soubory obsahují duplicitní záznamy. Ty jsou odstraněny pomocí skriptu napsaného v jazyce Bash:
+
+\begin{lstlisting}[caption={Skript pro odstranění duplicitních řádků}, tabsize=2]
+// Soubor removeDuplicates.sh.java
+for FILE in "$1"/*; do
+	sort "$FILE" | uniq > 'tmp.unl'
+	mv 'tmp.unl' "$FILE"
+	rm 'tmp.unl'
+done
+\end{lstlisting}
+
+\noindent Skript funguje následovně:
+
+\begin{itemize}
+	\item Skript předpokládá ve svém prvním argumentu cestu ke adresáři, kde se nachází datové soubory.
+	
+	\item Na začátku se iteruje přes všechny soubory v daném adresáři.
+	
+	\item Každý soubor se pomocí příkazu \lstinline|sort| seřadí vzestupně podle abecedy.
+	
+	\item Ze seřazeného souboru se odstraní duplicitní řádky jdoucí za sebou pomocí příkazu \lstinline|uniq|. Vy tuto chvíli jsou ze souboru odstraněny všechny duplicity.
+	
+	\item Zbytek kódu již je pouze přesouvání obsahů souborů tak, aby datové soubory s odstraněnými duplicity měly jejich originální název.
+\end{itemize}
+
+\noindent Skript je volán ze souboru \lstinline|PspFilesCleaner|. Důvodem pro odstranění duplicit pomocí jazyka Bash a ne přímo pomocí Javy je to, že v Bashi jsou operace jednodušší a rychlejší než v Javě. 
+
+\subsection{Parsování dat}
+Pro parsování zdrojových dat používám knihovnu \lstinline|opencsv|. Ta umožňuje parsovat CSV soubory tak, že každý řádek v souboru namapuje na objekt. Mapování sloupců v souboru na atributy objektu je implementováno přidáním anotací k příslušným atributům. Vysvětlíme si na příkladu. Nejdříve je potřeba vytvořit třídu, do jejíž instancí se napamatují záznamy ve zdrojovém souboru. Ta bude mít u atributů anotaci určující pozici neboli číslo sloupce záznamu. Hodnota tohoto sloupce se pak napamatuje na tento atribut:
+
+\begin{lstlisting}[caption={Parsování datového souboru omluvy.unl}, tabsize=2]
+// Soubor Omluva.java
+public class Omluva {
+	@CsvBindByPosition(position = 0)
+	private int idOrgan;
+	
+	@CsvBindByPosition(position = 1)
+	private int idPoslanec;
+
+	// dalsi atributy	
+}
+\end{lstlisting}
+
+\noindent Nyní lze datový soubor zparsovat a namapovat na tuto třídu. Knihovna poskytuje třídu \lstinline|CsvToBeanBuilder|, které předáme objekt typu |Reader|. Ta slouží pro čtení znaků ze streamu. V tomto případě je do streamu posílány data z datového souboru. Třídá \lstinline|CsvToBeanBuilder| poskytuje metody, kterými specifikujeme:
+
+\begin{itemize}
+	\item Třídu, na kterou se mají záznamy namapovat.
+	\item Oddělovač hodnot v záznamu.
+	\item Určení, kdy je hodnota null. V tomto případě hodnota interpretována jako null, pokud je prázdná.
+	\item Ignorování složených závorek.
+\end{itemize}
+
+\begin{lstlisting}[caption={Parsování datového souboru omluvy.unl}, tabsize=2]
+// Soubor OmluvyParser.java
+	
+public class OmluvyParser extends UnlParser {
+	
+	public List<Omluva> read() {
+		String filePath = PspPath.Unl.OMLUVY;
+		BufferedReader reader = getReader(filePath);
+		
+		return new CsvToBeanBuilder<Omluva>(reader)
+		.withType(Omluva.class)
+		.withSeparator(UNL_SEPARATOR)
+		.withFieldAsNull(UNL_NULL_SEPARATOR)
+		.withIgnoreQuotations(true)
+		.build()
+		.parse();
+		
+	}
+}
+	
+\end{lstlisting}
+
+zdroj: https://opencsv.sourceforge.net/
+
+\subsection{Transformace a uložení dat}
+Po zpasrování datových souborů a namapování záznamů na objekty lze tyto objekty začít ztransformovat do žádané podoby. Kód pro transformaci má u všech typů dat podobný tvar:
+
+\begin{lstlisting}[caption={Transformace objektu Omluva na databázový objekt Excuse}, tabsize=2]
+// Soubor ExcuseLoader.java
+	
+public class ExcuseLoader extends BaseLoader {
+
+    private final OmluvyParser omluvyReader;
+    private final ExcuseRepository excuseRepository;
+
+    public void load() {
+			excuseRepository.deleteAllInBatch();
+			List<Omluva> omluvaList = omluvyReader.read();
+			
+			List<Excuse> excuses = omluvaList.parallelStream()
+						.map(omluva -> {
+							// transformace
+						})
+					.collect(Collectors.toList());
+				
+			Lists
+				.partition(excuses, BATCH_SIZE)
+				.forEach(excuseRepository::saveAll);
+
+	}
+
+}
+\end{lstlisting}
+
+\noindent 
+Před samotným parsováním jsou smazány všechny záznamy v příslušné tabulce. Poté probíhá parsování datových souborů a seznamu namapovaných objekt. Z tohoto seznamu je vytvořen paralelní stream, což stream, který potenciálně zpracuje objekt v seznamu paralelně. Každý objekt je ztransformován a namapován na databázový objekt. Konkrétní implementace transformace se liší od typu entity. Ztransformovaná data jsou perzistetně uložena do databáze. Ukládání je optimalizováno tak, že se neukládá po jednom ale po skupinách. Každá skupina obsahuje 1000 objektů. Ukládáme tedy po 1000 objektech.
+

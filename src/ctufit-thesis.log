@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  4 FEB 2023 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  6 FEB 2023 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1346,6 +1346,15 @@ LaTeX Warning: Label `table:zarazeni' multiply defined.
 
 LaTeX Warning: Label `table:hl_hlasovani' multiply defined.
 
+
+LaTeX Warning: Label `lst:headers-paging' multiply defined.
+
+
+LaTeX Warning: Label `lst:headers-paging' multiply defined.
+
+
+LaTeX Warning: Label `lst:repository-paging' multiply defined.
+
 ) (text/appendix.aux) (text/medium.aux))
 \openout1 = `ctufit-thesis.aux'.
 
@@ -1507,7 +1516,7 @@ Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 159.
 Package biblatex Info: Reference segment=0 on input line 159.
 \c@lstlisting=\count494
-<assignment-include.pdf, id=242, 597.50829pt x 845.0471pt>
+<assignment-include.pdf, id=286, 597.50829pt x 845.0471pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 162.
@@ -1516,7 +1525,7 @@ File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 162.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<assignment-include.pdf, id=245, page=1, 597.50829pt x 845.0471pt>
+<assignment-include.pdf, id=289, page=1, 597.50829pt x 845.0471pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
 Package pdftex.def Info: assignment-include.pdf , page1 used on input line 162.
@@ -1670,14 +1679,12 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
+) [6])
 \tf@lol=\write9
 \openout9 = `ctufit-thesis.lol'.
 
 
-[6] [7
-
-] [8
+[7] [8
 
 ] [9
 
@@ -1693,6 +1700,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
  (text/text.tex (text/chapters/01_goals.tex
 Kapitola 1.
 ) (text/chapters/01_uvod.tex [1
+
 
 
 ] [2
@@ -1758,12 +1766,12 @@ l.76 \end{longtable}
 
 ]
 Kapitola 4.
-<images//politiscope.png, id=546, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=637, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 33.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=547, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=638, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 34.
@@ -1781,12 +1789,12 @@ been already used, duplicate ignored
                    \relax 
 l.60 
       [2 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=560, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=651, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 68.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=561, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=652, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 69.
@@ -1815,7 +1823,7 @@ l.30 \section{Datové typy}
                             [1
 
 ]
-<images//source_data_diagram.png, id=572, 1014.79124pt x 1039.885pt>
+<images//source_data_diagram.png, id=663, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 73
@@ -2015,7 +2023,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.296 ...ction*{Implementace prezentační vrstvy}
+l.296 ...ction {Implementace prezentační vrstvy}
                                                    [8] [9] [10] [11]
 Overfull \hbox (3.36453pt too wide) in paragraph at lines 420--421
 \OT1/lmr/m/n/10 Datov^^Se zdroje jsou pouze abs-trakc^^S^^P nad konkr^^Setn^^S^
@@ -2023,15 +2031,32 @@ Overfull \hbox (3.36453pt too wide) in paragraph at lines 420--421
  []
 
 [12]
-Overfull \hbox (6.80225pt too wide) in paragraph at lines 465--466
-\OT1/lmr/m/n/10 Spring je open-source aplika^^Tcn^^S^^P r^^Samec (d^^Sale jen f
-ra-mework) pro v^^Syvoj en-ter-prise apli-kac^^S^^P pou^^Tz^^S^^Pvaj^^S^^Pc^^S^
-^P
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 462.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 462.
+ [13] [14] [15] [16]
+
+LaTeX Warning: Reference `vote-entity' on page 17 undefined on input line 656.
+
+[17]
+Overfull \hbox (29.72871pt too wide) in paragraph at lines 675--676
+\OT1/lmr/m/n/10 Pro do-ta-zov^^San^^S^^P se nad daty pou^^Tz^^S^^Pv^^Sam kni-ho
+vnu spring-data-jpa, kter^^Sa po-sky-tuje roz-hran^^S^^P [][][],
  []
 
-) (text/chapters/06_testing.tex [13] [14
+[18] [19]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+790.
+ (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [20]
+Overfull \hbox (34.57649pt too wide) in paragraph at lines 829--830
+\OT1/lmr/m/n/10 Nyn^^S^^P lze da-tov^^Sy sou-bor zpar-so-vat a na-ma-po-vat na 
+tuto t^^Tr^^S^^Pdu. Knihovna po-sky-tuje t^^Tr^^S^^Pdu [][][],
+ []
 
-]
+[21]) (text/chapters/06_testing.tex [22]
 Kapitola 8.
 ) (text/chapters/07_deploy.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -2039,7 +2064,9 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Nasazení} [1]
+            {Nasazení} [1
+
+]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -2104,30 +2131,30 @@ l.1 \chapter
 
 ]
 P\v {r}\'{\i }loha A.
-<images//vote_list.png, id=939, 357.335pt x 727.71875pt>
+<images//vote_list.png, id=1297, 357.335pt x 727.71875pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 6.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=940, 357.335pt x 727.71875pt>
+<images//vote_list_search.png, id=1298, 357.335pt x 727.71875pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 12.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_details_general.png, id=941, 357.335pt x 727.71875pt>
+<images//vote_details_general.png, id=1299, 357.335pt x 727.71875pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 2.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=942, 357.335pt x 727.71875pt>
+<images//vote_details_party_votes.png, id=1300, 357.335pt x 727.71875pt>
 File: images//vote_details_party_votes.png Graphic file (type png)
 <use images//vote_details_party_votes.png>
 Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
 ne 28.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=943, 357.335pt x 727.71875pt
->
+<images//vote_details_party_votes_expanded.png, id=1301, 357.335pt x 727.71875p
+t>
 File: images//vote_details_party_votes_expanded.png Graphic file (type png)
 <use images//vote_details_party_votes_expanded.png>
 Package pdftex.def Info: images//vote_details_party_votes_expanded.png  used on
@@ -2144,12 +2171,12 @@ LaTeX Warning: Float too large for page by 16.3355pt on input line 39.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_list.png, id=944, 357.335pt x 727.71875pt>
+<images//member_list.png, id=1302, 357.335pt x 727.71875pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 44.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=945, 357.335pt x 727.71875pt>
+<images//member_list_search.png, id=1303, 357.335pt x 727.71875pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 50.
@@ -2158,13 +2185,13 @@ Package pdftex.def Info: images//member_list_search.png  used on input line 50.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_details_general.png, id=946, 357.335pt x 727.71875pt>
+<images//member_details_general.png, id=1304, 357.335pt x 727.71875pt>
 File: images//member_details_general.png Graphic file (type png)
 <use images//member_details_general.png>
 Package pdftex.def Info: images//member_details_general.png  used on input line
  60.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=947, 357.335pt x 727.71875pt>
+<images//member_details_votes.png, id=1305, 357.335pt x 727.71875pt>
 File: images//member_details_votes.png Graphic file (type png)
 <use images//member_details_votes.png>
 Package pdftex.def Info: images//member_details_votes.png  used on input line 6
@@ -2173,12 +2200,12 @@ Package pdftex.def Info: images//member_details_votes.png  used on input line 6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//settings.png, id=948, 357.335pt x 727.71875pt>
+<images//settings.png, id=1306, 357.335pt x 727.71875pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 76.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=949, 357.335pt x 727.71875pt>
+<images//settings_opened.png, id=1307, 357.335pt x 727.71875pt>
 File: images//settings_opened.png Graphic file (type png)
 <use images//settings_opened.png>
 Package pdftex.def Info: images//settings_opened.png  used on input line 82.
@@ -2308,41 +2335,68 @@ l.291 \backmatter
 
 
 
-] [15
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.295 \include{text/medium}
+                            % include `medium.tex' from `text/' subdirectory
+[15
 
 ]
 \openout2 = `text/medium.aux'.
 
  (text/medium.tex
-[16
+pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Obsah přiloženého média} [16
 
 
-]) [17] (ctufit-thesis.aux (text/text.aux) (text/appendix.aux)
-(text/medium.aux))
+])
+pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.295 \include{text/medium}
+                            % include `medium.tex' from `text/' subdirectory
+[17] (ctufit-thesis.aux (text/text.aux) (text/appendix.aux) (text/medium.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E97C6A7B9B9284339D55C5188B13C2FE;7307.
+
+Package rerunfilecheck Warning: File `ctufit-thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ctufit-thesis.out':
+(rerunfilecheck)             Before: 1D4019F11031928666110CC63D25A12B;9416
+(rerunfilecheck)             After:  99648DCB2E4759842D3A1D765ABEBD39;9478.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37876 strings out of 476375
- 719358 string characters out of 5788976
+ 38214 strings out of 476375
+ 724792 string characters out of 5788976
  2060299 words of memory out of 5000000
- 57067 multiletter control sequences out of 15000+600000
- 574970 words of font info for 68 fonts, out of 8000000 for 9000
+ 57135 multiletter control sequences out of 15000+600000
+ 583294 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,92p,1673b,2821s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C
-:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
-ers/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
+:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/U
+sers/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users
 /lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb
@@ -2350,17 +2404,18 @@ x10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb
 x12.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmc
 sc10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
 r10.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
-12.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7
-.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
-fb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.p
-fb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pf
-b><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.
-pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.
-pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.p
-fb>
-Output written on ctufit-thesis.pdf (75 pages, 2260223 bytes).
+12.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6
+.pfb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.p
+fb><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb
+><C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><
+C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><
+C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C
+:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
+<C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+<C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on ctufit-thesis.pdf (83 pages, 2389271 bytes).
 PDF statistics:
- 1316 PDF objects out of 1440 (max. 8388607)
- 493 named destinations out of 1000 (max. 500000)
- 585 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1730 PDF objects out of 2073 (max. 8388607)
+ 753 named destinations out of 1000 (max. 500000)
+ 673 words of extra memory for PDF output out of 10000 (max. 10000000)
 

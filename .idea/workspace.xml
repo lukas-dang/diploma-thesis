@@ -6,43 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e568c54d-6f1c-4a25-90bd-013d9efbcd3e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.bcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.lof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.lol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.lot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.run.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/ctufit-thesis.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/text/appendix.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/text/medium.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/text/text.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/ctufit-thesis.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/ctufit-thesis.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/01_goals.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/01_uvod.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/02_requirements.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/03_analysis.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/03_analysis_data.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/03_analysis_technologies.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/04_design.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/05_implementace.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/06_testing.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/07_deploy.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/08_run.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/09_conclusion.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ctufit-thesis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctufit-thesis.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ctufit-thesis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctufit-thesis.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/appendix.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/bib-database.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/text/bib-database.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/medium.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/texput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/text.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/text.bbl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/text.blg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/text.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text/text.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/text/text.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,18 +43,7 @@
       <recent name="C:\Users\lddan\IdeaProjects\diploma-thesis\src\text\chapters" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.pdf">
-    <configuration name="04_design bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBER</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/src/text/chapters/04_design.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -100,6 +52,38 @@
         <envs />
         <main-file>$APPLICATION_HOME_DIR$/jbr/bin</main-file>
         <aux-dir>$APPLICATION_HOME_DIR$/jbr/bin</aux-dir>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>NONE</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="04_design bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBER</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/src/text/chapters/04_design.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -135,27 +119,6 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>NONE</pdf-viewer>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
     <configuration name="pdf" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -177,17 +140,6 @@
       </texify>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="BibTeX.04_design bibliography" />
-      <item itemvalue="BibTeX.bibliography" />
-      <item itemvalue="LaTeX.pdf" />
-      <item itemvalue="LaTeX.04_design" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="LaTeX.04_design" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
