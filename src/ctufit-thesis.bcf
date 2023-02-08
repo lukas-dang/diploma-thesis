@@ -2379,6 +2379,8 @@
     <bcf:citekey order="7" intorder="1">congress</bcf:citekey>
     <bcf:citekey order="8" intorder="1">openfec</bcf:citekey>
     <bcf:citekey order="9" intorder="1">congress</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">zip-members</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">zip-votes</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

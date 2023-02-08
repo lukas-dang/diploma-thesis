@@ -1,18 +1,18 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'ctufit-thesis.blg'
-[93] biber-MSWIN64:340> INFO - === 
-[128] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
-[217] Biber.pm:978> INFO - Found 6 citekeys in bib section 0
-[230] Biber.pm:4401> INFO - Processing section 0
-[240] Biber.pm:4592> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
-[288] bibtex.pm:1713> INFO - LaTeX decoding ...
-[332] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
-[390] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[390] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[390] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
-[397] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
-[398] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
-[399] Biber.pm:130> WARN - Duplicate entry key: 'congress' in file 'text/bib-database.bib', skipping ...
-[399] Biber.pm:130> WARN - legacy year field 'Jan 2020' in entry 'politiscope' is not an integer - this will probably not sort properly.
-[399] Biber.pm:130> WARN - legacy year field 'Jan 2019' in entry 'congress' is not an integer - this will probably not sort properly.
-[399] Biber.pm:132> INFO - WARNINGS: 3
+[90] biber-MSWIN64:340> INFO - === 
+[122] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
+[223] Biber.pm:978> INFO - Found 8 citekeys in bib section 0
+[236] Biber.pm:4401> INFO - Processing section 0
+[245] Biber.pm:4592> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
+[292] bibtex.pm:1713> INFO - LaTeX decoding ...
+[336] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
+[395] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[395] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[395] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[402] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
+[405] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
+[405] Biber.pm:130> WARN - Duplicate entry key: 'congress' in file 'text/bib-database.bib', skipping ...
+[405] Biber.pm:130> WARN - legacy year field 'Jan 2020' in entry 'politiscope' is not an integer - this will probably not sort properly.
+[405] Biber.pm:130> WARN - legacy year field 'Jan 2019' in entry 'congress' is not an integer - this will probably not sort properly.
+[405] Biber.pm:132> INFO - WARNINGS: 3

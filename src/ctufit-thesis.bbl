@@ -156,6 +156,68 @@
       \verb https://api.open.fec.gov/developers/
       \endverb
     \endentry
+    \entry{zip-members}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=afee20f02454ac84f9ce05b227c3ba60}{%
+           family={Parlament\bibnamedelimb České\bibnamedelima republiky},
+           familyi={P\bibinitperiod\bibinitdelim Č\bibinitperiod\bibinitdelim r\bibinitperiod},
+           given={Poslanecká\bibnamedelima sněmovna},
+           giveni={P\bibinitperiod\bibinitdelim s\bibinitperiod}}}%
+      }
+      \strng{namehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{fullhash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{bibnamehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{authorbibnamehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{authornamehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{authorfullhash}{afee20f02454ac84f9ce05b227c3ba60}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Poslanci a osoby}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=1301
+      \endverb
+      \verb{url}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=1301
+      \endverb
+    \endentry
+    \entry{zip-votes}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=afee20f02454ac84f9ce05b227c3ba60}{%
+           family={Parlament\bibnamedelimb České\bibnamedelima republiky},
+           familyi={P\bibinitperiod\bibinitdelim Č\bibinitperiod\bibinitdelim r\bibinitperiod},
+           given={Poslanecká\bibnamedelima sněmovna},
+           giveni={P\bibinitperiod\bibinitdelim s\bibinitperiod}}}%
+      }
+      \strng{namehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{fullhash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{bibnamehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{authorbibnamehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{authornamehash}{afee20f02454ac84f9ce05b227c3ba60}
+      \strng{authorfullhash}{afee20f02454ac84f9ce05b227c3ba60}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hlasování}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=1302
+      \endverb
+      \verb{url}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=1302
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

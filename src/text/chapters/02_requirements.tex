@@ -3,11 +3,11 @@
 \setcounter{page}{1}
 
 \begin{chapterabstract}
-	V této kapitole popisuji funkční a nefunkční požadavky na mobilní aplikaci a backendu. Funkční požadavky specifikují funkcionality, které by měl daný software poskytovat. Nefunkční požadavky určují omezení kladená na daný software.
+V této kapitole budou popsány funkční a nefunkční požadavky na mobilní aplikaci a backendu. Funkční požadavky specifikují funkcionality, které by měl daný software poskytovat. Nefunkční požadavky určují omezení kladená na daný software. Funkční a nefunkční požadavky budou uvedeny ve formě tabulek. Každá tabulka bude mít dva sloupce. Jedne pro identifikátor daného požadavku pro jednodušší identifikaci v rámci práce, a jeden pro popis daného požadavku.
 \end{chapterabstract}
 
 \section{Funkční požadavky}
-V této podkapitole uvádím funkční požadavky pro mobilní aplikaci (\ref{table:func_req_app}) a backend (\ref{table:func_req_be}). Ke každému požadavku uvádím identifikátor pro pozdější odkazování k požadavku.
+Tato podkapitola obsahuje seznam funkčních požadavků pro mobilní aplikaci (\ref{table:func_req_app}) a backend (\ref{table:func_req_be}).
 
 \def\arraystretch{1.5}
 \begin{longtable}{|l|p{9cm}|} \hline
@@ -15,19 +15,21 @@ V této podkapitole uvádím funkční požadavky pro mobilní aplikaci (\ref{ta
 	
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	FP\textunderscore01	& Aplikace bude umět zobrazit seznam výsledků hlasování. Kromě výsledku budou jednotlivá hlasování v seznamu obsahovat také název hlasování, a datum a čas, kdy bylo odhlasováno. \\ \hline
+	FP\textunderscore01	& Aplikace bude umět zobrazit seznam návrhů zákona. Návrh bude obsahovat popis a výsledek jeho hlasování, a datum a čas hlasování. \\ \hline
 	
-	FP\textunderscore02	& Aplikace bude umět zobrazit detail hlasování. Detail hlasování bude obsahovat název, datum a čas, odkaz na stenoprotokol a celkovou statistiku hlasování. Celkovou statistikou hlasování rozumíme počet hlasování pro ano, ne, nepřihlášeno, omluveno a zdrženo od hlasování. Dále bude obsahovat to, jak v daném hlasování hlasovaly jednotlivé poslanecké kluby a členy těchto klubů. \\ \hline
+	FP\textunderscore02	& Aplikace bude umět zobrazit detail návrhu zákona. Detail bude zahrnovat název, datum a čas, odkaz na stenoprotokol a oficiální zdroj, a celkovou statistiku hlasování. Celkovou statistikou hlasování rozumíme počet hlasování pro a proti, a počet nepřihlášených, omluvených a zdržených. Dále bude obsahovat hlasování jednotlivých poslaneckých klubů a jejich členů pro daný návrh. \\ \hline
 	
-	FP\textunderscore03	& Aplikace bude umět zobrazit seznam členů poslanecké sněmovny. Prvky v tomto seznam budou obsahovat stručné informace o daném poslanci. Tyto informace budou obsahovat jméno a příjmení, volební kraj, název klubu a profilovou fotku. \\ \hline
+	FP\textunderscore03	& Aplikace bude umět zobrazit seznam členů poslanecké sněmovny. V seznamu budou tyto informace o členech: jméno a příjmení, volební kraj, název klubu a profilová fotku. \\ \hline
 	
-	FP\textunderscore04	& Aplikace bude umět zobrazit detail poslance. Detail poslance bude obsahovat jméno a příjemní, datum narození, profilovou fotku, datum nabytí statusu poslance, poslanecký klub a volební kraj. Dále bude obsahovat seznam výsledků hlasování a to, jak v nich hlasoval daný poslanec\\ \hline
+	FP\textunderscore04	& Aplikace bude umět zobrazit detail poslance. Detail poslance bude obsahovat jméno a příjemní, datum narození, profilovou fotku, odkaz na oficiální zdroj, datum nabytí statusu poslance, poslanecký klub a volební kraj. Dále bude obsahovat informace o tom, jak daný poslanec hlasovalv jednotlivých návrzích zákona. \\ \hline
 	
-	FP\textunderscore05	& Aplikace bude poskytovat možnost nastavení volební období, při kterém se nastaví hlasování a poslanci daného volebního období.\\ \hline
+	FP\textunderscore05	& Aplikace bude poskytovat možnost nastavení staršího volebního období. Uživatel vždy uvidí návrhy zákonů a seznam poslanců z aktuálně nastavenéího volebního období.\\ \hline
 	
-	FP\textunderscore06	& Aplikace bude poskytovat možnost vyhledávání hlasování podle jeho názvu.\\ \hline
+	FP\textunderscore06	& Aplikace bude poskytovat možnost vyhledávání hlasování podle jeho popisu.\\ \hline
 	
-	FP\textunderscore07	& Aplikace bude poskytovat možnost vyhledávání poslance / poslankyně podle jeho / jejího jména.\\ \hline
+	FP\textunderscore07	& Aplikace bude poskytovat možnost vyhledávání poslance podle jeho jména.\\ \hline
+	
+	FP\textunderscore07	& Aplikace bude pro seznamy návrhů a poslanců umožňovat tyto seznam nějakým způsobem aktualizovat skrz uživatelské rozhraní.\\ \hline
 	
 	\caption{Funkční požadavky pro mobilní aplikaci.}
 	\label{table:func_req_app}
@@ -38,7 +40,20 @@ V této podkapitole uvádím funkční požadavky pro mobilní aplikaci (\ref{ta
 	\multicolumn{2}{|l|}{\textbf{Funkční požadavky pro back-end}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	FP\textunderscore01	& Backend bude prostřednictvím volně dostupného rozhraní poskytovat mobilní aplikaci všechna data, která bude potřebovat.  \\ \hline
+	FP\textunderscore03	& Backend bude poskytovat endpoint pro seznam všech volebních období.  \\ \hline
+	
+	FP\textunderscore01	& Backend bude poskytovat endpoint pro seznam návrhů a výsledků hlasování.  \\ \hline
+	
+	FP\textunderscore02	& Backend bude poskytovat endpoint pro detail
+	návrhu a výsledku hlasování.  \\ \hline
+	
+	FP\textunderscore03	& Backend bude poskytovat endpoint pro výsledky hlasování poslaneckých klubů a jejich členů pro daný návrh.  \\ \hline
+	
+	FP\textunderscore04	& Backend bude poskytovat endpoint pro seznam poslanců.  \\ \hline
+	
+	FP\textunderscore05	& Backend bude poskytovat endpoint pro detail poslance.  \\ \hline
+	
+	FP\textunderscore06	& Backend bude poskytovat endpoint pro informace o tom, jak hlasoval konkrétní poslanec v jednotlivých návrzích zákona.  \\ \hline
 	
 	\caption{Funkční požadavky pro back-end.}
 	\label{table:func_req_be}
@@ -46,31 +61,21 @@ V této podkapitole uvádím funkční požadavky pro mobilní aplikaci (\ref{ta
 
 \section{Nefunkční požadavky}
 
-V této podkapitole uvádím nefunkční požadavky pro mobilní aplikaci (\ref{table:nonfunc_req_app}) a backend (\ref{table:nonfunc_req_be}).
-
+Tato podkapitola obsahuje seznam nefunkčních požadavky pro mobilní aplikaci (\ref{table:nonfunc_req_app}) a backend (\ref{table:nonfunc_req_be}).
 
 \def\arraystretch{1.5}
 \begin{longtable}{|l|p{9cm}|} \hline
 	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro mobilní aplikaci}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	NP\textunderscore 00	& Aplikace nebude provádět výpočetně náročná zpracování dat z důvodu šetření aplikace. Toto zpracování bude delegováno na backend. \\ \hline
-	
-	NP\textunderscore01	& Aplikace bude data stahovat pouze po spuštění aplikace z důvodu úspory dat a šetření BE. \\ \hline
+	NP\textunderscore 01	& Aplikace nebude provádět výpočetně náročná zpracování dat pro šetření aplikace. Výpočetně náročna pracování budou delegována na backend. \\ \hline
 
-	NP\textunderscore 02 & 
-	Aplikace bude podporovat pouze čas v ČR, jelikož cílí na hlasování o zákonech v ČR. Tj. pokud používáme aplikaci v zahraničí, zobrazené časy budou stále lokální vzhledem k ČR. \\ \hline
+	NP\textunderscore 02 & Aplikace bude mít jednoduché a intuitivní uživatelské rozhraní. \\ \hline
+	
+	NP\textunderscore 03 & Aplikace bude fungovat na zařízeních s OS Android 5.1 a výš pro cílení většího množství uživatelů. \\ \hline
+	
+	NP\textunderscore 04 & Aplikace nebude sbírat uživatelská data. \\ \hline
 
-	NP\textunderscore 03 & Aplikace bude mít jednoduché a intuitivní uživatelské rozhraní. \\ \hline
-	
-	NP\textunderscore 04 & Aplikace bude fungovat na zařízeních s OS Android 5.1 a výš pro cílení většího množství uživatelů. \\ \hline
-	
-	NP\textunderscore 05 & Aplikace nebude sbírat uživatelská data. \\ \hline
-	
-	NP\textunderscore 06 & Aplikace bude používat architekturu doporučenou v oficiální dokumenteci Androidu (https://developer.android.com/topic/architecture). \\ \hline
-	
-	NP\textunderscore07	& Backend bude zdrojová data zpracovávat tak, aby se nemusely zpracovávat v mobilní aplikaci. Zpracování dat na straně klienta by mohlo aplikaci zpomalit. Část dat, jejichž zpracování bude trvat příliš dlouho (např. půl dne), lze zpracovávat za běhu, pokud to nebude trvat příliš dlouho, a tím zhoršovat user experience uživatele. Rozhodnutí o to, kdy budou data zpracvávána při startu backendu a kdy až za běhu, je na pocitu programátora user testování mobilní aplikace. \\ \hline
-	
 	\caption{Nefunkční požadavky pro mobilní aplikaci.}
 	\label{table:nonfunc_req_app}
 \end{longtable}
@@ -82,15 +87,18 @@ V této podkapitole uvádím nefunkční požadavky pro mobilní aplikaci (\ref{
 	
 	NP\textunderscore 01 & Backend bude data stahovat z oficiální portálu PSP. \\ \hline
 	
-	NP\textunderscore 02 & Backend bude data stažená z portálu PSP transformovat do databázového modelu, který bude popsán v kapitole o návrhu aplikace a backendu. Cílem je, aby data byla předzpracovaná a připravená pro rychlý přistup z mobilní aplikace. \\ \hline
+	NP\textunderscore 02 & Backend bude data stažená z portálu PSP transformovat do databázového modelu (\ref{sec:database_model}). Cílem je, aby data byla předzpracovaná a připravená pro rychlý přistup z mobilní aplikace. \\ \hline
 	
-	NP\textunderscore 03 & Backend bude ztransformovaná data ukládat do databáze pro jejich perzistenci a připravu pro použití mobilní aplikací kdykoliv. \\ \hline
+	NP\textunderscore 03 & Backend bude ztransformovaná data perzistentně ukládat do databáze. \\ \hline
 	
-	NP\textunderscore 04 & Backend bude ztransformovaná a uložena data vystavovat prostřednictvím REST API. \\ \hline
+	NP\textunderscore 04 & Backend bude data z databáze vystavovat prostřednictvím REST API. \\ \hline
 	
 	NP\textunderscore 03 & Backend bude každý den stahovat nová data z portálu PSP a aktualizovat databázi. \\ \hline
 	
 	NP\textunderscore 05 & Backend bude data vystavovat ve formatu JSON. \\ \hline	
+	
+	
+	NP\textunderscore06	& Část dat, jejichž zpracování by trvalo příliš dlouho (např. půl dne) lze zpracovat až za běhu. \\ \hline
 	
 	\caption{Nefunkční požadavky pro back-end.}
 	\label{table:nonfunc_req_be}

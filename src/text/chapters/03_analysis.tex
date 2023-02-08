@@ -3,7 +3,7 @@
 \setcounter{page}{1}
 
 \begin{chapterabstract}
-V rámci této kapitoly provádím rešerši podobných řešení s cílem zjistit jejich funkčnosti a UI.
+Tato kapitola se zabývá rešerší existujících řešení.
 \end{chapterabstract}
 
 \section{politiscope}
@@ -14,18 +14,19 @@ V rámci této kapitoly provádím rešerši podobných řešení s cílem zjist
 	\item \textbf{Analyzovaná verze:} 2.4 (26. 1., 2023)
 \end{description}
 
-Aplikace politiscope \cite{politiscope} dle popisu na Google Play poskytuje informace ohledně politiky ve Spojených Státech v zjednodušené formě. Aplikace poskytuje informace i politicích a jejich rozhodnutích v hlasováních. Informace jsou podávány jednodušší formou, přičemž se snaží udržet objektivitu podaných informací. Aktuální témata jsou barevně označena pro lepší UX. Uživatelé mají možnost uložit si návrh zákona a sledovat průběh hlasování. Uživatelé mají také možnost sledovat konkrétní politiky. Návrhy zákonů jsou označeny tagy pro snazší vyhledání. U témat jsou i oficiální sumarizace a odkazy na oficiální zdroje. Lze také sledovat průběh voleb a kampaně.
+Aplikace politiscope \cite{politiscope} dle popisu na Google Play poskytuje informace ohledně politiky ve Spojených Státech. Informace jsou objektivní a jsou podány v jednoduché formě. Aplikace poskytuje informace o politických reprezentantech a jejich hlasováních. Aktuální témata jsou barevně označena. Uživatelé mají možnost ukládat návrh zákona a sledovat průběh hlasování. Uživatelé mají také možnost sledovat konkrétní politické reprezentanty. Návrhy zákonů jsou označeny tagy pro snazší vyhledání. U témat jsou oficiální sumarizace a odkazy na oficiální zdroje. Lze také sledovat průběh voleb a kampaní.
 
-Aplikace čerpá data z API poskytuných z následujícíh portálů:
+Aplikace čerpá data z API poskytuných z následujícíh zdrojů
 
 \begin{itemize}
-	\item https://api.propublica.org/ - ProPublica je nezávislá, nezisková redakce. \cite{propublica}
-	\item https://theunitedstates.io/ - @unitedstates je projekt poskytující data ohledně Spojených Států veřejností a pro veřejnost. \cite{unitedstates}
-	\item https://www.congress.gov/ - Congress.gov je oficiální portál pro informace z Kongresu a orgánů státní správy. \cite{congress}
-	\item https://api.open.fec.gov/ - OpenFEC je oficiální portál vlády Spojených Států. \cite{openfec}
+	\item \href[]{https://api.propublica.org/}{\color{blue}{prorepublica}} \cite{propublica}
+	 - ProPublica je nezávislá, nezisková redakce.
+	\item 	\href[]{https://theunitedstates.io/}{\color{blue}{theunitedstates}}\cite{unitedstates} - @unitedstates je projekt poskytující data ohledně Spojených Států veřejností a pro veřejnost.
+	\item \href[]{https://www.congress.gov/}{\color{blue}{congress}} \cite{congress} - Congress.gov je oficiální portál pro informace z Kongresu a orgánů státní správy.
+	\item \href[]{https://api.open.fec.gov/}{\color{blue}{openfec}} \cite{openfec} - OpenFEC je oficiální portál vlády Spojených Států.
 \end{itemize}
 
-Výše uvedené informace jsou čerpány čistě z popisu a screenshotů aplikace na Google Playi. Do aplikace se mi nepodařilo dostat. Pro přístup je potřeba se zaregistrovat a přihlásit se. Při registraci mě to však automaticky přesměruje na obrazovka pro přihlášování. Při zadání přihlašovacích údaju to však píše, že účet se zadanými přihlašovacími údaji neexistují. Aplikaci jsem testoval na dvou různých zařízeních a na obou nastal ten samý problém. Aplikace má přesto přes 10 000 stažení, a tudíž ve většině případech funguje. Tipuji, že problém souvisí s geografickou lokací mobilního zařízení.
+Výše uvedené informace jsou čerpány čistě z popisu a screenshotů aplikace na Google Playi. Do aplikace se mi nepodařilo dostat. Pro přístup je potřeba zaregistrovat se a přihlásit se. Při registraci mě to však automaticky přesměruje na přihlášovací obrazovku. Při zadání přihlašovacích údaju to pak píše, že účet se zadanými přihlašovacími údaji neexistují. Aplikaci jsem testoval na dvou různých zařízeních a na obou je stejný problém. Aplikace má přesto přes 10 000 stažení, a tudíž ve většině případech funguje. Tipuji, že problém souvisí nějakým způsobem s geografickou lokací mobilního zařízení.
 
 \begin{figure}
 	\centering
@@ -38,7 +39,7 @@ Výše uvedené informace jsou čerpány čistě z popisu a screenshotů aplikac
 \end{figure}
 
 \subsection{Zhodnocení}
-Přestože aplikaci se mi nepodařilo zprovoznit, stálo za podle mého názoru ji sem dát kvůli jejímu rozsáhlému výčtu funkčností. Další výhodou této aplikace je také přívětivé uživatelské rozhraní a fakt, že data získává z API. Poslanecká sněmovna, jak později ukážu, API pro svoje data neposkytuje, ale data poskytuje ve formě CSV souborů.
+Přestože se mi  aplikaci nepodařilo zprovoznit, stálo za to zahrnout ji do analýzy kvůli jejím funkčnostem. Další výhodou této aplikace je také přívětivé uživatelské rozhraní a fakt, že data získává z API. Dat PSP jsou totiž poskytována ve formě CSV souborů, jak bude popsáno v \ref{ch:analysis_data}.
 
 \section{Congress}
 
@@ -48,19 +49,19 @@ Přestože aplikaci se mi nepodařilo zprovoznit, stálo za podle mého názoru 
 	\item \textbf{Analyzovaná verze:} 4.9.2 (27. 1., 2023)
 \end{description}
 
-Aplikace Congress \cite{congress} dle popisu na Google Play poskytuje informace ohledně politických reprezentantů a jejich hlasováních, a návrhů zákonů ve Spojených Státech. Návrhy a hlasování umožňuje vyhledávat.
+Aplikace Congress \cite{congress} dle popisu na Google Play poskytuje informace ohledně politických reprezentantů a jejich hlasováních, a návrzích zákona ve Spojených Státech. Návrhy a hlasování lze vyhledávat podle klíčových slov.
 
-Při spuštění aplikace uvidíme domovskou obrazovku, která obsahuje menu pro seznam politiků, návrhů zákonů, výsledků hlasování, aktivity v kongresu, schůzky komisí a seznam komisí. Na domovské stránce uvidíme také seznam nejnovějších návrhů zákonů. 
+Při spuštění aplikace uvidíme domovskou obrazovku, která obsahuje menu pro seznam politických reprezentantů, návrhů zákona, výsledků hlasování, aktivit v kongresu, schůzek komisí a seznam komisí. Na domovské stránce uvidíme také seznam nejnovějších návrhů zákona. 
 
-Obrazovka pro seznam politiků obsahuje seznam politiků, které aktuálně sledujeme, seznam politických reprezentantů rozdělených podle států, sněmovny a senátu. Na obrazovce konkrétního politického reprezentanta uvidíme jméno, politickou stranu, příslušný stát, telefonní číslo, jak hlasoval, které zákony navrhnul, ke kterým komisím přísluší, odkaz na oficiální stránku s informacemi o něm a jeho biografii. 
+Obrazovka pro seznam politických reprezentantů obsahuje seznam aktuálně sledovaných politických reprezentatntů. Reprezentatny lze filtrovat podle států, sněmovny a senátu. Na obrazovce konkrétního politického reprezentanta uvidíme jméno, jeho politickou stranu, příslušný stát, telefonní číslo, jak hlasoval, které zákony navrhoval, ke kterým komisím patří, odkaz na oficiální stránku s informacemi o něm a jeho biografii. 
 
-Obrazovka pro návrhy zákonů obsahuje seznam návrhů, které sledujeme, seznam aktivních návrhů a seznam nových návrhů.
+Obrazovka pro návrhy zákonů obsahuje seznam sledovaných návrhů, seznam aktivních návrhů a seznam nových návrhů.
 
-Na obrazovce pro výsledky hlasování je popis, výsledek datum a čas, a údaj o tomm, zda se hlasovalo ve Sněmovně nebo Senátu. Obrazovka s detailem hlasování obsahuje výsledek hlasování, počet hlasování pro a proti, a počet lidí, kteří nehlasovali. Dále obsahuje informace o tom, kolik lidí je potřeba být ve fyzické přítomnosti, aby hlasování bylo platné, a jak hlasoval který politik.
+Na obrazovce pro výsledky hlasování je popis návrhu, výsledek hlasování, datum a čas hlasování, a údaj o tom, zda se hlasovalo ve Sněmovně nebo Senátu. Obrazovka s detailem hlasování obsahuje výsledek hlasování, počet hlasování pro a proti, a počet lidí, kteří nehlasovali. Dále obsahuje informace o tom, kolik lidí je potřeba být ve fyzické přítomnosti, aby hlasování bylo platné, a jak hlasoval který politik.
 
-Obrazovka pro události v kongresu obsahuje seznam událostí seřazené sestupně podle data času. Události jsou rozdělené podle toho, zda nastaly ve Sněmovně nebo v Senátu. 
+Obrazovka pro události v kongresu obsahuje seznam událostí seřazené sestupně podle času. Události jsou rozdělené podle toho, zda nastaly ve Sněmovně nebo v Senátu. 
 
-Obrazovka pro schůzky komisí byla v době analýzy aplikace prázdná. Obrazovka pro seznam komisí byla v době analýzy aplikace prázdná. Nejspíš proto je i obrazovka pro schůzky komisí prázdná.
+Obrazovka pro schůzky komisí a obrazovka pro seznam komisí byly v době analýzy aplikace prázdné.
  
 \begin{figure}
 	\centering
@@ -73,5 +74,5 @@ Obrazovka pro schůzky komisí byla v době analýzy aplikace prázdná. Obrazov
 \end{figure}
 
 \subsection{Zhodnocení}
-Můj první dojem z této aplikace je to, že je velmi propracovaná z hlediska různorodosti informací, které poskytuje. Přitom díky dobře navrženému uživatelskému rozhraní nepůsobí nepřehledně. Naopak působí velmi intuitivně. Z menu se dostaneme na hlavní obrazovky, které jsou dále rozděleny na taby. U návrhů můžeme snadno vidět výsledek, jak kdo hlasoval, proces schvalování návrhu a aktuální stav. Politici můžeme snadno vyhledat podle klíčových slov, státu a příslušnosti ve Sněmovně nebo Senátu. Politikz a návrhy zákonu můžeme sledovat a nastavit si notifikaci, takže budeme vždy notifikovani o nových změnách.
+První dojem z této aplikace je to, že je velmi propracovaná z hlediska různorodosti poskytovaných informací. Přesto díky dobře navrženému uživatelskému rozhraní nepůsobí nepřehledně. Naopak působí velmi intuitivně. Z menu se lze dostat na jednotlivé hlavní obrazovky, které jsou dále rozděleny na taby. U návrhů lze snadno vidět výsledek hlasování, jak hlasoval který politik, proces schvalování návrhu a aktuální stav. Politiky lze snadno vyhledat podle klíčových slov, státu a příslušnosti ve Sněmovně nebo Senátu. Politiky a návrhy zákonu lze sledovat a nastavit notifikaci o jejich změnách.
 

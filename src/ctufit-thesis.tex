@@ -1,10 +1,3 @@
-%% This is the ctufit-thesis example file. It is used to produce theses
-%% for submission to Czech Technical University, Faculty of Information Technology.
-%%
-%% Get the newest version from
-%% https://gitlab.fit.cvut.cz/theses-templates/FITthesis-LaTeX
-%%
-%%
 %% Copyright 2021, Eliska Sestakova and Ondrej Guth
 %%
 %% This work may be distributed and/or modified under the
@@ -34,27 +27,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FILL IN THIS INFORMATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ctufittitle{Mobilní aplikace pro zobrazení výsledků hlasování Poslanecké sněmovny} % replace with the title of your thesis
-\ctufitauthorfull{Bc. Lukáš Dang} % replace with your full name (first name(s) and then family name(s) / surname(s)) including academic degrees
-\ctufitauthorsurnames{Dang} % replace with your surname(s) / family name(s)
-\ctufitauthorgivennames{Lukáš} % replace with your first name(s) / given name(s)
-\ctufitsupervisor{Ing. Ondřej John} % replace with name of your supervisor/advisor (include academic degrees)
-\ctufitdepartment{Katedra webového inženýrství} % replace with the department of your defence
-\ctufityear{2023} % replace with the year of your defence
-\ctufitdeclarationplace{Praze} % replace with the place where you sign the declaration
-\ctufitdeclarationdate{\today} % replace with the date of signature of the declaration
-\ctufitabstractCZE{Diplomová práce popisuje návrh a implementaci mobilní aplikace, která slouží k zobrazení výsledků hlasování poslanců Poslanecké sněmovny Parlementu ČR. Součástí práce je i návrh a implementace REST API, který bude poskytovat data pro mobilní aplikaci. V teoretické části specifikuji požadavky po aplikaci a backendu, analyzuji již existující či podobná řešení a popisuji potřebné koncepty pro pochopení praktické části. V praktické části pak popisuji implementaci mobilní aplikace v jazyce Kotlin a REST API v jazyce Java. }
-\ctufitabstractENG{}
-\ctufitkeywordsCZE{poslanecká sněmovna, poslanecká sněmovna parlamentu ČR, hlasování, poslanec, REST, backend}
-\ctufitkeywordsENG{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% END FILL IN
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ctufittitle{Mobilní aplikace pro zobrazení výsledků hlasování Poslanecké sněmovny}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CUSTOMIZATION of this template
-% Skip this part or alter it if you know what you are doing.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ctufitauthorfull{Bc. Lukáš Dang}
+
+\ctufitauthorsurnames{Dang}
+
+\ctufitauthorgivennames{Lukáš}
+
+\ctufitsupervisor{Ing. Ondřej John}
+
+\ctufitdepartment{Katedra webového inženýrství} % 
+
+\ctufityear{2023}
+
+\ctufitdeclarationplace{Praze}
+
+\ctufitdeclarationdate{\today}
+
+\ctufitabstractCZE{Diplomová práce popisuje návrh a implementaci mobilní aplikace, která slouží k zobrazení výsledků hlasování poslanců Poslanecké sněmovny Parlementu ČR. Součástí práce je i návrh a implementace backendu, který bude zpracovávat data z webu poslanecké sněmovny parlamentu ČR a poskytovat je mobilní aplikaci prostřednictvím REST API.}
+	
+\ctufitabstractENG{The diploma thesis describes the design and implementation of a mobile application that serves to display the voting results of members	 of the Czech Parliament's Chamber of Deputies. The work also includes the design and implementation of a backend that will process data from the Czech Parliament's Chamber of Deputies website and provide it to the mobile application through a REST API.}
+
+\ctufitkeywordsCZE{poslanecká sněmovna, parlament, hlasování, poslanec, poslanecký klub, REST, Android, mobilní aplikace, backend, Kotlin, Java}
+
+\ctufitkeywordsENG{Chamber of Deputies, parliament, voting, member of parliament, parliamentary party group, REST, Android, mobile application, backend, Kotlin, Java}
 
 \RequirePackage{iftex}[2020/03/06]
 \iftutex % XeLaTeX and LuaLaTeX
@@ -74,17 +71,6 @@
 
 \setcounter{secnumdepth}{4} % numbering sections; 4: subsubsection
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CUSTOMIZATION of this template END
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%
-% DEMO CONTENTS SETTINGS
-% You may choose to modify this part.
-%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{svg}
 \newcommand{\imagepath}{images}
 
@@ -229,29 +215,39 @@ D\'\i{}la a za jak\'ymkoli \'u\v celem (v\v cetn\v e u\v zit\'\i{} k~v\'yd\v ele
 % (appropriate to remove in most theses)
 %%%%%%%%%%%%%%%%%%%
 \begin{summarypage}
-\section*{Poslanecká sněmovna}
+	
+\section*{Cíle}
+V této kapitole budou uvedeny cíle této práce.
 
-\section*{Analýza existujících řešení}
-V první kapitole analyzuji existující řešení, která řeší stejný nebo podobný problémm.
+\section*{Poslanecká sněmovna}
+Tato kapitola slouží jako úvod do tematiky hlasování v poslanecké sněmovně.
 
 \section*{Funkční a nefunkční požadavky}
-V této kapitole popisuji funkční a nefunkční požadavky kladené na mobilní aplikaci a backendu.
+V další kapitole bude popsány funkční a nefunkční požadavky pro mobilní aplikaci i backend.
 
-\section*{Analýza}
-V této kapitole analyzuji aplikace, které se také zabývají agregací a zobrazování výsledků hlasování. Konkrétně se podíváme na mobilní aplikace politiscope, Election Tracker - US election a Election Polls US. Budu analyzovat především zobrazovaná data a uživatelské rozhraní. V další části analyzuji zdrojová data, které poslanecka sněmovna poskytuje na jejich oficiálním portálu www.psp.cz.
+\section*{Analýza existujících řešení}
+Následně budou analyzována a zhodnocena existující řešení. Konkrétně budou analyzovány zahraniční mobilní aplikace politiscope a Congress.
+
+\section*{Analýza zdrojových dat}
+Součástí analýzy budou zdrojová data z webu poslanecké sněmovny, která budou v rámci této práce využita.
 
 \section*{Návrh}
-Na základě funkčních a nefunkčních požadavků a analýzy zdrojových dat navrhnu v této kapitole uživatelské rozhraní mobilní aplikaci. Součástí návrhu jsou wireframy. Následně popíši návrh REST API pro poskytování dat pro mobilní aplikaci. REST API bude navrženo tak, aby co nejlépě vyhovělo požadavkům mobilní aplikace a jejímu uživatelskému rozhraní. Na konci popíši návrh datové struktury backend služby, tedy jaká data a v jakém formátu budou v databázi na backendu ukládána. Zároveň popíši transformaci zdrojových dat do této struktury.
+V této kapitole bude na základě funkčních a nefunkčních požadavků popsán návrh uživatelského rozhraní mobilní aplikace, dotazů na REST API a odpovědí z něj, a databázový model. Dále budou popsány návrhy pro architektury použité pro implementaci mobilní aplikace a backendu.
 
 \section*{Implementace}
-V této kapitole popisuji implementaci mobilní aplikace a backendové služby. Popíši zde strukturu a architekturu projektu, způsob implementace na základě návrhů, odůvodnění některých implementačních rozhodnuí a konkrétne využité technologie.
+Na základě návrhů budou popsány implementace mobilní aplikace a backendu. Popis bude zahrnovat popis využitých nástrojů a technologií, případně jejich porovnání s možnými alternativami. Dále bude zahrnovat popis implementace po jednotlivých vrstvách architektury mobilní aplikace a backendu.
 
 \section*{Testování}
-V této kapitole popisuji testy pro ověření korektnosti mobilní aplikace a backendové služby.
+Po popisu implementace budou popsány testy ověřující funkčnost mobilní aplikace a backendu.
 
+\section*{Nasazení}
+V rámci této kapitoly bude popsáno způsob nasazení mobilní aplikace a backendu.
+
+\section*{Spuštění}
+Tato kapitola slouží jako návod pro spuštění lokální zprovoznění backendu a mobilní aplikace.
 
 \section*{Shrnutí}
-V této kapitole shrnuji celou práci a ujasňuji, jaké byly na práci kladeny požadavky a které požadavky byly splněny. Uvádím možná vylepšení do budoucnosti.
+V této kapitole bude shrnuta práce, včetně jejího zadání a jejich splnění.
 
 \end{summarypage}
 %%%%%%%%%%%%%%%%%%%
