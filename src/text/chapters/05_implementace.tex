@@ -1,125 +1,131 @@
-\chapter{Implementace}
+\chapter{Implementace mobilní aplikace}
 \setcounter{page}{1}
 \label{ch:implementation}
 
-Tato kapitola se zabývá implementací mobilní aplikace a backendu. Kapitola je rozdělena na dvě podkapitoly: jednu pro popis implementace mobilní aplikace a druhou pro popis implementace backendu.
+V rámci této podkapitoly bude popsána implementace mobilní aplikace. V první podkapitole budou popsány použité nástroje a technologie. Mobilní aplikace je implementována pomocí Googlem doporučené architektury pro vývoj mobilních aplikací (\ref{subsec:architecture-google}). Následující sekce budou rozděleny tak, aby odpovídaly jednotlivým vrstvám této architektury.
 
-\section{Mobilní aplikace}
-
-V rámci této podkapitoly bude popsána implementace mobilní aplikace. Kapitola je rozdělena do několika sekcí. Na začátku budou popsány nástroje a technologie použité pro implementaci. Následné bude popsána adresářová struktura projektu. Poté bude popsána implementace uživatelského rozhraní. Na konci bude popsána implementace síťové vrstvy pro komunikaci s backendem.
-
-\subsection{Použité nástroje a technologie}
-V této sekci budou popsány použité nástroje a technologie, včetně použitých knihoven pro implementaci mobilní aplikace.
+\section{Použité nástroje a technologie}
+V této sekci budou popsány hlavní nástroje a technologie použité pro implementaci mobilní aplikace.
 
 \subsubsection *{Android Studio}
-Mobilní aplikace byla vytvořena ve vývojovém prostředí Android Studio, což je oficiální IDE pro vývoj mobilních aplikací pro Android. Některé jeho vlastnosti:
+Mobilní aplikace byla vytvořena ve vývojovém prostředí Android Studio, což je oficiální IDE pro vývoj mobilních aplikací pro Android \cite{androidstudio}. Výhody tohoto IDE jsou:
 
 \begin{itemize}
-	\item \textbf{Podpora pro Android} - Pro vývoj mobilních aplikací pro Android je Android Studio velmi uživatelsky přívětivé. Po spuštění IDE se hned zobrazí průvodce pro instalaci Android SDK obsahující nástroje potřebné pro vývoj aplikací. Po instalaci lze SDK rovnou použít. Není tedy třeba Android SDK manuálně instalovat z internetu a nakonfigurovat s IDE. IDE Dále poskytuje průvodce pro vytvoření projektu, pomocí kterého lze vybrat jednu z existujích šablon pro různé typy projektů. Konfiguraci projektu si uživatel tedy nakliká a IDE se postará o zbytek, tedy vytvoří projektový adresář se všemi potřebnými konfiguračními soubory a počáteční kostru aplikace. Po vytvoření projektu je již k dispozici zatím prázdná, ale spustitelná aplikace.
+	\item \textbf{Podpora pro Android} - Android Studio je IDE určené pro vývoj mobilních aplikací pro Android. Po spuštění IDE se hned zobrazí průvodce pro instalaci Android SDK obsahující nástroje potřebné pro vývoj aplikací. Po instalaci je SDK připravené k použití. Není tedy potřeba SDK manuálně instalovat z internetu a naimportovat do IDE. IDE Dále poskytuje průvodce pro vytvoření projektu, pomocí kterého lze vybrat jednu z existujích šablon pro různé typy projektů. Po zvolení šablony IDE vytvoří projektový adresář se zdrojovými kódy, závislostmi a konfiguračními soubory pro danou šablonu. Po vytvoření projektu je aplikace prázndá, ale je ve spustitelném stavu.
 	
-	\item \textbf{Emulátor} - Android Studio poskytuje vestavěný emulátor, který emuluje fyzicka mobilní zařízení. Díky tomu může uživatel testovat své aplikace na různých zařízeních s různými konfiguracemi (např. rozměry zařízení, verze Androidu).
+	\item \textbf{Emulátor} - Android Studio poskytuje vestavěný emulátor, který emuluje fyzické mobilní zařízení. Díky tomu může uživatel testovat své aplikace na různých zařízeních s různými konfiguracemi (např. různé rozměry zařízení, verze Androidu).
 		
-	\item \textbf{Klávesové zkratky} - Jeden z hlavních důvodů pro používání IDE založených od JetBrains jsou klávesové zkratky, které jsou stejné pro všechna IDE od JetBrains. Tyto zkratky zrychlují navigaci v kódu a zvyšují produktivitu vývojáře.
+	\item \textbf{Klávesové zkratky} - Jeden z hlavních důvodů pro použití IDE založených od JetBrains jsou klávesové zkratky, které jsou stejné pro všechna IDE od JetBrains. Tyto zkratky zvyšují produktivitu vývojáře.
 \end{itemize}
-
-\noindent zdroj: https://developer.android.com/studio
 
 \subsubsection *{Gradle}
-Gradle je nástroj pro automatizaci sestavování programu, tj. automatizace kompilace zdrojového kódu a zabalení výsledného binárního kódu spolu s dalšími zdroji, které zdrojový kód využívá. Toto jsou další výhody Gradlu: 
+Gradle je nástroj pro automatizaci sestavování programu, tj. automatizace kompilace zdrojového kódu do binárního kódu, testování a zabalení do balíčku. Toto jsou další výhody Gradlu: 
 
 \begin{itemize}
-	\item \textbf{Gradle Pluginy} - Poskytují Gradlu další nástroje jako např. možnost kompilovat Kotlinu, parsovat anotace nebo generovat kód na základě konfiguračního souboru. 
+	\item \textbf{Gradle Pluginy} - Poskytují Gradlu další nástroje jako např. možnost kompilovat programovací jazyk Kotlin, parsovat anotace nebo generovat kód na základě konfiguračního souboru. 
 	
-	\item \textbf{Externí knihovny} - Pomocí Gradlu lze specifikovat externí knihovny, které se mají automaticky nainstalovat a naimportovat do aplikace pro použití.
+	\item \textbf{Externí knihovny} - Pomocí Gradlu lze do aplikace přidat knihovny, které se stáhnou z předem definovaného vzdáleného repozitáře.
 	
-	\item \textbf{Konfigurace} - Gradle umožňuje konfigurovat pluginy a Android. konfigurace pluginu závisí na daném pluginu. U Androidu lze konfigurovat např. SDK verzi, verzi Kotlinu, aktivaci Jetpack Compose toolkitu. Konfigurací se detailněji zabývá podkapitola o konfiguraci Androidu.
+	\item \textbf{Konfigurace} - Gradle umožňuje konfigurovat pluginy a aplikaci. U Androidu lze nakonfigurovat např. SDK verzi, verzi Kotlinu, aktivaci Jetpack Compose toolkitu (\ref{ssec:jetpack-compose}).
 \end{itemize}
 
-zdroj: https://gradle.org/
+\noindent Alternativou je nástroj Maven, který lze také použít pro vývoj mobilní aplikace pro Android. Oba mají své výhody a nevýhody pro různé situace. Rozhodl jsem se však pro Gradle, jelikož při vytváření projektu v Android Studiu nebyla možnost výběru mezi Gradlem a Mavenem. Projekt byl automaticky nakonfigurován pomocí Gradlu. Předpokládám tedy, že Google preferuje Gradle jako nástroj pro vývoj v Androidích aplikací. Maven by se musel nakonfigurovat manuálně, což by pro zprovoznění aplikace bylo časově náročné, a nejspíš i zbytečné.
 
-\noindent Alternativou nástroje Gradle je Maven, který lze také použít pro vývoj mobilní aplikace pro Android. Oba mají své výhody a nevýhody pro různé situace. Rozhodl jsem se však pro Gradle, jelikož při vytváření projektu v Android Studiu nebyla možnost výběru mezi Gradlem a Mavenem. Projekt byl automaticky nakonfigurován pomocí Gradlu. Předpokládám tedy, že Google preferuje Gradle jako nástroj pro tento účel. Maven by se musel nakonfigurovat manuálně, což by pro zprovoznění aplikace bylo časově náročné, a nejspíš i zbytečné. Pokud by však byla jednoduchá možnost, jak zvolit Maven jako nástroj, přesto bych zvolil Gradle, jelikož konfigurace v Gradlu je psána v programovacím jazyce Groovy, který je pro mě mnohem čitelnější než XML, v kterém je psána konfigurace pro Maven.
-
-\subsubsection *{Kotlin}
-Pro mobilní aplikaci byl použit programovací jayzk Kotlin, který je od roku 2017 preferovaným jazykem pro Android. Původním programovacím jayzkem pro Android byla Java.	 Kotlin má však oproti němu několik výhod. Toto jsou výhody Kotlinu:
+\subsection *{Kotlin}
+Pro mobilní aplikaci byl použit programovací jayzk Kotlin \cite{kotlin}, který je od roku 2017 preferovaným jazykem pro Android \cite{google-prefers-kotlin}. Původním programovacím jayzkem pro Android byla Java \cite{java}. Kotlin má však oproti němu několik výhod:
 
 \begin{itemize}
-    \item \textbf{Je stručný} - Kotlin umožňuje vytvořit 
-    singleton pomocí klíčového slova \lstinline{object}.
+    \item \textbf{Je stručný} - Kotlin umožňuje např. vytvořit 
+    singleton pomocí klíčového slova \lstinline{object} \cite{kotlin-object}.
     
     \item \textbf{Je bezpečný} - Kotlin rozlišuje null a non-null datové typy. Non-null typy lze dereferencovat vždy, null typy pouze po kontrole výskytu hodnoty null. To je vynuceno typovým systémem Kotlinu. Díky tomu není možné zkompilovat kód, v kterém by se dereferencovala hodnota null, kvůli čemuž by aplikace spadla.
     
-    \item \textbf{Je expresivní} - Kotlin byl navržen s důrazem na výstižnost kódu, což přispívá k čitelnosti kódu
+    \item \textbf{Je expresivní} - Kotlin byl navržen s důrazem na stručnost a výstižnost kódu.
 \end{itemize}
 
-\noindent Dalším důvodem pro použití Kotlinu souvisí s dlouze běžícími blokujícími operacemi jako např. síťovými a databázovými operacemi. Aplikace běží defaultně na hlavním vláknu, které má na starosti vykreslování obrazovky a obsluhu událostí (např. kliknutí na tlačítko a scrollování). Pokud na něm provedeme dlouze běžící blokující operaci, vlákno se zablokuje na delší dobu a nebude moct obsluhovat události. Uživatelovi se pak aplikace jeví jako zamrznutá. Možným řešením pro tento problém je vytvoření nového vlákna, které bude běžet paralelně s hlavním vlákenm a které bude provádět danou blokující operaci. Operace bude blokovat nově vytvořené vlákno, nebude však blokovat hlavní vlákno, díky čemuž bude uživatel stále moct interagovat s aplikací, i když blokující operace stále běží. Tvorba vláken a jejich správa jsou však drahé operace. 
+\subsubsection*{Kotlin Coroutines}
 
-\vspace{10px}
+\noindent Dalším důvodem pro použití Kotlinu souvisí s dlouze běžícími blokujícími operacemi jako např. síťovými a databázovými operacemi. Android aplikace běží defaultně na hlavním vláknu, které má na starosti vykreslování obrazovky a obsluhu událostí. Pokud je na tomto vlákně provedena dlouze běžící blokující operaci, vlákno se zablokuje na delší dobu a nebude moct obsluhovat události. Uživatelovi se aplikace pak jeví jako zamrznutá. Jedním řešením pro tento problém je vytvořit nové vlákno a provést operaci na něm. Dvě různá vlákna běží paralelně, a tudíž operace běžící na nově vytvořeném vlákně nebude blokovat hlavní vlákno, a tudíž aplikace nezamrzne. Problémem však je, že tvorba vláken a jejich správa jsou drahé operace. 
 
-\noindent\textbf{Kotlin Coroutines} - Alternativním řešením jsou proto Kotlin Coroutines, které umožňují provádět operace paralelně bez nutnosti vytvoření nového vlákna. Coroutina je kus kódu, který je suspendovatelný. To znamená, že ho lze pomocí určitých metod pozastavit (také suspendovat), dokud nebude operace hotová, a tím uvolnit aktuální vlákno pro použití jinde. To se hodí např. pro síťové operace, která stahuje data z internetu. Fungovalo by to tak, že danou síťovou operaci obalíme do coroutiny a až pak operaci provedeme. Ve chvíli kdy operace začne stahovat data z internetu, coroutinu suspendujeme, čímž uvolníme aktuální vlákno pro použití jinde. Jakmile jsou data stažena, kód v suspendované coroutině automaticky pokračuje. To vše probíhá na jednom vlákně. Ukážeme si příklad použití coroutiny je na (\ref{lst:coroutine}).
+Alternativním řešením jsou Kotlin Coroutines - paměťově nenáročný způsob, jak psát paralelní kód. Přesné fungování coroutinů je nad rámec této práce, pro účely této práce však stačí vědět, že coroutines se chovají paměťově nenáročná vlákna. To znamená, že lze vytvořit několik coroutinů, z nichž každý reprezentuje nějaký kus paralelně běžícího výpočtu. Oproti vláknům lze coroutinů spustit mnohem více (na běžném počítači klidne v řádu stovek nebo tisíců). Zde je příklad použití coroutiny:
 
-\begin{lstlisting}[caption={Příklad použití coroutiny}, label={lst:coroutine}, tabsize=2]
-fun main() = runBlocking {
-	launch {
-		delay(1000L)
-		println("World!")
+\begin{lstlisting}[caption={Příklad použití coroutiny}, label={lst:coroutine-example}, tabsize=2]
+// Soubor ListViewModel.kt
+class ListViewModel {
+
+	// zbytek implementace
+
+	init {
+		viewModelScope.launch {
+			// paralelne bezici operace 1
+		}
+		
+		viewModelScope.launch {
+			// paralelne bezici operace 2
+		}
 	}
-	println("Hello")
+
+	// zbytek implementace
 }
 \end{lstlisting}
 
-\noindent Metoda \lstinline|runBlocking| vytvoří tzv. scope, v rámci kterého je vytvořena coroutina pomocí metody \lstinline|launch|. Scope vymezuje životnost coroutinů, které v něm běží. To je užitečné pro zabránění úniku dat. Např. když uživatel spustí aplikaci a pomocí coroutinu se začnou stahovat data z internetu, a aplikaci hned zavře, díky scopu coroutina přestane stahovat data a je zrušena. V rámci metody \lstinline|launch| specifikujeme funkci, která je suspendovatelná, tj. lze ji pozastavit, a tím uvolnit aktuálkní vlákno. Coroutina v tuto chvíli běží sekvenčně se zbytkem kódu, dokud není suspendována. V tomto případě je suspendována pomocí funkce \lstinline|delay|, která ji suspenduje na 1 sekundu. V tuto chvíli je aktuální vlákno uvolněno a je proveden kód následující bezprostředně za coroutinou a vypíše se Hello. V tuto chvíli program ještě neskončí, scope totiž vždy čeká na to, až všechny její coroutiny doběžely. Po 1 sekundě suspendovaná coroutina opět pokračuje a vypíše řetězec World.
+\noindent V tomto kusu kódu je coroutina pro operaci 1 vytvářena zavoláním funkce \lstinline|launch| na objektu \lstinline|viewModelScope|. Funkce akceptuje callback funkci, která bude zavolána v rámci vytvořené couroutiny. To znamená, že callback funkce bude běžet paralelně vzhledem k ostatním  coroutinám, v tomto případě vzhledem ke coroutině spouštějící druhou operaci. Důležité je, že obě coroutiny běží paralelně, ale na stejném vlákně. Dále objekt \lstinline|viewModelScope| určuje scope, v kterém běží coroutina. Ten určuje životní cyklus dané coroutiny. Pokud skončí scope a coroutina ještě nedoběhla, coroutina automaticky ukončí svůj běh. Jednoduchým příkladem scopu je scope samotné aplikace. Pokud je aplikace spuštěna, pak scope existuje a coroutina může běžet. Pokud je aplikace zavřena, scope přestane existovat a coroutina přestane běžet. Díky tomu lze předejít únikům dat. Když by byla aplikace zavřena a scope by stále existoval, pak by coroutina stále běžela, a až by doběhla, mohla by nějakým způsobem modifikovat data nebo data někám přidávat. při opětovném spuštění aplikace však jsou reference na tato data ztracena.
 
-Kód (\ref{lst:coroutine-practical}) ilustruje praktičtější příklad, kdy voláme funkci \lstinline|fetchDataFromApi()|, která stahuje data z API a interně operaci suspenduje, díky čemuž se uvolní vlákno a funkce \lstinline|handleUserInteraction()| pro interakci s uživatelem může být spuštěna ještě před tím, než přijdou data. Až přijdou data, coroutina opět poběží a na základě získaných dat aktualizuje UI pomocí funkce \lstinline|updateUi()|. Klíčové slovo \lstinline|suspend| u deklarace funkce znamená, že je suspendovatelná a lze z ní volat funkce, které jsou také suspendovatelné.
+Další důležitou vlastností coroutinů je to, že callback funkce, kterou volá, je suspendovatelná. To znamená několik věcí
 
-\begin{lstlisting}[caption={Praktický příklad použití coroutiny}, label={lst:coroutine-practical}, tabsize=2]
-fun main() = runBlocking {
-	launch {
-		val data = fetchDataFromApi()
-		updateUi(data)
-	}
-	handleUserInteraction()
-}
+\begin{itemize}
+	\item Deklare funkce je označená klíčovým slovem \lstinline|suspend|
+	\item Suspendovatelná funkce může volat ostatní suspendovatelné funkce. Naopak nesuspendovatelná funkce může volat \textbf{pouze} nesuspendovatelné funkce.
+	\item Suspendovatelná funkce může coroutinu suspendovat, tj. pozastavit ji, a uvolnit tím vlákno pro použití jinou coroutinou.
+\end{itemize}
 
-suspend fun fetchDataFromApi() {...}
-\end{lstlisting}
+\noindent Důležitý je třetí bod. Díky mechanizmu pro suspendování coroutiny mohou coroutiny bežět paralelně. Příklad suspendovatelné funkce, která suspenduje coroutinu, je funkce \lstinline|delay()|, která coroutinu suspenduje na určitý počet milisekund. Během této doby je vlákno uvolněno pro použití jinou coroutinou. Jakmile uběhne daný časový interval, coroutina pokračuje ve svém běhu. Častějším případem použití je např. zavolání síťové operace prostřednictvím knihovny ze třetí strany, která poskytuje suspendovatelné funkce, v rámci kterých je interně implementován suspendovací mechanizmus. Tedy jakmile se provede síťová operace a čeká se na výsledek, knihovna coroutinu sama suspenduje. Uživatel tím pádem nemusí manuálně suspendovat coroutinu po zavolání dlouze běžící operace, ale pouze zavolá funkci knihovny, a ta se postará o zbytek. Tato knihovna bude detailněji popsána v (\ref{sec:impl-network}).
 
-\noindent Výhoda coroutines oproti vláknům je tedy menší paměťová náročnost a menší zátěž na procesoru.
-
-\vspace*{10px}
-
-\noindent \textbf{Kotlin Flow} - Pro zvýšení čitelnosti a expresivnosti kódu a implementaci stránkování je v aplikaci používán datový typ Kotlin Flow, který reprezentuje sekvenci hodnot, které jsou produkovány a konzumovány asynchronně pomocí suspend funkcí. Příkladem použití je získání aktuálního volebního roku každou sekundu (\ref{lst:flow-general}).
+\subsection*{Kotlin Flow}
+Kotlin Flow \cite{kotlinflow} je datový typ, který reprezentuje asynchronní proud hodnot, který poskytuje data v čase. Funguje tak, že klientský kód se k proudu zaregistruje, a stane se konzumentem dané flow. Kód produkující nové hodnoty a vkládající je do tohoto proudu je producentem dané flow. Jakmile producent vyprodukuje novou hodnotu a vloží ji do proudu, konzument hodnotu automaticky zkonzumuje, a na základě ní provede nějakou akci. Produkce hodnot nezačíná tehdy, když je vytvořena flow, ale až když se k ní konzument explicitně (pomocí funkce) zaregistruje a začne ji konzumovat. Flow je asynchronní proud hodnot, tj. hodnoty proudu jsou produkovány asynchronním způsobem (např. jsou získávány vzdáleně z backendu). Pro asynchronní produkci dat se používají coroutiny. Flow může být filtrována a transformována, tj. její hodnoty mohou být namapovány na jiné. Různé flow mohou být mezi sebou kombinovány, aby konzument mohl pracovat s hodnotami obou flowů zároveň. Lze nastavit, zda má konzument zareagovat na produkci nových hodnot v obou flowů zároveň nebo jenom jednoho z flowů. Všechny zmíněné operace na flowech lze provést zavoláním funkcí na dané flow a lze je řetězit. Zde je příklad flow, která produkuje seznam hlasování:
 
 \begin{lstlisting}[caption={Příklad použití flow}, label={lst:flow-general}, tabsize=2]
-              
-fun fetchData(): Flow<Int> = flow {
-	while(true) {
-		val year = fetchLatestElectionYear()
-		emit(year)
-		delay(1000)
+// Soubor VoteListViewModel.kt
+class VoteListViewModel: ViewModel() {
+	
+	// zbytek implementace
+	
+	private val _currentElectionYear = MutableStateFlow(2021)	
+	val currentElectionYear: StateFlow<Int> = _currentElectionYear
+	
+	private val _searchText = MutableStateFlow("")
+	val searchText: StateFlow<String> = _searchText
+	
+	init {
+		viewModelScope.launch {
+			currentElectionYear.combine(searchText, ::Pair)
+			.collectLatest { pair ->
+				// zde jsou konzumovany hodnoty pair
+				// zde jsou provadeny dalsi operace nad hodnotou pair
+			}
+		}
 	}
-}
 
-fun main() = {
-	fetchData().collect { data -> println(data) } 
+	fun onSearchTextChange(newText: String) {
+		_searchText.value = newText
+	}
+
+	// zbytek implementace
 }
 \end{lstlisting}
 
-\noindent Funkce \lstinline|flow| vytvoří flow, který v nekonečném cyklu získá data, emitne je a počká 1 s, než postup zoopakuje. Vidíme tedy, že funkce \lstinline|emit| vrací data, ale funkce pokračuje dál. Funkce skončí až tehdy, kdy doběhne na konec. Funkce vrací flow, v tuto chvíli však kód dané flow ještě neběží. Až po zavolání funkce \lstinline|collect| začne flow provádět svůj kód a emitovat data. Takovým funkcím, které spustí kód ve flow říkáme terminální operátory. Terminální operátor konzumuje všechny hodnoty emitované danou flow, s kterými lze dále pracovat. Výhodou kotlin flow je tedy jednoduchá implementace pro zpracovávání potenciálně nekonečných streamů dat, které jsou produkovány a konzumovány asynchronním způsobem pomocí coroutinů.
+\noindent Flow produkuje data asynchronně pomocí coroutinů a každá coroutina musí běžet v nějakém scopu, tudíž každá registrace konzumenta k flow musí proběhnout ve scopu. V tomto případě je použit scope \lstinline|viewModelScope|, což je scope jendoho z komponentu Androidu, view modelu, který bude vysvětlen později. V rámci coroutiny jsou kombinovány dvě flowy, \lstinline|currentElectionYear| a \lstinline|searchText|, do jednoho flowu produkující pár hodnot. Toho je dosaženo pomocí funkce \lstinline|combine| s parametrem \lstinline|::Pair|, což je reference na konstruktor třídy \lstinline|Pair|, pomocí kterého se vytváří flow párů. Všimněme si, že datovými typy flowů je \lstinline|StateFlow|. Existence těchto flowů je závislé na životním cyklu Android komponenty, v kterém běží. V tomto případě běží ve view modelu, který ještě existuje v rámci životního cyklu jiné Android komponenty. Pokud jedna z těchto komponent je po konci svého životního cyklu, všechny \lstinline|StateFlow| přestanou produkovat hodnoty a jsou odebrány z paměti. Po zkombinování dvou různých flow do jedné je výsledné flow konzumováno pomocí funkce \lstinline|collectLatest|. V tuto chvíli může začít produkce hodnot. Jak jde však vidět, tak první flow produkuje na začátku pouze jednu hodnotu 2021 a druhá flow pouze prázdný řetězec "". Další produkce dat může proběhnout buď v reakci na nějakou událost (např. kliknutí na tlačítko nebo psaní) nebo na načtení dat ze sítě, databáze, lokálního úložiště atd. Příklad kódu produkující data pro flow je funkce \lstinline|onSearchTextChange|, která do dané flow jednoduše uloží novou hodnotu. V tuto chvíli chceme, aby se zavolala callback funkce uvnitř \lstinline|collectLatest|. Nemusíme ji však zavolat přímo, konzument totiž na změnu hodnoty ve flow zareaguje a spustí daný kód sám. Kotlin Flows mají tedy následující výhody:
 
-Další výhodou kotlin flowů je možnost použití tzv. \textit{intermediate} operátorů, které s hodnoty emitované flowem nějakým způsobem manipulují. Mohou je např. filtrovat, mapovat na jiné hodnoty, kešovat je a další. V (\ref{lst:flow-intermediate}) voláme funkci, \lstinline|getMembers()|, která vrací flow Votů. Na ní se zavolá intermediate operátor \lstinline|filter|, který z hodnot emitovaných danou flow vyfiltruje takové voty, jejichý popis začíná písmenem A. V tuto chvíli flow ještě neběží. Následně se zavolá terminální operátor \lstinline|collect|, který flow spustí a zkonzumuje.
+\begin{itemize}
+	\item Proud hodnot je asynchronní a založený na paměťově nenáročných coroutinech.
+	
+	\item Proudy lze elegantním způsobem filtrovat a transformovat. Tyto operace lze řetězit.
+	
+	\item Produkce nové hodnoty v proudu automaticky spustí kód konzumenta tohoto proudu.
+	
+	\item Kód je čitelnější.
+\end{itemize}
 
-Kotlin flows se používají také pro implementaci stránkování, které bude poposáno v sekci Implementace uživatelského rozhraní.
-
-\begin{lstlisting}[caption={Příklad intermediate operátoru pro flow}, label={lst:flow-intermediate}, tabsize=2]
-fun main() = {
-	getVote()
-		.filter(vote -> vote.description.startsWith("A"))
-		.collect { vote -> updateUi(vote)
-	}
-
-	fun getVote(): Flow<Vote> {...}
-}
-\end{lstlisting}
 
 \subsubsection *{Android komponenty}
 Aplikace v Androidu jsou složeny z Android komponentů, které mají na starosti různé odpovědnosti:
@@ -157,20 +163,12 @@ object DataModule {
 
 }
 \end{lstlisting}
-	
-zdroj: https://kotlinlang.org/docs/flow.html
-zdroj: https://kotlinlang.org/docs/object-declarations.html
-zdroj: https://kotlinlang.org/docs/null-safety.html
-zdroj: https://kotlinlang.org/
-zdroj: https://techcrunch.com/2019/05/07/kotlin-is-now-googles-preferred-language-for-android-app-development/
-zdroj: zdroj: https://www.oracle.com/java/
-zdroj: https://developer.android.com/kotlin/coroutine
 
-\subsection {Implementace uživatelského rozhraní}
+\section {Implementace uživatelského rozhraní}
 V této sekci bude popsána implementace uživatelského rozhraní.
 
-\subsubsection*{Jetpack Compose}
-\label{sssec:jetpack-compose}
+\subsection*{Jetpack Compose}
+\label{ssec:jetpack-compose}
 Jetpack Compose je Androidem doporučený způsob pro implementaci uživatelského rozhraní. Rozhraní je implementováno voláním tzv \textit{composable} funkcí, což jsou funkce anotované anotací @composable a reprezentují nějaký UI element na obrazovce. Jetpack Compose nám již poskytuje nativní UI elementy jako text a tlačítko nebo kontejnery pro seskupení element do řádku či sloupců. Tyto nativní UI elementy lze kombinovat, a tím vytvořit složitější komponenty. Tyto složitější komponenty lze pak zapouzdřit do vlastně definované composable funkce. Důsledkem je to, že celé UI popisováno pomocí composable funkcí, které volají další composable funkce. Díky tomu je kód pro vytvoření UI modulární. 
 
 Jelikož composable funkce jsou vlastně jenom funkce napsané v programovacím jazyce, lze jim předávat parametry, které určují vzhled či chování daného UI elementu. Které parametry composable funkce přijímá a co určuji závisí na implementaci dané funkce. Jsou parametry, které mění např. barvu a velikost daného elementu. Dále jsou parametry, kterým předáváme funkci. Tato funkce může být volána např. když je na daný element kliknuto. Také jsou parametry, které určují textový obsah nějakého textového elementu. Výhodou použití knihovny Jetpack Compose je možnost definovat UI pomocí programovacího jazyka. To znamená, že lze využít cykly (např. pro vytvoření seznamu elementů) nebo podmínky (např. pro podmíněné vykreslování). Implementace rozhraní je díky tomu jednoduchá a intuitivní.
@@ -433,6 +431,7 @@ class PspRemoteDataSourceImpl @Inject constructor(
 \end{lstlisting}
 
 \subsection{Implementace síťové vrstvy}
+\label{sec:impl-network}
 
 \noindent Síťová vrstva je implementována pomocí knihovny Retrofit. Je to HTTP klient pro komunikaci se zdroji na internetu. Aplikaci ho používá pro získání veškerých dat z backendu. Na (\ref{lst:retrofit-votes}) je ukázka použití. URL adresu daného zdroje specifikujeme pomocí anotace \lstinline|@GET|. Pomocí anotací \lstinline|Query| specifikujeme query parametry pro jako číslo stránky a počet stránek. Návratovou hodnotou je seznam API entit. Implementaci této funkce má na starosti knihovna. Data z backendu jsou ve formátu JSON a jsou namapována na objekt v návratovém typu.
 
