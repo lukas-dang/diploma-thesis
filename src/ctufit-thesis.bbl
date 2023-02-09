@@ -218,6 +218,64 @@
       \verb https://www.psp.cz/sqw/hp.sqw?k=1302
       \endverb
     \endentry
+    \entry{android-architecture}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Guide to app architecture}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/topic/architecture
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/topic/architecture
+      \endverb
+    \endentry
+    \entry{5-tier}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0a7cf72332fae85fba7a99486434acb3}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Indeed\bibnamedelima Editorial},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a7cf72332fae85fba7a99486434acb3}
+      \strng{fullhash}{0a7cf72332fae85fba7a99486434acb3}
+      \strng{bibnamehash}{0a7cf72332fae85fba7a99486434acb3}
+      \strng{authorbibnamehash}{0a7cf72332fae85fba7a99486434acb3}
+      \strng{authornamehash}{0a7cf72332fae85fba7a99486434acb3}
+      \strng{authorfullhash}{0a7cf72332fae85fba7a99486434acb3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What Are the 5 Primary Layers in Software Architecture?}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.indeed.com/career-advice/career-development/what-are-the-layers-in-software-architecture
+      \endverb
+      \verb{url}
+      \verb https://www.indeed.com/career-advice/career-development/what-are-the-layers-in-software-architecture
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -27,39 +27,46 @@
 \contentsline {section}{\numberline {5.5}Licence}{2}{section.5.5}%
 \contentsline {section}{\numberline {5.6}Datové soubory}{2}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Tabulky}{3}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Návrh}{1}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Uživatelské rozhraní}{1}{section.6.1}%
-\contentsline {section}{\numberline {6.2}REST API}{2}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Databázový model}{4}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Implementace}{1}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Mobilní aplikace}{1}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Použité nástroje a technologie}{1}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Implementace uživatelského rozhraní}{5}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Implementace prezentační vrstvy}{9}{subsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.1.4}Implementace doménové vrstvy}{11}{subsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.1.5}Implementace datové vrstvy}{11}{subsection.7.1.5}%
-\contentsline {subsection}{\numberline {7.1.6}Implementace síťové vrstvy}{12}{subsection.7.1.6}%
-\contentsline {section}{\numberline {7.2}Backend}{13}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Použité nástroje a technologie}{13}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Prezentační vrstva}{14}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Doménová vrstva}{16}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Databázová vrstva}{17}{subsection.7.2.4}%
-\contentsline {section}{\numberline {7.3}Zpracování dat}{18}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Stahování zdrojových souborů}{19}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Extrakce datových souborů}{19}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Pročištění dat}{20}{subsection.7.3.3}%
-\contentsline {subsection}{\numberline {7.3.4}Parsování dat}{20}{subsection.7.3.4}%
-\contentsline {subsection}{\numberline {7.3.5}Transformace a uložení dat}{21}{subsection.7.3.5}%
-\contentsline {chapter}{\numberline {8}Testování}{1}{chapter.8}%
+\contentsline {chapter}{\numberline {6}Analýza softwarových architektur}{1}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Mobilní aplikace}{1}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Architektura doporučená Googlem}{1}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Zhodnocení}{3}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Backend}{3}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}5-vrstvá architektura}{3}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Zhodnocení}{3}{subsection.6.2.2}%
+\contentsline {chapter}{\numberline {7}Návrh}{1}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Uživatelské rozhraní}{1}{section.7.1}%
+\contentsline {section}{\numberline {7.2}REST API}{2}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Databázový model}{5}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Implementace}{1}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mobilní aplikace}{1}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Backend}{1}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Nasazení}{1}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Aplikace}{1}{section.9.1}%
+\contentsline {subsection}{\numberline {8.1.1}Použité nástroje a technologie}{1}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Implementace uživatelského rozhraní}{5}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Implementace prezentační vrstvy}{9}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.4}Implementace doménové vrstvy}{11}{subsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.1.5}Implementace datové vrstvy}{11}{subsection.8.1.5}%
+\contentsline {subsection}{\numberline {8.1.6}Implementace síťové vrstvy}{12}{subsection.8.1.6}%
+\contentsline {section}{\numberline {8.2}Backend}{13}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Použité nástroje a technologie}{13}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Prezentační vrstva}{14}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Doménová vrstva}{16}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Databázová vrstva}{17}{subsection.8.2.4}%
+\contentsline {section}{\numberline {8.3}Zpracování dat}{18}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Stahování zdrojových souborů}{19}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Extrakce datových souborů}{19}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Pročištění dat}{20}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Parsování dat}{20}{subsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.3.5}Transformace a uložení dat}{21}{subsection.8.3.5}%
+\contentsline {chapter}{\numberline {9}Testování}{1}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Mobilní aplikace}{1}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Backend}{1}{section.9.2}%
-\contentsline {chapter}{\numberline {10}Spuštění}{1}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Nasazení}{1}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Aplikace}{1}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Backend}{1}{section.10.2}%
-\contentsline {chapter}{\numberline {11}Závěr}{1}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Spuštění}{1}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Aplikace}{1}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Backend}{1}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Závěr}{1}{chapter.12}%
 \contentsline {chapter}{\numberline {A}Příloha}{3}{appendix.A}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -103,4 +110,16 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Obsah přiloženého média}{17}{appendix*.28}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Obsah přiloženého média}{17}{appendix*.30}%

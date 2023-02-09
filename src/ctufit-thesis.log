@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  9 FEB 2023 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  9 FEB 2023 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -582,7 +582,15 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks34
 \c@AM@survey=\count307
 \AM@templatesizebox=\box101
-) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
+) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count308
+\float@exts=\toks35
+\float@box=\box102
+\@float@everytoks=\toks36
+\@floatcapt=\box103
+)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
@@ -612,9 +620,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
-\c@svg@param@lastpage=\count308
-\svg@box=\box102
-\c@svg@param@currpage=\count309
+\c@svg@param@lastpage=\count309
+\svg@box=\box104
+\c@svg@param@currpage=\count310
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
 .sty
@@ -631,13 +639,13 @@ sty
 y
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks35
+\pgfutil@everybye=\toks37
 \pgfutil@tempdima=\dimen258
 \pgfutil@tempdimb=\dimen259
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box103
+\pgfutil@abb=\box105
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -650,12 +658,12 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks36
-\pgfkeys@temptoks=\toks37
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 libraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks38
+\pgfkeys@tmptoks=\toks40
 ))
 \pgf@x=\dimen260
 \pgf@y=\dimen261
@@ -669,14 +677,14 @@ libraryfiltered.code.tex
 \pgf@yd=\dimen269
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count310
-\c@pgf@countb=\count311
-\c@pgf@countc=\count312
-\c@pgf@countd=\count313
-\t@pgf@toka=\toks39
-\t@pgf@tokb=\toks40
-\t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count314
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
+\pgf@sys@id@count=\count315
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -695,8 +703,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count315
-\pgfsyssoftpath@bigbuffer@items=\count316
+\pgfsyssoftpath@smallbuffer@items=\count316
+\pgfsyssoftpath@bigbuffer@items=\count317
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -704,8 +712,8 @@ File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count317
-\c@subtable=\count318
+\c@subfigure=\count318
+\c@subtable=\count319
 ) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/dirtree\dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
@@ -718,10 +726,10 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@rulewidth=\dimen274
 \DT@dotwidth=\dimen275
 \DTbaselineskip=\dimen276
-\DT@counti=\count319
-\DT@countii=\count320
-\DT@countiii=\count321
-\DT@countiv=\count322
+\DT@counti=\count320
+\DT@countii=\count321
+\DT@countiii=\count322
+\DT@countiv=\count323
 \DT@indent=\dimen277
 \DT@parskip=\dimen278
 \DT@baselineskip=\dimen279
@@ -737,15 +745,15 @@ Package: expl3 2023-01-24 L3 programming layer (loader)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count323
-\l__pdf_internal_box=\box104
+\l__color_backend_stack_int=\count324
+\l__pdf_internal_box=\box106
 ))
 Package: l3keys2e 2023-01-16 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count324
-\l__lipsum_a_int=\count325
-\l__lipsum_b_int=\count326
+\g__lipsum_par_int=\count325
+\l__lipsum_a_int=\count326
+\l__lipsum_b_int=\count327
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 
@@ -767,11 +775,11 @@ code.tex)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen280
-\pgfmath@count=\count327
-\pgfmath@box=\box105
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
+\pgfmath@count=\count328
+\pgfmath@box=\box107
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex)
@@ -795,7 +803,7 @@ ions.integerarithmetics.code.tex)
 code.tex)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count328
+\c@pgfmathroundto@lastzeros=\count329
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
@@ -832,10 +840,10 @@ File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box106
-\pgf@hbox=\box107
-\pgf@layerbox@main=\box108
-\pgf@picture@serial@count=\count329
+\pgfpic=\box108
+\pgf@hbox=\box109
+\pgf@layerbox@main=\box110
+\pgf@picture@serial@count=\count330
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
@@ -870,8 +878,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 eshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen304
-\pgf@sys@shading@range@num=\count330
-\pgf@shadingcount=\count331
+\pgf@sys@shading@range@num=\count331
+\pgf@shadingcount=\count332
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -880,7 +888,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box109
+\pgfexternal@startupbox=\box111
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -901,7 +909,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box110
+\pgfnodeparttextbox=\box112
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -931,8 +939,8 @@ code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen307
 \pgffor@skip=\dimen308
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -941,7 +949,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count332
+\pgf@plot@mark@count=\count333
 \pgfplotmarksize=\dimen309
 )
 \tikz@lastx=\dimen310
@@ -952,23 +960,23 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen315
 \tikzleveldistance=\dimen316
 \tikzsiblingdistance=\dimen317
-\tikz@figbox=\box111
-\tikz@figbox@bg=\box112
-\tikz@tempbox=\box113
-\tikz@tempbox@bg=\box114
-\tikztreelevel=\count333
-\tikznumberofchildren=\count334
-\tikznumberofcurrentchild=\count335
-\tikz@fig@count=\count336
+\tikz@figbox=\box113
+\tikz@figbox@bg=\box114
+\tikz@tempbox=\box115
+\tikz@tempbox@bg=\box116
+\tikztreelevel=\count334
+\tikznumberofchildren=\count335
+\tikznumberofcurrentchild=\count336
+\tikz@fig@count=\count337
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count337
-\pgfmatrixcurrentcolumn=\count338
-\pgf@matrix@numberofcolumns=\count339
+\pgfmatrixcurrentrow=\count338
+\pgfmatrixcurrentcolumn=\count339
+\pgf@matrix@numberofcolumns=\count340
 )
-\tikz@expandcount=\count340
+\tikz@expandcount=\count341
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -979,15 +987,15 @@ Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count341
+\etb@tempcnta=\count342
 )
-\csq@reset=\count342
-\csq@gtype=\count343
-\csq@glevel=\count344
-\csq@qlevel=\count345
-\csq@maxlvl=\count346
-\csq@tshold=\count347
-\csq@ltx@everypar=\toks47
+\csq@reset=\count343
+\csq@gtype=\count344
+\csq@glevel=\count345
+\csq@qlevel=\count346
+\csq@maxlvl=\count347
+\csq@tshold=\count348
+\csq@ltx@everypar=\toks49
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
@@ -1003,54 +1011,54 @@ Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count348
+\lrq@indent=\count349
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count349
-\c@listtotal=\count350
-\c@listcount=\count351
-\c@liststart=\count352
-\c@liststop=\count353
-\c@citecount=\count354
-\c@citetotal=\count355
-\c@multicitecount=\count356
-\c@multicitetotal=\count357
-\c@instcount=\count358
-\c@maxnames=\count359
-\c@minnames=\count360
-\c@maxitems=\count361
-\c@minitems=\count362
-\c@citecounter=\count363
-\c@maxcitecounter=\count364
-\c@savedcitecounter=\count365
-\c@uniquelist=\count366
-\c@uniquename=\count367
-\c@refsection=\count368
-\c@refsegment=\count369
-\c@maxextratitle=\count370
-\c@maxextratitleyear=\count371
-\c@maxextraname=\count372
-\c@maxextradate=\count373
-\c@maxextraalpha=\count374
-\c@abbrvpenalty=\count375
-\c@highnamepenalty=\count376
-\c@lownamepenalty=\count377
-\c@maxparens=\count378
-\c@parenlevel=\count379
-\blx@tempcnta=\count380
-\blx@tempcntb=\count381
-\blx@tempcntc=\count382
-\c@blx@maxsection=\count383
-\blx@maxsegment@0=\count384
-\blx@notetype=\count385
-\blx@parenlevel@text=\count386
-\blx@parenlevel@foot=\count387
-\blx@sectionciteorder@0=\count388
-\blx@sectionciteorderinternal@0=\count389
-\blx@entrysetcounter=\count390
-\blx@biblioinstance=\count391
+\c@tabx@nest=\count350
+\c@listtotal=\count351
+\c@listcount=\count352
+\c@liststart=\count353
+\c@liststop=\count354
+\c@citecount=\count355
+\c@citetotal=\count356
+\c@multicitecount=\count357
+\c@multicitetotal=\count358
+\c@instcount=\count359
+\c@maxnames=\count360
+\c@minnames=\count361
+\c@maxitems=\count362
+\c@minitems=\count363
+\c@citecounter=\count364
+\c@maxcitecounter=\count365
+\c@savedcitecounter=\count366
+\c@uniquelist=\count367
+\c@uniquename=\count368
+\c@refsection=\count369
+\c@refsegment=\count370
+\c@maxextratitle=\count371
+\c@maxextratitleyear=\count372
+\c@maxextraname=\count373
+\c@maxextradate=\count374
+\c@maxextraalpha=\count375
+\c@abbrvpenalty=\count376
+\c@highnamepenalty=\count377
+\c@lownamepenalty=\count378
+\c@maxparens=\count379
+\c@parenlevel=\count380
+\blx@tempcnta=\count381
+\blx@tempcntb=\count382
+\blx@tempcntc=\count383
+\c@blx@maxsection=\count384
+\blx@maxsegment@0=\count385
+\blx@notetype=\count386
+\blx@parenlevel@text=\count387
+\blx@parenlevel@foot=\count388
+\blx@sectionciteorder@0=\count389
+\blx@sectionciteorderinternal@0=\count390
+\blx@entrysetcounter=\count391
+\blx@biblioinstance=\count392
 \labelnumberwidth=\skip74
 \labelalphawidth=\skip75
 \biblabelsep=\skip76
@@ -1062,9 +1070,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count392
-\c@maxcomprange=\count393
-\c@mincompwidth=\count394
+\c@mincomprange=\count393
+\c@maxcomprange=\count394
+\c@mincompwidth=\count395
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1080,76 +1088,76 @@ File: iso-numeric.dbx 2022/03/20 v0.4.1 ISO 690 biblatex data model extension
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count395
-\c@savedafterword=\count396
-\c@annotator=\count397
-\c@savedannotator=\count398
-\c@author=\count399
-\c@savedauthor=\count400
-\c@bookauthor=\count401
-\c@savedbookauthor=\count402
-\c@commentator=\count403
-\c@savedcommentator=\count404
-\c@editor=\count405
-\c@savededitor=\count406
-\c@editora=\count407
-\c@savededitora=\count408
-\c@editorb=\count409
-\c@savededitorb=\count410
-\c@editorc=\count411
-\c@savededitorc=\count412
-\c@foreword=\count413
-\c@savedforeword=\count414
-\c@holder=\count415
-\c@savedholder=\count416
-\c@introduction=\count417
-\c@savedintroduction=\count418
-\c@namea=\count419
-\c@savednamea=\count420
-\c@nameb=\count421
-\c@savednameb=\count422
-\c@namec=\count423
-\c@savednamec=\count424
-\c@translator=\count425
-\c@savedtranslator=\count426
-\c@shortauthor=\count427
-\c@savedshortauthor=\count428
-\c@shorteditor=\count429
-\c@savedshorteditor=\count430
-\c@supervisor=\count431
-\c@savedsupervisor=\count432
-\c@labelname=\count433
-\c@savedlabelname=\count434
-\c@institution=\count435
-\c@savedinstitution=\count436
-\c@lista=\count437
-\c@savedlista=\count438
-\c@listb=\count439
-\c@savedlistb=\count440
-\c@listc=\count441
-\c@savedlistc=\count442
-\c@listd=\count443
-\c@savedlistd=\count444
-\c@liste=\count445
-\c@savedliste=\count446
-\c@listf=\count447
-\c@savedlistf=\count448
-\c@location=\count449
-\c@savedlocation=\count450
-\c@organization=\count451
-\c@savedorganization=\count452
-\c@origlocation=\count453
-\c@savedoriglocation=\count454
-\c@origpublisher=\count455
-\c@savedorigpublisher=\count456
-\c@publisher=\count457
-\c@savedpublisher=\count458
-\c@language=\count459
-\c@savedlanguage=\count460
-\c@origlanguage=\count461
-\c@savedoriglanguage=\count462
-\c@pageref=\count463
-\c@savedpageref=\count464
+\c@afterword=\count396
+\c@savedafterword=\count397
+\c@annotator=\count398
+\c@savedannotator=\count399
+\c@author=\count400
+\c@savedauthor=\count401
+\c@bookauthor=\count402
+\c@savedbookauthor=\count403
+\c@commentator=\count404
+\c@savedcommentator=\count405
+\c@editor=\count406
+\c@savededitor=\count407
+\c@editora=\count408
+\c@savededitora=\count409
+\c@editorb=\count410
+\c@savededitorb=\count411
+\c@editorc=\count412
+\c@savededitorc=\count413
+\c@foreword=\count414
+\c@savedforeword=\count415
+\c@holder=\count416
+\c@savedholder=\count417
+\c@introduction=\count418
+\c@savedintroduction=\count419
+\c@namea=\count420
+\c@savednamea=\count421
+\c@nameb=\count422
+\c@savednameb=\count423
+\c@namec=\count424
+\c@savednamec=\count425
+\c@translator=\count426
+\c@savedtranslator=\count427
+\c@shortauthor=\count428
+\c@savedshortauthor=\count429
+\c@shorteditor=\count430
+\c@savedshorteditor=\count431
+\c@supervisor=\count432
+\c@savedsupervisor=\count433
+\c@labelname=\count434
+\c@savedlabelname=\count435
+\c@institution=\count436
+\c@savedinstitution=\count437
+\c@lista=\count438
+\c@savedlista=\count439
+\c@listb=\count440
+\c@savedlistb=\count441
+\c@listc=\count442
+\c@savedlistc=\count443
+\c@listd=\count444
+\c@savedlistd=\count445
+\c@liste=\count446
+\c@savedliste=\count447
+\c@listf=\count448
+\c@savedlistf=\count449
+\c@location=\count450
+\c@savedlocation=\count451
+\c@organization=\count452
+\c@savedorganization=\count453
+\c@origlocation=\count454
+\c@savedoriglocation=\count455
+\c@origpublisher=\count456
+\c@savedorigpublisher=\count457
+\c@publisher=\count458
+\c@savedpublisher=\count459
+\c@language=\count460
+\c@savedlanguage=\count461
+\c@origlanguage=\count462
+\c@savedoriglanguage=\count463
+\c@pageref=\count464
+\c@savedpageref=\count465
 \shorthandwidth=\skip82
 \shortjournalwidth=\skip83
 \shortserieswidth=\skip84
@@ -1174,19 +1182,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
-\c@textcitecount=\count465
-\c@textcitetotal=\count466
-\c@textcitemaxnames=\count467
-\c@biburlbigbreakpenalty=\count468
-\c@biburlbreakpenalty=\count469
-\c@biburlnumpenalty=\count470
-\c@biburlucpenalty=\count471
-\c@biburllcpenalty=\count472
+\c@textcitecount=\count466
+\c@textcitetotal=\count467
+\c@textcitemaxnames=\count468
+\c@biburlbigbreakpenalty=\count469
+\c@biburlbreakpenalty=\count470
+\c@biburlnumpenalty=\count471
+\c@biburlucpenalty=\count472
+\c@biburllcpenalty=\count473
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count473
+\c@smartand=\count474
 )
 Package biblatex Info: Trying to load bibliography style 'iso-numeric'...
 Package biblatex Info: ... file 'iso-numeric.bbx' found.
@@ -1280,24 +1288,24 @@ Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
 
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count474
-\lst@gtempboxa=\box115
-\lst@token=\toks48
-\lst@length=\count475
+\lst@mode=\count475
+\lst@gtempboxa=\box117
+\lst@token=\toks50
+\lst@length=\count476
 \lst@currlwidth=\dimen318
-\lst@column=\count476
-\lst@pos=\count477
+\lst@column=\count477
+\lst@pos=\count478
 \lst@lostspace=\dimen319
 \lst@width=\dimen320
-\lst@newlines=\count478
-\lst@lineno=\count479
+\lst@newlines=\count479
+\lst@lineno=\count480
 \lst@maxwidth=\dimen321
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count480
-\lst@skipnumbers=\count481
-\lst@framebox=\box116
+\c@lstnumber=\count481
+\lst@skipnumbers=\count482
+\lst@framebox=\box118
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -1309,26 +1317,26 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTright=\skip97
 \LTpre=\skip98
 \LTpost=\skip99
-\LTchunksize=\count482
+\LTchunksize=\count483
 \LTcapwidth=\dimen322
-\LT@head=\box117
-\LT@firsthead=\box118
-\LT@foot=\box119
-\LT@lastfoot=\box120
-\LT@gbox=\box121
-\LT@cols=\count483
-\LT@rows=\count484
-\c@LT@tables=\count485
-\c@LT@chunks=\count486
-\LT@p@ftn=\toks49
+\LT@head=\box119
+\LT@firsthead=\box120
+\LT@foot=\box121
+\LT@lastfoot=\box122
+\LT@gbox=\box123
+\LT@cols=\count484
+\LT@rows=\count485
+\c@LT@tables=\count486
+\c@LT@chunks=\count487
+\LT@p@ftn=\toks51
 )
-\c@theorem=\count487
+\c@theorem=\count488
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'czech'.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-45.
+47.
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1341,10 +1349,19 @@ LaTeX Warning: Label `fig:politoscope' multiply defined.
 LaTeX Warning: Label `table:zarazeni' multiply defined.
 
 
-LaTeX Warning: Label `table:hl_hlasovani' multiply defined.
+LaTeX Warning: Label `table:hl_poslanec' multiply defined.
 
 
-LaTeX Warning: Label `table:hl_hlasovani' multiply defined.
+LaTeX Warning: Label `ssec:design-vote' multiply defined.
+
+
+LaTeX Warning: Label `ssec:design-members' multiply defined.
+
+
+LaTeX Warning: Label `ssec:design-member' multiply defined.
+
+
+LaTeX Warning: Label `ssec:design-member' multiply defined.
 
 
 LaTeX Warning: Label `lst:headers-paging' multiply defined.
@@ -1358,26 +1375,26 @@ LaTeX Warning: Label `lst:repository-paging' multiply defined.
 ) (text/appendix.aux) (text/medium.aux))
 \openout1 = `ctufit-thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Info: Redefining \lstlistingname on input line 145.
-LaTeX Info: Redefining \lstlistlistingname on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Info: Redefining \lstlistingname on input line 147.
+LaTeX Info: Redefining \lstlistlistingname on input line 147.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1417,17 +1434,17 @@ LaTeX Info: Redefining \lstlistlistingname on input line 145.
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count488
+\scratchcounter=\count489
 \scratchdimen=\dimen323
-\scratchbox=\box122
-\nofMPsegments=\count489
-\nofMParguments=\count490
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count491
+\scratchbox=\box124
+\nofMPsegments=\count490
+\nofMParguments=\count491
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count492
 \MPscratchDim=\dimen324
-\MPnumerator=\count492
-\makeMPintoPDFobject=\count493
-\everyMPtoPDFconversion=\toks51
+\MPnumerator=\count493
+\makeMPintoPDFobject=\count494
+\everyMPtoPDFconversion=\toks53
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1440,6 +1457,7 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1448,7 +1466,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 145.
+Package hyperref Info: Link coloring OFF on input line 147.
 
 (ctufit-thesis.out) (ctufit-thesis.out)
 \@outlinefile=\write5
@@ -1513,42 +1531,42 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
  (ctufit-thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 145.
-Package biblatex Info: Reference segment=0 on input line 145.
-\c@lstlisting=\count494
-<assignment-include.pdf, id=254, 597.23125pt x 844.15375pt>
+Package biblatex Info: Reference section=0 on input line 147.
+Package biblatex Info: Reference segment=0 on input line 147.
+\c@lstlisting=\count495
+<assignment-include.pdf, id=282, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
-Package pdftex.def Info: assignment-include.pdf  used on input line 148.
+Package pdftex.def Info: assignment-include.pdf  used on input line 150.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
-Package pdftex.def Info: assignment-include.pdf  used on input line 148.
+Package pdftex.def Info: assignment-include.pdf  used on input line 150.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<assignment-include.pdf, id=257, page=1, 597.23125pt x 844.15375pt>
+<assignment-include.pdf, id=285, page=1, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 148.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 150.
 
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 148.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 150.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 148.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 150.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 148.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 150.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 148.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 150.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
  [1
@@ -1595,17 +1613,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.151 
+l.153 
        [1
 
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-52.
+54.
  (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (1.42198pt too wide) in paragraph at lines 152--153
+Overfull \hbox (1.42198pt too wide) in paragraph at lines 154--155
 \OT1/lmr/m/n/9 Odkaz na tuto pr^^Saci: Dang Luk^^Sa^^Ts. \OT1/lmr/m/it/9 Mo-bil
 n^^S^^P apli-kace pro zob-ra-zen^^S^^P v^^Sysledk^^Wu hla-sov^^San^^S^^P Po-sla
 -neck^^Se sn^^Temovny\OT1/lmr/m/n/9 .
@@ -1616,7 +1634,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.154 \tableofcontents
+l.156 \tableofcontents
                        % do not remove this command [2
 
 
@@ -1691,7 +1709,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ] [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 \OT1/lmr/m/n/9 a ne-funk^^Tcn^^S^^Pch po^^Tzadavk^^Wu pops^^San n^^Savrh
  []
 
@@ -1767,12 +1785,12 @@ Overfull \hbox (10.47064pt too wide) in paragraph at lines 24--25
 ^^S^^P
  []
 
-<images//politiscope.png, id=641, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=684, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 34.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=642, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=685, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 35.
@@ -1790,12 +1808,12 @@ been already used, duplicate ignored
                    \relax 
 l.61 
       [2 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=656, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=699, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 69.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=657, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=700, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 70.
@@ -1897,63 +1915,132 @@ Overfull \hbox (34.72652pt too wide) in alignment at lines 423--454
  [] [] [] 
  []
 
-) (text/chapters/04_design.tex [7] [8
+) (text/chapters/03_analysis_architecture.tex [7] [8
 
 ]
 Kapitola 6.
+<images//android-architecture-overall.png, id=750, 1731.46875pt x 1008.76875pt>
 
-Overfull \hbox (3.88666pt too wide) in paragraph at lines 21--22
-\OT1/lmr/m/n/10 Ob-sa-huje hlavi^^Tcku s ti-tu-lem, aktu^^Saln^^Te na-sta-ven^^
-Sym vo-lebn^^S^^Pm ob-dob^^S^^Pm a tla^^Tc^^S^^Ptk^^Sem pro vy-hled^^Sav^^San^^
-S^^P,
- []
+File: images//android-architecture-overall.png Graphic file (type png)
+<use images//android-architecture-overall.png>
+Package pdftex.def Info: images//android-architecture-overall.png  used on inpu
+t line 14.
+(pdftex.def)             Requested size: 209.12683pt x 121.83205pt.
+<images//android-architecture-ui.png, id=753, 1703.36375pt x 1508.63625pt>
+File: images//android-architecture-ui.png Graphic file (type png)
+<use images//android-architecture-ui.png>
+Package pdftex.def Info: images//android-architecture-ui.png  used on input lin
+e 25.
+(pdftex.def)             Requested size: 209.12683pt x 185.21815pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 
-      [1]
+l.30 
+      [1 <./images//android-architecture-overall.png>]
+<images//android-architecture-data.png, id=759, 1699.34875pt x 1516.66624pt>
+File: images//android-architecture-data.png Graphic file (type png)
+<use images//android-architecture-data.png>
+Package pdftex.def Info: images//android-architecture-data.png  used on input l
+ine 36.
+(pdftex.def)             Requested size: 209.12683pt x 186.64372pt.
+
+Overfull \hbox (18.94211pt too wide) in paragraph at lines 42--43
+\OT1/lmr/m/n/10 Dom^^Senov^^Sa vrstva m^^Sa na sta-rosti za-pouzd^^Tren^^S^^P s
+lo^^Tzit^^Se busi-ness lo-giky nebo busi-ness lo-giky p^^Trepou^^Tz^^S^^Pvan^^S
+e
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.64 \noindent
-               Vrací seznam hlasování s následujícími informace (\ref{...
-[2]
+l.48 	\item \textbf
+                   {Oddělení zodpovědnosti} - Rozdělení aplikace do vrs...
+[2 <./images//android-architecture-ui.png> <./images//android-architecture-data
+.png>]) (text/chapters/04_design.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \end{itemize}
-                    [3]) (text/chapters/05_implementace.tex
+l.1 \chapter
+            {Návrh} [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Implementace} [4]
+            {Návrh} [4
+
+]
 Kapitola 7.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 \end{itemize}
-                   [1
-
-]
+l.23 \subsection*{Seznam poslanců}
+                                    [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 
+l.60 	\item \textbf
+                   {name} - Jméno pro filtrování seznamu poslanců. [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.122 	\item i
+              dentifikátor hlasování [3]
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.182 \end{itemize}
+                    [4]
+
+LaTeX Warning: Reference `lst:endpoint-party-vote' on page 5 undefined on input
+ line 205.
+
+) (text/chapters/05_implementace.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Implementace} [5]
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Implementace} [6
+
+]
+Kapitola 8.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 \end{itemize}
+                   [1]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55 
       [2]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 59.
+nput line 60.
 
-Overfull \hbox (23.56053pt too wide) in paragraph at lines 71--72
+Overfull \hbox (23.56053pt too wide) in paragraph at lines 72--73
 \OT1/lmr/m/n/10 data z API a in-tern^^Te ope-raci suspen-duje, d^^S^^Pky ^^Tcem
 u^^Tz se uvoln^^S^^P vl^^Sakno a funkce [][][][]
  []
@@ -1963,28 +2050,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90 
+l.91 
       [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.129 	\item V
+l.130 	\item V
               iewModel - Reprezentuje komponentu, která definuje business l...
 [4]
-Overfull \hbox (48.55826pt too wide) in paragraph at lines 160--167
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 161--168
 []\OT1/lmr/m/n/10 zdroj: https://kotlinlang.org/docs/flow.html zdroj: https://k
 otlinlang.org/docs/object-declarations.html
  []
 
 
-Overfull \hbox (151.64548pt too wide) in paragraph at lines 160--167
+Overfull \hbox (151.64548pt too wide) in paragraph at lines 161--168
 \OT1/lmr/m/n/10 zdroj: https://kotlinlang.org/docs/null-safety.html zdroj: http
 s://kotlinlang.org/ zdroj: https://techcrunch.com/2019/05/07/kotlin-
  []
 
 
-Overfull \hbox (52.97371pt too wide) in paragraph at lines 160--167
+Overfull \hbox (52.97371pt too wide) in paragraph at lines 161--168
 \OT1/lmr/m/n/10 is-now-googles-preferred-language-for-android-app-development/ 
 zdroj: zdroj: https://www.oracle.com/java/
  []
@@ -1994,9 +2081,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.174 
+l.175 
        [5]
-Overfull \hbox (176.19807pt too wide) in paragraph at lines 182--185
+Overfull \hbox (176.19807pt too wide) in paragraph at lines 183--186
 \OT1/lmr/m/n/10 zdroj: https://developer.android.com/develop/ui/views/layout/re
 cyclerview zdroj: https://developer.android.com/jetpack/compose/lists
  []
@@ -2006,53 +2093,53 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 ....}, label={lst:jc-parameters}, tabsize=2]
+l.210 ....}, label={lst:jc-parameters}, tabsize=2]
                                                    [6]
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.247 ...u.}, label={lst:jc-viewmodel}, tabsize=2]
+l.248 ...u.}, label={lst:jc-viewmodel}, tabsize=2]
                                                    [7]
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.296 ...ction {Implementace prezentační vrstvy}
+l.297 ...ction {Implementace prezentační vrstvy}
                                                    [8] [9] [10] [11]
-Overfull \hbox (3.36453pt too wide) in paragraph at lines 420--421
+Overfull \hbox (3.36453pt too wide) in paragraph at lines 421--422
 \OT1/lmr/m/n/10 Datov^^Se zdroje jsou pouze abs-trakc^^S^^P nad konkr^^Setn^^S^
 ^Pm roz-hran^^S^^Pm pro z^^S^^Psk^^San^^S^^P dan^^Seho zdroje. Vzd^^Salen^^Sy
  []
 
 [12]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 462.
+(Font)              <8> on input line 463.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 462.
+(Font)              <6> on input line 463.
  [13] [14] [15] [16]
 
-LaTeX Warning: Reference `vote-entity' on page 17 undefined on input line 656.
+LaTeX Warning: Reference `vote-entity' on page 17 undefined on input line 657.
 
 [17]
-Overfull \hbox (29.72871pt too wide) in paragraph at lines 675--676
+Overfull \hbox (29.72871pt too wide) in paragraph at lines 676--677
 \OT1/lmr/m/n/10 Pro do-ta-zov^^San^^S^^P se nad daty pou^^Tz^^S^^Pv^^Sam kni-ho
 vnu spring-data-jpa, kter^^Sa po-sky-tuje roz-hran^^S^^P [][][],
  []
 
 [18] [19]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-790.
+791.
  (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [20]
-Overfull \hbox (34.57649pt too wide) in paragraph at lines 829--830
+Overfull \hbox (34.57649pt too wide) in paragraph at lines 830--831
 \OT1/lmr/m/n/10 Nyn^^S^^P lze da-tov^^Sy sou-bor zpar-so-vat a na-ma-po-vat na 
 tuto t^^Tr^^S^^Pdu. Knihovna po-sky-tuje t^^Tr^^S^^Pdu [][][],
  []
 
 [21]) (text/chapters/06_testing.tex [22]
-Kapitola 8.
+Kapitola 9.
 ) (text/chapters/07_deploy.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -2070,7 +2157,7 @@ l.1 \chapter
             {Nasazení} [2
 
 ]
-Kapitola 9.
+Kapitola 10.
 ) (text/chapters/08_run.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -2086,7 +2173,7 @@ l.1 \chapter
             {Spuštění} [2
 
 ]
-Kapitola 10.
+Kapitola 11.
 ) (text/chapters/09_conclusion.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -2102,13 +2189,13 @@ l.1 \chapter
             {Závěr} [2
 
 ]
-Kapitola 11.
+Kapitola 12.
 ))
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.281 \include{text/text}
+l.283 \include{text/text}
                           % include `text.tex' from `text/' subdirectory
 [1]
 \openout2 = `text/appendix.aux'.
@@ -2126,18 +2213,18 @@ l.1 \chapter
 
 ]
 P\v {r}\'{\i }loha A.
-<images//source_data_diagram.png, id=1311, 1014.79124pt x 1039.885pt>
+<images//source_data_diagram.png, id=1422, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
 
 (pdftex.def)             Requested size: 418.25368pt x 428.59291pt.
-<images//vote_list.png, id=1313, 357.335pt x 727.71875pt>
+<images//vote_list.png, id=1423, 357.335pt x 727.71875pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 12.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=1314, 357.335pt x 727.71875pt>
+<images//vote_list_search.png, id=1424, 357.335pt x 727.71875pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
@@ -2145,19 +2232,19 @@ Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//vote_details_general.png, id=1315, 357.335pt x 727.71875pt>
+<images//vote_details_general.png, id=1425, 357.335pt x 727.71875pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 8.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=1316, 357.335pt x 727.71875pt>
+<images//vote_details_party_votes.png, id=1426, 357.335pt x 727.71875pt>
 File: images//vote_details_party_votes.png Graphic file (type png)
 <use images//vote_details_party_votes.png>
 Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
 ne 34.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=1317, 357.335pt x 727.71875p
+<images//vote_details_party_votes_expanded.png, id=1427, 357.335pt x 727.71875p
 t>
 File: images//vote_details_party_votes_expanded.png Graphic file (type png)
 <use images//vote_details_party_votes_expanded.png>
@@ -2175,12 +2262,12 @@ LaTeX Warning: Float too large for page by 16.3355pt on input line 45.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_list.png, id=1318, 357.335pt x 727.71875pt>
+<images//member_list.png, id=1428, 357.335pt x 727.71875pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 50.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=1319, 357.335pt x 727.71875pt>
+<images//member_list_search.png, id=1429, 357.335pt x 727.71875pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 56.
@@ -2189,13 +2276,13 @@ Package pdftex.def Info: images//member_list_search.png  used on input line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//member_details_general.png, id=1320, 357.335pt x 727.71875pt>
+<images//member_details_general.png, id=1430, 357.335pt x 727.71875pt>
 File: images//member_details_general.png Graphic file (type png)
 <use images//member_details_general.png>
 Package pdftex.def Info: images//member_details_general.png  used on input line
  66.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=1321, 357.335pt x 727.71875pt>
+<images//member_details_votes.png, id=1431, 357.335pt x 727.71875pt>
 File: images//member_details_votes.png Graphic file (type png)
 <use images//member_details_votes.png>
 Package pdftex.def Info: images//member_details_votes.png  used on input line 7
@@ -2204,12 +2291,12 @@ Package pdftex.def Info: images//member_details_votes.png  used on input line 7
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//settings.png, id=1322, 357.335pt x 727.71875pt>
+<images//settings.png, id=1432, 357.335pt x 727.71875pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 82.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=1323, 357.335pt x 727.71875pt>
+<images//settings_opened.png, id=1433, 357.335pt x 727.71875pt>
 File: images//settings_opened.png Graphic file (type png)
 <use images//settings_opened.png>
 Package pdftex.def Info: images//settings_opened.png  used on input line 88.
@@ -2272,29 +2359,26 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [7]
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [8]
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [9 <./images//vote_details_general.png> <./images//vote_details_party_votes.png
 > <./images//vote_details_party_votes_expanded.png>]
@@ -2302,14 +2386,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [10 <./images//member_list.png> <./images//member_list_search.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [11 <./images//member_details_general.png> <./images//member_details_votes.png>
 ]
@@ -2317,33 +2401,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [12 <./images//settings.png> <./images//settings_opened.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
+l.287 \include{text/appendix}
                               % include `appendix.tex' from `text/' subdirec...
 [13]
 pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \include{text/appendix}
-                              % include `appendix.tex' from `text/' subdirec...
-[14]
+l.289 \backmatter
+                  % do not remove this command [14
+
+
+
+]
 pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.291 \include{text/medium}
+l.293 \include{text/medium}
                             % include `medium.tex' from `text/' subdirectory
 [15
-
-
-
 
 ]
 \openout2 = `text/medium.aux'.
@@ -2362,7 +2446,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.291 \include{text/medium}
+l.293 \include{text/medium}
                             % include `medium.tex' from `text/' subdirectory
 [17] (ctufit-thesis.aux (text/text.aux) (text/appendix.aux) (text/medium.aux))
 
@@ -2375,19 +2459,19 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 84205C5A8910A78C202B2A52362AD449;8670.
+(rerunfilecheck)             Checksum: A9ED791633371720EE3405BC7FE0EA9D;9754.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38204 strings out of 476375
- 724810 string characters out of 5788976
+ 38344 strings out of 476375
+ 728448 string characters out of 5788976
  2060299 words of memory out of 5000000
- 57131 multiletter control sequences out of 15000+600000
+ 57253 multiletter control sequences out of 15000+600000
  583294 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,17n,92p,1673b,2821s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,17n,92p,1673b,3050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C
 :/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/U
@@ -2407,9 +2491,9 @@ rs/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users
 lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/User
 s/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/User
 s/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on ctufit-thesis.pdf (83 pages, 2422884 bytes).
+Output written on ctufit-thesis.pdf (89 pages, 2656512 bytes).
 PDF statistics:
- 1747 PDF objects out of 2073 (max. 8388607)
- 747 named destinations out of 1000 (max. 500000)
- 609 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1864 PDF objects out of 2073 (max. 8388607)
+ 758 named destinations out of 1000 (max. 500000)
+ 680 words of extra memory for PDF output out of 10000 (max. 10000000)
 
