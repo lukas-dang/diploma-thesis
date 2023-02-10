@@ -1,37 +1,34 @@
 \contentsline {lstlisting}{\numberline {8.1}{\ignorespaces Příklad použití coroutiny}}{2}{lstlisting.8.1}%
 \contentsline {lstlisting}{\numberline {8.2}{\ignorespaces Příklad použití flow}}{4}{lstlisting.8.2}%
 \contentsline {lstlisting}{\numberline {8.3}{\ignorespaces Příklad použití DI pomocí knihovny Hilt}}{5}{lstlisting.8.3}%
-\contentsline {lstlisting}{\numberline {8.4}{\ignorespaces Příklad konfigurace závislostí pro Hilt}}{5}{lstlisting.8.4}%
-\contentsline {lstlisting}{\numberline {8.5}{\ignorespaces Příklad použití composable funkce Text.}}{7}{lstlisting.8.5}%
-\contentsline {lstlisting}{\numberline {8.6}{\ignorespaces Příklad skládání composable funkcí. Vykreslí ikonku a text vedle sebe.}}{7}{lstlisting.8.6}%
-\contentsline {lstlisting}{\numberline {8.7}{\ignorespaces Příklad parametrů pro změnu vzhledu a chování.}}{7}{lstlisting.8.7}%
-\contentsline {lstlisting}{\numberline {8.8}{\ignorespaces Příklad composable funkce používající lokální stav.}}{8}{lstlisting.8.8}%
-\contentsline {lstlisting}{\numberline {8.9}{\ignorespaces Příklad composable funkce používající stav z ViewModelu.}}{8}{lstlisting.8.9}%
-\contentsline {lstlisting}{\numberline {8.10}{\ignorespaces {Třída MainActivity. (Soubor \lstinline |psp_fe/app/MainActivity|})}}{9}{lstlisting.8.10}%
-\contentsline {lstlisting}{\numberline {8.11}{\ignorespaces Ukázka využití view modelu}}{10}{lstlisting.8.11}%
-\contentsline {lstlisting}{\numberline {8.12}{\ignorespaces Ukázka využití use caseu pro získání seznamu hlasování}}{11}{lstlisting.8.12}%
-\contentsline {lstlisting}{\numberline {8.13}{\ignorespaces Ukázka využití use caseu pro získání detailu hlasování}}{12}{lstlisting.8.13}%
-\contentsline {lstlisting}{\numberline {8.14}{\ignorespaces Ukázka datové vrstvy pro data o hlasováních}}{12}{lstlisting.8.14}%
-\contentsline {lstlisting}{\numberline {8.15}{\ignorespaces Ukázka datového zdroje}}{12}{lstlisting.8.15}%
-\contentsline {lstlisting}{\numberline {8.16}{\ignorespaces Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}}{13}{lstlisting.8.16}%
-\contentsline {lstlisting}{\numberline {8.17}{\ignorespaces Ukázka kódu pro vytvoření endpointu}}{15}{lstlisting.8.17}%
-\contentsline {lstlisting}{\numberline {8.18}{\ignorespaces Ukázka endpointu s request parametrem}}{15}{lstlisting.8.18}%
-\contentsline {lstlisting}{\numberline {8.19}{\ignorespaces Ukázka nastavení hlaviček pro stránkování}}{16}{lstlisting.8.19}%
-\contentsline {lstlisting}{\numberline {8.20}{\ignorespaces Ukázka kódu pro získání detailu poslance}}{16}{lstlisting.8.20}%
-\contentsline {lstlisting}{\numberline {8.21}{\ignorespaces Ukázka doménové vrstvy pro vrácení seznamu poslanců}}{17}{lstlisting.8.21}%
-\contentsline {lstlisting}{\numberline {8.22}{\ignorespaces Ukázka kódu pro sestavení objektu pro stránkování}}{17}{lstlisting.8.22}%
-\contentsline {lstlisting}{\numberline {8.23}{\ignorespaces Ukázka dopočtu statistik pro detail hlasování za běhu v doménové vrstvě}}{17}{lstlisting.8.23}%
-\contentsline {lstlisting}{\numberline {8.24}{\ignorespaces Entita Vote reprezentující hlasování}}{18}{lstlisting.8.24}%
-\contentsline {lstlisting}{\numberline {8.25}{\ignorespaces Repozitář pro hlasování}}{18}{lstlisting.8.25}%
-\contentsline {lstlisting}{\numberline {8.26}{\ignorespaces Ukázka query metody pro dotazování se nad stránkovaným obsahem}}{18}{lstlisting.8.26}%
-\contentsline {lstlisting}{\numberline {8.27}{\ignorespaces Ukázka query metody s dvěma podmínkami}}{18}{lstlisting.8.27}%
-\contentsline {lstlisting}{\numberline {8.28}{\ignorespaces Třída pro stahování zdrojových souborů}}{19}{lstlisting.8.28}%
-\contentsline {lstlisting}{\numberline {8.29}{\ignorespaces Ukázka stahování dat pomocí knihovny \lstinline |commons-io|}}{19}{lstlisting.8.29}%
-\contentsline {lstlisting}{\numberline {8.30}{\ignorespaces Ukázka extrakce souborů ze zipu}}{20}{lstlisting.8.30}%
-\contentsline {lstlisting}{\numberline {8.31}{\ignorespaces Skript pro odstranění duplicitních řádků}}{20}{lstlisting.8.31}%
-\contentsline {lstlisting}{\numberline {8.32}{\ignorespaces Parsování datového souboru omluvy.unl}}{21}{lstlisting.8.32}%
-\contentsline {lstlisting}{\numberline {8.33}{\ignorespaces Parsování datového souboru omluvy.unl}}{21}{lstlisting.8.33}%
-\contentsline {lstlisting}{\numberline {8.34}{\ignorespaces Transformace objektu Omluva na databázový objekt Excuse}}{22}{lstlisting.8.34}%
+\contentsline {lstlisting}{\numberline {8.4}{\ignorespaces Ukázka konfigurace DI pro Hilt}}{6}{lstlisting.8.4}%
+\contentsline {lstlisting}{\numberline {8.5}{\ignorespaces Ukázka composable funkce}}{7}{lstlisting.8.5}%
+\contentsline {lstlisting}{\numberline {8.6}{\ignorespaces Ukázka composable funkce}}{7}{lstlisting.8.6}%
+\contentsline {lstlisting}{\numberline {8.7}{\ignorespaces Ukázka práce s Proto DataStore}}{9}{lstlisting.8.7}%
+\contentsline {lstlisting}{\numberline {8.8}{\ignorespaces Třída activity}}{9}{lstlisting.8.8}%
+\contentsline {lstlisting}{\numberline {8.9}{\ignorespaces Třída activity}}{10}{lstlisting.8.9}%
+\contentsline {lstlisting}{\numberline {8.10}{\ignorespaces Komponenta pro seznam hlasování}}{12}{lstlisting.8.10}%
+\contentsline {lstlisting}{\numberline {8.11}{\ignorespaces Komponenta pro navigaci}}{13}{lstlisting.8.11}%
+\contentsline {lstlisting}{\numberline {8.12}{\ignorespaces Ukázka využití view modelu}}{14}{lstlisting.8.12}%
+\contentsline {lstlisting}{\numberline {8.13}{\ignorespaces Ukázka využití třídy doménové vrstvy pro získání stránkovaného seznamu hlasování}}{15}{lstlisting.8.13}%
+\contentsline {lstlisting}{\numberline {8.14}{\ignorespaces Ukázka datové vrstvy pro data o stavu aplikace}}{16}{lstlisting.8.14}%
+\contentsline {lstlisting}{\numberline {8.15}{\ignorespaces Ukázka datového zdroje}}{16}{lstlisting.8.15}%
+\contentsline {lstlisting}{\numberline {8.16}{\ignorespaces Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}}{17}{lstlisting.8.16}%
+\contentsline {lstlisting}{\numberline {9.1}{\ignorespaces Ukázka kódu pro vytvoření endpointu}}{20}{lstlisting.9.1}%
+\contentsline {lstlisting}{\numberline {9.2}{\ignorespaces Ukázka nastavení hlaviček pro stránkování}}{21}{lstlisting.9.2}%
+\contentsline {lstlisting}{\numberline {9.3}{\ignorespaces Ukázka doménové vrstvy pro vrácení seznamu poslanců}}{21}{lstlisting.9.3}%
+\contentsline {lstlisting}{\numberline {9.4}{\ignorespaces Ukázka kódu pro sestavení objektu pro stránkování}}{22}{lstlisting.9.4}%
+\contentsline {lstlisting}{\numberline {9.5}{\ignorespaces Ukázka dopočtu statistik pro detail hlasování za běhu v doménové vrstvě}}{22}{lstlisting.9.5}%
+\contentsline {lstlisting}{\numberline {9.6}{\ignorespaces Ukázka použití streamu}}{22}{lstlisting.9.6}%
+\contentsline {lstlisting}{\numberline {9.7}{\ignorespaces Entita Vote reprezentující hlasování}}{23}{lstlisting.9.7}%
+\contentsline {lstlisting}{\numberline {9.8}{\ignorespaces Repozitář pro hlasování}}{23}{lstlisting.9.8}%
+\contentsline {lstlisting}{\numberline {9.9}{\ignorespaces Třída pro stahování zdrojových souborů}}{24}{lstlisting.9.9}%
+\contentsline {lstlisting}{\numberline {9.10}{\ignorespaces Ukázka stahování dat pomocí knihovny \lstinline |commons-io|}}{24}{lstlisting.9.10}%
+\contentsline {lstlisting}{\numberline {9.11}{\ignorespaces Ukázka extrakce souborů ze zipu}}{25}{lstlisting.9.11}%
+\contentsline {lstlisting}{\numberline {9.12}{\ignorespaces Skript pro odstranění duplicitních řádků}}{25}{lstlisting.9.12}%
+\contentsline {lstlisting}{\numberline {9.13}{\ignorespaces Parsování datového souboru omluvy.unl}}{26}{lstlisting.9.13}%
+\contentsline {lstlisting}{\numberline {9.14}{\ignorespaces Parsování datového souboru omluvy.unl}}{26}{lstlisting.9.14}%
+\contentsline {lstlisting}{\numberline {9.15}{\ignorespaces Transformace objektu Omluva na databázový objekt Excuse}}{26}{lstlisting.9.15}%
 \contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/app}.}}{3}{lstlisting.A.1}%
 \contentsline {lstlisting}{\numberline {A.2}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote}}}{3}{lstlisting.A.2}%
 \contentsline {lstlisting}{\numberline {A.3}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote{id}}}}{3}{lstlisting.A.3}%

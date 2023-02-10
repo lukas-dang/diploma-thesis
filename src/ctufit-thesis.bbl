@@ -451,6 +451,448 @@
       \verb https://kotlinlang.org/docs/flow.html
       \endverb
     \endentry
+    \entry{android-component-application}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Application}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/reference/android/app/Application
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/reference/android/app/Application
+      \endverb
+    \endentry
+    \entry{jetpack-compose}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Build better apps faster with Jetpack Compose}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/jetpack/compose
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/jetpack/compose
+      \endverb
+    \endentry
+    \entry{recycler-view}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Create dynamic lists with RecyclerView}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/develop/ui/views/layout/recyclerview
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/develop/ui/views/layout/recyclerview
+      \endverb
+    \endentry
+    \entry{lazy-column}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lists and grids}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/jetpack/compose/lists
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/jetpack/compose/lists
+      \endverb
+    \endentry
+    \entry{shared-preferences}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Save key-value data}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/training/data-storage/shared-preferences
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/training/data-storage/shared-preferences
+      \endverb
+    \endentry
+    \entry{data-store}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{8}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Working with Proto DataStore}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/topic/libraries/architecture/datastore
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/topic/libraries/architecture/datastore
+      \endverb
+    \endentry
+    \entry{idea}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{bibnamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorbibnamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{extraname}{4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Create dynamic lists with RecyclerView}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jetbrains.com/idea/
+      \endverb
+      \verb{url}
+      \verb https://www.jetbrains.com/idea/
+      \endverb
+    \endentry
+    \entry{azure}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Azure}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/en-us
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/en-us
+      \endverb
+    \endentry
+    \entry{ktor}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{bibnamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorbibnamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{extraname}{5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ktor}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ktor.io/
+      \endverb
+      \verb{url}
+      \verb https://ktor.io/
+      \endverb
+    \endentry
+    \entry{kotlin-support}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c3c359c6265f4efcfa9840ed07f7fdb4}{%
+           family={VMware},
+           familyi={V\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{fullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{bibnamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{authorbibnamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{authornamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{authorfullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introducing Kotlin support in Spring Framework 5.0}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0
+      \endverb
+      \verb{url}
+      \verb https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0
+      \endverb
+    \endentry
+    \entry{hibernate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3c35b96ff67d4842e7c033033f8a568}{%
+           family={Hat},
+           familyi={H\bibinitperiod},
+           given={Red},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3c35b96ff67d4842e7c033033f8a568}
+      \strng{fullhash}{d3c35b96ff67d4842e7c033033f8a568}
+      \strng{bibnamehash}{d3c35b96ff67d4842e7c033033f8a568}
+      \strng{authorbibnamehash}{d3c35b96ff67d4842e7c033033f8a568}
+      \strng{authornamehash}{d3c35b96ff67d4842e7c033033f8a568}
+      \strng{authorfullhash}{d3c35b96ff67d4842e7c033033f8a568}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hibernate}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://hibernate.org/
+      \endverb
+      \verb{url}
+      \verb https://hibernate.org/
+      \endverb
+    \endentry
+    \entry{spring-jpa}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c3c359c6265f4efcfa9840ed07f7fdb4}{%
+           family={VMware},
+           familyi={V\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{fullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{bibnamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{authorbibnamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{authornamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \strng{authorfullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spring Data JPA - Reference Documentation}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+      \endverb
+      \verb{url}
+      \verb https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+      \endverb
+    \endentry
+    \entry{commons-io}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8e4c882dcd12cc2213d5876ed5c7fd42}{%
+           family={Commons},
+           familyi={C\bibinitperiod},
+           given={Apache},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
+      \strng{fullhash}{8e4c882dcd12cc2213d5876ed5c7fd42}
+      \strng{bibnamehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
+      \strng{authorbibnamehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
+      \strng{authornamehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
+      \strng{authorfullhash}{8e4c882dcd12cc2213d5876ed5c7fd42}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache Commons IO}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://commons.apache.org/proper/commons-io/
+      \endverb
+      \verb{url}
+      \verb https://commons.apache.org/proper/commons-io/
+      \endverb
+    \endentry
+    \entry{zip4j}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fb59b84c9dfeff147cbd2397d30c1f1f}{%
+           family={Lingala},
+           familyi={L\bibinitperiod},
+           given={Srikanth\bibnamedelima Reddy},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
+      \strng{fullhash}{fb59b84c9dfeff147cbd2397d30c1f1f}
+      \strng{bibnamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
+      \strng{authorbibnamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
+      \strng{authornamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
+      \strng{authorfullhash}{fb59b84c9dfeff147cbd2397d30c1f1f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{zip4j}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/srikanth-lingala/zip4j
+      \endverb
+      \verb{url}
+      \verb https://github.com/srikanth-lingala/zip4j
+      \endverb
+    \endentry
+    \entry{opencsv}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a1b12f84a8d5bc5174155bc528a6a5b4}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Glen},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
+      \strng{fullhash}{a1b12f84a8d5bc5174155bc528a6a5b4}
+      \strng{bibnamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
+      \strng{authorbibnamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
+      \strng{authornamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
+      \strng{authorfullhash}{a1b12f84a8d5bc5174155bc528a6a5b4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{opencsv}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://opencsv.sourceforge.net/
+      \endverb
+      \verb{url}
+      \verb https://opencsv.sourceforge.net/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

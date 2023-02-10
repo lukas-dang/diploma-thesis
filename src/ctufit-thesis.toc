@@ -40,33 +40,121 @@
 \contentsline {section}{\numberline {7.3}Databázový model}{5}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Implementace mobilní aplikace}{1}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Použité nástroje a technologie}{1}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Implementace uživatelského rozhraní}{6}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Implementace prezentační vrstvy}{9}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Implementace doménové vrstvy}{11}{subsection.8.2.2}%
-\contentsline {subsection}{\numberline {8.2.3}Implementace datové vrstvy}{12}{subsection.8.2.3}%
-\contentsline {subsection}{\numberline {8.2.4}Implementace síťové vrstvy}{13}{subsection.8.2.4}%
-\contentsline {section}{\numberline {8.3}Backend}{13}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Použité nástroje a technologie}{13}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Prezentační vrstva}{15}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Doménová vrstva}{16}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}Databázová vrstva}{17}{subsection.8.3.4}%
-\contentsline {section}{\numberline {8.4}Zpracování dat}{19}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Stahování zdrojových souborů}{19}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Extrakce datových souborů}{20}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Pročištění dat}{20}{subsection.8.4.3}%
-\contentsline {subsection}{\numberline {8.4.4}Parsování dat}{21}{subsection.8.4.4}%
-\contentsline {subsection}{\numberline {8.4.5}Transformace a uložení dat}{22}{subsection.8.4.5}%
-\contentsline {chapter}{\numberline {9}Testování}{1}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Mobilní aplikace}{1}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Backend}{1}{section.9.2}%
-\contentsline {chapter}{\numberline {10}Nasazení}{1}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Aplikace}{1}{section.10.1}%
+\contentsline {section}{\numberline {8.2}Implementace prezentační vrstvy}{9}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Implementace doménové vrstvy}{15}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Implementace datové vrstvy}{15}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Implementace síťové vrstvy}{16}{subsection.8.3.2}%
+\contentsline {chapter}{\numberline {9}Implementace backendu}{19}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Prezentační vrstva}{20}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Doménová vrstva}{21}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Databázová vrstva}{22}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Zpracování dat}{24}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Stahování zdrojových souborů}{24}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Extrakce datových souborů}{25}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Pročištění dat}{25}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}Parsování dat}{26}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Transformace a uložení dat}{26}{subsection.9.2.5}%
+\contentsline {chapter}{\numberline {10}Testování}{1}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Mobilní aplikace}{1}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Backend}{1}{section.10.2}%
-\contentsline {chapter}{\numberline {11}Spuštění}{1}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Nasazení}{1}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Aplikace}{1}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Backend}{1}{section.11.2}%
-\contentsline {chapter}{\numberline {12}Závěr}{1}{chapter.12}%
+\contentsline {chapter}{\numberline {12}Spuštění}{1}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Aplikace}{1}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Backend}{1}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Závěr}{1}{chapter.13}%
 \contentsline {chapter}{\numberline {A}Příloha}{3}{appendix.A}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
