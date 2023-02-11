@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  11 FEB 2023 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  11 FEB 2023 16:52
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **./ctufit-thesis.tex
 (ctufit-thesis.tex
@@ -123,7 +123,9 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
-) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
@@ -598,101 +600,222 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks36
 \@floatcapt=\box103
 )
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
-Package: svg 2020/11/26 v2.02k (include SVG pictures)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2022/12/12 v2.7 Yet another Pygments shim for LaTeX
 
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
 
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
-y
-Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
-ok.sty
-Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
-
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
-)))
-Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line
- 368.
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count309
 )
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
-ty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count310
+\FV@InFile=\read3
+\FV@TabBox=\box104
+\c@FancyVerbLine=\count311
+\FV@StepNumber=\count312
+\FV@OutFile=\write3
 )
-\c@svg@param@lastpage=\count309
-\svg@box=\box104
-\c@svg@param@currpage=\count310
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
-.sty
-Package: transparent 2022-10-27 v1.5 Transparency with color stacks
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
 
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
--nometadata.sty
-Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color
- stack (HO)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2023/01/19 line numbers on paragraphs v5.1
+\linenopenalty=\count313
+\output=\toks37
+\linenoprevgraf=\count314
+\linenumbersep=\dimen258
+\linenumberwidth=\dimen259
+\c@linenumber=\count315
+\c@pagewiselinenumber=\count316
+\c@LN@truepage=\count317
+\c@internallinenumber=\count318
+\c@internallinenumbers=\count319
+\quotelinenumbersep=\dimen260
+\bframerule=\dimen261
+\bframesep=\dimen262
+\bframebox=\box105
+\linenoamsmath@ams@eqpen=\count320
+LaTeX Info: Redefining \\ on input line 3131.
+)
+\c@FV@TrueTabGroupLevel=\count321
+\c@FV@TrueTabCounter=\count322
+\FV@TabBox@Group=\box106
+\FV@TmpLength=\skip74
+\c@FV@HighlightLinesStart=\count323
+\c@FV@HighlightLinesStop=\count324
+\FV@LoopCount=\count325
+\FV@NCharsBox=\box107
+\FV@BreakIndent=\dimen263
+\FV@BreakIndentNChars=\count326
+\FV@BreakSymbolSepLeft=\dimen264
+\FV@BreakSymbolSepLeftNChars=\count327
+\FV@BreakSymbolSepRight=\dimen265
+\FV@BreakSymbolSepRightNChars=\count328
+\FV@BreakSymbolIndentLeft=\dimen266
+\FV@BreakSymbolIndentLeftNChars=\count329
+\FV@BreakSymbolIndentRight=\dimen267
+\FV@BreakSymbolIndentRightNChars=\count330
+\c@FancyVerbLineBreakLast=\count331
+\FV@LineBox=\box108
+\FV@LineIndentBox=\box109
+\c@FV@BreakBufferDepth=\count332
+\FV@LineWidth=\dimen268
+)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.s
+ty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
+ty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count333
+\decimalpart=\count334
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip75
+\fb@frw=\dimen269
+\fb@frh=\dimen270
+\FrameRule=\dimen271
+\FrameSep=\dimen272
+)
+\minted@appexistsfile=\read4
+\minted@bgbox=\box110
+\minted@code=\write4
+\c@minted@FancyVerbLineTemp=\count335
+\c@minted@pygmentizecounter=\count336
+\@float@every@listing=\toks38
+\c@listing=\count337
+)
+runsystem(if not exist _minted-ctufit-thesis mkdir _minted-ctufit-thesis)...exe
+cuted.
+
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count338
+\c@subtable=\count339
+) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/dirtree\dirtree.sty
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/dirtree\dirtree.tex
+`dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen273
+\DT@width=\dimen274
+\DT@sep=\dimen275
+\DT@all=\dimen276
+\DT@rulewidth=\dimen277
+\DT@dotwidth=\dimen278
+\DTbaselineskip=\dimen279
+\DT@counti=\count340
+\DT@countii=\count341
+\DT@countiii=\count342
+\DT@countiv=\count343
+\DT@indent=\dimen280
+\DT@parskip=\dimen281
+\DT@baselineskip=\dimen282
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-01-24 L3 programming layer (loader) 
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count344
+\l__pdf_internal_box=\box111
+))
+Package: l3keys2e 2023-01-16 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count345
+\l__lipsum_a_int=\count346
+\l__lipsum_b_int=\count347
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
 sty
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
 y
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks37
-\pgfutil@tempdima=\dimen258
-\pgfutil@tempdimb=\dimen259
+\pgfutil@everybye=\toks39
+\pgfutil@tempdima=\dimen283
+\pgfutil@tempdimb=\dimen284
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box105
+\pgfutil@abb=\box112
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 s.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks38
-\pgfkeys@temptoks=\toks39
+\pgfkeys@pathtoks=\toks40
+\pgfkeys@temptoks=\toks41
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 libraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks40
+\pgfkeys@tmptoks=\toks42
 ))
-\pgf@x=\dimen260
-\pgf@y=\dimen261
-\pgf@xa=\dimen262
-\pgf@ya=\dimen263
-\pgf@xb=\dimen264
-\pgf@yb=\dimen265
-\pgf@xc=\dimen266
-\pgf@yc=\dimen267
-\pgf@xd=\dimen268
-\pgf@yd=\dimen269
-\w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count311
-\c@pgf@countb=\count312
-\c@pgf@countc=\count313
-\c@pgf@countd=\count314
-\t@pgf@toka=\toks41
-\t@pgf@tokb=\toks42
-\t@pgf@tokc=\toks43
-\pgf@sys@id@count=\count315
+\pgf@x=\dimen285
+\pgf@y=\dimen286
+\pgf@xa=\dimen287
+\pgf@ya=\dimen288
+\pgf@xb=\dimen289
+\pgf@yb=\dimen290
+\pgf@xc=\dimen291
+\pgf@yc=\dimen292
+\pgf@xd=\dimen293
+\pgf@yd=\dimen294
+\w@pgf@writea=\write5
+\r@pgf@reada=\read5
+\c@pgf@counta=\count348
+\c@pgf@countb=\count349
+\c@pgf@countc=\count350
+\c@pgf@countd=\count351
+\t@pgf@toka=\toks43
+\t@pgf@tokb=\toks44
+\t@pgf@tokc=\toks45
+\pgf@sys@id@count=\count352
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -711,67 +834,13 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count316
-\pgfsyssoftpath@bigbuffer@items=\count317
+\pgfsyssoftpath@smallbuffer@items=\count353
+\pgfsyssoftpath@bigbuffer@items=\count354
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
-Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count318
-\c@subtable=\count319
-) (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/dirtree\dirtree.sty
-Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/dirtree\dirtree.tex
-`dirtree' v0.32, 2012/12/11 (jcc)
-\DT@offset=\dimen270
-\DT@width=\dimen271
-\DT@sep=\dimen272
-\DT@all=\dimen273
-\DT@rulewidth=\dimen274
-\DT@dotwidth=\dimen275
-\DTbaselineskip=\dimen276
-\DT@counti=\count320
-\DT@countii=\count321
-\DT@countiii=\count322
-\DT@countiv=\count323
-\DT@indent=\dimen277
-\DT@parskip=\dimen278
-\DT@baselineskip=\dimen279
-)
-File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
-)
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
-eys2e.sty
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2023-01-24 L3 programming layer (loader) 
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count324
-\l__pdf_internal_box=\box106
-))
-Package: l3keys2e 2023-01-16 LaTeX2e option processing using LaTeX3 keys
-)
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count325
-\l__lipsum_a_int=\count326
-\l__lipsum_b_int=\count327
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
-sty
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
-sty
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 e.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
@@ -782,12 +851,12 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 code.tex)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen280
-\pgfmath@count=\count328
-\pgfmath@box=\box107
-\pgfmath@toks=\toks44
-\pgfmath@stack@operand=\toks45
-\pgfmath@stack@operation=\toks46
+\pgfmath@dimen=\dimen295
+\pgfmath@count=\count355
+\pgfmath@box=\box113
+\pgfmath@toks=\toks46
+\pgfmath@stack@operand=\toks47
+\pgfmath@stack@operation=\toks48
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex)
@@ -811,59 +880,59 @@ ions.integerarithmetics.code.tex)
 code.tex)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count329
+\c@pgfmathroundto@lastzeros=\count356
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen281
-\pgf@picmaxx=\dimen282
-\pgf@picminy=\dimen283
-\pgf@picmaxy=\dimen284
-\pgf@pathminx=\dimen285
-\pgf@pathmaxx=\dimen286
-\pgf@pathminy=\dimen287
-\pgf@pathmaxy=\dimen288
-\pgf@xx=\dimen289
-\pgf@xy=\dimen290
-\pgf@yx=\dimen291
-\pgf@yy=\dimen292
-\pgf@zx=\dimen293
-\pgf@zy=\dimen294
+\pgf@picminx=\dimen296
+\pgf@picmaxx=\dimen297
+\pgf@picminy=\dimen298
+\pgf@picmaxy=\dimen299
+\pgf@pathminx=\dimen300
+\pgf@pathmaxx=\dimen301
+\pgf@pathminy=\dimen302
+\pgf@pathmaxy=\dimen303
+\pgf@xx=\dimen304
+\pgf@xy=\dimen305
+\pgf@yx=\dimen306
+\pgf@yy=\dimen307
+\pgf@zx=\dimen308
+\pgf@zy=\dimen309
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen295
-\pgf@path@lasty=\dimen296
+\pgf@path@lastx=\dimen310
+\pgf@path@lasty=\dimen311
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen297
-\pgf@shorten@start@additional=\dimen298
+\pgf@shorten@end@additional=\dimen312
+\pgf@shorten@start@additional=\dimen313
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box108
-\pgf@hbox=\box109
-\pgf@layerbox@main=\box110
-\pgf@picture@serial@count=\count330
+\pgfpic=\box114
+\pgf@hbox=\box115
+\pgf@layerbox@main=\box116
+\pgf@picture@serial@count=\count357
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen299
+\pgflinewidth=\dimen314
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen300
-\pgf@pt@y=\dimen301
-\pgf@pt@temp=\dimen302
+\pgf@pt@x=\dimen315
+\pgf@pt@y=\dimen316
+\pgf@pt@temp=\dimen317
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -880,14 +949,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen303
+\pgfarrowsep=\dimen318
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen304
-\pgf@sys@shading@range@num=\count331
-\pgf@shadingcount=\count332
+\pgf@max=\dimen319
+\pgf@sys@shading@range@num=\count358
+\pgf@shadingcount=\count359
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -896,7 +965,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box111
+\pgfexternal@startupbox=\box117
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -917,7 +986,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box112
+\pgfnodeparttextbox=\box118
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -926,8 +995,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen305
-\pgf@nodesepend=\dimen306
+\pgf@nodesepstart=\dimen320
+\pgf@nodesepend=\dimen321
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -945,10 +1014,10 @@ ty
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
 code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen307
-\pgffor@skip=\dimen308
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen322
+\pgffor@skip=\dimen323
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -957,34 +1026,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count333
-\pgfplotmarksize=\dimen309
+\pgf@plot@mark@count=\count360
+\pgfplotmarksize=\dimen324
 )
-\tikz@lastx=\dimen310
-\tikz@lasty=\dimen311
-\tikz@lastxsaved=\dimen312
-\tikz@lastysaved=\dimen313
-\tikz@lastmovetox=\dimen314
-\tikz@lastmovetoy=\dimen315
-\tikzleveldistance=\dimen316
-\tikzsiblingdistance=\dimen317
-\tikz@figbox=\box113
-\tikz@figbox@bg=\box114
-\tikz@tempbox=\box115
-\tikz@tempbox@bg=\box116
-\tikztreelevel=\count334
-\tikznumberofchildren=\count335
-\tikznumberofcurrentchild=\count336
-\tikz@fig@count=\count337
+\tikz@lastx=\dimen325
+\tikz@lasty=\dimen326
+\tikz@lastxsaved=\dimen327
+\tikz@lastysaved=\dimen328
+\tikz@lastmovetox=\dimen329
+\tikz@lastmovetoy=\dimen330
+\tikzleveldistance=\dimen331
+\tikzsiblingdistance=\dimen332
+\tikz@figbox=\box119
+\tikz@figbox@bg=\box120
+\tikz@tempbox=\box121
+\tikz@tempbox@bg=\box122
+\tikztreelevel=\count361
+\tikznumberofchildren=\count362
+\tikznumberofcurrentchild=\count363
+\tikz@fig@count=\count364
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count338
-\pgfmatrixcurrentcolumn=\count339
-\pgf@matrix@numberofcolumns=\count340
+\pgfmatrixcurrentrow=\count365
+\pgfmatrixcurrentcolumn=\count366
+\pgf@matrix@numberofcolumns=\count367
 )
-\tikz@expandcount=\count341
+\tikz@expandcount=\count368
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -992,18 +1061,13 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
-
-(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count342
-)
-\csq@reset=\count343
-\csq@gtype=\count344
-\csq@glevel=\count345
-\csq@qlevel=\count346
-\csq@maxlvl=\count347
-\csq@tshold=\count348
-\csq@ltx@everypar=\toks49
+\csq@reset=\count369
+\csq@gtype=\count370
+\csq@glevel=\count371
+\csq@qlevel=\count372
+\csq@maxlvl=\count373
+\csq@tshold=\count374
+\csq@ltx@everypar=\toks51
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
@@ -1019,68 +1083,68 @@ Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count349
+\lrq@indent=\count375
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count350
-\c@listtotal=\count351
-\c@listcount=\count352
-\c@liststart=\count353
-\c@liststop=\count354
-\c@citecount=\count355
-\c@citetotal=\count356
-\c@multicitecount=\count357
-\c@multicitetotal=\count358
-\c@instcount=\count359
-\c@maxnames=\count360
-\c@minnames=\count361
-\c@maxitems=\count362
-\c@minitems=\count363
-\c@citecounter=\count364
-\c@maxcitecounter=\count365
-\c@savedcitecounter=\count366
-\c@uniquelist=\count367
-\c@uniquename=\count368
-\c@refsection=\count369
-\c@refsegment=\count370
-\c@maxextratitle=\count371
-\c@maxextratitleyear=\count372
-\c@maxextraname=\count373
-\c@maxextradate=\count374
-\c@maxextraalpha=\count375
-\c@abbrvpenalty=\count376
-\c@highnamepenalty=\count377
-\c@lownamepenalty=\count378
-\c@maxparens=\count379
-\c@parenlevel=\count380
-\blx@tempcnta=\count381
-\blx@tempcntb=\count382
-\blx@tempcntc=\count383
-\c@blx@maxsection=\count384
-\blx@maxsegment@0=\count385
-\blx@notetype=\count386
-\blx@parenlevel@text=\count387
-\blx@parenlevel@foot=\count388
-\blx@sectionciteorder@0=\count389
-\blx@sectionciteorderinternal@0=\count390
-\blx@entrysetcounter=\count391
-\blx@biblioinstance=\count392
-\labelnumberwidth=\skip74
-\labelalphawidth=\skip75
-\biblabelsep=\skip76
-\bibitemsep=\skip77
-\bibnamesep=\skip78
-\bibinitsep=\skip79
-\bibparsep=\skip80
-\bibhang=\skip81
-\blx@bcfin=\read4
-\blx@bcfout=\write4
+\c@tabx@nest=\count376
+\c@listtotal=\count377
+\c@listcount=\count378
+\c@liststart=\count379
+\c@liststop=\count380
+\c@citecount=\count381
+\c@citetotal=\count382
+\c@multicitecount=\count383
+\c@multicitetotal=\count384
+\c@instcount=\count385
+\c@maxnames=\count386
+\c@minnames=\count387
+\c@maxitems=\count388
+\c@minitems=\count389
+\c@citecounter=\count390
+\c@maxcitecounter=\count391
+\c@savedcitecounter=\count392
+\c@uniquelist=\count393
+\c@uniquename=\count394
+\c@refsection=\count395
+\c@refsegment=\count396
+\c@maxextratitle=\count397
+\c@maxextratitleyear=\count398
+\c@maxextraname=\count399
+\c@maxextradate=\count400
+\c@maxextraalpha=\count401
+\c@abbrvpenalty=\count402
+\c@highnamepenalty=\count403
+\c@lownamepenalty=\count404
+\c@maxparens=\count405
+\c@parenlevel=\count406
+\blx@tempcnta=\count407
+\blx@tempcntb=\count408
+\blx@tempcntc=\count409
+\c@blx@maxsection=\count410
+\blx@maxsegment@0=\count411
+\blx@notetype=\count412
+\blx@parenlevel@text=\count413
+\blx@parenlevel@foot=\count414
+\blx@sectionciteorder@0=\count415
+\blx@sectionciteorderinternal@0=\count416
+\blx@entrysetcounter=\count417
+\blx@biblioinstance=\count418
+\labelnumberwidth=\skip76
+\labelalphawidth=\skip77
+\biblabelsep=\skip78
+\bibitemsep=\skip79
+\bibnamesep=\skip80
+\bibinitsep=\skip81
+\bibparsep=\skip82
+\bibhang=\skip83
+\blx@bcfin=\read6
+\blx@bcfout=\write6
 \blx@langwohyphens=\language80
-\c@mincomprange=\count393
-\c@maxcomprange=\count394
-\c@mincompwidth=\count395
+\c@mincomprange=\count419
+\c@maxcomprange=\count420
+\c@mincompwidth=\count421
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1096,90 +1160,90 @@ File: iso-numeric.dbx 2022/03/20 v0.4.1 ISO 690 biblatex data model extension
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count396
-\c@savedafterword=\count397
-\c@annotator=\count398
-\c@savedannotator=\count399
-\c@author=\count400
-\c@savedauthor=\count401
-\c@bookauthor=\count402
-\c@savedbookauthor=\count403
-\c@commentator=\count404
-\c@savedcommentator=\count405
-\c@editor=\count406
-\c@savededitor=\count407
-\c@editora=\count408
-\c@savededitora=\count409
-\c@editorb=\count410
-\c@savededitorb=\count411
-\c@editorc=\count412
-\c@savededitorc=\count413
-\c@foreword=\count414
-\c@savedforeword=\count415
-\c@holder=\count416
-\c@savedholder=\count417
-\c@introduction=\count418
-\c@savedintroduction=\count419
-\c@namea=\count420
-\c@savednamea=\count421
-\c@nameb=\count422
-\c@savednameb=\count423
-\c@namec=\count424
-\c@savednamec=\count425
-\c@translator=\count426
-\c@savedtranslator=\count427
-\c@shortauthor=\count428
-\c@savedshortauthor=\count429
-\c@shorteditor=\count430
-\c@savedshorteditor=\count431
-\c@supervisor=\count432
-\c@savedsupervisor=\count433
-\c@labelname=\count434
-\c@savedlabelname=\count435
-\c@institution=\count436
-\c@savedinstitution=\count437
-\c@lista=\count438
-\c@savedlista=\count439
-\c@listb=\count440
-\c@savedlistb=\count441
-\c@listc=\count442
-\c@savedlistc=\count443
-\c@listd=\count444
-\c@savedlistd=\count445
-\c@liste=\count446
-\c@savedliste=\count447
-\c@listf=\count448
-\c@savedlistf=\count449
-\c@location=\count450
-\c@savedlocation=\count451
-\c@organization=\count452
-\c@savedorganization=\count453
-\c@origlocation=\count454
-\c@savedoriglocation=\count455
-\c@origpublisher=\count456
-\c@savedorigpublisher=\count457
-\c@publisher=\count458
-\c@savedpublisher=\count459
-\c@language=\count460
-\c@savedlanguage=\count461
-\c@origlanguage=\count462
-\c@savedoriglanguage=\count463
-\c@pageref=\count464
-\c@savedpageref=\count465
-\shorthandwidth=\skip82
-\shortjournalwidth=\skip83
-\shortserieswidth=\skip84
-\shorttitlewidth=\skip85
-\shortauthorwidth=\skip86
-\shorteditorwidth=\skip87
-\locallabelnumberwidth=\skip88
-\locallabelalphawidth=\skip89
-\localshorthandwidth=\skip90
-\localshortjournalwidth=\skip91
-\localshortserieswidth=\skip92
-\localshorttitlewidth=\skip93
-\localshortauthorwidth=\skip94
-\localshorteditorwidth=\skip95
+\c@afterword=\count422
+\c@savedafterword=\count423
+\c@annotator=\count424
+\c@savedannotator=\count425
+\c@author=\count426
+\c@savedauthor=\count427
+\c@bookauthor=\count428
+\c@savedbookauthor=\count429
+\c@commentator=\count430
+\c@savedcommentator=\count431
+\c@editor=\count432
+\c@savededitor=\count433
+\c@editora=\count434
+\c@savededitora=\count435
+\c@editorb=\count436
+\c@savededitorb=\count437
+\c@editorc=\count438
+\c@savededitorc=\count439
+\c@foreword=\count440
+\c@savedforeword=\count441
+\c@holder=\count442
+\c@savedholder=\count443
+\c@introduction=\count444
+\c@savedintroduction=\count445
+\c@namea=\count446
+\c@savednamea=\count447
+\c@nameb=\count448
+\c@savednameb=\count449
+\c@namec=\count450
+\c@savednamec=\count451
+\c@translator=\count452
+\c@savedtranslator=\count453
+\c@shortauthor=\count454
+\c@savedshortauthor=\count455
+\c@shorteditor=\count456
+\c@savedshorteditor=\count457
+\c@supervisor=\count458
+\c@savedsupervisor=\count459
+\c@labelname=\count460
+\c@savedlabelname=\count461
+\c@institution=\count462
+\c@savedinstitution=\count463
+\c@lista=\count464
+\c@savedlista=\count465
+\c@listb=\count466
+\c@savedlistb=\count467
+\c@listc=\count468
+\c@savedlistc=\count469
+\c@listd=\count470
+\c@savedlistd=\count471
+\c@liste=\count472
+\c@savedliste=\count473
+\c@listf=\count474
+\c@savedlistf=\count475
+\c@location=\count476
+\c@savedlocation=\count477
+\c@organization=\count478
+\c@savedorganization=\count479
+\c@origlocation=\count480
+\c@savedoriglocation=\count481
+\c@origpublisher=\count482
+\c@savedorigpublisher=\count483
+\c@publisher=\count484
+\c@savedpublisher=\count485
+\c@language=\count486
+\c@savedlanguage=\count487
+\c@origlanguage=\count488
+\c@savedoriglanguage=\count489
+\c@pageref=\count490
+\c@savedpageref=\count491
+\shorthandwidth=\skip84
+\shortjournalwidth=\skip85
+\shortserieswidth=\skip86
+\shorttitlewidth=\skip87
+\shortauthorwidth=\skip88
+\shorteditorwidth=\skip89
+\locallabelnumberwidth=\skip90
+\locallabelalphawidth=\skip91
+\localshorthandwidth=\skip92
+\localshortjournalwidth=\skip93
+\localshortserieswidth=\skip94
+\localshorttitlewidth=\skip95
+\localshortauthorwidth=\skip96
+\localshorteditorwidth=\skip97
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1190,19 +1254,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
-\c@textcitecount=\count466
-\c@textcitetotal=\count467
-\c@textcitemaxnames=\count468
-\c@biburlbigbreakpenalty=\count469
-\c@biburlbreakpenalty=\count470
-\c@biburlnumpenalty=\count471
-\c@biburlucpenalty=\count472
-\c@biburllcpenalty=\count473
+\c@textcitecount=\count492
+\c@textcitetotal=\count493
+\c@textcitemaxnames=\count494
+\c@biburlbigbreakpenalty=\count495
+\c@biburlbreakpenalty=\count496
+\c@biburlnumpenalty=\count497
+\c@biburlucpenalty=\count498
+\c@biburllcpenalty=\count499
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count474
+\c@smartand=\count500
 )
 Package biblatex Info: Trying to load bibliography style 'iso-numeric'...
 Package biblatex Info: ... file 'iso-numeric.bbx' found.
@@ -1296,49 +1360,57 @@ Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
 
 ))
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count475
-\lst@gtempboxa=\box117
-\lst@token=\toks50
-\lst@length=\count476
-\lst@currlwidth=\dimen318
-\lst@column=\count477
-\lst@pos=\count478
-\lst@lostspace=\dimen319
-\lst@width=\dimen320
-\lst@newlines=\count479
-\lst@lineno=\count480
-\lst@maxwidth=\dimen321
+\lst@mode=\count501
+\lst@gtempboxa=\box123
+\lst@token=\toks52
+\lst@length=\count502
+\lst@currlwidth=\dimen333
+\lst@column=\count503
+\lst@pos=\count504
+\lst@lostspace=\dimen334
+\lst@width=\dimen335
+\lst@newlines=\count505
+\lst@lineno=\count506
+\lst@maxwidth=\dimen336
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count481
-\lst@skipnumbers=\count482
-\lst@framebox=\box118
+\c@lstnumber=\count507
+\lst@skipnumbers=\count508
+\lst@framebox=\box124
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip96
-\LTright=\skip97
-\LTpre=\skip98
-\LTpost=\skip99
-\LTchunksize=\count483
-\LTcapwidth=\dimen322
-\LT@head=\box119
-\LT@firsthead=\box120
-\LT@foot=\box121
-\LT@lastfoot=\box122
-\LT@gbox=\box123
-\LT@cols=\count484
-\LT@rows=\count485
-\c@LT@tables=\count486
-\c@LT@chunks=\count487
-\LT@p@ftn=\toks51
+\LTleft=\skip98
+\LTright=\skip99
+\LTpre=\skip100
+\LTpost=\skip101
+\LTchunksize=\count509
+\LTcapwidth=\dimen337
+\LT@head=\box125
+\LT@firsthead=\box126
+\LT@foot=\box127
+\LT@lastfoot=\box128
+\LT@gbox=\box129
+\LT@cols=\count510
+\LT@rows=\count511
+\c@LT@tables=\count512
+\c@LT@chunks=\count513
+\LT@p@ftn=\toks53
 )
-\c@theorem=\count488
+\c@theorem=\count514
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ct
+ufit-thesis.aex <nul: /p x=^%~$PATH:i>> ctufit-thesis.aex)...executed.
+
+runsystem(del ctufit-thesis.aex)...executed.
+
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1349,12 +1421,6 @@ Package csquotes Info: Redefining alias 'default' -> 'czech'.
 LaTeX Warning: Label `fig:politoscope' multiply defined.
 
 
-LaTeX Warning: Label `table:zarazeni' multiply defined.
-
-
-LaTeX Warning: Label `table:hl_poslanec' multiply defined.
-
-
 LaTeX Warning: Label `lst:composable-example' multiply defined.
 
 
@@ -1363,26 +1429,28 @@ LaTeX Warning: Label `lst:headers-paging' multiply defined.
 ) (text/appendix.aux) (text/medium.aux))
 \openout1 = `ctufit-thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Info: Redefining \lstlistingname on input line 148.
-LaTeX Info: Redefining \lstlistlistingname on input line 148.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Info: Redefining \lstlistingname on input line 181.
+LaTeX Info: Redefining \lstlistlistingname on input line 181.
+LaTeX Info: Redefining \listingscaption on input line 181.
+LaTeX Info: Redefining \listoflistingscaption on input line 181.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1422,17 +1490,17 @@ LaTeX Info: Redefining \lstlistlistingname on input line 148.
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count489
-\scratchdimen=\dimen323
-\scratchbox=\box124
-\nofMPsegments=\count490
-\nofMParguments=\count491
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count492
-\MPscratchDim=\dimen324
-\MPnumerator=\count493
-\makeMPintoPDFobject=\count494
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count515
+\scratchdimen=\dimen338
+\scratchbox=\box130
+\nofMPsegments=\count516
+\nofMParguments=\count517
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count518
+\MPscratchDim=\dimen339
+\MPnumerator=\count519
+\makeMPintoPDFobject=\count520
+\everyMPtoPDFconversion=\toks55
 )
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1454,11 +1522,11 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 148.
+Package hyperref Info: Link coloring OFF on input line 181.
 
 (ctufit-thesis.out) (ctufit-thesis.out)
-\@outlinefile=\write5
-\openout5 = `ctufit-thesis.out'.
+\@outlinefile=\write7
+\openout7 = `ctufit-thesis.out'.
 
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
@@ -1514,47 +1582,47 @@ File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `ctufit-thesis.bcf'.
+\openout6 = `ctufit-thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
  (ctufit-thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 148.
-Package biblatex Info: Reference segment=0 on input line 148.
-\c@lstlisting=\count495
-<assignment-include.pdf, id=278, 597.23125pt x 844.15375pt>
+Package biblatex Info: Reference section=0 on input line 181.
+Package biblatex Info: Reference segment=0 on input line 181.
+\c@lstlisting=\count521
+<assignment-include.pdf, id=238, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
-Package pdftex.def Info: assignment-include.pdf  used on input line 151.
+Package pdftex.def Info: assignment-include.pdf  used on input line 184.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
-Package pdftex.def Info: assignment-include.pdf  used on input line 151.
+Package pdftex.def Info: assignment-include.pdf  used on input line 184.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<assignment-include.pdf, id=281, page=1, 597.23125pt x 844.15375pt>
+<assignment-include.pdf, id=241, page=1, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 151.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 184.
 
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 151.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 184.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 151.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 184.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 151.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 184.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
-Package pdftex.def Info: assignment-include.pdf , page1 used on input line 151.
+Package pdftex.def Info: assignment-include.pdf , page1 used on input line 184.
 
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
  [1
@@ -1601,13 +1669,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.154 
+l.187 
        [1
 
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-55.
+88.
  (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1615,7 +1683,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.157 \tableofcontents
+l.190 \tableofcontents
                        % do not remove this command [2
 
 
@@ -1665,18 +1733,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3
 
 ])
-\tf@toc=\write6
-\openout6 = `ctufit-thesis.toc'.
+\tf@toc=\write8
+\openout8 = `ctufit-thesis.toc'.
 
  [4] (ctufit-thesis.lof)
-\tf@lof=\write7
-\openout7 = `ctufit-thesis.lof'.
+\tf@lof=\write9
+\openout9 = `ctufit-thesis.lof'.
 
  (ctufit-thesis.lot [5
 
 ])
-\tf@lot=\write8
-\openout8 = `ctufit-thesis.lot'.
+\tf@lot=\write10
+\openout10 = `ctufit-thesis.lot'.
 
  (ctufit-thesis.lol
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -1684,11 +1752,11 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [6])
-\tf@lol=\write9
-\openout9 = `ctufit-thesis.lol'.
+))
+\tf@lol=\write11
+\openout11 = `ctufit-thesis.lol'.
 
-
+ [6]
 [7] [8
 
 ] [9
@@ -1733,12 +1801,12 @@ Underfull \hbox (badness 1694) in paragraph at lines 4--5
 Pro re-²er²i byly vy-bí-rány ta-kové
  []
 
-<images//politiscope.png, id=670, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=614, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 31.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=671, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=615, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 32.
@@ -1746,12 +1814,12 @@ Package pdftex.def Info: images//politiscope2.jpg  used on input line 32.
 [9
 
 ] [10 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=686, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=630, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 66.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=687, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=631, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 67.
@@ -1759,35 +1827,35 @@ Package pdftex.def Info: images//congress_2.jpg  used on input line 67.
  [11 <./images//congress_1.jpg> <./images//congress_2.jpg>])
 (text/chapters/03_analysis_data.tex [12]
 Kapitola 3.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 25.
 [13
 
-] [14] [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 426--428
+] [14] [15] [16] [17] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 430--432
 []|\T1/lmr/m/n/10 Identifikátor vo-leb-ního ob-dobí, viz or-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 []|\T1/lmr/m/n/10 Identifikátor po-slance, viz po-sla-
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 449--450
-[]|\T1/lmr/m/n/10 ƒas konce omluvy, po-kud je [][][], pak i
+Underfull \hbox (badness 1107) in paragraph at lines 453--454
+[]|\T1/lmr/m/n/10 ƒas konce omluvy, po-kud je [][][][], pak i
  []
 
-) (text/chapters/03_analysis_architecture.tex [19] [20
-
-]
+) (text/chapters/03_analysis_architecture.tex [20]
 Kapitola 4.
-<images//android-architecture-overall.png, id=746, 1731.46875pt x 1008.76875pt>
+<images//android-architecture-overall.png, id=690, 1731.46875pt x 1008.76875pt>
 
 File: images//android-architecture-overall.png Graphic file (type png)
 <use images//android-architecture-overall.png>
 Package pdftex.def Info: images//android-architecture-overall.png  used on inpu
 t line 16.
 (pdftex.def)             Requested size: 209.12683pt x 121.83205pt.
-<images//android-architecture-ui.png, id=749, 1703.36375pt x 1508.63625pt>
+<images//android-architecture-ui.png, id=693, 1703.36375pt x 1508.63625pt>
 File: images//android-architecture-ui.png Graphic file (type png)
 <use images//android-architecture-ui.png>
 Package pdftex.def Info: images//android-architecture-ui.png  used on input lin
@@ -1796,7 +1864,9 @@ e 27.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <./images//android-architecture-overall.png>]
+ [21
+
+ <./images//android-architecture-overall.png>]
 Underfull \hbox (badness 2556) in paragraph at lines 33--34
 \T1/lmr/m/n/10 vzdál¥n¥) a cen-t-ra-li-zaci dat. Cen-t-ra-li-zace dat slouºí pr
 o vy-tvo-°ení jed-not-ného zdroje
@@ -1808,7 +1878,7 @@ Underfull \hbox (badness 3118) in paragraph at lines 33--34
 -vána data. M·ºe to být
  []
 
-<images//android-architecture-data.png, id=756, 1699.34875pt x 1516.66624pt>
+<images//android-architecture-data.png, id=700, 1699.34875pt x 1516.66624pt>
 File: images//android-architecture-data.png Graphic file (type png)
 <use images//android-architecture-data.png>
 Package pdftex.def Info: images//android-architecture-data.png  used on input l
@@ -1816,9 +1886,9 @@ ine 38.
 (pdftex.def)             Requested size: 209.12683pt x 186.64372pt.
 [22 <./images//android-architecture-ui.png> <./images//android-architecture-dat
 a.png>] [23]
-Underfull \hbox (badness 1442) in paragraph at lines 94--95
-[]\T1/lmr/bx/n/10 Vývoj v n¥-ko-lika tý-mech \T1/lmr/m/n/10 - Jed-not-livé sluº
-by lze vy-v-jíet ne-zá-visle na ostat-ních
+Underfull \hbox (badness 1292) in paragraph at lines 94--95
+[]\T1/lmr/bx/n/10 Vývoj v n¥-ko-lika tý-mech \T1/lmr/m/n/10 -- Jed-not-livé slu
+ºby lze vy-v-jíet ne-zá-visle na ostat-ních
  []
 
 
@@ -1841,86 +1911,71 @@ da-tum a £as
 
 ]
 Kapitola 6.
-[31]
+[31] [32]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 53.
- [32] [33] [34] [35] [36] [37]
-Underfull \hbox (badness 4242) in paragraph at lines 240--241
+nput line 55.
+ [33] [34] [35] [36] [37]
+Underfull \hbox (badness 4242) in paragraph at lines 244--245
 \T1/lmr/m/n/10 funkce, kde do-²lo ke zm¥n¥ stavu. Dal²í po-znám-kou je, ºe ná-v
 ra-tový typ funkce
  []
 
 [38]
-Underfull \hbox (badness 3078) in paragraph at lines 283--284
+Underfull \hbox (badness 3078) in paragraph at lines 287--288
 \T1/lmr/m/n/10 Popis im-ple-men-tace pre-zen-ta£ní vrstvy bude roz-d¥-lena na p
 o-pis vstup-ního bodu do
  []
 
-[39] [40]
-Underfull \hbox (badness 5359) in paragraph at lines 384--385
+[39] [40] [41]
+Underfull \hbox (badness 5359) in paragraph at lines 390--391
 []\T1/lmr/bx/n/10 ListItemPicker \T1/lmr/m/n/10 - Com-posa-ble funkce z knihovn
 y Alorma re-pre-zen-tu-jící se-znam
  []
 
-[41] [42] [43] [44] [45]
-Underfull \hbox (badness 2644) in paragraph at lines 574--575
+[42] [43] [44] [45]
+Underfull \hbox (badness 2644) in paragraph at lines 580--581
 \T1/lmr/m/n/10 strán-ko-vaný se-znam (pak je lo-gika pro p°e-ve-dení na flow po
 -ne-chána na strán-ko-vací
  []
 
-[46] [47] [48
-
-]
+[46] [47] [48]
 Kapitola 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 \T1/lmr/m/n/10 ºité ná-stroje a tech-no-lo-gie. Bac-kend je im-ple-men-to-vaný 
 po-mocí více vrstvé
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 647.
+(Font)              <8> on input line 655.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 647.
+(Font)              <6> on input line 655.
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 \T1/lmr/m/n/10 kódu a nut-nost po-£á-te£ní kon-fi-gu-race. Toto re-a-li-zuje pr
 o-st°ed-nict-cvím
  []
 
-[49] [50] [51] [52] [53] [54] [55]
-Overfull \hbox (2.46693pt too wide) in paragraph at lines 972--973
-\T1/lmr/m/n/10 for-mo-vat do da-ta-bá-zo-vého mo-delu. V²echny sou-bory pro tra
-ns-for-maci se na-chází ve sloºce [][][].
- []
+[49
 
-[56]) (text/chapters/06_testing.tex [57] [58
+] [50] [51] [52] [53] [54]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+921.
 
-]
-Kapitola 8.
-) (text/chapters/07_deploy.tex [59] [60
-
-]
-Kapitola 9.
-) (text/chapters/08_run.tex [61] [62
-
-]
-Kapitola 10.
-) (text/chapters/09_conclusion.tex [63] [64
-
-]
-Kapitola 11.
-)) [65]
+(C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [55]
+[56])) [57]
 \openout2 = `text/appendix.aux'.
 
- (text/appendix.tex [66
+ (text/appendix.tex [58
 
 
 
 
 ]
 P\v {r}\'{\i }loha A.
-<images//source_data_diagram.png, id=1565, 1014.79124pt x 1039.885pt>
+<images//source_data_diagram.png, id=1469, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
@@ -1929,13 +1984,13 @@ Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
-<images//vote_list.png, id=1570, 357.335pt x 727.71875pt>
+ [59]
+<images//vote_list.png, id=1475, 357.335pt x 727.71875pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 12.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=1571, 357.335pt x 727.71875pt>
+<images//vote_list_search.png, id=1476, 357.335pt x 727.71875pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
@@ -1943,20 +1998,20 @@ Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68 <./images//source_data_diagram.png>]
-<images//vote_details_general.png, id=1577, 357.335pt x 727.71875pt>
+ [60 <./images//source_data_diagram.png>]
+<images//vote_details_general.png, id=1482, 357.335pt x 727.71875pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 7.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=1578, 357.335pt x 727.71875pt>
+<images//vote_details_party_votes.png, id=1483, 357.335pt x 727.71875pt>
 File: images//vote_details_party_votes.png Graphic file (type png)
 <use images//vote_details_party_votes.png>
 Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
 ne 33.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=1579, 357.335pt x 727.71875p
+<images//vote_details_party_votes_expanded.png, id=1484, 357.335pt x 727.71875p
 t>
 File: images//vote_details_party_votes_expanded.png Graphic file (type png)
 <use images//vote_details_party_votes_expanded.png>
@@ -1971,30 +2026,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--43
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69 <./images//vote_list.png> <./images//vote_list_search.png>]
+ [61 <./images//vote_list.png> <./images//vote_list_search.png>]
 Overfull \vbox (6.3355pt too high) has occurred while \output is active []
 
 
-[70 <./images//vote_details_general.png> <./images//vote_details_party_votes.pn
+[62 <./images//vote_details_general.png> <./images//vote_details_party_votes.pn
 g> <./images//vote_details_party_votes_expanded.png>]
-<images//member_list.png, id=1593, 357.335pt x 727.71875pt>
+<images//member_list.png, id=1498, 357.335pt x 727.71875pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 48.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=1594, 357.335pt x 727.71875pt>
+<images//member_list_search.png, id=1499, 357.335pt x 727.71875pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 54.
 
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_general.png, id=1595, 357.335pt x 727.71875pt>
+<images//member_details_general.png, id=1500, 357.335pt x 727.71875pt>
 File: images//member_details_general.png Graphic file (type png)
 <use images//member_details_general.png>
 Package pdftex.def Info: images//member_details_general.png  used on input line
  64.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=1596, 357.335pt x 727.71875pt>
+<images//member_details_votes.png, id=1501, 357.335pt x 727.71875pt>
 File: images//member_details_votes.png Graphic file (type png)
 <use images//member_details_votes.png>
 Package pdftex.def Info: images//member_details_votes.png  used on input line 7
@@ -2003,13 +2058,13 @@ Package pdftex.def Info: images//member_details_votes.png  used on input line 7
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71 <./images//member_list.png> <./images//member_list_search.png>]
-<images//settings.png, id=1604, 357.335pt x 727.71875pt>
+ [63 <./images//member_list.png> <./images//member_list_search.png>]
+<images//settings.png, id=1508, 357.335pt x 727.71875pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 79.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=1605, 357.335pt x 727.71875pt>
+<images//settings_opened.png, id=1509, 357.335pt x 727.71875pt>
 File: images//settings_opened.png Graphic file (type png)
 <use images//settings_opened.png>
 Package pdftex.def Info: images//settings_opened.png  used on input line 85.
@@ -2017,10 +2072,8 @@ Package pdftex.def Info: images//settings_opened.png  used on input line 85.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72 <./images//member_details_general.png> <./images//member_details_votes.png
->] [73 <./images//settings.png> <./images//settings_opened.png>] [74] [75]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ [64 <./images//member_details_general.png> <./images//member_details_votes.png
+>] [65 <./images//settings.png> <./images//settings_opened.png>] [66] [67] [68]
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2034,75 +2087,87 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [76] [77] [78]
-Overfull \hbox (11.07326pt too wide) in paragraph at lines 311--311
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [69] [70] [71] [72
+
+
+
+]
+Overfull \hbox (11.07326pt too wide) in paragraph at lines 344--344
 []\T1/lmr/m/n/10 PRO PU-B-LICA INC. [][on-line][]. [B.r.]. [[]cit.[] 2023-01-26
 ]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 https : / / www . propublica .
  []
 
 
-Overfull \hbox (9.37918pt too wide) in paragraph at lines 311--311
+Overfull \hbox (9.37918pt too wide) in paragraph at lines 344--344
 []\T1/lmr/m/n/10 @UNITEDSTATES [][on-line][]. [B.r.]. [[]cit.[] 2023-01-26]. []
 Do-stupné z[]: []$\T1/lmtt/m/n/10 https : / / theunitedstates .
  []
 
 
-Overfull \hbox (2.10248pt too wide) in paragraph at lines 311--311
+Overfull \hbox (2.10248pt too wide) in paragraph at lines 344--344
 []\T1/lmr/m/n/10 FEDERAL ELECTION COM-MIS-SION [][on-line][]. [B.r.]. [[]cit.[]
  2023-01-26]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 https :
  []
 
 
-Overfull \hbox (6.00883pt too wide) in paragraph at lines 311--311
+Overfull \hbox (6.00883pt too wide) in paragraph at lines 344--344
 []\T1/lmr/m/n/10 GOOGLE. \T1/lmr/m/it/10 An-droid Stu-dio []\T1/lmr/m/n/10 [on-
 line][]. [B.r.]. [[]cit.[] 2023-02-09]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 htt
 ps : / / developer .
  []
 
-[79
-
-
-
+[73
 
 ]
-Overfull \hbox (4.19872pt too wide) in paragraph at lines 311--311
+Overfull \hbox (4.19872pt too wide) in paragraph at lines 344--344
 []\T1/lmr/m/n/10 GOOGLE. \T1/lmr/m/it/10 Lists and grids []\T1/lmr/m/n/10 [on-l
 ine][]. [B.r.]. [[]cit.[] 2023-02-10]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 http
 s : / / developer .
  []
 
 
-Overfull \hbox (15.12247pt too wide) in paragraph at lines 311--311
+Overfull \hbox (15.12247pt too wide) in paragraph at lines 344--344
 []\T1/lmr/m/n/10 MICROSOFT. \T1/lmr/m/it/10 Azure []\T1/lmr/m/n/10 [on-line][].
  [B.r.]. [[]cit.[] 2023-02-10]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 https : / /
  azure . microsoft .
  []
 
-[80]
+[74]
 \openout2 = `text/medium.aux'.
 
- (text/medium.tex) [81
+ (text/medium.tex) [75
 
 
 ] (ctufit-thesis.aux (text/text.aux)
 (text/appendix.aux) (text/medium.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 931879B0BCF94D7402AAFD28471FC4AA;9335.
+(rerunfilecheck)             Checksum: 495F9155F1AF12151CECF91E5EF722EE;8378.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                ctufit-thesis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38660 strings out of 476375
- 734035 string characters out of 5788976
- 2072299 words of memory out of 5000000
- 57423 multiletter control sequences out of 15000+600000
- 595772 words of font info for 82 fonts, out of 8000000 for 9000
+ 42131 strings out of 476375
+ 797207 string characters out of 5788976
+ 2050299 words of memory out of 5000000
+ 60897 multiletter control sequences out of 15000+600000
+ 596395 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,17n,92p,2182b,3061s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,90p,2182b,3061s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/U
@@ -2117,11 +2182,12 @@ dan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/ldda
 n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ldda
 n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/lddan
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/ldd
+an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/ldd
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ldd
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on ctufit-thesis.pdf (95 pages, 2690700 bytes).
+Output written on ctufit-thesis.pdf (89 pages, 2710106 bytes).
 PDF statistics:
- 2081 PDF objects out of 2487 (max. 8388607)
- 900 named destinations out of 1000 (max. 500000)
- 672 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1999 PDF objects out of 2073 (max. 8388607)
+ 879 named destinations out of 1000 (max. 500000)
+ 592 words of extra memory for PDF output out of 10000 (max. 10000000)
 

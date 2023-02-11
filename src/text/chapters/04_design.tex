@@ -44,10 +44,10 @@ Mobilní aplikace komunikuje s backendem pomocí REST API. Tato kapitola popisuj
 \subsection*{HTTP hlavička}
 
 \begin{itemize}
-	\item \textbf{prev} - Odkaz na předchozí stránku. \lstinline|Null|, pokud aktuální stránka je první.
-	\item \textbf{next} - Odkaz na následující stránku. \lstinline|Null|, pokud aktuální stránka je poslední.
-	\item \textbf{last} - Odkaz na poslední stránku.
-	\item \textbf{self} - Odkaz na aktuální stránku.
+	\item \textbf{prev} -- Odkaz na předchozí stránku. \lstinline|Null|, pokud aktuální stránka je první.
+	\item \textbf{next} -- Odkaz na následující stránku. \lstinline|Null|, pokud aktuální stránka je poslední.
+	\item \textbf{last} -- Odkaz na poslední stránku.
+	\item \textbf{self} -- Odkaz na aktuální stránku.
 \end{itemize}
 
 \noindent Tyto HTTP hlavičky jsou poskytovány pouze u endpointů, které vrací stránkovaný obsah.
@@ -56,11 +56,11 @@ Mobilní aplikace komunikuje s backendem pomocí REST API. Tato kapitola popisuj
 U některých endpointů lze specifikovat tyto query parametry:
 
 \begin{itemize}
-	\item \textbf{page} - Číslo stránky stránkovaného obsahu.
-	\item \textbf{size} - Velikost stránky stránkovaného obsahu.
-	\item \textbf{description} - Popis pro filtrování seznam hlasování podle popisu.
-	\item \textbf{name} - Jméno pro filtrování seznamu poslanců.
-	\item \textbf{electionYear} - Volební rok pro získání dat pro dané volební období.
+	\item \textbf{page} -- Číslo stránky stránkovaného obsahu.
+	\item \textbf{size} -- Velikost stránky stránkovaného obsahu.
+	\item \textbf{description} -- Popis pro filtrování seznam hlasování podle popisu.
+	\item \textbf{name} -- Jméno pro filtrování seznamu poslanců.
+	\item \textbf{electionYear} -- Volební rok pro získání dat pro dané volební období.
 \end{itemize}
 
 \subsection*{Endpointy}
@@ -82,7 +82,7 @@ GET /api/vote
 	\item identifikátor hlasování
 	\item datum a čas hlasování
 	\item popis hlasování
-	\item výsledek hlasování (A - přijato, N - zamítnuto, jinak zmatečné hlasování)
+	\item výsledek hlasování (A -- přijato, N -- zamítnuto, jinak zmatečné hlasování)
 \end{itemize}
 
 \noindent Obsah je stránkovaný. Lze specifikovat query parametry: page, size, description a electionYear. Použije se pro obrazovku pro seznam hlasování (\ref{ssec:design-votes}).
@@ -98,7 +98,7 @@ GET /api/vote{id}
 	\item identifikátor hlasování
 	\item datum a čas hlasování
 	\item popis hlasování
-	\item výsledek hlasování (A - přijato, N - zamítnuto, jinak zmatečné hlasování)
+	\item výsledek hlasování (A -- přijato, N -- zamítnuto, jinak zmatečné hlasování)
 	\item URL odkaz na příslušný stenoprotokol
 	\item počet hlasování pro
 	\item počet hlasování proti
@@ -120,7 +120,7 @@ GET /api/party/vote/{id}
 
 \begin{itemize}
 	\item název klubu
-	\item URL odkaz na logo klubu, pokud známo, jinak null
+	\item URL odkaz na logo klubu, pokud známo, jinak \lstinline|null|
 	\item identifikátor hlasování
 	\item výsledky hlasování klubu
 	\item výsledky hlasování členů klubu
@@ -158,13 +158,13 @@ GET /api/member/{id}
 \begin{itemize}
 	\item identifikátor
 	\item jméno a příjmení
-	\item pohlaví (M - muž, jinak ostatní)
+	\item pohlaví (M -- muž, jinak ostatní)
 	\item poslanecký klub
 	\item začátek mandátu
 	\item konec mandátu
-	\item datum narození, pokud známo, jinak null
+	\item datum narození, pokud známo, jinak \lstinline|null|
 	\item volební kraj
-	\item URL odkaz na profilovou fotku, pokud existuje, jinak null
+	\item URL odkaz na profilovou fotku, pokud existuje, jinak \lstinline|null|
 	\item volební rok
 \end{itemize}
 
@@ -180,10 +180,10 @@ GET /api/member/1/vote
 
 \begin{itemize}
 \item obecné informace o hlasování
-\item výsledek hlasování poslance (A - ano, N - ne, C - zdržel se, @ - nepřihlášen, M - omluven)
+\item výsledek hlasování poslance (A -- ano, N -- ne, C -- zdržel se, @ -- nepřihlášen, M -- omluven)
 \end{itemize}
 
-\noindent Narozdíl od původní reprezentace výsledků hlasování (\ref{table:hl_hlasovani}) bude REST API vystavovat jednodušší verzi. Výsledek 'B' je přičten k 'N'. Výsledek 'W' je přičten k '@'. Výsledkek 'F' je \linebreak ignorován, protože mobilní aplikace nebude ukazovat počet poslanců, kteří nehlasovali. Jak bylo probíráno v analýze dat, tento údaj je zastaralý. V datech existoval pouze před rokem 1995 \linebreak a ani před tímto rokem není na webu PS vidět. Výsledek 'K' je taktéž ignorován, jelikož z dat \linebreak a z dokumentace není jasné, co přesně znamená. Na výsledek hlasování to nebude mít vliv. Použije se pro obrazovku pro detail poslance (\ref{ssec:design-member}).
+\noindent Narozdíl od původní reprezentace výsledků hlasování (\ref{table:hl_hlasovani}) bude REST API vystavovat jednodušší verzi. Výsledek 'B' je přičten k 'N'. Výsledek 'W' je přičten k '@'. Výsledkek 'F' je \linebreak ignorován, protože mobilní aplikace nebude ukazovat počet poslanců, kteří nehlasovali. Jak bylo probíráno v analýze dat, tento údaj je zastaralý. V datech existoval pouze před rokem 1995 a ani před tímto rokem není na webu PS vidět. Výsledek 'K' je taktéž ignorován, jelikož z dat \linebreak a z dokumentace není jasné, co přesně znamená. Na výsledek hlasování to nebude mít vliv. Použije se pro obrazovku pro detail poslance (\ref{ssec:design-member}).
 
 \section{Databázový model}
 \label{sec:database_model}
@@ -191,19 +191,19 @@ GET /api/member/1/vote
 Databázový model bude složen z následujících struktur:
 
 \begin{itemize}
-	\item \textbf{agency} (\ref{table:agency}) - Obsahuje informace o jedntlivých orgánech. Používá se pro získání volebního kraje poslance. Volební kraj bude potřeba pro strukturu \textbf{member} níže. Dále se bude používat pro získání orgánuý PS v konkrétním volebním období. Na základě toho lze získat všechny poslanecké kluby v daném volebním období, což bude využito pro endpoint (\ref{lst:endpoint-party-votes}). Data pro tuto strukturu lze získat z tabulky \textbf{table:organy}.
+	\item \textbf{agency} (\ref{table:agency}) -- Obsahuje informace o jedntlivých orgánech. Používá se pro získání volebního kraje poslance. Volební kraj bude potřeba pro strukturu \textbf{member} níže. Dále se bude používat pro získání orgánuý PS v konkrétním volebním období. Na základě toho lze získat všechny poslanecké kluby v daném volebním období, což bude využito pro endpoint (\ref{lst:endpoint-party-votes}). Data pro tuto strukturu lze získat z tabulky \textbf{table:organy}.
 	
 
-	\item \textbf{excuse} (\ref{table:excuse}) - Obsahuje informace o časově ohraničených omluvách z jednání poslanců, které se bude používat pro získání počtu omluvených v daném hlasování. To se bude používat pro endpoint (\ref{lst:endpoint-vote}) a (\ref{lst:endpoint-party-votes}). Data pro tuto strukturu lze získat z tabulky (\ref{table:omluvy}).
+	\item \textbf{excuse} (\ref{table:excuse}) -- Obsahuje informace o časově ohraničených omluvách z jednání poslanců, které se bude používat pro získání počtu omluvených v daném hlasování. To se bude používat pro endpoint (\ref{lst:endpoint-vote}) a (\ref{lst:endpoint-party-votes}). Data pro tuto strukturu lze získat z tabulky (\ref{table:omluvy}).
 	
-	\item \textbf{member} (\ref{table:member}) - Obsahuje informace o poslancích. To se bude používat pro endpoint (\ref{lst:endpoint-member}). Data pro tuto strukturu lze získat z tabulek (\ref{table:osoby}), (\ref{table:poslanec}), (\ref{table:zarazeni}) a (\ref{table:organy}).
+	\item \textbf{member} (\ref{table:member}) -- Obsahuje informace o poslancích. To se bude používat pro endpoint (\ref{lst:endpoint-member}). Data pro tuto strukturu lze získat z tabulek (\ref{table:osoby}), (\ref{table:poslanec}), (\ref{table:zarazeni}) a (\ref{table:organy}).
 	
-	\item \textbf{member\_vote} (\ref{table:membe_vote}) - Obsahuje informace o tom, kdo jak hlasoval v kterém hlasování. Používá  se pro endpointy (\ref{lst:endpoint-party-votes}) a (\ref{lst:endpoint-member-votes}). Data pro tuto strukturu lze získat z tabulky (\ref{table:hl_poslanec}).
+	\item \textbf{member\_vote} (\ref{table:membe_vote}) -- Obsahuje informace o tom, kdo jak hlasoval v kterém hlasování. Používá  se pro endpointy (\ref{lst:endpoint-party-votes}) a (\ref{lst:endpoint-member-votes}). Data pro tuto strukturu lze získat z tabulky (\ref{table:hl_poslanec}).
 	
-	\item \textbf{membership} (\ref{table:membership}) - Obsahuje informace časově ohraničeném zařazení osoby do orgánu. Používá se pro endpoint (\ref{lst:endpoint-member}). Data pro strukturu lze získat z tabulky (\ref{table:zarazeni}).
+	\item \textbf{membership} (\ref{table:membership}) -- Obsahuje informace časově ohraničeném zařazení osoby do orgánu. Používá se pro endpoint (\ref{lst:endpoint-member}). Data pro strukturu lze získat z tabulky (\ref{table:zarazeni}).
 	
-	\item \textbf{party} (\ref{table:party}) - Obsahuje informace o politických klubech. Používá se pro endpoint (\ref{lst:endpoint-member}) \linebreak a (\ref{lst:endpoint-member-votes}).
+	\item \textbf{party} (\ref{table:party}) -- Obsahuje informace o politických klubech. Používá se pro endpoint (\ref{lst:endpoint-member}) \linebreak a (\ref{lst:endpoint-member-votes}).
 	
-	\item \textbf{vote} (\ref{table:vote}) - Obsahuje informace o hlasováních. Používá se pro endpointy (\ref{lst:endpoint-votes}), (\ref{lst:endpoint-vote}), (\ref{lst:endpoint-party-votes}) a (\ref{lst:endpoint-member-votes}). Data pro tuto strukturu lze získat z tabulek (\ref{table:hl_hlasovani}) a (\ref{table:omluvy}).
+	\item \textbf{vote} (\ref{table:vote}) -- Obsahuje informace o hlasováních. Používá se pro endpointy (\ref{lst:endpoint-votes}), (\ref{lst:endpoint-vote}), (\ref{lst:endpoint-party-votes}) a (\ref{lst:endpoint-member-votes}). Data pro tuto strukturu lze získat z tabulek (\ref{table:hl_hlasovani}) a (\ref{table:omluvy}).
 
 \end{itemize}

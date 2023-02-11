@@ -47,15 +47,15 @@ Softwarovou architekturu doporučenou Googlem \cite{android-architecture} ilustr
 Architektura doporučená Googlem má následující výhody:
 
 \begin{itemize}
-	\item \textbf{Oddělení zodpovědnosti} - Rozdělení aplikace do vrstev zlepšuje udržitelnost aplikace.  Vrstvy mají mezi sebou pevně definované rozhraní. Změna implementace jedné vrstvy bude mít minimální vliv na ostatní vrstvy.
+	\item \textbf{Oddělení zodpovědnosti} -- Rozdělení aplikace do vrstev zlepšuje udržitelnost aplikace.  Vrstvy mají mezi sebou pevně definované rozhraní. Změna implementace jedné vrstvy bude mít minimální vliv na ostatní vrstvy.
 
-	\item \textbf{Řízení UI podle stavu dat} - Uživatelské rozhraní automaticky reaguje na změnu stavu dat. 
+	\item \textbf{Řízení UI podle stavu dat} -- Uživatelské rozhraní automaticky reaguje na změnu stavu dat. 
 
-	\item \textbf{Jednotný zdroj pravdy} - Zajišťuje konzistenci dat.
+	\item \textbf{Jednotný zdroj pravdy} -- Zajišťuje konzistenci dat.
 
-	\item \textbf{Jednosměrný tok dat} - Data putují pouze zeshora dolu (např. z datového zdroje k repozitáři, z repozitáře k držiteli stavu). Události putují pouze zezdola nahoru (např. z UI elementů k držitěli stavu, z držitele stavu k repoiztáři). Díky tomu je fungování aplikace predikovatelné a snadno debugovatelné.
+	\item \textbf{Jednosměrný tok dat} -- Data putují pouze zeshora dolu (např. z datového zdroje k repozitáři, z repozitáře k držiteli stavu). Události putují pouze zezdola nahoru (např. z UI elementů k držitěli stavu, z držitele stavu k repoiztáři). Díky tomu je fungování aplikace predikovatelné a snadno debugovatelné.
 
-	\item \textbf{Je doporučený Googlem} - Architektura je díky tomu obecně známá. Když by na této práce začal pracovat jiný Android vývojář, vyznal by se díky této architektuře v kódu lépe.
+	\item \textbf{Je doporučený Googlem} -- Architektura je díky tomu obecně známá. Když by na této práce začal pracovat jiný Android vývojář, vyznal by se díky této architektuře v kódu lépe.
 \end{itemize}
 
 \noindent Z těchto důvodů byla pro implementaci mobilní aplikace vybrána tato architektura. 
@@ -67,15 +67,15 @@ Architektura doporučená Googlem má následující výhody:
 
 
 \begin{itemize}
-	\item \textbf{Prezentační} - Má na starosti prezentaci dat uživatelovi a obsluhu událostí. Data získává \linebreak z aplikační vrstvy.
+	\item \textbf{Prezentační} -- Má na starosti prezentaci dat uživatelovi a obsluhu událostí. Data získává \linebreak z aplikační vrstvy.
 	
-	\item \textbf{Aplikační} - Funguje jako prostředník mezi prezentační a businessovou vrstvou. Má na starosti aplikační logiku a řídí tok dat mezi různými vrstvami. Implementuje mimo jiné autentizaci, autorizaci a validaci dat.
+	\item \textbf{Aplikační} -- Funguje jako prostředník mezi prezentační a businessovou vrstvou. Má na starosti aplikační logiku a řídí tok dat mezi různými vrstvami. Implementuje mimo jiné autentizaci, autorizaci a validaci dat.
 	
-	\item \textbf{Businessová} - Obsahuje businessovou logiku aplikace. Definuje operace, které mohou být prováděny na datech, a implementuje businessové procesy. Komunikuje s perzistentní vrstvou pro ukládání a získání dat.	
+	\item \textbf{Businessová} -- Obsahuje businessovou logiku aplikace. Definuje operace, které mohou být prováděny na datech, a implementuje businessové procesy. Komunikuje s perzistentní vrstvou pro ukládání a získání dat.	
 	
-	\item \textbf{Perzistentní} - Tato vrstva má na starosti ukládání a získání dat z databáze. Slouží jako abstraktní rozhraní pro bussinessovou vrstvu pro přístup k datům. Data ukládá a získává komunikací s API databáze poskytované databázovou vrstvou.
+	\item \textbf{Perzistentní} -- Tato vrstva má na starosti ukládání a získání dat z databáze. Slouží jako abstraktní rozhraní pro bussinessovou vrstvu pro přístup k datům. Data ukládá a získává komunikací s API databáze poskytované databázovou vrstvou.
 	
-	\item \textbf{Databázová} - Má na starosti ukládání dat. Může být implementovaná např. pomocí relační databáze. Poskytuje data perzistentní vrstvě.
+	\item \textbf{Databázová} -- Má na starosti ukládání dat. Může být implementovaná např. pomocí relační databáze. Poskytuje data perzistentní vrstvě.
 	
 \end{itemize}
 
@@ -85,15 +85,15 @@ Architektura doporučená Googlem má následující výhody:
 Architektura mikroslužeb je architektonický styl, který rozděluje aplikaci do služeb, což jsou komponenty s následujícími vlastnostmi:
 
 \begin{itemize}
-	\item \textbf{Samostatně nasaditelné} - Každou službu lze nasadit zvlášť od ostatních služeb
+	\item \textbf{Samostatně nasaditelné} -- Každou službu lze nasadit zvlášť od ostatních služeb
 
-	\item \textbf{Volně propojené} - Služby komunikují mezi sebou prostřednictvím API, a nejsou tedy závislé na implementaci ostatních služeb.
+	\item \textbf{Volně propojené} -- Služby komunikují mezi sebou prostřednictvím API, a nejsou tedy závislé na implementaci ostatních služeb.
 	
-	\item \textbf{Rozdělené podle domény} - Každá služba má na starosti nějakou doménu v byznysu. \linebreak Např. jedna služba má na starosti účetnictví a jiná má na starosti objednávky.
+	\item \textbf{Rozdělené podle domény} -- Každá služba má na starosti nějakou doménu v byznysu. \linebreak Např. jedna služba má na starosti účetnictví a jiná má na starosti objednávky.
 	
-	\item \textbf{Vývoj v několika týmech} - Jednotlivé služby lze vyvjíet nezávisle na ostatních \linebreak službých, pokud je zachováno API mezi nima.
+	\item \textbf{Vývoj v několika týmech} -- Jednotlivé služby lze vyvjíet nezávisle na ostatních \linebreak službých, pokud je zachováno API mezi nima.
 	
-	\item \textbf{Dobře testovatelné a udržitelné} - Každou službu lze testovat a udržovat zvlášť.
+	\item \textbf{Dobře testovatelné a udržitelné} -- Každou službu lze testovat a udržovat zvlášť.
 \end{itemize}
 
 \subsection{Zhodnocení}

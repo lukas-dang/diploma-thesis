@@ -10,8 +10,8 @@
 Zdrojová data se nachází v souborech ve formátu zip, které jsou volně ke stažení na webu PSP \cite{psp-data}. Pro tuto práci budou důležité následující soubory, které obsahují datové soubory potřebné pro splnění zadání a funkčních a nefunkčních požadavků:
 
 \begin{itemize}
-	\item \textbf{poslanci.zip} - Eviduje osoby, jejich zařazení do orgánů a jejich funkce v orgánech a orgány jako takové. Obsahuje datové soubory potřebné 
-	\item \textbf{hl-XXXXps.zip} - Eviduje hlasování v PSP.
+	\item \textbf{poslanci.zip} -- Eviduje osoby, jejich zařazení do orgánů a jejich funkce v orgánech a orgány jako takové. Obsahuje datové soubory potřebné 
+	\item \textbf{hl-XXXXps.zip} -- Eviduje hlasování v PSP.
 \end{itemize}
 
 \noindent Zbytek práce se bude zabývat daty v datových souborech v těchto dvou zdrojových souborech.
@@ -22,7 +22,7 @@ Data v datových souborech jsou poskytována ve formátu UNL, tj.:
 \begin{itemize}
 	\item Každý řádek v souboru odpovídá jednom řádku v databázi.
 	\item Oddělovačem je znak roury (|).
-	\item Pokud je sloupec prázdný, je jeho hodnota typu \texttt{null}.
+	\item Pokud je sloupec prázdný, je jeho hodnota typu \lstinline|null|.
 	\item V sloupcích jsou používány tzv. escape sekvence k zápisu speciálních znaků s úvodním znakem \ (backslash) následovaný znakem.
 \end{itemize}
 
@@ -73,18 +73,18 @@ Data jsou poskytována bezplatně, využití dat je podmíněno uvedením zdroje
 Zde je výčet použitých datových souborů a stručná analýza. Detailnější analýza bude v následující sekci. Ze zdrojového souboru \lstinline|poslanci.zip| budou používány následující datové soubory \cite{zip-members}:
 
 \begin{itemize}
-	\item \textbf{organy} - Reprezentuje orgány ve státní správě. Zahrnuje parlamenty všech volebních období a poslanecké kluby. Tabulka bude využita pro nalezení všech poslaneckých klub.
-	\item \textbf{poslanec} - Reprezentuje poslance v různých volebních obdobích.
-	\item \textbf{osoby} - Reprezentuje osobu. Obsahuje osobní údaje jako jméno a příjmení a datum narození. Poslanec je osobou, a tudíž lze o poslanci prostřednictvím téhle tabulky zjistit jeho osobní údaje.
-	\item \textbf{zarazeni} - Obsahuje zařazení osoby osoby do nějakého orgánu. Tabulka bude využita pro zjištění členů poslaneckého klubu.
+	\item \textbf{organy} -- Reprezentuje orgány ve státní správě. Zahrnuje parlamenty všech volebních období a poslanecké kluby. Tabulka bude využita pro nalezení všech poslaneckých klub.
+	\item \textbf{poslanec} -- Reprezentuje poslance v různých volebních obdobích.
+	\item \textbf{osoby} -- Reprezentuje osobu. Obsahuje osobní údaje jako jméno a příjmení a datum narození. Poslanec je osobou, a tudíž lze o poslanci prostřednictvím téhle tabulky zjistit jeho osobní údaje.
+	\item \textbf{zarazeni} -- Obsahuje zařazení osoby osoby do nějakého orgánu. Tabulka bude využita pro zjištění členů poslaneckého klubu.
 \end{itemize}
 
 \noindent Ze zdrojových souborů \lstinline|hl-XXXX.zip|, kde XXXX je volební rok, budou používány následující datové soubory \cite{zip-votes}:
 
 \begin{itemize}
-	\item \textbf{hl\_hlasovani} - Reprezentuje hlasování o návrhu zákona. Zahrnuje většinu informací o hlasování, které budou potřeba.
-	\item \textbf{hl\_poslanec} - Reprezentuje výsledek hlasování poslance o návrhu zákona, tedy jak hlasoval který poslanec o kterém návrhu zákona.
-	\item \textbf{omluvy} - Repreznetuje časově ohraničené omluvy z jednání a hlasování v poslanecké sněmovně. Bude použito pro zjištění počtu omluvených. 
+	\item \textbf{hl\_hlasovani} -- Reprezentuje hlasování o návrhu zákona. Zahrnuje většinu informací o hlasování, které budou potřeba.
+	\item \textbf{hl\_poslanec} -- Reprezentuje výsledek hlasování poslance o návrhu zákona, tedy jak hlasoval který poslanec o kterém návrhu zákona.
+	\item \textbf{omluvy} -- Repreznetuje časově ohraničené omluvy z jednání a hlasování v poslanecké sněmovně. Bude použito pro zjištění počtu omluvených. 
 \end{itemize}
 
 \section{Tabulky}
@@ -189,6 +189,8 @@ Tabulka \textbf{osoby} \ref{table:osoby} bude použita pro získání osobních 
 \subsection*{zarazeni}
 
 Tabulka zařazení bude použita ke zjištění příslušnosti poslance do poslaneckého klubu. Zde je potřeba dát pozor na to, že atribut \textbf{id\_of} může reprezentovat buď tabulku \textbf{organ} (tu používáme) nebo tabulku \textbf{funkce} (tu nepoužíváme, a tudíž tu není uvedena) podle toho, zda je hodnota atributu \textbf{cl\_funkce} rovna 0 nebo 1. Tabulka \textbf{funkce} reprezentuje konkrétní funkci v daném orgánu. Pro účely této práce tato informace není potřeba, a proto tu tabulka \textbf{funkce} není uvedena. Je však potřeba zjistit příslušnost poslance do poslaneckého klubu, kterou lze zjistit kombinací tabulky \textbf{zarazeni} a \textbf{organy}. Důsledkem popsaného je to, že nás budou zajímat pouze zařazení \linebreak s hodnotou atributu \textbf{cl\_funkce} rovnou 0. Tím pádem identifikátor \textbf{id\_of} bude vždy referovat k tabulce \textbf{organy}. Tabulka \textbf{organy} obsahuje poslanecké kluby, což je přesně to, co potřebujeme. Dále pokud hodnota atributu \textbf{do\_o} je rovna \lstinline|null|, pak jde o aktuální zařazení.
+
+\newpage
 
 \begin{center}
 	\begin{longtable}{|l|l|p{8cm}|}
@@ -348,7 +350,7 @@ Tabulka \textbf{hl\_hlasovani} obsahuje většinu potřebných informací o hlas
 		
 		\hline 
 		
-		vysledek & char(X)	 & Výsledek: A - přijato, R - zamítnuto, jinak zmatečné hlasování
+		vysledek & char(X)	 & Výsledek: A -- přijato, R -- zamítnuto, jinak zmatečné hlasování
 		\\
 		
 		\hline 
@@ -392,7 +394,7 @@ Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který posla
 		
 		\hline 
 		
-		vysledek & char(X) & Hlasování jednotlivého poslance. 'A' - ano, 'B' nebo 'N' - ne, 'C' - zdržel se, 'F' - nehlasoval, '@' - nepřihlášen, 'M' - omluven, 'W' - hlasování před složením slibu poslance, 'K' - zdržel se/nehlasoval.
+		vysledek & char(X) & Hlasování jednotlivého poslance. 'A' - ano, 'B' nebo 'N' -- ne, 'C' -- zdržel se, 'F' -- nehlasoval, '@' -- nepřihlášen, 'M' -- omluven, 'W' -- hlasování před složením slibu poslance, 'K' -- zdržel se/nehlasoval.
 		\\
 		
 		\hline 
@@ -405,6 +407,8 @@ Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který posla
 Tabulka \textbf{omluvy} \ref{table:omluvy} zaznamenává časové ohraničení omluv poslanců z jednání Poslanecké sněmovny. Slouží pouze po spočtení počtu omluvených poslanců během hlasování. Podáváme-li se na statistiky o hlasování poskytnuté tabulkou \textbf{hl\_hlasovani}, uvidíme, že poskytuje počet hlasování pro, proti, a počet zdržených, ale již ne počet nepřihlášených a omluvených. Počet omluvených byl přidán až po 1995, kdy pouze nahradil počet poslanců, kteří nehlasovali. Počet nehlasujících poslanců tedy nepomůže k odvození počtu nepřihlášených a omluvených. Jediná další informace v tabulce \textbf{hl\_hlasovani} je tedy počet přihlášených. Intuitivně by člověk čekal, že doplněk pro počet přihlášených je počet nepřihlášených, ale není tomu tak. Když jsem od počtu poslanců (200) odečetl počet přihlášených, nikdy to nevycházelo s počty nepřihlášených na webu, ať už jsem to zkoušel s jakýmkoliv hlasování. Z toho důvodu je počet omluvených počítáno z tabulky \textbf{omluvy}, kde na základě atributů \textbf{den}, \textbf{od} a \textbf{do} zjistíme, zda datum a čas omluvy poslance spadá do data a času daného hlasování.
 
 Podle popisu tabulky na webu data slouží pro nahrazení výsledku typu '@', tj. pokud výsledek hlasování jednotlivého poslance je nepřihlášen. Pokud čas hlasování spadá do časového intervalu omluvy, pak se za výsledek považuje 'M', tj. omluven.
+
+\newpage
 
 \begin{center}
 	\begin{longtable}{|l|l|p{7cm}|}
@@ -440,7 +444,7 @@ Podle popisu tabulky na webu data slouží pro nahrazení výsledku typu '@', tj
 		\hline 
 		
 		
-		od & datetime(hour to minute)	 & Čas začátku omluvy, pokud je \lstinline|null|, pak i omluvy:do je null a jedná se o omluvu na celý jednací den.
+		od & datetime(hour to minute)	 & Čas začátku omluvy, pokud je \lstinline|null|, pak i omluvy:do je \lstinline|null| a jedná se o omluvu na celý jednací den.
 		\\
 		
 		\hline 

@@ -44,8 +44,8 @@
 \contentsline {section}{\numberline {6.1}Použité nástroje a technologie}{31}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Implementace prezentační vrstvy}{39}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{45}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Implementace datové vrstvy}{45}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Implementace síťové vrstvy}{46}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.1}Implementace datové vrstvy}{46}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Implementace síťové vrstvy}{47}{subsection.6.3.2}%
 \contentsline {chapter}{\numberline {7}Implementace backendu}{49}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Prezentační vrstva}{50}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Doménová vrstva}{51}{section.7.2}%
@@ -55,18 +55,8 @@
 \contentsline {subsection}{\numberline {7.4.2}Extrakce datových souborů}{55}{subsection.7.4.2}%
 \contentsline {subsection}{\numberline {7.4.3}Pročištění dat}{55}{subsection.7.4.3}%
 \contentsline {subsection}{\numberline {7.4.4}Parsování dat}{56}{subsection.7.4.4}%
-\contentsline {subsection}{\numberline {7.4.5}Transformace a uložení dat}{56}{subsection.7.4.5}%
-\contentsline {chapter}{\numberline {8}Testování}{59}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Mobilní aplikace}{59}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Backend}{59}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Nasazení}{61}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Aplikace}{61}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Backend}{61}{section.9.2}%
-\contentsline {chapter}{\numberline {10}Spuštění}{63}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Aplikace}{63}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Backend}{63}{section.10.2}%
-\contentsline {chapter}{\numberline {11}Závěr}{65}{chapter.11}%
-\contentsline {chapter}{\numberline {A}Příloha}{67}{appendix.A}%
+\contentsline {subsection}{\numberline {7.4.5}Transformace a uložení dat}{57}{subsection.7.4.5}%
+\contentsline {chapter}{\numberline {A}Příloha}{59}{appendix.A}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -271,4 +261,4 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Obsah přiloženého média}{81}{appendix*.31}%
+\contentsline {chapter}{Obsah přiloženého média}{75}{appendix*.31}%
