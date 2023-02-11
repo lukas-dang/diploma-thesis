@@ -1,9 +1,7 @@
 \chapter{Analýza existujících řešení}
 
-\setcounter{page}{1}
-
 \begin{chapterabstract}
-Tato kapitola se zabývá rešerší existujících řešení.
+Tato kapitola se zabývá rešerší existujících řešení. Pro rešerši byly vybírány takové \linebreak aplikace, které poskytují informace o výsledcích hlasování o návrzích zákonů. Aplikace byly nalezeny v rámci různých článků na internetu se seznamy aplikací pro tyto účely.
 \end{chapterabstract}
 
 \section{politiscope}
@@ -14,19 +12,18 @@ Tato kapitola se zabývá rešerší existujících řešení.
 	\item \textbf{Analyzovaná verze:} 2.4 (26. 1., 2023)
 \end{description}
 
-Aplikace politiscope \cite{politiscope} dle popisu na Google Play poskytuje informace ohledně politiky ve Spojených Státech. Informace jsou objektivní a jsou podány v jednoduché formě. Aplikace poskytuje informace o politických reprezentantech a jejich hlasováních. Aktuální témata jsou barevně označena. Uživatelé mají možnost ukládat návrh zákona a sledovat průběh hlasování. Uživatelé mají také možnost sledovat konkrétní politické reprezentanty. Návrhy zákonů jsou označeny tagy pro snazší vyhledání. U témat jsou oficiální sumarizace a odkazy na oficiální zdroje. Lze také sledovat průběh voleb a kampaní.
+\noindent Aplikace politiscope \cite{politiscope} dle popisu na Google Play poskytuje informace ohledně politiky ve Spojených Státech. Informace jsou objektivní a jsou podány v jednoduché formě. Aplikace poskytuje informace o politických reprezentantech a jejich hlasováních. Aktuální témata jsou barevně označena. Uživatelé mají možnost ukládat návrh zákona a sledovat průběh hlasování. Uživatelé mají také možnost sledovat konkrétní politické reprezentanty. Návrhy zákonů jsou označeny tagy pro snazší vyhledání. U témat jsou oficiální sumarizace a odkazy na oficiální zdroje. Lze také sledovat průběh voleb a kampaní.
 
 Aplikace čerpá data z API poskytuných z následujícíh zdrojů
 
 \begin{itemize}
-	\item \href[]{https://api.propublica.org/}{\color{blue}{prorepublica}} \cite{propublica}
-	 - ProPublica je nezávislá, nezisková redakce.
-	\item 	\href[]{https://theunitedstates.io/}{\color{blue}{theunitedstates}}\cite{unitedstates} - @unitedstates je projekt poskytující data ohledně Spojených Států veřejností a pro veřejnost.
-	\item \href[]{https://www.congress.gov/}{\color{blue}{congress}} \cite{congress} - Congress.gov je oficiální portál pro informace z Kongresu a orgánů státní správy.
-	\item \href[]{https://api.open.fec.gov/}{\color{blue}{openfec}} \cite{openfec} - OpenFEC je oficiální portál vlády Spojených Států.
+	\item prorepublica \cite{propublica} - ProPublica je nezávislá, nezisková redakce.
+	\item theunitedstates \cite{unitedstates} - @unitedstates je projekt poskytující data ohledně Spojených Států veřejností a pro veřejnost.
+	\item congress \cite{congress} - Congress.gov je oficiální portál pro informace z Kongresu a orgánů státní správy.
+	\item openfec \cite{openfec} - OpenFEC je oficiální portál vlády Spojených Států.
 \end{itemize}
 
-Výše uvedené informace jsou čerpány čistě z popisu a screenshotů aplikace na Google Playi. Do aplikace se mi nepodařilo dostat. Pro přístup je potřeba zaregistrovat se a přihlásit se. Při registraci mě to však automaticky přesměruje na přihlášovací obrazovku. Při zadání přihlašovacích údaju to pak píše, že účet se zadanými přihlašovacími údaji neexistují. Aplikaci jsem testoval na dvou různých zařízeních a na obou je stejný problém. Aplikace má přesto přes 10 000 stažení, a tudíž ve většině případech funguje. Tipuji, že problém souvisí nějakým způsobem s geografickou lokací mobilního zařízení.
+\noindent Výše uvedené informace jsou čerpány čistě z popisu a screenshotů aplikace na Google Playi. Do aplikace se mi nepodařilo dostat. Pro přístup je potřeba zaregistrovat se a přihlásit se. Při registraci mě to však automaticky přesměruje na přihlášovací obrazovku. Při zadání přihlašovacích údaju to pak píše, že účet se zadanými přihlašovacími údaji neexistují. Aplikaci jsem testoval na dvou různých zařízeních a na obou je stejný problém. Aplikace má přesto přes 10 000 \linebreak stažení, a tudíž ve většině případech funguje. Tipuji, že problém souvisí nějakým způsobem \linebreak s geografickou lokací mobilního zařízení.
 
 \begin{figure}
 	\centering
@@ -34,12 +31,12 @@ Výše uvedené informace jsou čerpány čistě z popisu a screenshotů aplikac
 	\includegraphics[width=0.4\linewidth]{politiscope}
 	\includegraphics[width=0.4\linewidth]{politiscope2}
 	
-	\caption{Android aplikace politiscope}
+	\caption{Android aplikace politiscope \cite{politiscope}}
 	\label{fig:politoscope}
 \end{figure}
 
 \subsection{Zhodnocení}
-Přestože se mi  aplikaci nepodařilo zprovoznit, stálo za to zahrnout ji do analýzy kvůli jejím funkčnostem. Další výhodou této aplikace je také přívětivé uživatelské rozhraní a fakt, že data získává z API. Dat PSP jsou totiž poskytována ve formě CSV souborů, jak bude popsáno v \ref{ch:analysis_data}.
+Přestože se mi  aplikaci nepodařilo zprovoznit, stálo za to zahrnout ji do analýzy kvůli jejím funkčnostem. Další výhodou této aplikace je také přívětivé uživatelské rozhraní a fakt, že data získává z API. Dat PSP jsou totiž poskytována ve formě CSV souborů, jak bude popsáno \linebreak v kapitole \ref{ch:analysis_data}.
 
 \section{Congress}
 
@@ -49,13 +46,13 @@ Přestože se mi  aplikaci nepodařilo zprovoznit, stálo za to zahrnout ji do a
 	\item \textbf{Analyzovaná verze:} 4.9.2 (27. 1., 2023)
 \end{description}
 
-Aplikace Congress \cite{congress} dle popisu na Google Play poskytuje informace ohledně politických reprezentantů a jejich hlasováních, a návrzích zákona ve Spojených Státech. Návrhy a hlasování lze vyhledávat podle klíčových slov.
+\noindent Aplikace Congress \cite{congress} dle popisu na Google Play poskytuje informace ohledně politických reprezentantů a jejich hlasováních, a návrzích zákona ve Spojených Státech. Návrhy a hlasování lze vyhledávat podle klíčových slov.
 
-Při spuštění aplikace uvidíme domovskou obrazovku, která obsahuje menu pro seznam politických reprezentantů, návrhů zákona, výsledků hlasování, aktivit v kongresu, schůzek komisí a seznam komisí. Na domovské stránce uvidíme také seznam nejnovějších návrhů zákona. 
+Při spuštění aplikace uvidíme domovskou obrazovku, která obsahuje menu pro seznam politických reprezentantů, návrhů zákona, výsledků hlasování, aktivit v kongresu, schůzek komisí \linebreak a seznam komisí. Na domovské stránce uvidíme také seznam nejnovějších návrhů zákona. 
 
 Obrazovka pro seznam politických reprezentantů obsahuje seznam aktuálně sledovaných politických reprezentatntů. Reprezentatny lze filtrovat podle států, sněmovny a senátu. Na obrazovce konkrétního politického reprezentanta uvidíme jméno, jeho politickou stranu, příslušný stát, telefonní číslo, jak hlasoval, které zákony navrhoval, ke kterým komisím patří, odkaz na oficiální stránku s informacemi o něm a jeho biografii. 
 
-Obrazovka pro návrhy zákonů obsahuje seznam sledovaných návrhů, seznam aktivních návrhů a seznam nových návrhů.
+\noindent Obrazovka pro návrhy zákonů obsahuje seznam sledovaných návrhů, seznam aktivních návrhů \linebreak a seznam nových návrhů.
 
 Na obrazovce pro výsledky hlasování je popis návrhu, výsledek hlasování, datum a čas hlasování, a údaj o tom, zda se hlasovalo ve Sněmovně nebo Senátu. Obrazovka s detailem hlasování obsahuje výsledek hlasování, počet hlasování pro a proti, a počet lidí, kteří nehlasovali. Dále obsahuje informace o tom, kolik lidí je potřeba být ve fyzické přítomnosti, aby hlasování bylo platné, a jak hlasoval který politik.
 
@@ -69,10 +66,10 @@ Obrazovka pro schůzky komisí a obrazovka pro seznam komisí byly v době anal�
 	\includegraphics[width=0.4\linewidth]{congress_1}
 	\includegraphics[width=0.4\linewidth]{congress_2}
 	
-	\caption{Android aplikace politiscope}
+	\caption{Android aplikace Congress \cite{congress}}
 	\label{fig:politoscope}
 \end{figure}
 
 \subsection{Zhodnocení}
-První dojem z této aplikace je to, že je velmi propracovaná z hlediska různorodosti poskytovaných informací. Přesto díky dobře navrženému uživatelskému rozhraní nepůsobí nepřehledně. Naopak působí velmi intuitivně. Z menu se lze dostat na jednotlivé hlavní obrazovky, které jsou dále rozděleny na taby. U návrhů lze snadno vidět výsledek hlasování, jak hlasoval který politik, proces schvalování návrhu a aktuální stav. Politiky lze snadno vyhledat podle klíčových slov, státu a příslušnosti ve Sněmovně nebo Senátu. Politiky a návrhy zákonu lze sledovat a nastavit notifikaci o jejich změnách.
+První dojem z této aplikace je to, že je velmi propracovaná z hlediska různorodosti poskytovaných informací. Přesto díky dobře navrženému uživatelskému rozhraní nepůsobí nepřehledně. Naopak působí velmi intuitivně. Z menu se lze dostat na jednotlivé hlavní obrazovky, které jsou dále rozděleny na taby. U návrhů lze snadno vidět výsledek hlasování, jak hlasoval který \linebreak politik, proces schvalování návrhu a aktuální stav. Politiky lze snadno vyhledat podle klíčových slov, státu a příslušnosti ve Sněmovně nebo Senátu. Politiky a návrhy zákonu lze sledovat \linebreak a nastavit notifikaci o jejich změnách.
 

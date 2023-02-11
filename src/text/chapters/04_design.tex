@@ -1,7 +1,9 @@
 \chapter{Návrh}
-\setcounter{page}{1}
 
-V této kapitole bude popsán návrh uživatelského rozhraní, REST API a databázového modelu.
+\begin{chapterabstract}
+	V této kapitole bude popsán návrh uživatelského rozhraní, REST API a databázového modelu.
+\end{chapterabstract}
+
 
 \section{Uživatelské rozhraní}
 V této podkapitole bude popsán návrh uživatelského rozhraní. Popis návrhu bude rozdělen do sekcí, kde každá sekce bude odpovídat jedné obrazovce na mobilní aplikaci. V každé sekci bude popis návrhu obrazovky a návrh obrazovky pomocí wireframů.
@@ -9,31 +11,31 @@ V této podkapitole bude popsán návrh uživatelského rozhraní. Popis návrhu
 \subsection*{Seznam hlasování}
 \label{ssec:design-votes}
 
-Na obrázku (\ref{fig:vote_list}) je návrh obrazovky pro seznam hlasování. Ta je složena z hlavičky, seznamu hlasování a dolní navigace. Hlavička obsahuje titul identifikující danou obrazovku,  aktuálně nastavené volební období, tlačítko pro filtrování seznamu a tlačítko pro otevření webu s oficiálním zdrojem. Každé hlasování v seznamu obsahuje popis návrhu zákona, datum a čas hlasování, výsledek hlasování ve formě ikonky a textu, a indikátor pro kliknutí na dané hlasování. Dolní navigace slouží pro navigaci mezi hlavními obrazovkami, tj. mezi obrazovkou pro seznam hlasování, seznam poslanců a nastavení.
+Na obrázku \ref{fig:vote_list} je návrh obrazovky pro seznam hlasování. Ta je složena z hlavičky, seznamu hlasování a dolní navigace. Hlavička obsahuje titul identifikující danou obrazovku,  aktuálně nastavené volební období, tlačítko pro filtrování seznamu a tlačítko pro otevření webu s oficiálním zdrojem. Každé hlasování v seznamu obsahuje popis návrhu zákona, datum a čas \linebreak hlasování, výsledek hlasování ve formě ikonky a textu, a indikátor pro kliknutí na dané hlasování. Dolní navigace slouží pro navigaci mezi hlavními obrazovkami, tj. mezi obrazovkou pro seznam hlasování, seznam poslanců a nastavení.
 
-Kliknutím na tlačítko pro vyhledávání se zobrazí vyhledávací pole (\ref{fig:vote_list_search}), které slouží pro vyhledávání seznamu hlasování podle jejich popisu. Do pole uživatel zadává klíčová slova. Pole obsahuje placeholder text, tlačítko pro smazání textu a tlačítko pro schování vyhledávacího pole.%
+Kliknutím na tlačítko pro vyhledávání se zobrazí vyhledávací pole \ref{fig:vote_list_search}, které slouží pro vyhledávání seznamu hlasování podle jejich popisu. Do pole uživatel zadává klíčová slova. Pole obsahuje placeholder text, tlačítko pro smazání textu a tlačítko pro schování vyhledávacího pole.%
 
 \subsection*{Detail hlasování}
 \label{ssec:design-vote}
 
-Obrazovka pro detail hlasování (\ref{fig:vote_details_party_votes}) je složena z hlavičky a obsahu. Hlavička obsahuje tlačítko pro navigaci zpět a tlačítko pro otevření webu s oficiálním zdrojem. Obsah je rozdělen do dvou tabů. V prvním tabu se nachází obecné informace o daném návrhu zákona a výsledcích jeho hlasování. Tyto informace zahrnují popis návrhu zákona, datum a čas hlasování, odkaz na stránku se stenoprotokolem, a tabulku s informacemi ohledně toho, jak se hlasovalo.Typy hlasování (ano, ne, nepřihlášen, omluven, zdržel se) jsou popsány textově a pomocí ikonky.
+Obrazovka pro detail hlasování \ref{fig:vote_details_party_votes} je složena z hlavičky a obsahu. Hlavička obsahuje tlačítko pro navigaci zpět a tlačítko pro otevření webu s oficiálním zdrojem. Obsah je rozdělen do dvou tabů. V prvním tabu se nachází obecné informace o daném návrhu zákona a výsledcích jeho hlasování. Tyto informace zahrnují popis návrhu zákona, datum a čas hlasování, odkaz na stránku se stenoprotokolem, a tabulku s informacemi ohledně toho, jak se hlasovalo. Typy \linebreak hlasování (ano, ne, nepřihlášen, omluven, zdržel se) jsou popsány textově a pomocí ikonky.
 
-Druhý tab (\ref{fig:vote_details_party_votes}) obsahuje seznam poslaneckých klubů v daném volebním období, rozdělených do boxů. V každém boxu je název klubu, jeho logo, pokud je k dispozici, a indikátor pro expandování boxu pro zobrazení informací o tom, jak daný klub a jeho členové hlasovali (\ref{fig:vote_details_party_votes}). Expandovaný box obsahuje navíc tabulku se statistikou hlasování jako v prvním tabu, ale pro konkrétní poslanecký klub. Pod tabulkou je seznam členů klubu a to, jak pro daný návrh zákona hlasovali. Výsledek hlasování členů je znázorněno ikonkou.
+Druhý tab (\ref{fig:vote_details_party_votes}) obsahuje seznam poslaneckých klubů v daném volebním období, rozdělených do boxů. V každém boxu je název klubu, jeho logo, pokud je k dispozici, a indikátor pro expandování boxu pro zobrazení informací o tom, jak daný klub a jeho členové hlasovali \ref{fig:vote_details_party_votes}. Expandovaný box obsahuje navíc tabulku se statistikou hlasování jako v prvním tabu, ale pro konkrétní poslanecký klub. Pod tabulkou je seznam členů klubu a to, jak pro daný návrh zákona hlasovali. Výsledek hlasování členů je znázorněno ikonkou.
 
 \subsection*{Seznam poslanců}
 \label{ssec:design-members}
 
-Obrazovka pro seznam poslanců (\ref{fig:member_list_search}) vypadá podobně jako obrazovka pro seznam hlasování. Obsahuje hlavičku s titulem, aktuálně nastaveným volebním obdobím, tlačítkém pro vyhledávání a tlačítkém pro otevření webu s oficiálním zdrojem. Obrazovka dále obsahuje seznam poslanců a dolní navigaci. Každý poslanec má profilovou fotku, jméno a příjmení, volební kraj, poslanecký klub a indikátor pro kliknutí. Kliknutím se dostaneme na obrazovku s detailem daného poslance. Dále pomocí vyhledávacího pole (\ref{fig:member_list_search}) lze poslance filtrovat podle jeho jména a příjmení.
+Obrazovka pro seznam poslanců \ref{fig:member_list_search} vypadá podobně jako obrazovka pro seznam hlasování. Obsahuje hlavičku s titulem, aktuálně nastaveným volebním obdobím, tlačítkém pro vyhledávání a tlačítkém pro otevření webu s oficiálním zdrojem. Obrazovka dále obsahuje seznam poslanců \linebreak a dolní navigaci. Každý poslanec má profilovou fotku, jméno a příjmení, volební kraj, poslanecký klub a indikátor pro kliknutí. Kliknutím se dostaneme na obrazovku s detailem daného poslance. Dále pomocí vyhledávacího pole \ref{fig:member_list_search} lze poslance filtrovat podle jeho jména a příjmení.
 
 \subsection*{Detail poslance}
 \label{ssec:design-member}
 
-Na obrazovce s detailem poslance (\ref{fig:member_details_general}) můžeme vidět údaje o daném poslanci a informace o tom, jak hlasoval o jednotlivých návrzích zákonů. Obrazovka je rozdělena na hlavičku a obsah. Hlavička obsahuje tlačítko pro navigaci zpět a tlačítko pro otevření stránky s oficiálním zdrojem. Obsah je rozdělen do dvou tabů. První tab obsahuje údaje o daném poslanci, tj. profilovou fotku, jméno a příjmení, datum a narození, datum začátku mandátu poslance, poslanecký klub, a volební kraj. Druhý tab (\ref{fig:member_details_votes}) obsahuje seznam návrhů zákona s výsledky jeho hlasování, a k nim dodatečnou informaci o tom, jak o nic hlasoval daný poslanec. 
+Na obrazovce s detailem poslance \ref{fig:member_details_general} můžeme vidět údaje o daném poslanci a informace \linebreak o tom, jak hlasoval o jednotlivých návrzích zákonů. Obrazovka je rozdělena na hlavičku a obsah. Hlavička obsahuje tlačítko pro navigaci zpět a tlačítko pro otevření stránky s oficiálním zdrojem. Obsah je rozdělen do dvou tabů. První tab obsahuje údaje o daném poslanci, tj. profilovou fotku, jméno a příjmení, datum a narození, datum začátku mandátu poslance, poslanecký \linebreak klub, a volební kraj. Druhý tab \ref{fig:member_details_votes} obsahuje seznam návrhů zákona s výsledky jeho \linebreak hlasování, a k nim dodatečnou informaci o tom, jak o nic hlasoval daný poslanec. 
 
 \subsection*{Nastavení}
 \label{ssec:design-settings}
 	
-Na obrazovce pro nastavení (\ref{fig:settings_opened}) je seznam nastavení dané aplikace. Obsahuje nastavení pro volební období. Nastavení obsahuje ikonku znázorňující typ nastavení, název nastavení a text nastaveného volebního obdobi. Kliknutím na toto nastavení naskočí okno (\ref{fig:settings_opened}) se seznamem volebních období. Po zvolení volebního období uživatel může kliknout na tlačítko Uložit, kterým se dané volební období lokálně uloží a nastaví, nebo Zrušit, čímž se zruší aktuální výběr v seznamu. Dále obsahuje tlačítko O aplikaci, které zobrazí okno se stručnými informacemi o dané aplikaci a uvedením zdroje data a ikonku aplikace.
+Na obrazovce pro nastavení \ref{fig:settings_opened} je seznam nastavení dané aplikace. Obsahuje nastavení pro volební období. Nastavení obsahuje ikonku znázorňující typ nastavení, název nastavení a text nastaveného volebního obdobi. Kliknutím na toto nastavení naskočí okno \ref{fig:settings_opened} se seznamem volebních období. Po zvolení volebního období uživatel může kliknout na tlačítko Uložit, kterým se dané volební období lokálně uloží a nastaví, nebo Zrušit, čímž se zruší aktuální výběr \linebreak v seznamu. Dále obsahuje tlačítko O aplikaci, které zobrazí okno se stručnými informacemi \linebreak o dané aplikaci a uvedením zdroje data a ikonku aplikace.
 
 \section{REST API}
 
@@ -42,8 +44,8 @@ Mobilní aplikace komunikuje s backendem pomocí REST API. Tato kapitola popisuj
 \subsection*{HTTP hlavička}
 
 \begin{itemize}
-	\item \textbf{prev} - Odkaz na předchozí stránku. Null, pokud aktuální stránka je první.
-	\item \textbf{next} - Odkaz na následující stránku. Null, pokud aktuální stránka je poslední.
+	\item \textbf{prev} - Odkaz na předchozí stránku. \lstinline|Null|, pokud aktuální stránka je první.
+	\item \textbf{next} - Odkaz na následující stránku. \lstinline|Null|, pokud aktuální stránka je poslední.
 	\item \textbf{last} - Odkaz na poslední stránku.
 	\item \textbf{self} - Odkaz na aktuální stránku.
 \end{itemize}
@@ -181,7 +183,7 @@ GET /api/member/1/vote
 \item výsledek hlasování poslance (A - ano, N - ne, C - zdržel se, @ - nepřihlášen, M - omluven)
 \end{itemize}
 
-\noindent Narozdíl od původní reprezentace výsledků hlasování (\ref{table:hl_hlasovani}) bude REST API vystavovat jednodušší verzi. Výsledek 'B' je přičten k 'N'. Výsledek 'W' je přičten k '@'. Výsledkek 'F' je ignorován, protože mobilní aplikace nebude ukazovat počet poslanců, kteří nehlasovali. Jak bylo probíráno v analýze dat, tento údaj je zastaralý. V datech existoval pouze před rokem 1995 a ani před tímto rokem není na webu PS vidět. Výsledek 'K' je taktéž ignorován, jelikož z dat a z dokumentace není jasné, co přesně znamená. Na výsledek hlasování to nebude mít vliv. Použije se pro obrazovku pro detail poslance (\ref{ssec:design-member}).
+\noindent Narozdíl od původní reprezentace výsledků hlasování (\ref{table:hl_hlasovani}) bude REST API vystavovat jednodušší verzi. Výsledek 'B' je přičten k 'N'. Výsledek 'W' je přičten k '@'. Výsledkek 'F' je \linebreak ignorován, protože mobilní aplikace nebude ukazovat počet poslanců, kteří nehlasovali. Jak bylo probíráno v analýze dat, tento údaj je zastaralý. V datech existoval pouze před rokem 1995 \linebreak a ani před tímto rokem není na webu PS vidět. Výsledek 'K' je taktéž ignorován, jelikož z dat \linebreak a z dokumentace není jasné, co přesně znamená. Na výsledek hlasování to nebude mít vliv. Použije se pro obrazovku pro detail poslance (\ref{ssec:design-member}).
 
 \section{Databázový model}
 \label{sec:database_model}
@@ -200,8 +202,8 @@ Databázový model bude složen z následujících struktur:
 	
 	\item \textbf{membership} (\ref{table:membership}) - Obsahuje informace časově ohraničeném zařazení osoby do orgánu. Používá se pro endpoint (\ref{lst:endpoint-member}). Data pro strukturu lze získat z tabulky (\ref{table:zarazeni}).
 	
-	\item \textbf{party} (\ref{table:party}) - Obsahuje informace o politických klubech. Používá se pro endpoint (\ref{lst:endpoint-member}) a (\ref{lst:endpoint-member-votes}).
+	\item \textbf{party} (\ref{table:party}) - Obsahuje informace o politických klubech. Používá se pro endpoint (\ref{lst:endpoint-member}) \linebreak a (\ref{lst:endpoint-member-votes}).
 	
-	\item \textbf{vote} (\ref{table:vote}) - Obsahuje informace o hlasováních. Používá se pro endpointy (\ref{lst:endpoint-votes}), (\ref{lst:endpoint-vote}), (\ref{lst:endpoint-party-vote}) a (\ref{lst:endpoint-member-votes}). Data pro tuto strukturu lze získat z tabulek (\ref{table:hl_hlasovani}) a (\ref{table:omluvy}).
+	\item \textbf{vote} (\ref{table:vote}) - Obsahuje informace o hlasováních. Používá se pro endpointy (\ref{lst:endpoint-votes}), (\ref{lst:endpoint-vote}), (\ref{lst:endpoint-party-votes}) a (\ref{lst:endpoint-member-votes}). Data pro tuto strukturu lze získat z tabulek (\ref{table:hl_hlasovani}) a (\ref{table:omluvy}).
 
 \end{itemize}

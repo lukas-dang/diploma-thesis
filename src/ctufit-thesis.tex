@@ -45,9 +45,9 @@
 
 \ctufitdeclarationdate{\today}
 
-\ctufitabstractCZE{Diplomová práce popisuje návrh a implementaci mobilní aplikace, která slouží k zobrazení výsledků hlasování poslanců Poslanecké sněmovny Parlementu ČR. Součástí práce je i návrh a implementace backendu, který bude zpracovávat data z webu poslanecké sněmovny parlamentu ČR a poskytovat je mobilní aplikaci prostřednictvím REST API.}
+\ctufitabstractCZE{Diplomová práce popisuje návrh a implementaci mobilní aplikace, která slouží k zobrazení výsledků hlasování poslanců Poslanecké sněmovny Parlementu ČR. Součástí práce je i návrh \linebreak a implementace backendu, který bude zpracovávat data z webu poslanecké sněmovny parlamentu ČR a poskytovat je mobilní aplikaci prostřednictvím REST API.}
 	
-\ctufitabstractENG{The diploma thesis describes the design and implementation of a mobile application that serves to display the voting results of members	 of the Czech Parliament's Chamber of Deputies. The work also includes the design and implementation of a backend that will process data from the Czech Parliament's Chamber of Deputies website and provide it to the mobile application through a REST API.}
+\ctufitabstractENG{The diploma thesis describes the design and implementation of a mobile application that serves to display the voting results of members	 of the Czech Parliament's Chamber of Deputies. The work also includes the design and implementation of a backend that will process data from the Czech Parliament's Chamber of Deputies website and provide it to the mobile application through \linebreak a REST API.}
 
 \ctufitkeywordsCZE{poslanecká sněmovna, parlament, hlasování, poslanec, poslanecký klub, REST, Android, mobilní aplikace, backend, Kotlin, Java}
 
@@ -71,6 +71,7 @@
 
 \setcounter{secnumdepth}{4} % numbering sections; 4: subsubsection
 
+\usepackage[T1]{fontenc}
 \usepackage{float}
 
 \usepackage{svg}
@@ -219,10 +220,13 @@ D\'\i{}la a za jak\'ymkoli \'u\v celem (v\v cetn\v e u\v zit\'\i{} k~v\'yd\v ele
 \begin{summarypage}
 	
 \section*{Cíle}
-V této kapitole budou uvedeny cíle této práce.
+V této sekci budou uvedeny cíle této práce.
 
-\section*{Poslanecká sněmovna}
-Tato kapitola slouží jako úvod do tematiky hlasování v poslanecké sněmovně.
+\section*{Úvod}
+Tato sekce slouží jako úvod pro diplomovou práci.
+
+\section*{Motivace a požadavky}
+Tato kapitola slouží jako úvod do tematiky hlasování v poslanecké sněmovně a motivace k vytvoření mobilní aplikace pro zobrazení výsledků hlasování v PSP. Dále zde budou uvedeny funkční \linebreak a nefunkční požadavky kladené na mobilní aplikaci a backend.
 
 \section*{Funkční a nefunkční požadavky}
 V další kapitole bude popsány funkční a nefunkční požadavky pro mobilní aplikaci i backend.
@@ -233,8 +237,11 @@ Následně budou analyzována a zhodnocena existující řešení. Konkrétně b
 \section*{Analýza zdrojových dat}
 Součástí analýzy budou zdrojová data z webu poslanecké sněmovny, která budou v rámci této práce využita.
 
+\section*{Výběr architektur}
+V této kapitole budou porovnávány a vybírány architektury mobilní a aplikaci a backend.
+
 \section*{Návrh}
-V této kapitole bude na základě funkčních a nefunkčních požadavků popsán návrh uživatelského rozhraní mobilní aplikace, dotazů na REST API a odpovědí z něj, a databázový model. Dále budou popsány návrhy pro architektury použité pro implementaci mobilní aplikace a backendu.
+V této kapitole bude na základě funkčních a nefunkčních požadavků popsán návrh uživatelského rozhraní mobilní aplikace, dotazů na REST API a odpovědí z něj, a databázový model.
 
 \section*{Implementace}
 Na základě návrhů budou popsány implementace mobilní aplikace a backendu. Popis bude zahrnovat popis využitých nástrojů a technologií, případně jejich porovnání s možnými alternativami. Dále bude zahrnovat popis implementace po jednotlivých vrstvách architektury mobilní aplikace a backendu.
@@ -265,9 +272,21 @@ V této kapitole bude shrnuta práce, včetně jejího zadání a jejich splněn
 \chapter{Seznam zkratek}
 	
 \begin{tabular}{rl}
+API & Application Programming Interface\\
+CSV & Comma Separated Values\\
+ČR & Česká republika\\
+FIT & Fakulta Informačních Technologií\\
+HTTP & Hypertext Transfer Protocol\\
+IDE & Integrated development environment\\
+JDBC & Java Database Connectivity\\
+JSON & JavaScript Object Notation\\
+ORM & Objektově Relační Mapování\\
 PSP & Poslanecká sněmovná Parlamentu ČR\\
 REST & Representational state transfer\\
-API & Application Programming Interface
+SDK & Software Development Kit\\
+SQL & Structured Query Language\\
+UI & User Interface\\
+URL & Uniform Resource Locator
 \end{tabular}
 %%%%%%%%%%%%%%%%%%%
 % ABBREVIATIONS END

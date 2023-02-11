@@ -7,15 +7,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Android aplikace politiscope \blx@tocontentsinit {0}\cite {politiscope}\relax }}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Android aplikace Congress \blx@tocontentsinit {0}\cite {congress}\relax }}{11}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Android aplikace politiscope\relax }}{2}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Android aplikace politiscope\relax }}{3}{figure.caption.11}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Architektura pro mobilní aplikaci pro Android \blx@tocontentsinit {0}\cite {android-architecture}\relax }}{1}{figure.caption.12}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Složení UI vrstvy \blx@tocontentsinit {0}\cite {android-architecture}\relax }}{2}{figure.caption.13}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Složení datové vrstvy \blx@tocontentsinit {0}\cite {android-architecture}\relax }}{2}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architektura pro mobilní aplikaci pro Android \blx@tocontentsinit {0}\cite {android-architecture}\relax }}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Složení UI vrstvy \blx@tocontentsinit {0}\cite {android-architecture}\relax }}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Složení datové vrstvy \blx@tocontentsinit {0}\cite {android-architecture}\relax }}{22}{figure.caption.16}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -24,24 +22,43 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagram zdrojových dat\relax }}{4}{figure.caption.15}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Seznam hlasování\relax }}{5}{figure.caption.16}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Vyhledávání v seznamu hlasování\relax }}{5}{figure.caption.16}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Obrazovka pro seznam hlasování\relax }}{5}{figure.caption.16}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Detail hlasování\relax }}{9}{figure.caption.17}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Jak hlasovaly kluby\relax }}{9}{figure.caption.17}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Jak hlasovaly kluby\relax }}{9}{figure.caption.17}%
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Obrazovky pro detail hlasování\relax }}{9}{figure.caption.17}%
-\contentsline {figure}{\numberline {A.9}{\ignorespaces Seznam poslanců\relax }}{10}{figure.caption.18}%
-\contentsline {figure}{\numberline {A.10}{\ignorespaces Vyhledávání v seznamu poslanců\relax }}{10}{figure.caption.18}%
-\contentsline {figure}{\numberline {A.11}{\ignorespaces Obrazovka pro seznam poslanců\relax }}{10}{figure.caption.18}%
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Detail poslance\relax }}{11}{figure.caption.19}%
-\contentsline {figure}{\numberline {A.13}{\ignorespaces Jak hlasoval/a poslanec/kyně\relax }}{11}{figure.caption.19}%
-\contentsline {figure}{\numberline {A.14}{\ignorespaces Obrazovky pro detail poslance\relax }}{11}{figure.caption.19}%
-\contentsline {figure}{\numberline {A.15}{\ignorespaces Seznam nastavení\relax }}{12}{figure.caption.20}%
-\contentsline {figure}{\numberline {A.16}{\ignorespaces Nastavení volebního období\relax }}{12}{figure.caption.20}%
-\contentsline {figure}{\numberline {A.17}{\ignorespaces Obrazovka pro nastavení\relax }}{12}{figure.caption.20}%
-\contentsline {figure}{\numberline {A.18}{\ignorespaces Adresářová struktura mobilní aplikace\relax }}{13}{figure.caption.28}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagram zdrojových dat\relax }}{68}{figure.caption.17}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Seznam hlasování\relax }}{69}{figure.caption.18}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Vyhledávání v seznamu hlasování\relax }}{69}{figure.caption.18}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Detail hlasování\relax }}{70}{figure.caption.19}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Jak hlasovaly kluby\relax }}{70}{figure.caption.19}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Jak hlasovaly kluby s expandovaným oknem klubu\relax }}{70}{figure.caption.19}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Seznam poslanců\relax }}{71}{figure.caption.20}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Vyhledávání v seznamu poslanců\relax }}{71}{figure.caption.20}%
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Obrazovka pro seznam poslanců\relax }}{71}{figure.caption.20}%
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Detail poslance\relax }}{72}{figure.caption.21}%
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Jak hlasoval/a poslanec/kyně\relax }}{72}{figure.caption.21}%
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Seznam nastavení\relax }}{73}{figure.caption.22}%
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Nastavení volebního období\relax }}{73}{figure.caption.22}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 

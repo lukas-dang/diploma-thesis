@@ -1,16 +1,17 @@
 \chapter{Analýza zdrojových dat}
 \label{ch:analysis_data}
-\setcounter{page}{1}
 
-V této kapitole budou analyzována zdrojová data, z kterých bude čerpat backend.
+\begin{chapterabstract}
+	V této kapitole budou analyzována zdrojová data, z kterých bude čerpat backend.
+\end{chapterabstract}
 
 \section{Zdrojové soubory}
 
-Zdrojová data se nachází v souborech ve formátu zip, které jsou volně ke stažení na \href{https://www.psp.cz/sqw/hp.sqw?k=1300}{\color{blue}stránkách} PSP. Pro tuto práci budou důležité následující soubory, které obsahují datové soubory potřebné pro splnění zadání a funkčních a nefunkčních požadavků:
+Zdrojová data se nachází v souborech ve formátu zip, které jsou volně ke stažení na webu PSP \cite{psp-data}. Pro tuto práci budou důležité následující soubory, které obsahují datové soubory potřebné pro splnění zadání a funkčních a nefunkčních požadavků:
 
 \begin{itemize}
 	\item \textbf{poslanci.zip} - Eviduje osoby, jejich zařazení do orgánů a jejich funkce v orgánech a orgány jako takové. Obsahuje datové soubory potřebné 
-	\item \textbf{hl-XXXXps.zip} - Eviduje hlasování v PS.
+	\item \textbf{hl-XXXXps.zip} - Eviduje hlasování v PSP.
 \end{itemize}
 
 \noindent Zbytek práce se bude zabývat daty v datových souborech v těchto dvou zdrojových souborech.
@@ -21,7 +22,7 @@ Data v datových souborech jsou poskytována ve formátu UNL, tj.:
 \begin{itemize}
 	\item Každý řádek v souboru odpovídá jednom řádku v databázi.
 	\item Oddělovačem je znak roury (|).
-	\item Pokud je sloupec prázdný, je jeho hodnota typu null.
+	\item Pokud je sloupec prázdný, je jeho hodnota typu \texttt{null}.
 	\item V sloupcích jsou používány tzv. escape sekvence k zápisu speciálních znaků s úvodním znakem \ (backslash) následovaný znakem.
 \end{itemize}
 
@@ -35,11 +36,10 @@ Data v datových souborech jsou poskytována ve formátu UNL, tj.:
 \noindent Kódování windows-1250 obsahuje mimo jiné všechny znaky z české abecedy. Je tedy třeba dbát na správně nastavené kódování při parsování nebo ukládání do databáze, aby datům vráceným mobilní aplikaci nechyběly např. háčky a čárky. Zároveň při parsování UNL souborů je potřeba brát ohled na přidávání nových sloupců nakonec.
 
 \section{Aktualizace}
-
-\href{https://www.psp.cz/sqw/hp.sqw?k=1300}{\color{blue}Web} uvádí, že data obsahují úplný stav a že rozdílové aktualizace nejsou poskytovány. To je pro použití neideální, jelikož při aktualizaci dat je potřeba stáhnout všechna data a následně buď zpracovat všechna data znovu nebo naimplementovat vlastní logiku pro zjištění rozdílového stavu a aktualizovat data pouze na základě tohoto rozdílového stavu. 
+Web PSP \cite{psp-data} uvádí, že data obsahují úplný stav a že rozdílové aktualizace nejsou poskytovány. To je pro použití neideální, jelikož při aktualizaci dat je potřeba stáhnout všechna data a následně buď zpracovat všechna data znovu nebo naimplementovat vlastní logiku pro zjištění rozdílového stavu a aktualizovat data pouze na základě tohoto rozdílového stavu. 
 
 \section{Datové typy}
-Na \href{https://www.psp.cz/sqw/hp.sqw?k=1300}{\color{blue}stránce} jsou poskytovány informace o datových typech sloupců. Zde je výčet pouze těch datových typů, které jsou nutné pro pochopení dat používaných v rámci této práce.
+Na webu PSP \cite{psp-data} jsou poskytovány informace o datových typech sloupců. Zde je výčet pouze těch datových typů, které jsou nutné pro pochopení dat používaných v rámci této práce.
 
 \begin{longtable}{|l|p{9cm}|} \hline
 	\multicolumn{2}{|l|}{\textbf{Typy dat sloupců v tabulkách}} \\ \hline
@@ -70,16 +70,16 @@ Data jsou poskytována bezplatně, využití dat je podmíněno uvedením zdroje
 
 \section{Datové soubory}
 
-Zde je výčet použitých datových souborů a stručná analýza. Detailnější analýza bude v následující sekci. Ze zdrojového souboru \lstinline|poslanci.zip| budou používány následující datové soubory (\cite{zip-members}:)
+Zde je výčet použitých datových souborů a stručná analýza. Detailnější analýza bude v následující sekci. Ze zdrojového souboru \lstinline|poslanci.zip| budou používány následující datové soubory \cite{zip-members}:
 
 \begin{itemize}
-	\item \textbf{organy} - Reprezentuje orgány ve státní správě. Zahrnuje parlamenty všech volebních období a poslanecké kluby. Tabulka bude využita pro nalezení všech poslaneckých klub;.
+	\item \textbf{organy} - Reprezentuje orgány ve státní správě. Zahrnuje parlamenty všech volebních období a poslanecké kluby. Tabulka bude využita pro nalezení všech poslaneckých klub.
 	\item \textbf{poslanec} - Reprezentuje poslance v různých volebních obdobích.
 	\item \textbf{osoby} - Reprezentuje osobu. Obsahuje osobní údaje jako jméno a příjmení a datum narození. Poslanec je osobou, a tudíž lze o poslanci prostřednictvím téhle tabulky zjistit jeho osobní údaje.
 	\item \textbf{zarazeni} - Obsahuje zařazení osoby osoby do nějakého orgánu. Tabulka bude využita pro zjištění členů poslaneckého klubu.
 \end{itemize}
 
-\noindent Ze zdrojových souborů \lstinline|hl-XXXX.zip|, kde XXXX je volební rok, budou používány následující datové soubory (\cite{zip-votes}:)
+\noindent Ze zdrojových souborů \lstinline|hl-XXXX.zip|, kde XXXX je volební rok, budou používány následující datové soubory \cite{zip-votes}:
 
 \begin{itemize}
 	\item \textbf{hl\_hlasovani} - Reprezentuje hlasování o návrhu zákona. Zahrnuje většinu informací o hlasování, které budou potřeba.
@@ -89,10 +89,10 @@ Zde je výčet použitých datových souborů a stručná analýza. Detailnějš
 
 \section{Tabulky}
 
-Na (\ref{fig:class-diagram}) lze vidět diagram zdrojových dat, s kterými bude dále v práci pracováno. Obsahuje typy dat, jejich atributy, datové typy atributů a vazby mezi typy. Atributy identifikující daný typ jsou zvýrazněny tučným písmem. Následovat bude výčet použitých tabulek s popisem atributů. Pro stručnost budou u tabulek uvedeny pouze atributy, které jsou v rámci práce používány. Poznatky v textu jsou převážně z \textbf{analýzy obsahu datových souborů} a nejsou na stránkách PS nijak zdokumentovány.
+Na \ref{fig:class-diagram} lze vidět diagram zdrojových dat, s kterými bude dále v práci pracováno. Obsahuje typy dat, jejich atributy, datové typy atributů a vazby mezi typy. Atributy identifikující daný typ jsou zvýrazněny tučným písmem. Následovat bude výčet použitých tabulek s popisem atributů. Pro stručnost budou u tabulek uvedeny pouze atributy, které jsou v rámci práce používány. Poznatky v textu jsou převážně z \textbf{analýzy obsahu datových souborů} a nejsou na stránkách PS nijak zdokumentovány.
 
 \subsection*{organy}
-Tabulka \textbf{organy} (\ref{table:organy}) bude použita pro nalezení poslaneckých klubů v určitém volebním období. Všechny poslanecké kluby mají hodnotu atributu \textbf{id\_typ\_organu} rovnou 1. Poslanecké kluby v daném volebním období lze nalézt kontrolou, zda hodnoty atributů \textbf{od\_organ} a \textbf{do\_organ} spadají mezi hodnotami stejných atributů PS. PS je totiž také orgánem a lze ji najít prostřednictvím hodnoty atributu \textbf{id\_organ}. První PS má identifikátor 165. PS v každém následujícím volebním období má hodnotu identifikátoru o jednu větší než PS v předchozím volebním období. Tedy např. PS ve volebním období 2017 až 2021 má identifikátor 172. Dále pokud hodnota atributu \textbf{do\_organ} je rovna \lstinline|null|, pak jde o aktuální orgán.
+Tabulka \textbf{organy} \ref{table:organy} bude použita pro nalezení poslaneckých klubů v určitém volebním období. Všechny poslanecké kluby mají hodnotu atributu \textbf{id\_typ\_organu} rovnou 1. Poslanecké kluby v daném volebním období lze nalézt kontrolou, zda hodnoty atributů \textbf{od\_organ} a \textbf{do\_organ} spadají mezi hodnotami stejných atributů PSP. PSP je totiž také orgánem a lze ji najít prostřednictvím hodnoty atributu \textbf{id\_organ}. První PSP má identifikátor 165. PSP v každém následujícím volebním období má hodnotu identifikátoru o jednu větší než PSP v předchozím volebním období. Tedy např. PSP ve volebním období 2017 až 2021 má identifikátor 172. Dále pokud hodnota atributu \textbf{do\_organ} je rovna \lstinline|null|, pak jde o aktuální orgán.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -142,7 +142,7 @@ Tabulka \textbf{organy} (\ref{table:organy}) bude použita pro nalezení poslane
 
 \subsection*{osoby}
 
-Tabulka \textbf{osoby} (\ref{table:osoby}) bude použita pro získání osobních údajů o poslancích. Tabulka však nezahrnuje pouze poslance, ale i další osoby senátu. Pro zjištění, kterého poslance reprezentuje daná osoba, je potřeba použít tabulku \textbf{zarazeni}. Zde je zajímavé datum narození, které je 1. 1. 1900, pokud je neznámo. Zobrazovat toto datum v mobilní aplikaci by nebylo ideální. V kapitole o návrhu REST API bude popsána transformace tohoto data na jinou hodnotu.
+Tabulka \textbf{osoby} \ref{table:osoby} bude použita pro získání osobních údajů o poslancích. Tabulka však nezahrnuje pouze poslance, ale i další osoby senátu. Pro zjištění, kterého poslance reprezentuje daná osoba, je potřeba použít tabulku \textbf{zarazeni}. Zde je zajímavé datum narození, které je 1. 1. 1900, pokud je neznámo. Zobrazovat toto datum v mobilní aplikaci by nebylo ideální. V kapitole \linebreak o návrhu REST API bude popsána transformace tohoto data na jinou hodnotu.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -188,10 +188,10 @@ Tabulka \textbf{osoby} (\ref{table:osoby}) bude použita pro získání osobníc
 
 \subsection*{zarazeni}
 
-Tabulka zařazení bude použita ke zjištění příslušnosti poslance do poslaneckého klubu. Zde je potřeba dát pozor na to, že atribut \textbf{id\_of} může reprezentovat buď tabulku \textbf{organ} (tu používáme) nebo tabulku \textbf{funkce} (tu nepoužíváme, a tudíž tu není uvedena) podle toho, zda je hodnota atributu \textbf{cl\_funkce} rovna 0 nebo 1. Tabulka \textbf{funkce} reprezentuje konkrétní funkci v daném orgánu. Pro účely této práce tato informace není potřeba, a proto tu tabulka \textbf{funkce} není uvedena. Je však potřeba zjistit příslušnost poslance do poslaneckého klubu, kterou lze zjistit kombinací tabulky \textbf{zarazeni} a \textbf{organy}. Důsledkem popsaného je to, že nás budou zajímat pouze zařazení s hodnotou atributu \textbf{cl\_funkce} rovnou 0. Tím pádem identifikátor \textbf{id\_of} bude vždy referovat k tabulce \textbf{organy}. Tabulka \textbf{organy} obsahuje poslanecké kluby, což je přesně to, co potřebujeme. Dále pokud hodnota atributu \textbf{do\_o} je rovna \lstinline|null|, pak jde o aktuální zařazení.
+Tabulka zařazení bude použita ke zjištění příslušnosti poslance do poslaneckého klubu. Zde je potřeba dát pozor na to, že atribut \textbf{id\_of} může reprezentovat buď tabulku \textbf{organ} (tu používáme) nebo tabulku \textbf{funkce} (tu nepoužíváme, a tudíž tu není uvedena) podle toho, zda je hodnota atributu \textbf{cl\_funkce} rovna 0 nebo 1. Tabulka \textbf{funkce} reprezentuje konkrétní funkci v daném orgánu. Pro účely této práce tato informace není potřeba, a proto tu tabulka \textbf{funkce} není uvedena. Je však potřeba zjistit příslušnost poslance do poslaneckého klubu, kterou lze zjistit kombinací tabulky \textbf{zarazeni} a \textbf{organy}. Důsledkem popsaného je to, že nás budou zajímat pouze zařazení \linebreak s hodnotou atributu \textbf{cl\_funkce} rovnou 0. Tím pádem identifikátor \textbf{id\_of} bude vždy referovat k tabulce \textbf{organy}. Tabulka \textbf{organy} obsahuje poslanecké kluby, což je přesně to, co potřebujeme. Dále pokud hodnota atributu \textbf{do\_o} je rovna \lstinline|null|, pak jde o aktuální zařazení.
 
 \begin{center}
-	\begin{longtable}{|l|l|p{9cm}|}
+	\begin{longtable}{|l|l|p{8cm}|}
 		\caption{Tabulka zarazeni} 
 		\label{table:zarazeni} \\
 		
@@ -236,7 +236,7 @@ Tabulka zařazení bude použita ke zjištění příslušnosti poslance do posl
 
 \subsection*{poslanec}
 
-Tabulka \textbf{poslanec} (\ref{table:poslanec}) slouží pro získání informací o všech poslancích. Pokud je někdo poslancem ve více volebních obdobích, pak bude v této tabulce mít více záznamů. Tedy dva poslanci mohou reprezentovat tutéž osobu, pokud jsou z různých volebních období. Dále pomocí atributu \textbf{id\_osoba} lze tabulku zjistit osobní údaje o poslanci. Dále pomocí atributu \textbf{id\_kraj} lze získat název volebního kraje. A pomocí atributu \textbf{id\_obdobi} lze zjisti volební období, do kterého přísluší. Hodnota atributu \textbf{id\_obdobi} totiž odpovídá identifikátoru některé z PS. Např. pokud poslanec patří do PS v prvním volebním období (orgán mající identifikátor 165), pak je hodnota atributu \textbf{id\_obdobi} rovna 165. Dále někteří poslanci mají profilové foto. Po analýze fotek poslanců na oficiálním portálu PS byl zjištěn následující vzor pro URL fotky poslance: \lstinline|https://www.psp.cz/eknih/cdrom/XXXXps/eknih/XXXXps/poslanci/iYYY.jpg|, kde \lstinline|XXXX| je identifikátor osoby (pozor, ne identikátor poslance) a \lstinline|YYY| je identifikátor PS (např. 165). Příklad: pokud bychom chtěli najít URL s fotkou poslance s identifikátorem 1659, zjistíme hodnoty atributů \textbf{id\_kraj} a \textbf{id\_obdobi}, a na základě nich vygenerujeme URL fotky.
+Tabulka \textbf{poslanec} \ref{table:poslanec} slouží pro získání informací o všech poslancích. Pokud je někdo poslancem ve více volebních obdobích, pak bude v této tabulce mít více záznamů. Tedy dva poslanci mohou reprezentovat tutéž osobu, pokud jsou z různých volebních období. Dále pomocí atributu \textbf{id\_osoba} lze tabulku zjistit osobní údaje o poslanci. Dále pomocí atributu \textbf{id\_kraj} lze získat název volebního kraje. A pomocí atributu \textbf{id\_obdobi} lze zjisti volební období, do kterého přísluší. Hodnota atributu \textbf{id\_obdobi} totiž odpovídá identifikátoru některé z PSP. Např. pokud poslanec patří do PSP v prvním volebním období (orgán mající identifikátor 165), pak je hodnota atributu \textbf{id\_obdobi} rovna 165. Dále někteří poslanci mají profilové foto. Po analýze fotek poslanců na oficiálním portálu PSP byl zjištěn následující vzor pro URL fotky \linebreak poslance: \lstinline|https://www.psp.cz/eknih/cdrom/XXXXps/eknih/XXXXps/poslanci/iYYY.jpg|, kde \lstinline|XXXX| je identifikátor osoby (pozor, ne identikátor poslance) a \lstinline|YYY| je identifikátor PS (např. 165). Příklad: pokud bychom chtěli najít URL s fotkou poslance s identifikátorem 1659, zjistíme hodnoty atributů \textbf{id\_kraj} a \textbf{id\_obdobi}, a na základě nich vygenerujeme URL fotky.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -280,11 +280,10 @@ Tabulka \textbf{poslanec} (\ref{table:poslanec}) slouží pro získání informa
 
 \subsection*{hl\textunderscore hlasovani}
 
-Tabulka \textbf{hl\_hlasovani} obsahuje většinu potřebných informací o hlasováních o daném návrhu zákona. Čislo schůze a číslo hlasování budou použity pro sestavení URL pro stenoprotokol daného hlasování. Podle webu se od účinnosti novely jednacího řádu 90/1995 Sb. nerozlišuje zdržel se a nehlasoval, tj. příslušné počty se sčítají. Z toho plyne, že by mobilní aplikaci měla u hlasováních uskutečněných před účinností této novely mít kolonku pro počet poslanců, kterí nehlasovali. 
-A u hlasováních uskutečněných po účinnosti této novely by tam daná kolonka již být neměla.
+Tabulka \textbf{hl\_hlasovani} obsahuje většinu potřebných informací o hlasováních o daném návrhu zákona. Čislo schůze a číslo hlasování budou použity pro sestavení URL pro stenoprotokol daného hlasování. Podle webu se od účinnosti novely jednacího řádu 90/1995 Sb. nerozlišuje zdržel se \linebreak a nehlasoval, tj. příslušné počty se sčítají. Z toho plyne, že by mobilní aplikaci měla u hlasováních uskutečněných před účinností této novely mít kolonku pro počet poslanců, kterí nehlasovali. \linebreak A u hlasováních uskutečněných po účinnosti této novely by tam daná kolonka již být neměla.
 
 \begin{center}
-	\begin{longtable}{|l|l|p{9cm}|}
+	\begin{longtable}{|l|l|p{7cm}|}
 		\caption{Tabulka hl\textunderscore hlasovani} 
 		\label{table:hl_hlasovani} \\
 		
@@ -364,7 +363,7 @@ A u hlasováních uskutečněných po účinnosti této novely by tam daná kolo
 
 \subsection*{hl\textunderscore poslanec}
 
-Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který poslanec v rámci kterého hlasování. Výsledky 'B' a 'N' jsou interpretovány stejně, oba znamenají hlasování proti. Výsledek 'Fb se používalo před rokem 1995. Po roce 1995 má vždy hodnotu 0. Výsledek 'W' je velmi ojedinělý a v případě, že nastane, sečte se do počtu nepřihlášených. U výsledku 'K' se mi nepodařilo zjistit, co přesně znamená zdržel se/nehlasoval. Ve zdrojových datech se vysktuje spíš méně, ale častěji než výsledek 'W'. Na webu PS je tento výsledek u jednoho hlasování v roce 2013 interpretován jako nehlasoval. Z toho lze usoudit pouze to, že 'K' může znamenat nehlasoval. Není však z toho jasné, kdy může znamenat zdržel se. Na výsledek hlasování má vliv pouze počet pro a proti, a tudíž bylo rozhodnuto, že tento výsledek bude mobilní aplikaci ignorován. 
+Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který poslanec v rámci kterého hlasování. Výsledky 'B' a 'N' jsou interpretovány stejně, oba znamenají hlasování proti. Výsledek 'Fb se používalo před rokem 1995. Po roce 1995 má vždy hodnotu 0. Výsledek 'W' je velmi ojedinělý a v případě, že nastane, sečte se do počtu nepřihlášených. U výsledku 'K' se mi nepodařilo zjistit, co přesně znamená zdržel se/nehlasoval. Ve zdrojových datech se vysktuje spíš méně, ale častěji než výsledek 'W'. Na webu PSP je tento výsledek u jednoho hlasování v roce 2013 interpretován jako nehlasoval. Z toho lze usoudit pouze to, že 'K' může znamenat nehlasoval. Není však z toho jasné, kdy může znamenat zdržel se. Na výsledek hlasování má vliv pouze počet pro a proti, a tudíž bylo rozhodnuto, že tento výsledek bude mobilní aplikaci ignorován. 
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -403,12 +402,12 @@ Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který posla
 
 \subsection*{omluvy}
 
-Tabulka \textbf{omluvy} (\ref{table:omluvy}) zaznamenává časové ohraničení omluv poslanců z jednání Poslanecké sněmovny. Slouží pouze po spočtení počtu omluvených poslanců během hlasování. Podáváme-li se na statistiky o hlasování poskytnuté tabulkou \textbf{hl\_hlasovani}, uvidíme, že poskytuje počet hlasování pro, proti, a počet zdržených, ale již ne počet nepřihlášených a omluvených. Počet omluvených byl přidán až po 1995, kdy pouze nahradil počet poslanců, kteří nehlasovali. Počet nehlasujících poslanců tedy nepomůže k odvození počtu nepřihlášených a omluvených. Jediná další informace v tabulce \textbf{hl\_hlasovani} je tedy počet přihlášených. Intuitivně by člověk čekal, že doplněk pro počet přihlášených je počet nepřihlášených, ale není tomu tak. Když jsem od počtu poslanců (200) odečetl počet přihlášených, nikdy to nevycházelo s počty nepřihlášených na webu, ať už jsem to zkoušel s jakýmkoliv hlasování. Z toho důvodu je počet omluvených počítáno z tabulky \textbf{omluvy}, kde na základě atributů \textbf{den}, \textbf{od} a \textbf{do} zjistíme, zda datum a čas omluvy poslance spadá do data a času daného hlasování.
+Tabulka \textbf{omluvy} \ref{table:omluvy} zaznamenává časové ohraničení omluv poslanců z jednání Poslanecké sněmovny. Slouží pouze po spočtení počtu omluvených poslanců během hlasování. Podáváme-li se na statistiky o hlasování poskytnuté tabulkou \textbf{hl\_hlasovani}, uvidíme, že poskytuje počet hlasování pro, proti, a počet zdržených, ale již ne počet nepřihlášených a omluvených. Počet omluvených byl přidán až po 1995, kdy pouze nahradil počet poslanců, kteří nehlasovali. Počet nehlasujících poslanců tedy nepomůže k odvození počtu nepřihlášených a omluvených. Jediná další informace v tabulce \textbf{hl\_hlasovani} je tedy počet přihlášených. Intuitivně by člověk čekal, že doplněk pro počet přihlášených je počet nepřihlášených, ale není tomu tak. Když jsem od počtu poslanců (200) odečetl počet přihlášených, nikdy to nevycházelo s počty nepřihlášených na webu, ať už jsem to zkoušel s jakýmkoliv hlasování. Z toho důvodu je počet omluvených počítáno z tabulky \textbf{omluvy}, kde na základě atributů \textbf{den}, \textbf{od} a \textbf{do} zjistíme, zda datum a čas omluvy poslance spadá do data a času daného hlasování.
 
 Podle popisu tabulky na webu data slouží pro nahrazení výsledku typu '@', tj. pokud výsledek hlasování jednotlivého poslance je nepřihlášen. Pokud čas hlasování spadá do časového intervalu omluvy, pak se za výsledek považuje 'M', tj. omluven.
 
 \begin{center}
-	\begin{longtable}{|l|l|p{9cm}|}
+	\begin{longtable}{|l|l|p{7cm}|}
 		\caption{Tabulka omluvy} 
 		\label{table:omluvy} \\
 		
@@ -441,13 +440,13 @@ Podle popisu tabulky na webu data slouží pro nahrazení výsledku typu '@', tj
 		\hline 
 		
 		
-		od & datetime(hour to minute)	 & Čas začátku omluvy, pokud je null, pak i omluvy:do je null a jedná se o omluvu na celý jednací den.
+		od & datetime(hour to minute)	 & Čas začátku omluvy, pokud je \lstinline|null|, pak i omluvy:do je null a jedná se o omluvu na celý jednací den.
 		\\
 		
 		\hline 
 		
 		
-		do & datetime(hour to minute)	 & Čas konce omluvy, pokud je null, pak i omluvy:od je null a jedná se o omluvu na celý jednací den.	\\
+		do & datetime(hour to minute)	 & Čas konce omluvy, pokud je \lstinline|null|, pak i omluvy:od je \lstinline|null| a jedná se o omluvu na celý jednací den.	\\
 		
 		\hline 
 		

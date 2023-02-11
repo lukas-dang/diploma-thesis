@@ -44,30 +44,114 @@
       \strng{authorbibnamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
       \strng{authornamehash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
       \strng{authorfullhash}{1c371c2bb1e6f97f02e79cb51a8a7aed}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-80-7509-665-4}
       \field{title}{POLITICKÝ SYSTÉM A POLITICKÉ STRANY ČESKÉ REPUBLIKY}
       \field{year}{2019}
     \endentry
+    \entry{psp-vote-process}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0ab3d9ff7d32129a56db1c466e56253a}{%
+           family={{Parlament České republiky}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{fullhash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{bibnamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authorbibnamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authornamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authorfullhash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Přijímání zákonů}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=173.
+      \endverb
+      \verb{url}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=173.
+      \endverb
+    \endentry
+    \entry{psp}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0ab3d9ff7d32129a56db1c466e56253a}{%
+           family={{Parlament České republiky}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{fullhash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{bibnamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authorbibnamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authornamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authorfullhash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Poslanecká sněmovna Parlamentu České republiky}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psp.cz/sqw/hp.sqw?akk=7
+      \endverb
+      \verb{url}
+      \verb https://www.psp.cz/sqw/hp.sqw?akk=7
+      \endverb
+    \endentry
+    \entry{rest-api}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=184a913e122c18374ca03bc02b30c050}{%
+           family={{Red Hat, Inc.}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{184a913e122c18374ca03bc02b30c050}
+      \strng{fullhash}{184a913e122c18374ca03bc02b30c050}
+      \strng{bibnamehash}{184a913e122c18374ca03bc02b30c050}
+      \strng{authorbibnamehash}{184a913e122c18374ca03bc02b30c050}
+      \strng{authornamehash}{184a913e122c18374ca03bc02b30c050}
+      \strng{authorfullhash}{184a913e122c18374ca03bc02b30c050}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a REST API?}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.redhat.com/en/topics/api/what-is-a-rest-api
+      \endverb
+      \verb{url}
+      \verb https://www.redhat.com/en/topics/api/what-is-a-rest-api
+      \endverb
+    \endentry
     \entry{politiscope}{misc}{}
       \name{author}{1}{}{%
-        {{hash=88900adbdf9ed381d7995fe1328d2ad8}{%
-           family={Developer},
-           familyi={D\bibinitperiod},
-           given={Android\bibnamedelima Politiscope},
-           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=633a0224940e3b78f1da0d63884154d4}{%
+           family={{Android Politiscope Developer}},
+           familyi={A\bibinitperiod}}}%
       }
-      \strng{namehash}{88900adbdf9ed381d7995fe1328d2ad8}
-      \strng{fullhash}{88900adbdf9ed381d7995fe1328d2ad8}
-      \strng{bibnamehash}{88900adbdf9ed381d7995fe1328d2ad8}
-      \strng{authorbibnamehash}{88900adbdf9ed381d7995fe1328d2ad8}
-      \strng{authornamehash}{88900adbdf9ed381d7995fe1328d2ad8}
-      \strng{authorfullhash}{88900adbdf9ed381d7995fe1328d2ad8}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \strng{namehash}{633a0224940e3b78f1da0d63884154d4}
+      \strng{fullhash}{633a0224940e3b78f1da0d63884154d4}
+      \strng{bibnamehash}{633a0224940e3b78f1da0d63884154d4}
+      \strng{authorbibnamehash}{633a0224940e3b78f1da0d63884154d4}
+      \strng{authornamehash}{633a0224940e3b78f1da0d63884154d4}
+      \strng{authorfullhash}{633a0224940e3b78f1da0d63884154d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{politiscope}
@@ -84,8 +168,20 @@
       \endverb
     \endentry
     \entry{propublica}{misc}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \name{author}{1}{}{%
+        {{hash=7738b235542263f14677d6b3d574ef80}{%
+           family={{Pro Publica Inc.}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{7738b235542263f14677d6b3d574ef80}
+      \strng{fullhash}{7738b235542263f14677d6b3d574ef80}
+      \strng{bibnamehash}{7738b235542263f14677d6b3d574ef80}
+      \strng{authorbibnamehash}{7738b235542263f14677d6b3d574ef80}
+      \strng{authornamehash}{7738b235542263f14677d6b3d574ef80}
+      \strng{authorfullhash}{7738b235542263f14677d6b3d574ef80}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
       \field{urlday}{26}
       \field{urlmonth}{1}
       \field{urlyear}{2023}
@@ -98,8 +194,20 @@
       \endverb
     \endentry
     \entry{unitedstates}{misc}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \name{author}{1}{}{%
+        {{hash=6139a11e87dbf293670a75a5069d42fc}{%
+           family={@unitedstates},
+           familyi={@\bibinitperiod}}}%
+      }
+      \strng{namehash}{6139a11e87dbf293670a75a5069d42fc}
+      \strng{fullhash}{6139a11e87dbf293670a75a5069d42fc}
+      \strng{bibnamehash}{6139a11e87dbf293670a75a5069d42fc}
+      \strng{authorbibnamehash}{6139a11e87dbf293670a75a5069d42fc}
+      \strng{authornamehash}{6139a11e87dbf293670a75a5069d42fc}
+      \strng{authorfullhash}{6139a11e87dbf293670a75a5069d42fc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
       \field{urlday}{26}
       \field{urlmonth}{1}
       \field{urlyear}{2023}
@@ -143,8 +251,20 @@
       \endverb
     \endentry
     \entry{openfec}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c50e00cc5e93aec4f025b873a1c122dc}{%
+           family={{Federal Election Commission}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c50e00cc5e93aec4f025b873a1c122dc}
+      \strng{fullhash}{c50e00cc5e93aec4f025b873a1c122dc}
+      \strng{bibnamehash}{c50e00cc5e93aec4f025b873a1c122dc}
+      \strng{authorbibnamehash}{c50e00cc5e93aec4f025b873a1c122dc}
+      \strng{authornamehash}{c50e00cc5e93aec4f025b873a1c122dc}
+      \strng{authorfullhash}{c50e00cc5e93aec4f025b873a1c122dc}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
       \field{urlday}{26}
       \field{urlmonth}{1}
       \field{urlyear}{2023}
@@ -154,6 +274,35 @@
       \endverb
       \verb{url}
       \verb https://api.open.fec.gov/developers/
+      \endverb
+    \endentry
+    \entry{psp-data}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0ab3d9ff7d32129a56db1c466e56253a}{%
+           family={{Parlament České republiky}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{fullhash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{bibnamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authorbibnamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authornamehash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \strng{authorfullhash}{0ab3d9ff7d32129a56db1c466e56253a}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Poslanecké sněmovny a Senátu}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=1300
+      \endverb
+      \verb{url}
+      \verb https://www.psp.cz/sqw/hp.sqw?k=1300
       \endverb
     \endentry
     \entry{zip-members}{misc}{}
@@ -170,9 +319,9 @@
       \strng{authorbibnamehash}{afee20f02454ac84f9ce05b227c3ba60}
       \strng{authornamehash}{afee20f02454ac84f9ce05b227c3ba60}
       \strng{authorfullhash}{afee20f02454ac84f9ce05b227c3ba60}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Poslanci a osoby}
@@ -201,9 +350,9 @@
       \strng{authorbibnamehash}{afee20f02454ac84f9ce05b227c3ba60}
       \strng{authornamehash}{afee20f02454ac84f9ce05b227c3ba60}
       \strng{authorfullhash}{afee20f02454ac84f9ce05b227c3ba60}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Hlasování}
@@ -231,8 +380,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Guide to app architecture}
@@ -249,20 +398,18 @@
     \endentry
     \entry{5-tier}{misc}{}
       \name{author}{1}{}{%
-        {{hash=0a7cf72332fae85fba7a99486434acb3}{%
-           family={Team},
-           familyi={T\bibinitperiod},
-           given={Indeed\bibnamedelima Editorial},
-           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=30c4c35f6f9827693b10e589514c7308}{%
+           family={{Indeed Editorial Team}},
+           familyi={I\bibinitperiod}}}%
       }
-      \strng{namehash}{0a7cf72332fae85fba7a99486434acb3}
-      \strng{fullhash}{0a7cf72332fae85fba7a99486434acb3}
-      \strng{bibnamehash}{0a7cf72332fae85fba7a99486434acb3}
-      \strng{authorbibnamehash}{0a7cf72332fae85fba7a99486434acb3}
-      \strng{authornamehash}{0a7cf72332fae85fba7a99486434acb3}
-      \strng{authorfullhash}{0a7cf72332fae85fba7a99486434acb3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{namehash}{30c4c35f6f9827693b10e589514c7308}
+      \strng{fullhash}{30c4c35f6f9827693b10e589514c7308}
+      \strng{bibnamehash}{30c4c35f6f9827693b10e589514c7308}
+      \strng{authorbibnamehash}{30c4c35f6f9827693b10e589514c7308}
+      \strng{authornamehash}{30c4c35f6f9827693b10e589514c7308}
+      \strng{authorfullhash}{30c4c35f6f9827693b10e589514c7308}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What Are the 5 Primary Layers in Software Architecture?}
@@ -290,8 +437,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Android Studio}
@@ -319,8 +466,8 @@
       \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Kotlin}
@@ -349,8 +496,8 @@
       \strng{authorbibnamehash}{9311b3a9635937cce81f4115e8c3e50b}
       \strng{authornamehash}{9311b3a9635937cce81f4115e8c3e50b}
       \strng{authorfullhash}{9311b3a9635937cce81f4115e8c3e50b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Kotlin is now Google’s preferred language for Android app development}
@@ -377,8 +524,8 @@
       \strng{authorbibnamehash}{30162ed78b6c10f731411f2fc440c24f}
       \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
       \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Java}
@@ -406,8 +553,8 @@
       \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Object expressions and declarations﻿}
@@ -435,8 +582,8 @@
       \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Asynchronous Flow﻿}
@@ -464,8 +611,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Application}
@@ -493,8 +640,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Build better apps faster with Jetpack Compose}
@@ -522,8 +669,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Create dynamic lists with RecyclerView}
@@ -551,8 +698,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Lists and grids}
@@ -580,8 +727,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{7}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Save key-value data}
@@ -609,8 +756,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{8}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Working with Proto DataStore}
@@ -638,8 +785,8 @@
       \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Create dynamic lists with RecyclerView}
@@ -666,8 +813,8 @@
       \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Azure}
@@ -695,8 +842,8 @@
       \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{extraname}{5}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Ktor}
@@ -726,8 +873,8 @@
       \strng{authornamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
       \strng{authorfullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introducing Kotlin support in Spring Framework 5.0}
@@ -744,20 +891,18 @@
     \endentry
     \entry{hibernate}{misc}{}
       \name{author}{1}{}{%
-        {{hash=d3c35b96ff67d4842e7c033033f8a568}{%
-           family={Hat},
-           familyi={H\bibinitperiod},
-           given={Red},
-           giveni={R\bibinitperiod}}}%
+        {{hash=88aeb0df37b2b028779df80a92815df5}{%
+           family={{RED HAT}},
+           familyi={R\bibinitperiod}}}%
       }
-      \strng{namehash}{d3c35b96ff67d4842e7c033033f8a568}
-      \strng{fullhash}{d3c35b96ff67d4842e7c033033f8a568}
-      \strng{bibnamehash}{d3c35b96ff67d4842e7c033033f8a568}
-      \strng{authorbibnamehash}{d3c35b96ff67d4842e7c033033f8a568}
-      \strng{authornamehash}{d3c35b96ff67d4842e7c033033f8a568}
-      \strng{authorfullhash}{d3c35b96ff67d4842e7c033033f8a568}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \strng{namehash}{88aeb0df37b2b028779df80a92815df5}
+      \strng{fullhash}{88aeb0df37b2b028779df80a92815df5}
+      \strng{bibnamehash}{88aeb0df37b2b028779df80a92815df5}
+      \strng{authorbibnamehash}{88aeb0df37b2b028779df80a92815df5}
+      \strng{authornamehash}{88aeb0df37b2b028779df80a92815df5}
+      \strng{authorfullhash}{88aeb0df37b2b028779df80a92815df5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Hibernate}
@@ -787,8 +932,8 @@
       \strng{authornamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
       \strng{authorfullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Spring Data JPA - Reference Documentation}
@@ -805,20 +950,20 @@
     \endentry
     \entry{commons-io}{misc}{}
       \name{author}{1}{}{%
-        {{hash=8e4c882dcd12cc2213d5876ed5c7fd42}{%
-           family={Commons},
-           familyi={C\bibinitperiod},
-           given={Apache},
-           giveni={A\bibinitperiod}}}%
+        {{hash=e87370c6a22ddad119a17645eb3f41b7}{%
+           family={Apache},
+           familyi={A\bibinitperiod},
+           given={Commons},
+           giveni={C\bibinitperiod}}}%
       }
-      \strng{namehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
-      \strng{fullhash}{8e4c882dcd12cc2213d5876ed5c7fd42}
-      \strng{bibnamehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
-      \strng{authorbibnamehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
-      \strng{authornamehash}{8e4c882dcd12cc2213d5876ed5c7fd42}
-      \strng{authorfullhash}{8e4c882dcd12cc2213d5876ed5c7fd42}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \strng{namehash}{e87370c6a22ddad119a17645eb3f41b7}
+      \strng{fullhash}{e87370c6a22ddad119a17645eb3f41b7}
+      \strng{bibnamehash}{e87370c6a22ddad119a17645eb3f41b7}
+      \strng{authorbibnamehash}{e87370c6a22ddad119a17645eb3f41b7}
+      \strng{authornamehash}{e87370c6a22ddad119a17645eb3f41b7}
+      \strng{authorfullhash}{e87370c6a22ddad119a17645eb3f41b7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Apache Commons IO}
@@ -847,8 +992,8 @@
       \strng{authorbibnamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
       \strng{authornamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
       \strng{authorfullhash}{fb59b84c9dfeff147cbd2397d30c1f1f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{zip4j}
@@ -877,8 +1022,8 @@
       \strng{authorbibnamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
       \strng{authornamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
       \strng{authorfullhash}{a1b12f84a8d5bc5174155bc528a6a5b4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{opencsv}

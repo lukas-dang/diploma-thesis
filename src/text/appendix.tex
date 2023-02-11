@@ -1,12 +1,12 @@
 \chapter{Příloha}
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\linewidth]{source_data_diagram}
 	\caption{Diagram zdrojových dat}
 	\label{fig:class-diagram}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\textwidth}
 		\centering
 		\includegraphics[scale = 0.5]{vote_list.png}
@@ -19,10 +19,9 @@
 		\caption{Vyhledávání v seznamu hlasování}
 		\label{fig:vote_list_search}
 	\end{minipage}
-	\caption{Obrazovka pro seznam hlasování}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\textwidth}
 		\centering
 		\includegraphics[scale = 0.4]{vote_details_general.png}
@@ -38,13 +37,12 @@
 	\begin{minipage}{0.5\textwidth}
 	\centering
 	\includegraphics[scale = 0.4]{vote_details_party_votes_expanded.png}
-	\caption{Jak hlasovaly kluby}
+	\caption{Jak hlasovaly kluby s expandovaným oknem klubu}
 	\label{fig:vote_details_party_votes_expanded}
 \end{minipage}
-	\caption{Obrazovky pro detail hlasování}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\textwidth}
 		\centering
 		\includegraphics[scale = 0.5]{member_list.png}
@@ -60,7 +58,7 @@
 	\caption{Obrazovka pro seznam poslanců}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\textwidth}
 		\centering
 		\includegraphics[scale = 0.5]{member_details_general.png}
@@ -73,10 +71,9 @@
 		\caption{Jak hlasoval/a poslanec/kyně}
 		\label{fig:member_details_votes}
 	\end{minipage}
-	\caption{Obrazovky pro detail poslance}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\textwidth}
 		\centering
 		\includegraphics[scale = 0.5]{settings.png}
@@ -89,7 +86,6 @@
 		\caption{Nastavení volebního období}
 		\label{fig:settings_opened}
 	\end{minipage}
-	\caption{Obrazovka pro nastavení}
 \end{figure}
 
 \begin{lstlisting}[caption={Tělo odpovědi pro dotaz \lstinline{GET /api/app}.}, label={fig:app}, language=json,firstnumber=1,tabsize=2]
@@ -176,7 +172,7 @@
 ]
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Tělo odpovědi pro dotaz ¨}, label={fig:member}, language=json,firstnumber=1,tabsize=2]
+\begin{lstlisting}[caption={Tělo odpovědi pro dotaz \lstinline|GET /api/member|}, label={fig:member}, language=json,firstnumber=1,tabsize=2]
 [
 	{
 		"id": 1,
@@ -330,39 +326,3 @@
 		\texttt{id}		& \texttt{int}	& identifikátor hlasování \tabularnewline \hline
 	\end{tabular}
 \end{table}
-
-\begin{figure}
-	\centering
-	\begin{minipage}{\textwidth}
-		\dirtree{%
-			.1 app.
-			.2 src.
-			.3 main.
-			.4 java.
-			.5 com.lukas\_dang.psp\_fe.
-			.6 app.
-			.7 navigation\DTcomment{Zdrojové kódy pro navigaci mezi obrazovkami}.
-			.7 ui.
-			.8 theme\DTcomment{Barvy, typografie, barevné režimy, tvary}.
-			.8 PspApp.kt\DTcomment{Hlavní komponenta aplikace}.
-			.8 PspAppState.kt\DTcomment{Stav aplikace}.
-			.7 MainActivity\DTcomment{Hlavní aktivita}.
-			.7 PspApplication\DTcomment{Třída reprezentující aplikaci}.
-			.6 core\DTcomment{Stav aplikace}.
-			.6 feature.
-			.4 proto.
-			.5 user\_prefs.proto.
-			.4 res.
-			.5 drawable.
-			.5 values.
-			.6 strings.xml.
-			.4 AndroidManifest.xml.
-			.3 test\DTcomment{Unit testy}.
-			.3 androidTest\DTcomment{Instrumentované testy}.
-			.2 build.gradle.
-			.1 build.gradle.
-		}
-	\end{minipage}
-	\caption{Adresářová struktura mobilní aplikace}
-	\label{fig:dir_struct}
-\end{figure}

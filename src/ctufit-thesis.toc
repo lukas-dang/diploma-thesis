@@ -5,66 +5,68 @@
 \contentsline {chapter}{{Abstrakt}}{x}{chapter*.7}%
 \contentsline {chapter}{{Shrnutí}}{xi}{chapter*.8}%
 \contentsline {chapter}{Seznam zkratek}{xii}{chapter*.9}%
-\contentsline {chapter}{\numberline {1}Cíle}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Poslanecká sněmovna}{1}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Poslanecká sněmovna}{1}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Hlasování v poslanecké sněmovně}{1}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Webový portál psp.cz}{1}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Motivace pro tuto práci}{1}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Funkční a nefunkční požadavky}{1}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Funkční požadavky}{1}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Nefunkční požadavky}{2}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Analýza existujících řešení}{1}{chapter.4}%
-\contentsline {section}{\numberline {4.1}politiscope}{1}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Zhodnocení}{2}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Congress}{2}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Zhodnocení}{3}{subsection.4.2.1}%
-\contentsline {chapter}{\numberline {5}Analýza zdrojových dat}{1}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Zdrojové soubory}{1}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Formát dat}{1}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Aktualizace}{2}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Datové typy}{2}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Licence}{2}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Datové soubory}{2}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Tabulky}{3}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Analýza softwarových architektur}{1}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Mobilní aplikace}{1}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Architektura doporučená Googlem}{1}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Zhodnocení}{3}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Backend}{3}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}5-vrstvá architektura}{3}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Zhodnocení}{3}{subsection.6.2.2}%
-\contentsline {chapter}{\numberline {7}Návrh}{1}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Uživatelské rozhraní}{1}{section.7.1}%
-\contentsline {section}{\numberline {7.2}REST API}{2}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Databázový model}{5}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Implementace mobilní aplikace}{1}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Použité nástroje a technologie}{1}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Implementace prezentační vrstvy}{9}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Implementace doménové vrstvy}{15}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Implementace datové vrstvy}{15}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Implementace síťové vrstvy}{16}{subsection.8.3.2}%
-\contentsline {chapter}{\numberline {9}Implementace backendu}{19}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Prezentační vrstva}{20}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Doménová vrstva}{21}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Databázová vrstva}{22}{subsection.9.1.2}%
-\contentsline {section}{\numberline {9.2}Zpracování dat}{24}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Stahování zdrojových souborů}{24}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Extrakce datových souborů}{25}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Pročištění dat}{25}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}Parsování dat}{26}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}Transformace a uložení dat}{26}{subsection.9.2.5}%
-\contentsline {chapter}{\numberline {10}Testování}{1}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Mobilní aplikace}{1}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Backend}{1}{section.10.2}%
-\contentsline {chapter}{\numberline {11}Nasazení}{1}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Aplikace}{1}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Backend}{1}{section.11.2}%
-\contentsline {chapter}{\numberline {12}Spuštění}{1}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Aplikace}{1}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Backend}{1}{section.12.2}%
-\contentsline {chapter}{\numberline {13}Závěr}{1}{chapter.13}%
-\contentsline {chapter}{\numberline {A}Příloha}{3}{appendix.A}%
+\contentsline {chapter}{Cíle}{1}{chapter*.10}%
+\contentsline {chapter}{Úvod}{3}{chapter*.11}%
+\contentsline {chapter}{\numberline {1}Motivace a požadavky}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Poslanecká sněmovna}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Hlasování v poslanecké sněmovně}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Webový portál psp.cz}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Motivace pro tuto práci}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Požadavky}{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Funkční požadavky}{6}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Nefunkční požadavky}{7}{subsection.1.5.2}%
+\contentsline {chapter}{\numberline {2}Analýza existujících řešení}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}politiscope}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Zhodnocení}{10}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Congress}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Zhodnocení}{11}{subsection.2.2.1}%
+\contentsline {chapter}{\numberline {3}Analýza zdrojových dat}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Zdrojové soubory}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Formát dat}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Aktualizace}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Datové typy}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Licence}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Datové soubory}{14}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Tabulky}{15}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Výběr architektury}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Mobilní aplikace}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Architektura doporučená Googlem}{21}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Zhodnocení}{23}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Backend}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}5-vrstvá architektura}{23}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Architektura mikroslužeb}{24}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Zhodnocení}{24}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}Návrh}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Uživatelské rozhraní}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}REST API}{26}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Databázový model}{29}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Implementace mobilní aplikace}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Použité nástroje a technologie}{31}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Implementace prezentační vrstvy}{39}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{45}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Implementace datové vrstvy}{45}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Implementace síťové vrstvy}{46}{subsection.6.3.2}%
+\contentsline {chapter}{\numberline {7}Implementace backendu}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Prezentační vrstva}{50}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Doménová vrstva}{51}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Databázová vrstva}{53}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Zpracování dat}{54}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Stahování zdrojových souborů}{54}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Extrakce datových souborů}{55}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Pročištění dat}{55}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Parsování dat}{56}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Transformace a uložení dat}{56}{subsection.7.4.5}%
+\contentsline {chapter}{\numberline {8}Testování}{59}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Mobilní aplikace}{59}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Backend}{59}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Nasazení}{61}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Aplikace}{61}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Backend}{61}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Spuštění}{63}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Aplikace}{63}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Backend}{63}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Závěr}{65}{chapter.11}%
+\contentsline {chapter}{\numberline {A}Příloha}{67}{appendix.A}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -245,4 +247,28 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Obsah přiloženého média}{17}{appendix*.30}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Obsah přiloženého média}{81}{appendix*.31}%
