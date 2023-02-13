@@ -12,9 +12,7 @@
 \contentsline {section}{\numberline {1.2}Hlasování v poslanecké sněmovně}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Webový portál psp.cz}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Motivace pro tuto práci}{5}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Požadavky}{6}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Funkční požadavky}{6}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Nefunkční požadavky}{7}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.5}Funkční a nefunkční požadavky}{6}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Analýza existujících řešení}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}politiscope}{9}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Zhodnocení}{10}{subsection.2.1.1}%
@@ -44,18 +42,13 @@
 \contentsline {section}{\numberline {6.1}Použité nástroje a technologie}{31}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Implementace prezentační vrstvy}{39}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{45}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Implementace datové vrstvy}{46}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Implementace síťové vrstvy}{47}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Implementace datové vrstvy}{46}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Implementace síťové vrstvy}{47}{section.6.5}%
 \contentsline {chapter}{\numberline {7}Implementace backendu}{49}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Prezentační vrstva}{50}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Doménová vrstva}{51}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Databázová vrstva}{53}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Zpracování dat}{54}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Stahování zdrojových souborů}{54}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Extrakce datových souborů}{55}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Pročištění dat}{55}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}Parsování dat}{56}{subsection.7.4.4}%
-\contentsline {subsection}{\numberline {7.4.5}Transformace a uložení dat}{57}{subsection.7.4.5}%
 \contentsline {chapter}{\numberline {8}Testování}{59}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mobilní aplikace}{59}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Uživatelské testování}{59}{subsection.8.1.1}%
@@ -67,6 +60,12 @@
 \contentsline {section}{\numberline {9.2}Backend}{63}{section.9.2}%
 \contentsline {chapter}{\numberline {10}Závěr}{65}{chapter.10}%
 \contentsline {chapter}{\numberline {A}Příloha}{67}{appendix.A}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 

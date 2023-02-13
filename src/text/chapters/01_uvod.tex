@@ -1,31 +1,29 @@
 \chapter{Motivace a požadavky}
 
 \begin{chapterabstract}
-Táto kapitola slouží jako úvod do tematiky hlasování v poslanecké sněmovně. V první podkapitole bude popsána poslanecká sněmovna jako taková a jakou má roli v politickém sytému ČR. Dále bude stručně popsán hlasovací proces v poslanecké sněmovně. Následně bude popsán webový portál PSP. Po té bude uvedena motivace pro tuto práci. Na konci bude uveden seznam požadavků kladené na mobilní aplikaci a backend.
+Táto kapitola slouží jako úvod do tematiky hlasování PSP a motivace k této práci. Na konci budou popsány funkční a nefunkční požadavky kladené na mobilní aplikaci a backend.
 \end{chapterabstract}
 
 \section{Poslanecká sněmovna}
-Základní prvky politického systému ČR představuje prezident, vláda, Parlament a ústavní soud. Ústava ČR dělí moc na zákonodárnou – Parlament, který je složen z Poslanecké sněmovny \linebreak a Senátu, výkonnou – prezident, vláda a státní zastupitelství a soudní – Ústavní soud a obecné soudy.
+Základní prvky politického systému ČR představuje prezident, vláda, Parlament a ústavní soud. Ústava ČR dělí moc na zákonodárnou, výkonnou a soudní. Zákonodárnou moc má na starosti Parlament, výkonnou prezident, vláda a zastupitelství, a soudní Ústavní soud a obecné \linebreak soudy \cite{political-system}.
 
-Parlament České republiky se skládá ze dvou komor – Poslanecké sněmovny (dolní komora) \linebreak a Senátu (horní komora). Poslanecká sněmovna se skládá z 200 poslanců a je volena na čtyři roky na základě poměrného volebního systému.
+Parlament České republiky se skládá ze dvou komor – Poslanecké sněmovny a Senátu. Poslanecká sněmovna se skládá z 200 poslanců a je volena na čtyři roky na základě poměrného volebního systému \cite{psp-book}.
 
 \section{Hlasování v poslanecké sněmovně}
-Komora PS je usnášeníschopná, pokud je přítomna alespoň jedna třetina jejích členů. K přijetí usnesení (tzn. ke schválení zákona) je nutný souhlas nadpoloviční většiny přítomných poslanců, pokud ústava nestanoví jinak.
-
-Proces návrhu a schvalování zákona je komplexní a řídí se podle určitých pravidel. Avšak pro účely této práce stačí pochopit schvalovací proces v PSP. Kompletní proces přijímání zákonů lze najít na webu PSP \cite{psp-vote-process}.
+Komora PSP je usnášeníschopná, pokud je přítomna alespoň jedna třetina jejích členů. K přijetí usnesení (tzn. ke schválení zákona) je nutný souhlas nadpoloviční většiny přítomných \linebreak poslanců, pokud ústava nestanoví jinak \cite{psp-book}. Proces návrhu a schvalování zákona je komplexní a řídí se podle určitých pravidel. Avšak pro účely této práce stačí pochopit schvalovací proces \linebreak v PSP. Kompletní proces přijímání zákonů lze najít na webu PSP \cite{psp-vote-process}.
 
 \section{Webový portál psp.cz}
-Hlavním zdrojem data z PSP je oficiální webový portál PSP \cite{psp}. Tento portál poskytuje je webová aplikace, ale poskytuje i strojově zpracovatelná data, která budou využita pro tuto práci.
+Hlavním zdrojem dat je oficiální webový portál PSP \cite{psp}, kde jsou mimo jiné informace o hlasováních. Zároveň portál poskytuje zdrojová data ve strojově čitelné formě \cite{psp-data}.
 
 \section{Motivace pro tuto práci}
-Web PSP obsahuje veškeré informace ohledně hlasováních, nicméně není responzivní a přizpůsobený pro mobilní zařízení, a tudíž pro uživatele mobilních zařízení je web nepoužitelný. Zároveň srovnatelná aplikace na českém trhu práce ještě neexistuje, a tudíž by se uživatelovi v ČR taková aplikaci mohla hodit. V neposlední řadě tato práce podporuje to, abychom měli informované voliče, zajímající se o to, jak jimi volení zástupci hlasují.
+Web PSP obsahuje veškeré informace ohledně hlasováních, nicméně není responzivní a přizpůsobený pro mobilní zařízení. Zároveň srovnatelná aplikace na českém trhu práce ještě neexistuje. V neposlední řadě tato práce podporuje to, abychom měli informované voliče, zajímající se \linebreak o to, jak jimi volení zástupci hlasují.
 
-\section{Požadavky}
+\section{Funkční a nefunkční požadavky}
 
-V této sekci budou popsány funkční a nefunkční požadavky na mobilní aplikaci a backendu. Funkční požadavky specifikují funkcionality, které by měl daný software poskytovat. Nefunkční požadavky určují omezení kladená na daný software. Funkční a nefunkční požadavky budou uvedeny ve formě tabulek. Každá tabulka bude mít dva sloupce. Jedne pro identifikátor daného požadavku pro jednodušší identifikaci v rámci práce, a jeden pro popis daného požadavku.
+V této sekci budou popsány funkční a nefunkční požadavky na mobilní aplikaci a backendu. Funkční požadavky specifikují funkcionality, které by měl daný software poskytovat. Nefunkční požadavky určují omezení kladená na daný software. Funkční a nefunkční požadavky budou uvedeny ve formě tabulek. Každá tabulka bude mít dva sloupce. Jeden pro identifikátor a druhý pro popis požadavku.
 
-\subsection{Funkční požadavky}
-Tato podkapitola obsahuje seznam funkčních požadavků pro mobilní aplikaci (\ref{table:func_req_app}) a backend (\ref{table:func_req_be}).
+\subsection*{Funkční požadavky}
+Seznam funkčních požadavků pro mobilní aplikaci jsou v tabulce \ref{table:func_req_app} a pro backend \linebreak v tabulce \ref{table:func_req_be}.
 
 \def\arraystretch{1.5}
 \begin{longtable}{|l|p{9cm}|} \hline
@@ -33,21 +31,21 @@ Tato podkapitola obsahuje seznam funkčních požadavků pro mobilní aplikaci (
 	
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	FP\textunderscore01	& Aplikace bude umět zobrazit seznam návrhů zákona. Návrh bude obsahovat popis a výsledek jeho hlasování, a datum a čas hlasování. \\ \hline
+	FP\textunderscore01	& Aplikace bude umět zobrazit seznam návrhů zákona. Návrh bude obsahovat popis a výsledek jeho hlasování, a datum \linebreak a čas hlasování. \\ \hline
 	
-	FP\textunderscore02	& Aplikace bude umět zobrazit detail návrhu zákona. Detail bude zahrnovat název, datum a čas, odkaz na stenoprotokol a oficiální zdroj, a celkovou statistiku hlasování. Celkovou statistikou hlasování rozumíme počet hlasování pro a proti, a počet nepřihlášených, omluvených a zdržených. Dále bude obsahovat hlasování jednotlivých poslaneckých klubů a jejich členů pro daný návrh. \\ \hline
+	FP\textunderscore02	& Aplikace bude umět zobrazit detail návrhu zákona. Detail bude zahrnovat název, datum a čas, odkaz na stenoprotokol, odkaz na oficiální zdroj, a celkovou statistiku hlasování. Celkovou statistikou hlasování rozumíme počet hlasování pro a proti, a počet nepřihlášených, omluvených \linebreak a zdržených. Dále bude obsahovat výsledky hlasování jednotlivých poslaneckých klubů a jejich členů pro daný návrh zákona. \\ \hline
 	
-	FP\textunderscore03	& Aplikace bude umět zobrazit seznam členů poslanecké sněmovny. V seznamu budou tyto informace o členech: jméno a příjmení, volební kraj, název klubu a profilová fotku. \\ \hline
+	FP\textunderscore03	& Aplikace bude umět zobrazit seznam poslanců. V seznamu budou následující informace o poslancích: jméno \linebreak a příjmení, volební kraj, název klubu a profilová fotku. \\ \hline
 	
-	FP\textunderscore04	& Aplikace bude umět zobrazit detail poslance. Detail poslance bude obsahovat jméno a příjemní, datum narození, profilovou fotku, odkaz na oficiální zdroj, datum nabytí statusu poslance, poslanecký klub a volební kraj. Dále bude obsahovat informace o tom, jak daný poslanec hlasovalv jednotlivých návrzích zákona. \\ \hline
+	FP\textunderscore04	& Aplikace bude umět zobrazit detail poslance. Detail poslance bude obsahovat jméno a příjemní, datum \linebreak narození, profilovou fotku, odkaz na oficiální zdroj, datum začátku mandátu, poslanecký klub a volební kraj. Dále bude obsahovat výsledky jeho hlasování o jednotlivých návrzích zákona. \\ \hline
 	
-	FP\textunderscore05	& Aplikace bude poskytovat možnost nastavení staršího volebního období. Uživatel vždy uvidí návrhy zákonů a seznam poslanců z aktuálně nastavenéího volebního období.\\ \hline
+	FP\textunderscore05	& Aplikace bude poskytovat možnost nastavení staršího volebního období. Aplikace bude zobrazovat návrhy zákonů \linebreak a poslance vždy z aktuálně nastaveného volebního období. \\ \hline
 	
-	FP\textunderscore06	& Aplikace bude poskytovat možnost vyhledávání hlasování podle jeho popisu.\\ \hline
+	FP\textunderscore06	& Aplikace bude umožňovat filtrovat seznam návrhů zákona podle popisu.\\ \hline
 	
-	FP\textunderscore07	& Aplikace bude poskytovat možnost vyhledávání poslance podle jeho jména.\\ \hline
+	FP\textunderscore07	& Aplikace bude umožňovat filtrovat seznam poslanců podle jména.\\ \hline
 	
-	FP\textunderscore07	& Aplikace bude pro seznamy návrhů a poslanců umožňovat tyto seznam nějakým způsobem aktualizovat skrz uživatelské rozhraní.\\ \hline
+	FP\textunderscore08	& Aplikace bude poskytovat způsob, jak aktualizovat seznamy, nějakým způsobem prostřednictvím UI.\\ \hline
 	
 	\caption{Funkční požadavky pro mobilní aplikaci.}
 	\label{table:func_req_app}
@@ -58,39 +56,39 @@ Tato podkapitola obsahuje seznam funkčních požadavků pro mobilní aplikaci (
 	\multicolumn{2}{|l|}{\textbf{Funkční požadavky pro backend}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	FP\textunderscore03	& Backend bude poskytovat endpoint pro seznam všech volebních období.  \\ \hline
+	FP\textunderscore01	& Backend bude poskytovat endpoint pro seznam všech volebních období.  \\ \hline
 	
-	FP\textunderscore01	& Backend bude poskytovat endpoint pro seznam návrhů a výsledků hlasování.  \\ \hline
+	FP\textunderscore02	& Backend bude poskytovat endpoint pro seznam návrhů \linebreak a výsledků jejich hlasování.  \\ \hline
 	
-	FP\textunderscore02	& Backend bude poskytovat endpoint pro detail
-	návrhu a výsledku hlasování.  \\ \hline
+	FP\textunderscore03	& Backend bude poskytovat endpoint pro detaily
+	návrhu zákona a výsledku jeho hlasování.  \\ \hline
 	
-	FP\textunderscore03	& Backend bude poskytovat endpoint pro výsledky hlasování poslaneckých klubů a jejich členů pro daný návrh.  \\ \hline
+	FP\textunderscore04	& Backend bude poskytovat endpoint pro výsledky hlasování poslaneckých klubů a jejich členů o daném návrhu zákona.  \\ \hline
 	
-	FP\textunderscore04	& Backend bude poskytovat endpoint pro seznam poslanců.  \\ \hline
+	FP\textunderscore05	& Backend bude poskytovat endpoint pro seznam poslanců.  \\ \hline
 	
-	FP\textunderscore05	& Backend bude poskytovat endpoint pro detail poslance.  \\ \hline
+	FP\textunderscore06	& Backend bude poskytovat endpoint pro detaily poslance.  \\ \hline
 	
-	FP\textunderscore06	& Backend bude poskytovat endpoint pro informace o tom, jak hlasoval konkrétní poslanec v jednotlivých návrzích zákona.  \\ \hline
+	FP\textunderscore07	& Backend bude poskytovat endpoint pro výsledky hlasování daného poslance o návrzích zákonů.  \\ \hline
 	
 	\caption{Funkční požadavky pro backend.}
 	\label{table:func_req_be}
 \end{longtable}
 
-\subsection{Nefunkční požadavky}
+\subsection*{Nefunkční požadavky}
 
-Tato podkapitola obsahuje seznam nefunkčních požadavky pro mobilní aplikaci (\ref{table:nonfunc_req_app}) a backend (\ref{table:nonfunc_req_be}).
+Seznam nefunkčních požadavků pro mobilní aplikaci jsou v tabulce \ref{table:nonfunc_req_app} a pro backend v tabulce \ref{table:nonfunc_req_be}.
 
 \def\arraystretch{1.5}
 \begin{longtable}{|l|p{9cm}|} \hline
 	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro mobilní aplikaci}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	NP\textunderscore 01	& Aplikace nebude provádět výpočetně náročná zpracování dat pro šetření aplikace. Výpočetně náročna pracování budou delegována na backend. \\ \hline
+	NP\textunderscore 01	& Aplikace nebude provádět výpočetně náročná zpracování dat pro šetření aplikace. Ty budou delegována na backend. \\ \hline
 	
 	NP\textunderscore 02 & Aplikace bude mít jednoduché a intuitivní uživatelské rozhraní. \\ \hline
 	
-	NP\textunderscore 03 & Aplikace bude fungovat na zařízeních s OS Android 5.1 a výš pro cílení většího množství uživatelů. \\ \hline
+	NP\textunderscore 03 & Aplikace bude fungovat na zařízeních s OS Android 5.1 \linebreak a výš pro cílení většího množství uživatelů. \\ \hline
 	
 	NP\textunderscore 04 & Aplikace nebude sbírat uživatelská data. \\ \hline
 	
@@ -98,25 +96,27 @@ Tato podkapitola obsahuje seznam nefunkčních požadavky pro mobilní aplikaci 
 	\label{table:nonfunc_req_app}
 \end{longtable}
 
+\newpage
+
 \def\arraystretch{1.5}
 \begin{longtable}{|l|p{9cm}|} \hline
 	\multicolumn{2}{|l|}{\textbf{Nefunkční požadavky pro backend}} \\ \hline
 	\textbf{ID požadavku} & \textbf{Popis požadavku} \\ \hline
 	
-	NP\textunderscore 01 & Backend bude data stahovat z oficiální portálu PSP. \\ \hline
+	NP\textunderscore 01 & Backend bude data stahovat z webu PSP. \\ \hline
 	
-	NP\textunderscore 02 & Backend bude data stažená z portálu PSP transformovat do databázového modelu (\ref{sec:database_model}). Cílem je, aby data byla předzpracovaná a připravená pro rychlý přistup z mobilní aplikace. \\ \hline
+	NP\textunderscore 02 & Backend bude data stažená z portálu PSP transformovat do databázového modelu \ref{sec:database_model}. Cílem je, aby data byla předzpracovaná a připravená pro rychlý přistup z mobilní aplikace. \\ \hline
 	
 	NP\textunderscore 03 & Backend bude ztransformovaná data perzistentně ukládat do databáze. \\ \hline
 	
 	NP\textunderscore 04 & Backend bude data z databáze vystavovat prostřednictvím REST API \cite{rest-api}. \\ \hline
 	
-	NP\textunderscore 03 & Backend bude každý den stahovat nová data z portálu PSP a aktualizovat databázi. \\ \hline
+	NP\textunderscore 05 & Backend bude každý den stahovat nová data z portálu PSP a aktualizovat databázi. \\ \hline
 	
-	NP\textunderscore 05 & Backend bude data vystavovat ve formatu JSON. \\ \hline	
+	NP\textunderscore 06 & Backend bude data vystavovat ve formatu JSON \cite{json}. \\ \hline	
 	
 	
-	NP\textunderscore06	& Část dat, jejichž zpracování by trvalo příliš dlouho (např. půl dne) lze zpracovat až za běhu. \\ \hline
+	NP\textunderscore07	& Část dat, u kterých má vývojář pocit, že jejich zpracování probíhá příliš dlouho, lze zpracovat až za běhu. \\ \hline
 	
 	\caption{Nefunkční požadavky pro backend.}
 	\label{table:nonfunc_req_be}

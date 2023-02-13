@@ -2,22 +2,21 @@
 \label{ch:analysis_data}
 
 \begin{chapterabstract}
-	V této kapitole budou analyzována zdrojová data, z kterých bude čerpat backend.
+	V této kapitole budou analyzována zdrojová data PSP, která budou použita pro backend.
 \end{chapterabstract}
 
 \section{Zdrojové soubory}
+\label{sec:source-data}
 
-Zdrojová data se nachází v souborech ve formátu zip, které jsou volně ke stažení na webu PSP \cite{psp-data}. Pro tuto práci budou důležité následující soubory, které obsahují datové soubory potřebné pro splnění zadání a funkčních a nefunkčních požadavků:
+Zdrojové soubory se nachází v souborech ve formátu zip, které lze stáhnout na webu PSP \cite{psp-data}. Pro tuto práci budou použity následující zdrojové soubory:
 
 \begin{itemize}
-	\item \textbf{poslanci.zip} -- Eviduje osoby, jejich zařazení do orgánů a jejich funkce v orgánech a orgány jako takové. Obsahuje datové soubory potřebné 
-	\item \textbf{hl-XXXXps.zip} -- Eviduje hlasování v PSP.
+	\item \textbf{poslanci.zip} - Obsahuje datové soubory pro poslance a osoby, jejich zařazení do orgánů \linebreak a orgány jako takové.
+	\item \textbf{hl-XXXXps.zip} -- Obsahuje datové soubory pro návrhy zákonů a výsledky jejich \linebreak hlasování, a výsledky hlasování poslanců.
 \end{itemize}
 
-\noindent Zbytek práce se bude zabývat daty v datových souborech v těchto dvou zdrojových souborech.
-
 \section{Formát dat}
-Data v datových souborech jsou poskytována ve formátu UNL, tj.:
+Data v datových souborech jsou poskytována ve formátu UNL \cite{psp-data}, tj.:
 
 \begin{itemize}
 	\item Každý řádek v souboru odpovídá jednom řádku v databázi.
@@ -29,17 +28,17 @@ Data v datových souborech jsou poskytována ve formátu UNL, tj.:
 \noindent Další informace o datech:
 
 \begin{itemize}
-	\item Kódování dat je windows-1250
+	\item Kódování dat je \lstinline|windows-1250|.
 	\item Pokud bude strunktura dat doplňována, budou nové sloupce přidávány na konec.
 \end{itemize}
 
-\noindent Kódování windows-1250 obsahuje mimo jiné všechny znaky z české abecedy. Je tedy třeba dbát na správně nastavené kódování při parsování nebo ukládání do databáze, aby datům vráceným mobilní aplikaci nechyběly např. háčky a čárky. Zároveň při parsování UNL souborů je potřeba brát ohled na přidávání nových sloupců nakonec.
+\noindent Kódování \lstinline|windows-1250| obsahuje mimo jiné všechny znaky z české abecedy. Je tedy třeba dbát na správně nastavené kódování při parsování nebo ukládání do databáze, aby datům vráceným mobilní aplikaci nechyběly např. háčky a čárky. Zároveň při parsování UNL souborů je potřeba brát ohled na přidávání nových sloupců nakonec.
 
 \section{Aktualizace}
-Web PSP \cite{psp-data} uvádí, že data obsahují úplný stav a že rozdílové aktualizace nejsou poskytovány. To je pro použití neideální, jelikož při aktualizaci dat je potřeba stáhnout všechna data a následně buď zpracovat všechna data znovu nebo naimplementovat vlastní logiku pro zjištění rozdílového stavu a aktualizovat data pouze na základě tohoto rozdílového stavu. 
+Web PSP \cite{psp-data} uvádí, že data obsahují úplný stav a že rozdílové aktualizace nejsou poskytovány. To je pro použití neideální, jelikož při aktualizaci databáze je pak potřeba z webu stáhnout znovu všechna zdrojová data a poté buď sestavit znovu celou databázi nebo zjistit rozdílový stav a na základě něho aktualizovat stávající databázi.
 
 \section{Datové typy}
-Na webu PSP \cite{psp-data} jsou poskytovány informace o datových typech sloupců. Zde je výčet pouze těch datových typů, které jsou nutné pro pochopení dat používaných v rámci této práce.
+Na webu PSP \cite{psp-data} jsou poskytovány informace o datových typech sloupců. V tabulce \ref{table:data_types} jsou uvedeny ty datové typy, které jsou použity v rámci této práce.
 
 \begin{longtable}{|l|p{9cm}|} \hline
 	\multicolumn{2}{|l|}{\textbf{Typy dat sloupců v tabulkách}} \\ \hline
@@ -60,34 +59,40 @@ Na webu PSP \cite{psp-data} jsou poskytovány informace o datových typech sloup
 	datetime(hour to minute)		& čas, ve formátu HH:MM
 	\\ \hline
 	
-	\caption{Datové typy dat}
+	\caption{Datové typy sloupců v datových souborech \cite{psp-data}}
 	\label{table:data_types}
 \end{longtable}
 
 \section{Licence}
 
-Data jsou poskytována bezplatně, využití dat je podmíněno uvedením zdroje dat a případně datem zpracování dat. V mobilní aplikaci a v repozitářích mobilní aplikace a backendu bude uveden zdroj dat. 
+Data jsou poskytována bezplatně, využití dat je podmíněno uvedením zdroje dat a případně datem zpracování dat \cite{psp-data}. V mobilní aplikaci bude uveden zdroj.
 
 \section{Datové soubory}
 
-Zde je výčet použitých datových souborů a stručná analýza. Detailnější analýza bude v následující sekci. Ze zdrojového souboru \lstinline|poslanci.zip| budou používány následující datové soubory \cite{zip-members}:
+Zde budou vypsány použité datové soubory ve zdrojových souborech uvedených v podkapitole \ref{sec:source-data} a jejich stručný popis. Soubory budou popsány detailněji v následující sekci \ref{sec:db-tables}. Ze zdrojového souboru \lstinline|poslanci.zip| budou použity následující datové soubory:
 
 \begin{itemize}
-	\item \textbf{organy} -- Reprezentuje orgány ve státní správě. Zahrnuje parlamenty všech volebních období a poslanecké kluby. Tabulka bude využita pro nalezení všech poslaneckých klub.
-	\item \textbf{poslanec} -- Reprezentuje poslance v různých volebních obdobích.
-	\item \textbf{osoby} -- Reprezentuje osobu. Obsahuje osobní údaje jako jméno a příjmení a datum narození. Poslanec je osobou, a tudíž lze o poslanci prostřednictvím téhle tabulky zjistit jeho osobní údaje.
-	\item \textbf{zarazeni} -- Obsahuje zařazení osoby osoby do nějakého orgánu. Tabulka bude využita pro zjištění členů poslaneckého klubu.
+	\item \textbf{organy} -- Reprezentuje orgány ve státní správě. Zahrnuje parlamenty všech volebních období a poslanecké kluby. Data budou použita pro nalezení poslaneckých klub.
+	
+	\item \textbf{poslanec} -- Reprezentuje poslance, včetně těch z předchozích volebních období. Data budou použita pro získání všech poslanců v určitém volebním období.
+	
+	\item \textbf{osoby} -- Reprezentuje osobu. Obsahuje osobní údaje jako jméno, příjmení a datum narození. Data budou použita pro zjištění osobních údajů o poslanci.
+	
+	\item \textbf{zarazeni} -- Obsahuje zařazení osoby do nějakého orgánu. Data budou použita pro získání členů poslaneckého klubu.
 \end{itemize}
 
-\noindent Ze zdrojových souborů \lstinline|hl-XXXX.zip|, kde XXXX je volební rok, budou používány následující datové soubory \cite{zip-votes}:
+\noindent Ze zdrojových souborů \lstinline|hl-XXXX.zip|, kde XXXX je volební rok, budou používány následující datové soubory:
 
 \begin{itemize}
-	\item \textbf{hl\_hlasovani} -- Reprezentuje hlasování o návrhu zákona. Zahrnuje většinu informací o hlasování, které budou potřeba.
-	\item \textbf{hl\_poslanec} -- Reprezentuje výsledek hlasování poslance o návrhu zákona, tedy jak hlasoval který poslanec o kterém návrhu zákona.
-	\item \textbf{omluvy} -- Repreznetuje časově ohraničené omluvy z jednání a hlasování v poslanecké sněmovně. Bude použito pro zjištění počtu omluvených. 
+	\item \textbf{hl\_hlasovani} -- Reprezentuje výsledky hlasování o návrhů zákonů. Data budou použita pro získání informací o návrhu zákona a výsledcích jeho hlasování.
+	
+	\item \textbf{hl\_poslanec} -- Reprezentuje výsledek hlasování poslance o návrhu zákona. Data budou použita pro získání výsledků hlasování poslance o návrhu zákona.
+	
+	\item \textbf{omluvy} -- Reprezentuje časově ohraničené omluvy z jednání a hlasování. Data budou použita pro získání počtu omluvených. 
 \end{itemize}
 
 \section{Tabulky}
+\label{sec:db-tables}
 
 Na \ref{fig:class-diagram} lze vidět diagram zdrojových dat, s kterými bude dále v práci pracováno. Obsahuje typy dat, jejich atributy, datové typy atributů a vazby mezi typy. Atributy identifikující daný typ jsou zvýrazněny tučným písmem. Následovat bude výčet použitých tabulek s popisem atributů. Pro stručnost budou u tabulek uvedeny pouze atributy, které jsou v rámci práce používány. Poznatky v textu jsou převážně z \textbf{analýzy obsahu datových souborů} a nejsou na stránkách PS nijak zdokumentovány.
 

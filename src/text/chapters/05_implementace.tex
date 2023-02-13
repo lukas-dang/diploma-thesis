@@ -131,16 +131,8 @@ class VoteListViewModel: ViewModel() {
 \end{itemize}
 
 
-\subsection *{Android komponenty}
-Android komponenta \cite{android-component-application} je hlavním stavením kamenem aplikace, která má na starosti určitou funkcionalitu. V aplikaci se používá pouze komponenta \lstinline|Application|. Pro jednoduchost textu budou považovány za komponenty i \lstinline|Activity| a \lstinline|ViewModel|, přestože podle dokumentace nejsou považovány za Android komponenty jako takové. V aplikaci jsou tedy použity následující komponenty:
-
-\begin{itemize}
-	\item \textbf{Application} - Reprezentuje aplikaci. Slouží pro inicilizaci aplikace a správu globálního stavu \cite{android-component-application}. je inicializována před ostatními Android komponentami. Všechny ostatní Android komponenty existují v rámcí této. Pro použití vytvoříme podtřídu třídy \lstinline|Application| a specifikujeme cestu k této podtřídě v rámci souboru \lstinline|AndroidManifest.xml|.
-	
-	\item \textbf{Activity} - Reprezentuje obrazovku a má na starosti správu UI a obsluhu událostí. Je to vstupní bod pro vytvoření UI. V aplikaci je použita pouze jedna aktivita a v rámci ní je dynamicky měněn obsah. Při navigace na jinou obrazovku se tedy nevytvoří nová aktivita, ale změní se pouze obsah existující aktivity. Pro použití této komponenty vytvoříme podtřídu třídy \lstinline|ComponentActivity| a specifikujeme cestu k této podtřídě v rámci souboru \lstinline|AndroidManfiest.xml|.
-	
-	\item \textbf{ViewModel} - Reprezentuje držitele stavu (\ref{fig:android-architecture-ui}), tj. definuje business logiku a drží v sobě stav pro UI elementy. Změna stavu vyvolá opětovné vykreslení UI. Pro použití této třídy vytvoříme podtřídu třídy \lstinline|ViewModel|.
-\end{itemize}
+\subsection *{Activity a ViewModel}
+Android aplikace je složena z Android komponent \cite{android-components}, které jsou jejími základními stavebními kameny. V této práce je použita jedna z nich - \lstinline|Activity|. Tato Android komponenta slouží jako vstupní bod pro vytvoření UI. UI v rámci aktivity lze dynamicky měnit. Díky tomu lze všechny obrazovky aplikace vykreslovat v rámci jedné aktivity a při navigaci na jinou obrazovku se UI v aktiviě pouze překreslí. V rámci aktivity lze použít třídu \lstinline|ViewModel|, která reprezentuje držitele stavu, který byl popsán v kapitole \ref{fig:android-architecture-ui}. Ukládáme v něm stav UI a obsluhy událostí. UI reaguje a přeskresluje se v reakci na změny stavu v držiteli stavu. 
 
 \subsection *{Hilt}
 Hilt je dependency injection (dále jen DI) knihovna pro Android, která umožňuje přidat závislosti (dále jen injektovat) objektům pomocí anotací. Vysvětlíme si na příkladě:
@@ -311,7 +303,7 @@ class MainActivity : ComponentActivity() {
 }
 \end{lstlisting}
 
-\noindent Anotace \lstinline|@AndroidEntryPoint| je informace pro Hilt, aby dovoloval injetovat závislosti v rámci této třídy a všech komponent existujících v rámci této aktivity. Pomocí funkce \lstinline|setContent| je zavolána kořenová composable funkce \lstinline|PspApp|. V rámci funkce \lstinline|init| je z backendu získán seznam volebních roků a uložen do lokálního úložiště:
+\noindent Anotace \lstinline|@AndroidEntryPoint| je informace pro Hilt, aby dovoloval injectovat závislosti v rámci této třídy a všech komponent existujících v rámci této aktivity. Pomocí funkce \lstinline|setContent| je zavolána kořenová composable funkce \lstinline|PspApp|. V rámci funkce \lstinline|init| je z backendu získán seznam volebních roků a uložen do lokálního úložiště:
 
 \newpage
 
@@ -567,7 +559,7 @@ class GetVotesUseCase @Inject constructor(...) {
 
 \noindent Je vytvořen objekt typu \lstinline|Pager|, který na základě konfigurace v \lstinline|PagingConfig| a zdroje dat \linebreak v \lstinline|VotespagingSource| poskytne flow stránkovaných hodnot.  \lstinline|voteRepository| je repozitář z datové vrstvy, odkud budou získávána data. \lstinline|electionYear| je volební rok, aby se daly stahovat data pro určité volební období. \lstinline|searchText| ja řetězec pro případné filtrování seznamu.
 
-\subsection {Implementace datové vrstvy}
+\section {Implementace datové vrstvy}
 Datová vrstva slouží pro abstrahování doménové vrstvy od konkrétních datových zdrojů. Datovým zdrojem může být např. backend nebo lokální databíze. V našem případě je použit pouze datový zdroj pro získávání data z backendu. Zde jsou soubory s repozitářemi implementujícími datovou vrstvu:
 
 \begin{itemize}
@@ -615,7 +607,7 @@ class PspRemoteDataSourceImpl @Inject constructor(
 
 \noindent Implementace stránkovacích zdrojů jsou příliš dlouhé, a proto zde nebude uvedena ukázka. Poskytuje funkci \lstinline|load|, kterou lze přepsat. V této funkci máme k dispozici aktuální stav scrollovatelného seznamu, tj. aktuální číslo a velikost stránky. Na základě toho jsou získána data z backendu skrz sítovou vrstvu. V případě, že získání dat proběhlo v pořádku a nedošlo k žádné síťové chybě, je vracen objekt typu \lstinline|LoadResult.Page|, kterému jsou předána data aktuální stránky, číslo předchozí stránky a číslo následující stránky. Pokud nastane chyba, pak je vracen objekt typu \lstinline|LoadResult| reprezentující chybnou stránku.
 
-\subsection{Implementace síťové vrstvy}
+\section{Implementace síťové vrstvy}
 \label{sec:impl-network}
 
 \noindent Síťová vrstva je implementována pomocí knihovny Retrofit, která umožňuje vytvářet HTTP dotazy pomocí funkcí a anotací:
@@ -658,7 +650,7 @@ Backend byl vyvíjen ve vývojovém prostředí Intellij IDEA \cite{idea}. Výho
 \end{itemize}
 
 \subsection*{Maven}
-Maven je nástroj pro automatizaci sestavování programu. Původně byl použit Gradle kvůli čitelnější syntaxi. Poté se přešlo na Maven z historických důvodů. Původně bylo v plánu backend nasadit na Cloud Azure \cite{azure}. Ten poskytoval plugin pro maven, který umožňoval backend nasadit a zprovoznit pomocí jednoho příkazu. Avšak kvůli omezené možnosti využití výpočetního výkonu byl backend nakonec nasazen na jiný FIT cloud (více v kapitole o nasazení). Na funkčnosti aplikace to však nemá žádný vliv, a proto se už nepřešlo z Mavenu na Gradle. 
+Maven je nástroj pro automatizaci sestavování programu. Maven byl zvolen kvůli tomu, že původně bylo v plánu backend nasadit na Cloud Azure \cite{azure}. Ten poskytoval plugin pro maven, který umožňoval backend nasadit a zprovoznit pomocí jednoho příkazu. Avšak kvůli omezené možnosti využití výpočetního výkonu byl backend nakonec nasazen na jiný CloudFIT (více v kapitole \ref{ch:deploy}). Gradle má čitelnější syntaxi, nicméně výběr mezi Mavenem a Gradlem neměl na funkčnost backendu a vývoj zásadní vliv, a proto se zůstalo u Mavenu.
 
 \subsection*{Spring Boot}
 Spring je open-source framework pro vývoj enterprise aplikací. Obshauje nástroje pro řešení různorodých problémů. Pro účely této práce byly využity nástroje pro vytvoření webových \linebreak aplikací, které lze používat i pro implementaci REST API. Nástroje Springu jsou založeny na návrhovém vzoru dependency injection.
@@ -668,7 +660,7 @@ Spring Boot je framework, který je postavený na Springu a který má za cíl r
 Alternativou ke knihovně Spring Boot je knihovna Ktor \cite{ktor}. Výhodou této knihovny je, že vývoj v ní je určený pro psaní v Kotlinu. Lze tedy využít všechny výhody tohoto jazyka. Nevýhodou je, že nepodporuje defaultně dependency injection. Musí se tedy dodatečně nainstalovat a nakonfigurovat. Další nevýhodou je chybějící autokonfigurace. Mnoho závislostí se tedy musí manuálně nakonfigurovat.
 
 \subsubsection*{Java}
-Java byla od začátku hlavním programovacím jazykem pro vývoj aplikací ve Spring Bootu. Od roku 2017 přišla integrace jazyka Kotlin do Spring Bootu \cite{kotlin-support} a v dokumentaci jsou ukázkové kódy psány jak v Javě tak i Kotlinu. Podle mého názoru má Java oproti Kotlinu větší podporu v komunitě, co se týče vývoje ve Spring Bootu. Nalezení řešení pro problém ve Spring Bootu \linebreak s Javou bylo jednodušší než ve Spring Bootu s Kotlinem. Intellij DIEA však poskytuje nástroje pro automatickou trasnformaci souboru v jazyce Java do souboru v Kotlinu. Výsledný kód bylo však potřeba vždy pročistit, jelikož u všech proměnných vždy obsahoval datové typy, které lze \linebreak v Kotlinu v některých případech pro čitelnost vynechat. Zároveň výstupní kód někdy nebyl kvůli drobnosti kompilovatelný. Z toho důvodu jsem se rozhodl pro použití Javy. Zdá se však, že podpora pro psaní aplikací Spring Boot pomocí Kotlinu je čím dál tím větší. Když bych měl možnost backend napsat znovu, pouvažoval bych znovu o použití Kotlinu, jelikož je to velmi dobrý programovací jazyk.
+Java byla od začátku hlavním programovacím jazykem pro vývoj aplikací ve Spring Bootu. Od roku 2017 přišla integrace jazyka Kotlin do Spring Bootu \cite{kotlin-support} a v dokumentaci jsou ukázkové kódy psány jak v Javě tak i Kotlinu. Podle mého názoru má Java oproti Kotlinu větší podporu v komunitě, co se týče vývoje ve Spring Bootu. Nalezení řešení pro problém ve Spring Bootu \linebreak s Javou bylo jednodušší než ve Spring Bootu s Kotlinem. Intellij IDEA však poskytuje nástroje pro automatickou trasnformaci souboru v jazyce Java do souboru v Kotlinu. Výsledný kód bylo však potřeba vždy pročistit, jelikož u všech proměnných vždy obsahoval datové typy, které lze \linebreak v Kotlinu v některých případech pro čitelnost vynechat. Zároveň výstupní kód někdy nebyl kvůli drobnosti kompilovatelný. Z toho důvodu jsem se rozhodl pro použití Javy. Zdá se však, že podpora pro psaní aplikací Spring Boot pomocí Kotlinu je čím dál tím větší. Když bych měl možnost backend napsat znovu, pouvažoval bych znovu o použití Kotlinu, jelikož je to velmi dobrý programovací jazyk.
 
 \section {Prezentační vrstva}
 V prezentační vrstvě jsou implementovány endpointy REST API v rámci \textit{controllerů}, což je třída obsahující definice endpointů. Endpointy lze tedy seskupit do různých tříd. Controllery získávají data z doménové vrstvy. Zde je seznam souborů s controllery:
@@ -855,7 +847,7 @@ Backend každý den o půl noci aktualizuje databázi podle zdrojových dat na w
 	\item \textbf{Uložení dat do databáze} -- Ztransfomovaná data jsou perzistentně uložena do databáze.
 \end{itemize}
 
-\subsection{Stahování zdrojových souborů}
+\subsection*{Stahování zdrojových souborů}
 Stahování zdrojových souborů má na starosti třída následující třída:
 
 \begin{lstlisting}[caption={Třída pro stahování zdrojových souborů}, label={lst:psp-downloader}, tabsize=2]
@@ -892,7 +884,7 @@ public class FileDownloader {
 }
 \end{lstlisting}
 
-\subsection{Extrakce datových souborů}
+\subsection*{Extrakce datových souborů}
 Pro extrakci souborů ze zip byla použita funkce funkce \lstinline|extractFile| třídy \lstinline|ZipFile| z knihovny \lstinline|zip4j| \cite{zip4j}. Ta na základě názvu souboru, který se má vyextrahovat, vyextrahuje daný soubor do dané složky a soubor bude mít daný název:
 
 \begin{lstlisting}[caption={Ukázka extrakce souborů ze zipu}, label={lst:zip4j}, tabsize=2]
@@ -912,7 +904,7 @@ public class ZipExtractor {
 }
 \end{lstlisting}
 
-\subsection{Pročištění dat}
+\subsection*{Pročištění dat}
 Duplicitní záznamy jsou odstraněny pomocí skriptu napsaného v jazyce Bash:
 
 \begin{lstlisting}[caption={Skript pro odstranění duplicitních řádků}, tabsize=2]
@@ -940,7 +932,7 @@ done
 
 \noindent Skript je volán ze souboru \lstinline|PspFilesCleaner|. Důvodem pro odstranění duplicit pomocí jazyka Bash a ne přímo pomocí Javy je rychlost Bashe pro tento účel a jednoduchá manipulace se soubory.
 
-\subsection{Parsování dat}
+\subsection*{Parsování dat}
 Pro parsování zdrojových dat používám knihovnu \lstinline|opencsv|. Ta umožňuje parsovat CSV přidáním anotací k atributům třídy. Tyto anotace specifikují pozici sloupce v CSV souboru, na který se atribut namapuje:
 
 \begin{lstlisting}[caption={Parsování datového souboru omluvy.unl}, tabsize=2]
@@ -956,7 +948,7 @@ public class Omluva {
 }
 \end{lstlisting}
 
-\noindent Všechny parsery se nachází ve složce \lstinline|parsers|. Pro parsování je použita knihovna \cite{opencsv}. Ta poskytuje třídu \lstinline|CsvToBeanBuilder|, pomocí které lze parsovat CSV soubory a namapovat je na objekty vytvořené s anotacemi, jak popsáno výše. Dále poskytuje metody pro nastavení oddělovače, detekci nullové hodnoty a možnost ignorování uvozovek:
+\noindent Všechny parsery se nachází ve složce \lstinline|parsers|. Pro parsování je použita knihovna \textit{opencsv} \cite{opencsv}. Ta poskytuje třídu \lstinline|CsvToBeanBuilder|, pomocí které lze parsovat CSV soubory a namapovat je na objekty vytvořené s anotacemi, jak popsáno výše. Dále poskytuje metody pro nastavení oddělovače, detekci nullové hodnoty a možnost ignorování uvozovek:
 
 \begin{lstlisting}[caption={Parsování datového souboru omluvy.unl}, tabsize=2]
 // Soubor OmluvyParser.java
@@ -978,7 +970,7 @@ public class OmluvyParser extends UnlParser {
 	
 \end{lstlisting}
 
-\subsection{Transformace a uložení dat}
+\subsection*{Transformace a uložení dat}
 Po zpasrování datových souborů a namapování záznamů na objekty lze tyto objekty začít ztransformovat do databázového modelu. Všechny soubory pro transformaci se nachází ve složce \lstinline|loaders|. V rámci transformátoru se vždy zavolá příslušný parser, který vrátí data, ty se ztranformují \linebreak a následně uloží do databáze:
 
 \begin{lstlisting}[caption={Transformace objektu Omluva na databázový objekt Excuse}, tabsize=2]
@@ -1009,5 +1001,5 @@ public class ExcuseLoader extends BaseLoader {
 \end{lstlisting}
 
 \noindent 
-Před samotným parsováním jsou smazány všechny záznamy v příslušné tabulce. Poté probíhá parsování datových souborů a seznamu namapovaných objekt. Z tohoto seznamu je vytvořen paralelní stream, což stream, který potenciálně zpracuje objekt v seznamu paralelně. Každý objekt je ztransformován a namapován na databázový objekt. Ztransformovaná data jsou perzistetně uložena do databáze. Ukládání je optimalizováno tak, že se neukládá po jednom ale po skupinách. Každá skupina obsahuje 1000 objektů. Ukládáme tedy po 1000 objektech.
+Před samotným parsováním jsou smazány všechny záznamy v příslušné tabulce. Poté probíhá parsování datových souborů a seznamu namapovaných objekt. Z tohoto seznamu je vytvořen paralelní stream, , který umožňuje mapovat načtené prvky seznamu do databázových entit paralelně. Databázové entity jsou následně perzistetně uloženy do databáze. Ukládání je optimalizováno tak, že se neukládá po jednom ale po skupinách. Každá skupina obsahuje 1000 objektů. Ukládáme tedy po 1000 objektech.
 
