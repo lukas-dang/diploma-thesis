@@ -1,10 +1,136 @@
 \chapter{Testování}
 
 \begin{chapterabstract}
-asdf
+V této kapitole bude popsána testování mobilní aplikace a backendu. Při testování mobilní aplikace byl kladen důraz na uživatelské testování, kdy je aplikace otestována reálným uživatelem. Dále byla otestována doménová a datová vrstva aplikace prostřednictvím automatizovaných unit testů. Na závěr byly přidány ještě UI testy které simulovali uživatelskou interakci s aplikací. V sekci pro popis testování backendu byl kladen důraz na testování prezentační vrstvy, tedy REST API.
 \end{chapterabstract}
 
 
 \section{Mobilní aplikace}
 
+\subsection{Uživatelské testování}
+Cílem uživatelského testování je sledovat chování uživatelů při používání aplikace, a odhalovat tím případné chyby nebo nedostatky. Testování se zúčastnili dva uživatelé, kteří dostali několik úkolů, přičemž se sledoval jejich postup řešení. Od účastníků byla na konci poskytnuta zpětná vazba k aplikaci. Účastníci používali následující mobilní zařízení:
+
+\begin{table}[!h]\centering
+	\caption[Použitá testovací zařízení]{Struktura agency}
+	\begin{tabular}{|l|l|l|p{4cm}|}\hline
+		& Název zařízení	& Displej	& Verze OS \tabularnewline \hline \hline
+		\texttt{Uživatel 1} & \texttt{Poco X3}		& \texttt{2400 x 1080 6.67 "}	& 13.0		\tabularnewline \hline
+		
+		\texttt{Uživatel 2} & \texttt{Samsung Galaxy M20}		& \texttt{2340 x 1080 6.3 "}	& 10.0		\tabularnewline \hline
+	\end{tabular}
+\end{table}
+
+\noindent Uživatelé dostali postupně následující úkoly:
+
+\begin{enumerate}
+	\item \textbf{Nalezněte detail libovolného hlasování.}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+	\item \textbf{Nalezněte informace o počtu hlasování pro a proti}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+	\item \textbf{Nalezněte odkaz na oficiální zdroj hlasování}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+	\item \textbf{Nalezněte informace o tom, jak hlasovali kluby a jejich členové}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+		
+	
+	\item \textbf{Nalezněte detail poslance}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+	
+	\item \textbf{Nalezněte informace o tom, jak hlasoval poslanec hlasoval libovolný poslanec}
+	
+		\begin{itemize}
+				\item Uživatelovi 1 vykonal test bez problémů, na začátku však navigoval k detailu hlasování, kde si zobrazil výsledky hlasování členů klubu, jehož je daný poslanec členem. Poté si uvědomil, že k výsledku hlasování člena se lze dostat jednodušeji prostřednictvím detailu poslance.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+	
+	\item \textbf{Vyfiltrujte seznam hlasování}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+	
+	\item \textbf{Vyfiltrujte seznam poslanců}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+	
+		\item \textbf{Nastavte jiné volební období}
+	
+		\begin{itemize}
+			\item Uživatel 1 vykonal test bez problémů.
+			\item Uživatel 2 vykonal test bez problémů.
+		\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Vyhodnocení}
+Uživatelské testování proběhlo v pořádku. Jediný zádrhel byl v úkolu při nalézání výsledku hlasování konkrétního poslance, jelikož se tato informace nachází na dvou různých místech. Poté co se uživatel však seznámil s aplikací, se mu již aplikace používala pohodlně. Od jednoho uživatele bylo oceněno, že při nalézání informací není potřeba se proklikat aplikací příliš hluboko.
+
+\subsection{Unit Testy}
+Unit testy jsou automatizované testy pro ověření funkčnosti dílčích částí zdrojového kódu (např. funkce a třídy). Tyto dílčí části jsou testovány v izolaci, tj. nejsou závislé na jiných částech. V praxi to znamená, že pokud testujeme např. třídu, která obsahuje referenci na objekt typu rozhraní, pak pro toto rozhraní vytvoříme dvě různé implementace. Jedna implementace bude obsahovat skutečnou funkcionalitu daného objektu. Druhá implementace bude testovací a bude funkcionalitu skutečného objektu pouze simulovat. Díky tomu můžeme třídy testovat nezávisle na sobě. Unit testy se nachází ve složce \texttt{test}. Byla testována základní funkčnost doménové (interactory a stránkovací mechanizmus) a datové vrstvy (datové zdroje). Pro interactory byly vytvořeny testovací implementace pro repozitáře. Pro datové zdroje byla vytvořena testovací implementace Retrofit rozhraní s HTTP dotazy pro komunikaci s databází. Závislosti byly vkládány pomocí DI knihovny Hilt. Zde je výčet testovacích souborů s unit testy:
+
+\begin{itemize}
+	\item \textbf{PspRemoteDataSourceImplTest}
+	\item \textbf{MembersPagingSourceTest}
+	\item \textbf{MemberVotesPagingSourceTest}
+	\item \textbf{VotesPagingSourceTest}
+	\item \textbf{GetAppStateInteractorImplTest}
+	\item \textbf{GetMemberDetailsInteractorImplTest}
+	\item \textbf{GetPartyVotesInteractorImplTest}
+	\item \textbf{GetVoteDetailsInteractorImplTest}
+\end{itemize}
+
+\subsection{UI testy}
+UI testy jsou automatické testy pro testování uživatelského rozhraní. V této aplikaci vyžadují fyzické zařízení nebo emulátor. Pro toto testování byla použita knihovna Jetpack Compose , jelikož UI je implementováno taktéž pomocí knihovny Jetpack Compose \cite{compose-test}. Ta poskytuje objekty a metody pro dotazování se nad komponentami a jejich informace na obrazovce, a události jako kliknutí na tlačítko nebo scrollování. Tyto testy se nachází ve složce \texttt{androidTest}. Testovány byly komponenty reprezentující obrazovku. Zde je výčet testovacích souborů s UI testy:
+
+\begin{itemize}
+	\item \textbf{VoteListScreenTest}
+	\item \textbf{PartyVotesScreenTest}
+	\item \textbf{VoteDetailsScreenTest}
+	\item \textbf{MemberListScreenTest}
+	\item \textbf{MemberDetailsScreenTest}
+	\item \textbf{SettingsScreenKtTest}
+\end{itemize}
+
 \section{Backend}
+Na backendu byla testována prezentační vrstva, kde se především ověřovalo, zda JSON vracený z REST API je ve správném formátu. Testování bylo implementováno pomocí knihovny Spring Boot. Testování bylo prováděno podle návodu na stránkách Spring Bootu \cite{spring-boot-testing}, kde se jednotlivé controllery v prezentační vrstvě testují jako unit testy. Ty jsou závislé na komponentách service z doménové vrstvy a mapper pro mapování objektů. Místo vytvoření rozhraní a testovací implementace, jako se to dělalo u mobilní aplikace, jsou tyto komponenty mockovány, tj. jsou nahrazeny za jeho testovací imitaci, která neprovádí žádnou funkci a jen se tváří jako původní objekt \cite{mocking}. Aby prováděla nějakou funkci, musíme ji to explicitně nastavit. Nastavení probíhá tak, že zvolíme její funkci, a řekneme ji, že pro parametr X bude vracet výsledek Y. Pokud je tato funkce tedy zavolána s parametrem X, vrátí výsledek Y. V opačném případě vrací výchozí hodnotu návratového typu dané metody. Testy se nachází ve složce \texttt{test}:
+
+\begin{itemize}
+	\item \textbf{MemberControllerTest}
+	\item \textbf{PartyControllerTest}
+	\item \textbf{VoteControllerTest}
+\end{itemize}
+
+
+
+
+
+

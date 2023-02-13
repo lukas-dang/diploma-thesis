@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  11 FEB 2023 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  13 FEB 2023 14:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1590,7 +1590,7 @@ Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 181.
 Package biblatex Info: Reference segment=0 on input line 181.
 \c@lstlisting=\count521
-<assignment-include.pdf, id=238, 597.23125pt x 844.15375pt>
+<assignment-include.pdf, id=278, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 184.
@@ -1599,7 +1599,7 @@ File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 184.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<assignment-include.pdf, id=241, page=1, 597.23125pt x 844.15375pt>
+<assignment-include.pdf, id=281, page=1, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
 Package pdftex.def Info: assignment-include.pdf , page1 used on input line 184.
@@ -1752,11 +1752,11 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
+) [6])
 \tf@lol=\write11
 \openout11 = `ctufit-thesis.lol'.
 
- [6]
+
 [7] [8
 
 ] [9
@@ -1801,12 +1801,12 @@ Underfull \hbox (badness 1694) in paragraph at lines 4--5
 Pro re-²er²i byly vy-bí-rány ta-kové
  []
 
-<images//politiscope.png, id=614, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=666, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 31.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=615, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=667, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 32.
@@ -1814,12 +1814,12 @@ Package pdftex.def Info: images//politiscope2.jpg  used on input line 32.
 [9
 
 ] [10 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=630, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=682, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 66.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=631, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=683, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 67.
@@ -1848,14 +1848,14 @@ Underfull \hbox (badness 1107) in paragraph at lines 453--454
 
 ) (text/chapters/03_analysis_architecture.tex [20]
 Kapitola 4.
-<images//android-architecture-overall.png, id=690, 1731.46875pt x 1008.76875pt>
+<images//android-architecture-overall.png, id=742, 1731.46875pt x 1008.76875pt>
 
 File: images//android-architecture-overall.png Graphic file (type png)
 <use images//android-architecture-overall.png>
 Package pdftex.def Info: images//android-architecture-overall.png  used on inpu
 t line 16.
 (pdftex.def)             Requested size: 209.12683pt x 121.83205pt.
-<images//android-architecture-ui.png, id=693, 1703.36375pt x 1508.63625pt>
+<images//android-architecture-ui.png, id=745, 1703.36375pt x 1508.63625pt>
 File: images//android-architecture-ui.png Graphic file (type png)
 <use images//android-architecture-ui.png>
 Package pdftex.def Info: images//android-architecture-ui.png  used on input lin
@@ -1878,7 +1878,7 @@ Underfull \hbox (badness 3118) in paragraph at lines 33--34
 -vána data. M·ºe to být
  []
 
-<images//android-architecture-data.png, id=700, 1699.34875pt x 1516.66624pt>
+<images//android-architecture-data.png, id=752, 1699.34875pt x 1516.66624pt>
 File: images//android-architecture-data.png Graphic file (type png)
 <use images//android-architecture-data.png>
 Package pdftex.def Info: images//android-architecture-data.png  used on input l
@@ -1965,17 +1965,29 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [55]
-[56])) [57]
+[56]) (text/chapters/06_testing.tex [57] [58
+
+]
+Kapitola 8.
+[59] [60] [61]) (text/chapters/07_deploy.tex [62]
+Kapitola 9.
+) (text/chapters/09_conclusion.tex [63
+
+] [64
+
+]
+Kapitola 10.
+)) [65]
 \openout2 = `text/appendix.aux'.
 
- (text/appendix.tex [58
+ (text/appendix.tex [66
 
 
 
 
 ]
 P\v {r}\'{\i }loha A.
-<images//source_data_diagram.png, id=1469, 1014.79124pt x 1039.885pt>
+<images//source_data_diagram.png, id=1571, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
@@ -1984,13 +1996,13 @@ Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
-<images//vote_list.png, id=1475, 357.335pt x 727.71875pt>
+ [67]
+<images//vote_list.png, id=1576, 357.335pt x 727.71875pt>
 File: images//vote_list.png Graphic file (type png)
 <use images//vote_list.png>
 Package pdftex.def Info: images//vote_list.png  used on input line 12.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=1476, 357.335pt x 727.71875pt>
+<images//vote_list_search.png, id=1577, 357.335pt x 727.71875pt>
 File: images//vote_list_search.png Graphic file (type png)
 <use images//vote_list_search.png>
 Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
@@ -1998,20 +2010,20 @@ Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60 <./images//source_data_diagram.png>]
-<images//vote_details_general.png, id=1482, 357.335pt x 727.71875pt>
+ [68 <./images//source_data_diagram.png>]
+<images//vote_details_general.png, id=1583, 357.335pt x 727.71875pt>
 File: images//vote_details_general.png Graphic file (type png)
 <use images//vote_details_general.png>
 Package pdftex.def Info: images//vote_details_general.png  used on input line 2
 7.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=1483, 357.335pt x 727.71875pt>
+<images//vote_details_party_votes.png, id=1584, 357.335pt x 727.71875pt>
 File: images//vote_details_party_votes.png Graphic file (type png)
 <use images//vote_details_party_votes.png>
 Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
 ne 33.
 (pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=1484, 357.335pt x 727.71875p
+<images//vote_details_party_votes_expanded.png, id=1585, 357.335pt x 727.71875p
 t>
 File: images//vote_details_party_votes_expanded.png Graphic file (type png)
 <use images//vote_details_party_votes_expanded.png>
@@ -2026,30 +2038,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--43
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61 <./images//vote_list.png> <./images//vote_list_search.png>]
+ [69 <./images//vote_list.png> <./images//vote_list_search.png>]
 Overfull \vbox (6.3355pt too high) has occurred while \output is active []
 
 
-[62 <./images//vote_details_general.png> <./images//vote_details_party_votes.pn
+[70 <./images//vote_details_general.png> <./images//vote_details_party_votes.pn
 g> <./images//vote_details_party_votes_expanded.png>]
-<images//member_list.png, id=1498, 357.335pt x 727.71875pt>
+<images//member_list.png, id=1599, 357.335pt x 727.71875pt>
 File: images//member_list.png Graphic file (type png)
 <use images//member_list.png>
 Package pdftex.def Info: images//member_list.png  used on input line 48.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=1499, 357.335pt x 727.71875pt>
+<images//member_list_search.png, id=1600, 357.335pt x 727.71875pt>
 File: images//member_list_search.png Graphic file (type png)
 <use images//member_list_search.png>
 Package pdftex.def Info: images//member_list_search.png  used on input line 54.
 
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_general.png, id=1500, 357.335pt x 727.71875pt>
+<images//member_details_general.png, id=1601, 357.335pt x 727.71875pt>
 File: images//member_details_general.png Graphic file (type png)
 <use images//member_details_general.png>
 Package pdftex.def Info: images//member_details_general.png  used on input line
  64.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=1501, 357.335pt x 727.71875pt>
+<images//member_details_votes.png, id=1602, 357.335pt x 727.71875pt>
 File: images//member_details_votes.png Graphic file (type png)
 <use images//member_details_votes.png>
 Package pdftex.def Info: images//member_details_votes.png  used on input line 7
@@ -2058,13 +2070,13 @@ Package pdftex.def Info: images//member_details_votes.png  used on input line 7
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63 <./images//member_list.png> <./images//member_list_search.png>]
-<images//settings.png, id=1508, 357.335pt x 727.71875pt>
+ [71 <./images//member_list.png> <./images//member_list_search.png>]
+<images//settings.png, id=1610, 357.335pt x 727.71875pt>
 File: images//settings.png Graphic file (type png)
 <use images//settings.png>
 Package pdftex.def Info: images//settings.png  used on input line 79.
 (pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=1509, 357.335pt x 727.71875pt>
+<images//settings_opened.png, id=1611, 357.335pt x 727.71875pt>
 File: images//settings_opened.png Graphic file (type png)
 <use images//settings_opened.png>
 Package pdftex.def Info: images//settings_opened.png  used on input line 85.
@@ -2072,8 +2084,8 @@ Package pdftex.def Info: images//settings_opened.png  used on input line 85.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64 <./images//member_details_general.png> <./images//member_details_votes.png
->] [65 <./images//settings.png> <./images//settings_opened.png>] [66] [67] [68]
+ [72 <./images//member_details_general.png> <./images//member_details_votes.png
+>] [73 <./images//settings.png> <./images//settings_opened.png>] [74] [75] [76]
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2090,7 +2102,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [69] [70] [71] [72
+) [77] [78] [79] [80
 
 
 
@@ -2119,7 +2131,7 @@ line][]. [B.r.]. [[]cit.[] 2023-02-09]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 htt
 ps : / / developer .
  []
 
-[73
+[81
 
 ]
 Overfull \hbox (4.19872pt too wide) in paragraph at lines 344--344
@@ -2135,59 +2147,50 @@ Overfull \hbox (15.12247pt too wide) in paragraph at lines 344--344
  azure . microsoft .
  []
 
-[74]
+[82] [83]
 \openout2 = `text/medium.aux'.
 
- (text/medium.tex) [75
+ (text/medium.tex [84
 
 
-] (ctufit-thesis.aux (text/text.aux)
+]) [85] (ctufit-thesis.aux (text/text.aux)
 (text/appendix.aux) (text/medium.aux))
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 495F9155F1AF12151CECF91E5EF722EE;8378.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                ctufit-thesis
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: E9B36C4BDE3C9F1F7AF9A4ADD086E513;9500.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42131 strings out of 476375
- 797207 string characters out of 5788976
+ 42192 strings out of 476375
+ 798518 string characters out of 5788976
  2050299 words of memory out of 5000000
- 60897 multiletter control sequences out of 15000+600000
- 596395 words of font info for 84 fonts, out of 8000000 for 9000
+ 60918 multiletter control sequences out of 15000+600000
+ 593600 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,90p,2182b,3061s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/U
 sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/U
-sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/
-Users/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/U
-sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Us
-ers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/User
-s/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/
-lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ld
-dan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/ldda
-n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ldda
-n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/lddan
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/ldd
-an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/ldd
-an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ldd
-an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on ctufit-thesis.pdf (89 pages, 2710106 bytes).
+sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Us
+ers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Use
+rs/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users
+/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/l
+ddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ldd
+an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/lddan
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/lddan
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/lddan/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/ldda
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/ldda
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ldda
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on ctufit-thesis.pdf (99 pages, 2717001 bytes).
 PDF statistics:
- 1999 PDF objects out of 2073 (max. 8388607)
- 879 named destinations out of 1000 (max. 500000)
- 592 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2114 PDF objects out of 2487 (max. 8388607)
+ 911 named destinations out of 1000 (max. 500000)
+ 672 words of extra memory for PDF output out of 10000 (max. 10000000)
 

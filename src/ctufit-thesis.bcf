@@ -2414,6 +2414,9 @@
     <bcf:citekey order="47" intorder="1">commons-io</bcf:citekey>
     <bcf:citekey order="48" intorder="1">zip4j</bcf:citekey>
     <bcf:citekey order="49" intorder="1">opencsv</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">compose-test</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">spring-boot-testing</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">mocking</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -29,10 +29,10 @@
 \contentsline {lstlisting}{\numberline {7.13}{\ignorespaces Parsování datového souboru omluvy.unl}}{56}{lstlisting.7.13}%
 \contentsline {lstlisting}{\numberline {7.14}{\ignorespaces Parsování datového souboru omluvy.unl}}{56}{lstlisting.7.14}%
 \contentsline {lstlisting}{\numberline {7.15}{\ignorespaces Transformace objektu Omluva na databázový objekt Excuse}}{57}{lstlisting.7.15}%
-\contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/app}.}}{65}{lstlisting.A.1}%
-\contentsline {lstlisting}{\numberline {A.2}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote}}}{65}{lstlisting.A.2}%
-\contentsline {lstlisting}{\numberline {A.3}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote{id}}}}{66}{lstlisting.A.3}%
-\contentsline {lstlisting}{\numberline {A.4}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/party/vote/1}}}{67}{lstlisting.A.4}%
-\contentsline {lstlisting}{\numberline {A.5}{\ignorespaces Tělo odpovědi pro dotaz \lstinline |GET /api/member|}}{68}{lstlisting.A.5}%
-\contentsline {lstlisting}{\numberline {A.6}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/member/1}}}{68}{lstlisting.A.6}%
-\contentsline {lstlisting}{\numberline {A.7}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/member/1/vote}}}{69}{lstlisting.A.7}%
+\contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/app}.}}{73}{lstlisting.A.1}%
+\contentsline {lstlisting}{\numberline {A.2}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote}}}{73}{lstlisting.A.2}%
+\contentsline {lstlisting}{\numberline {A.3}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/vote{id}}}}{74}{lstlisting.A.3}%
+\contentsline {lstlisting}{\numberline {A.4}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/party/vote/1}}}{75}{lstlisting.A.4}%
+\contentsline {lstlisting}{\numberline {A.5}{\ignorespaces Tělo odpovědi pro dotaz \lstinline |GET /api/member|}}{76}{lstlisting.A.5}%
+\contentsline {lstlisting}{\numberline {A.6}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/member/1}}}{76}{lstlisting.A.6}%
+\contentsline {lstlisting}{\numberline {A.7}{\ignorespaces Tělo odpovědi pro dotaz \lstinline {GET /api/member/1/vote}}}{77}{lstlisting.A.7}%

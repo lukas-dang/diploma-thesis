@@ -1,22 +1,23 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'ctufit-thesis.blg'
-[105] biber-MSWIN64:340> INFO - === 
-[138] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
-[230] Biber.pm:978> INFO - Found 35 citekeys in bib section 0
-[243] Biber.pm:4401> INFO - Processing section 0
-[253] Biber.pm:4592> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
-[300] bibtex.pm:1713> INFO - LaTeX decoding ...
-[370] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
-[507] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[507] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[507] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
-[528] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
-[537] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
-[538] Biber.pm:130> WARN - Duplicate entry key: 'psp' in file 'text/bib-database.bib', skipping ...
-[538] Biber.pm:130> WARN - Duplicate entry key: 'recycler-view' in file 'text/bib-database.bib', skipping ...
-[538] Biber.pm:130> WARN - Duplicate entry key: 'gradle' in file 'text/bib-database.bib', skipping ...
-[538] Biber.pm:130> WARN - Duplicate entry key: 'gradle' in file 'text/bib-database.bib', skipping ...
-[538] Biber.pm:130> WARN - Duplicate entry key: 'congress' in file 'text/bib-database.bib', skipping ...
-[538] Biber.pm:130> WARN - legacy year field 'Jan 2020' in entry 'politiscope' is not an integer - this will probably not sort properly.
-[538] Biber.pm:130> WARN - legacy year field 'Jan 2019' in entry 'congress' is not an integer - this will probably not sort properly.
-[538] Biber.pm:132> INFO - WARNINGS: 7
+[93] biber-MSWIN64:340> INFO - === 
+[126] Biber.pm:418> INFO - Reading 'ctufit-thesis.bcf'
+[218] Biber.pm:978> INFO - Found 37 citekeys in bib section 0
+[231] Biber.pm:4401> INFO - Processing section 0
+[241] Biber.pm:4592> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
+[288] bibtex.pm:1713> INFO - LaTeX decoding ...
+[351] bibtex.pm:1518> INFO - Found BibTeX data source 'text/bib-database.bib'
+[468] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[468] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[468] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[490] bbl.pm:654> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
+[500] bbl.pm:757> INFO - Output to ctufit-thesis.bbl
+[500] Biber.pm:130> WARN - Duplicate entry key: 'spring-boot-testing' in file 'text/bib-database.bib', skipping ...
+[500] Biber.pm:130> WARN - Duplicate entry key: 'psp' in file 'text/bib-database.bib', skipping ...
+[500] Biber.pm:130> WARN - Duplicate entry key: 'recycler-view' in file 'text/bib-database.bib', skipping ...
+[500] Biber.pm:130> WARN - Duplicate entry key: 'gradle' in file 'text/bib-database.bib', skipping ...
+[500] Biber.pm:130> WARN - Duplicate entry key: 'gradle' in file 'text/bib-database.bib', skipping ...
+[501] Biber.pm:130> WARN - Duplicate entry key: 'congress' in file 'text/bib-database.bib', skipping ...
+[501] Biber.pm:130> WARN - legacy year field 'Jan 2020' in entry 'politiscope' is not an integer - this will probably not sort properly.
+[501] Biber.pm:130> WARN - legacy year field 'Jan 2019' in entry 'congress' is not an integer - this will probably not sort properly.
+[501] Biber.pm:132> INFO - WARNINGS: 8
