@@ -68,6 +68,7 @@ Na webu PSP \cite{psp-data} jsou poskytovány informace o datových typech sloup
 Data jsou poskytována bezplatně, využití dat je podmíněno uvedením zdroje dat a případně datem zpracování dat \cite{psp-data}. V mobilní aplikaci bude uveden zdroj.
 
 \section{Datové soubory}
+\label{sec:data-file}
 
 Zde budou vypsány použité datové soubory ve zdrojových souborech uvedených v podkapitole \ref{sec:source-data} a jejich stručný popis. Soubory budou popsány detailněji v následující sekci \ref{sec:db-tables}. Ze zdrojového souboru \lstinline|poslanci.zip| budou použity následující datové soubory:
 
@@ -94,10 +95,10 @@ Zde budou vypsány použité datové soubory ve zdrojových souborech uvedených
 \section{Tabulky}
 \label{sec:db-tables}
 
-Na \ref{fig:class-diagram} lze vidět diagram zdrojových dat, s kterými bude dále v práci pracováno. Obsahuje typy dat, jejich atributy, datové typy atributů a vazby mezi typy. Atributy identifikující daný typ jsou zvýrazněny tučným písmem. Následovat bude výčet použitých tabulek s popisem atributů. Pro stručnost budou u tabulek uvedeny pouze atributy, které jsou v rámci práce používány. Poznatky v textu jsou převážně z \textbf{analýzy obsahu datových souborů} a nejsou na stránkách PS nijak zdokumentovány.
+Na diagramu zdrojových dat \ref{fig:class-diagram} jsou ilustrovány tabulky reprezentující datové soubory popsané \linebreak v předchozí sekci \ref{sec:data-file}. Diagram byl vytvořen pomocí nástroje \cite{app-diagram}. Atribut identifikující danou tabulku je zvýrazněn tučným písmem. Některé tabulky jsou identifikovány více atributy. Ve zbytku této sekce budou detailněji popsány jednotlivé tabulky. V tabulkách budou uvedeny pouze ty atributy, kterou jsou použity v rámci této práce. Kompletní výčet atributů lze najít na webu PSP \cite{psp-data}. Většina poznatků ve zbytku této sekce pochází z analýzy obsahu datových souborů a nejsou na stránkách PSP nijak zdokumentována.
 
 \subsection*{organy}
-Tabulka \textbf{organy} \ref{table:organy} bude použita pro nalezení poslaneckých klubů v určitém volebním období. Všechny poslanecké kluby mají hodnotu atributu \textbf{id\_typ\_organu} rovnou 1. Poslanecké kluby v daném volebním období lze nalézt kontrolou, zda hodnoty atributů \textbf{od\_organ} a \textbf{do\_organ} spadají mezi hodnotami stejných atributů PSP. PSP je totiž také orgánem a lze ji najít prostřednictvím hodnoty atributu \textbf{id\_organ}. První PSP má identifikátor 165. PSP v každém následujícím volebním období má hodnotu identifikátoru o jednu větší než PSP v předchozím volebním období. Tedy např. PSP ve volebním období 2017 až 2021 má identifikátor 172. Dále pokud hodnota atributu \textbf{do\_organ} je rovna \lstinline|null|, pak jde o aktuální orgán.
+Tabulka \textbf{organy} \ref{table:organy} bude použita pro nalezení poslaneckých klubů v určitém volebním období. Všechny poslanecké kluby mají hodnotu atributu \textbf{id\_typ\_organu} rovnou 1. Poslanecké kluby \linebreak v daném volebním období lze získat dotazem nad všemi kluby, jejichž hodnoty atributů \linebreak \textbf{od\_organ} a \textbf{do\_organ} spadají mezi hodnotami atributů \textbf{od\_organ} a \textbf{do\_organ} PSP. PSP je totiž také orgánem, kterého lze získat přes atribut \textbf{id\_organ}. První PSP má identifikátor 165. PSP v každém následujícím volebním období má hodnotu identifikátoru o jednu větší než PSP \linebreak v předchozím volebním období. Tedy např. PSP z volebního období 2017 až 2021 má identifikátor 172. Dále pokud hodnota atributu \textbf{do\_organ} je rovna \lstinline|null|, pak jde o aktuální orgán.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -115,29 +116,29 @@ Tabulka \textbf{organy} \ref{table:organy} bude použita pro nalezení poslaneck
 		
 		\hline 
 		
-		id\textunderscore organ & int & Identifikátor orgánu \\
+		\lstinline|id_organ| & \lstinline|int| & Identifikátor orgánu \\
 		
 		\hline 
 		
-		id\textunderscore typ\textunderscore organu & int & Identifikátor typu orgánu \\
+		\lstinline|id_typ_organu| & \lstinline|int| & Identifikátor typu orgánu \\
 		
 		\hline 
 		
-		zkratka & char(X) & Zkratka orgánu \\
+		\lstinline|zkratka| & \lstinline|char(X)| & Zkratka orgánu \\
 		
 		\hline 
 		
-		nazev\textunderscore organu\textunderscore cz	 & char(X)	 & Název orgánu v češtině
+		\lstinline|nazev_organu_cz|	 & \lstinline|char(X)|	 & Název orgánu v češtině
 		\\
 		
 		\hline 
 		
-		od\textunderscore organ & date & Datum ustavení orgánu
+		\lstinline|od_organ| & \lstinline|date| & Datum ustavení orgánu
 		\\
 		
 		\hline 
 		
-		do\textunderscore organ & date & Datum ukončení orgánu
+		\lstinline|do_organ| & \lstinline|date| & Datum ukončení orgánu
 		\\
 		
 		\hline 
@@ -147,7 +148,7 @@ Tabulka \textbf{organy} \ref{table:organy} bude použita pro nalezení poslaneck
 
 \subsection*{osoby}
 
-Tabulka \textbf{osoby} \ref{table:osoby} bude použita pro získání osobních údajů o poslancích. Tabulka však nezahrnuje pouze poslance, ale i další osoby senátu. Pro zjištění, kterého poslance reprezentuje daná osoba, je potřeba použít tabulku \textbf{zarazeni}. Zde je zajímavé datum narození, které je 1. 1. 1900, pokud je neznámo. Zobrazovat toto datum v mobilní aplikaci by nebylo ideální. V kapitole \linebreak o návrhu REST API bude popsána transformace tohoto data na jinou hodnotu.
+Tabulka \textbf{osoby} \ref{table:osoby} bude použita pro získání osobních údajů o poslancích. Zde je zajímavé datum narození, které je 1. 1. 1900, pokud je neznámo. Zobrazovat toto datum v mobilní aplikaci při absenci data narození poslance by nebylo ideální. V kapitole \ref{sec:rest} je uvedena ztransformovaná verze tohoto data.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -167,23 +168,23 @@ Tabulka \textbf{osoby} \ref{table:osoby} bude použita pro získání osobních 
 		
 		\hline 
 		
-		id\textunderscore osoba & int & Identifikátor osoby \\
+		\lstinline|id_osoba| & \lstinline|int| & Identifikátor osoby \\
 		
 		\hline 
 		
-		jmeno & char(X) & Jméno \\
+		\lstinline|jmeno| & \lstinline|char(X)| & Jméno \\
 		
 		\hline 
 		
-		prijmeni & char(X) & Příjmení \\
+		\lstinline|prijmeni| & \lstinline|char(X)| & Příjmení \\
 		
 		\hline 
 		
-		narozeni & date & Datum narození, pokud neznámo, pak 1.1.1900. \\
+		\lstinline|narozeni| & \lstinline|date| & Datum narození, pokud neznámo, pak 1.1.1900. \\
 		
 		\hline 
 		
-		pohlavi & char(X) & Pohlaví, "M" jako muž, ostatní hodnoty žena \\
+		\lstinline|pohlavi| & \lstinline|char(X)| & Pohlaví, M jako muž, ostatní hodnoty žena \\
 		
 		\hline 
 		
@@ -193,9 +194,7 @@ Tabulka \textbf{osoby} \ref{table:osoby} bude použita pro získání osobních 
 
 \subsection*{zarazeni}
 
-Tabulka zařazení bude použita ke zjištění příslušnosti poslance do poslaneckého klubu. Zde je potřeba dát pozor na to, že atribut \textbf{id\_of} může reprezentovat buď tabulku \textbf{organ} (tu používáme) nebo tabulku \textbf{funkce} (tu nepoužíváme, a tudíž tu není uvedena) podle toho, zda je hodnota atributu \textbf{cl\_funkce} rovna 0 nebo 1. Tabulka \textbf{funkce} reprezentuje konkrétní funkci v daném orgánu. Pro účely této práce tato informace není potřeba, a proto tu tabulka \textbf{funkce} není uvedena. Je však potřeba zjistit příslušnost poslance do poslaneckého klubu, kterou lze zjistit kombinací tabulky \textbf{zarazeni} a \textbf{organy}. Důsledkem popsaného je to, že nás budou zajímat pouze zařazení \linebreak s hodnotou atributu \textbf{cl\_funkce} rovnou 0. Tím pádem identifikátor \textbf{id\_of} bude vždy referovat k tabulce \textbf{organy}. Tabulka \textbf{organy} obsahuje poslanecké kluby, což je přesně to, co potřebujeme. Dále pokud hodnota atributu \textbf{do\_o} je rovna \lstinline|null|, pak jde o aktuální zařazení.
-
-\newpage
+Tabulka zařazení bude použita ke zjištění příslušnosti poslance do poslaneckého klubu. Atribut \textbf{id\_of} může reprezentovat buď tabulku \textbf{organ} (tu používáme) nebo tabulku \textbf{funkce} (tu nepoužíváme, a tudíž tu není uvedena) podle toho, zda je hodnota atributu \textbf{cl\_funkce} rovna 0 nebo 1. Tabulka \textbf{funkce} reprezentuje konkrétní funkci v daném orgánu. Pro účely této práce tato informace není potřeba, a proto zde tabulka \textbf{funkce} není uvedena. Je však potřeba zjistit příslušnost poslance do poslaneckého klubu, kterou lze zjistit kombinací tabulek \textbf{poslanec}, \textbf{osoby}, \textbf{zarazeni} a \textbf{organy}. Zajímat nás tedy budou pouze taková zařazení, která mají hodnotu atributu \textbf{cl\_funkce} rovnou 0. Dále pokud hodnota atributu \textbf{do\_o} je rovna \lstinline|null|, pak jde o aktuální zařazení.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{8cm}|}
@@ -214,26 +213,26 @@ Tabulka zařazení bude použita ke zjištění příslušnosti poslance do posl
 		
 		\hline 
 		
-		id\textunderscore osoba & int & Identifikátor osoby, viz osoba:id\textunderscore osoba \\
+		\lstinline|id_osoba| & \lstinline|int| & Identifikátor osoby, viz osoba:id\textunderscore osoba \\
 		
 		\hline 
 		
-		id\textunderscore of & int & Identifikátor orgánu či funkce: pokud je zároveň nastaveno zarazeni:cl\textunderscore funkce == 0, pak id\textunderscore o odpovídá organy:id\textunderscore organ, pokud cl\textunderscore funkce == 1, pak odpovídá funkce:id\textunderscore funkce.
+		\lstinline|id_of| & \lstinline|int| & Identifikátor orgánu či funkce: pokud je zároveň nastaveno zarazeni:cl\textunderscore funkce == 0, pak id\textunderscore o odpovídá organy:id\textunderscore organ, pokud cl\textunderscore funkce == 1, pak odpovídá funkce:id\textunderscore funkce.
 		\\
 		
 		\hline 
 		
-		cl\textunderscore funkce & int & Status členství nebo funkce: pokud je rovno 0, pak jde o členství, pokud 1, pak jde o funkci.
+		\lstinline|cl_funkce| & \lstinline|int| & Status členství nebo funkce: pokud je rovno 0, pak jde o členství, pokud 1, pak jde o funkci.
 		\\
 		
 		\hline 
 		
-		od\textunderscore o & datetime(year to hour)	 & Zařazení od
+		\lstinline|od_o| & \lstinline|datetime(year to hour)|	 & Zařazení od
 		\\
 		
 		\hline 
 		
-		do\textunderscore o & datetime(year to hour)	 & Zařazení do
+		\lstinline|do_o| & \lstinline|datetime(year to hour)|	 & Zařazení do
 		\\
 		
 		\hline 
@@ -243,7 +242,7 @@ Tabulka zařazení bude použita ke zjištění příslušnosti poslance do posl
 
 \subsection*{poslanec}
 
-Tabulka \textbf{poslanec} \ref{table:poslanec} slouží pro získání informací o všech poslancích. Pokud je někdo poslancem ve více volebních obdobích, pak bude v této tabulce mít více záznamů. Tedy dva poslanci mohou reprezentovat tutéž osobu, pokud jsou z různých volebních období. Dále pomocí atributu \textbf{id\_osoba} lze tabulku zjistit osobní údaje o poslanci. Dále pomocí atributu \textbf{id\_kraj} lze získat název volebního kraje. A pomocí atributu \textbf{id\_obdobi} lze zjisti volební období, do kterého přísluší. Hodnota atributu \textbf{id\_obdobi} totiž odpovídá identifikátoru některé z PSP. Např. pokud poslanec patří do PSP v prvním volebním období (orgán mající identifikátor 165), pak je hodnota atributu \textbf{id\_obdobi} rovna 165. Dále někteří poslanci mají profilové foto. Po analýze fotek poslanců na oficiálním portálu PSP byl zjištěn následující vzor pro URL fotky \linebreak poslance: \lstinline|https://www.psp.cz/eknih/cdrom/XXXXps/eknih/XXXXps/poslanci/iYYY.jpg|, kde \lstinline|XXXX| je identifikátor osoby (pozor, ne identikátor poslance) a \lstinline|YYY| je identifikátor PS (např. 165). Příklad: pokud bychom chtěli najít URL s fotkou poslance s identifikátorem 1659, zjistíme hodnoty atributů \textbf{id\_kraj} a \textbf{id\_obdobi}, a na základě nich vygenerujeme URL fotky.
+Tabulka \textbf{poslanec} \ref{table:poslanec} slouží pro získání seznamu poslanců v daném volebním období. Pokud je někdo poslancem ve více volebních obdobích, objeví se v této tabulce vícekrát, pokaždé s jiným identifikátorem. Dále pomocí atributu \textbf{id\_kraj} lze skrz tabulku \textbf{organy} získat název volebního kraje. A pomocí atributu \textbf{id\_obdobi} lze zjistit volební období, v kterém byl poslancem. Hodnota atributu \textbf{id\_obdobi} totiž odpovídá identifikátoru PSP v určitém volebním období. Např. poslanec s hodnotou atributu \textbf{id\_obdobi} rovnou 165 je poslancem PSP s identifikátorem 165. Dále někteří poslanci mají profilové foto. Po analýze fotek poslanců na webu PSP byl zjištěn následující vzor pro URL fotky poslance: \lstinline|https://www.psp.cz/eknih/cdrom/XXXXps/eknih/XXXXps/poslanci/iYYY.jpg|, kde \lstinline|XXXX| je identifikátor osoby a \lstinline|YYY| je identifikátor PSP.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -262,23 +261,23 @@ Tabulka \textbf{poslanec} \ref{table:poslanec} slouží pro získání informac�
 		
 		\hline 
 		
-		id\textunderscore poslanec & int & Identifikátor poslance \\
+		\lstinline|id_poslanec| & \lstinline|int| & Identifikátor poslance \\
 		
 		\hline 
 		
-		id\textunderscore osoba & int & Identifikátor osoby, viz osoba:id\textunderscore osoba \\
+		\lstinline|id_osoba| & \lstinline|int| & Identifikátor osoby, viz osoba:id\textunderscore osoba \\
 		
 		\hline 
 		
-		id\textunderscore kraj & int & Volební kraj, viz organy:id\textunderscore organu \\
+		\lstinline|id_kraj| & \lstinline|int| & Volební kraj, viz organy:id\textunderscore organu \\
 		
 		\hline 
 		
-		id\textunderscore obdobi & int & Volební období, viz organy:id\textunderscore organu \\
+		\lstinline|id_obdobi| & \lstinline|int| & Volební období, viz organy:id\textunderscore organu \\
 		
 		\hline 
 		
-		foto & int & Pokud je rovno 1, pak existuje fotografie poslance. \\
+		\lstinline|foto| & \lstinline|int| & Pokud je rovno 1, pak existuje fotografie poslance \\
 		
 		\hline 
 		
@@ -286,8 +285,11 @@ Tabulka \textbf{poslanec} \ref{table:poslanec} slouží pro získání informac�
 \end{center}
 
 \subsection*{hl\textunderscore hlasovani}
+\label{subsec:hl-hlasovani}
 
-Tabulka \textbf{hl\_hlasovani} obsahuje většinu potřebných informací o hlasováních o daném návrhu zákona. Čislo schůze a číslo hlasování budou použity pro sestavení URL pro stenoprotokol daného hlasování. Podle webu se od účinnosti novely jednacího řádu 90/1995 Sb. nerozlišuje zdržel se \linebreak a nehlasoval, tj. příslušné počty se sčítají. Z toho plyne, že by mobilní aplikaci měla u hlasováních uskutečněných před účinností této novely mít kolonku pro počet poslanců, kterí nehlasovali. \linebreak A u hlasováních uskutečněných po účinnosti této novely by tam daná kolonka již být neměla.
+Tabulka \textbf{hl\_hlasovani} obsahuje informace o návrzích zákonů a výsledcích jejich hlasování. Čislo schůze bude použito pro sestavení URL adresu ke stenoprotokolu jednání o daném návrhu zákona. Po analýze stenoprotokolů na webu PSP bylo zjištěno, že lze sestavit URL adresu ke stenoprotokolu ale pouze na první jeho stránky. Nelze sestavit URL adresu na \linebreak stránku, kde se jedná o daném návrhu zákona. Vzor pro URL adresu stenoprotokolu je \linebreak \lstinline|https://www.psp.cz/eknih/XXXXps/stenprot/YYYschuz|, kde \lstinline|XXXX| je volební rok a \lstinline|YYY| je číslo schůze. Dále podle webu se od účinnosti novely jednacího řádu 90/1995 Sb. nerozlišuje zdržel se a nehlasoval, tj. příslušné počty se sčítají. Z toho plyne, že by mobilní aplikaci měla u hlasováních uskutečněných před účinností této novely mít kolonku pro počet poslanců, kterí nehlasovali. A u hlasováních uskutečněných po účinnosti této novely by tam daná kolonka již být neměla.
+
+\newpage
 
 \begin{center}
 	\begin{longtable}{|l|l|p{7cm}|}
@@ -306,61 +308,61 @@ Tabulka \textbf{hl\_hlasovani} obsahuje většinu potřebných informací o hlas
 		
 		\hline 
 		
-		id\textunderscore hlasovani & int & Identifikátor hlasování \\
+		\lstinline|id_hlasovani| & \lstinline|int| & Identifikátor hlasování \\
 		
 		\hline 
 		
-		schuze & int & Číslo schůze
+		\lstinline|schuze| & \lstinline|int| & Číslo schůze
 		\\
 		
 		\hline 
 		
-		cislo & int & Číslo hlasování
+		\lstinline|cislo| & \lstinline|int| & Číslo hlasování
 		\\
 		
 		\hline 
 		
-		datum & date & Datum hlasování
+		\lstinline|datum| & \lstinline|date| & Datum hlasování
 		\\
 		
 		\hline 
 		
-		čas & datetime(hour to minute)	 & Čas hlasování
+		\lstinline|cas| & \lstinline|datetime(hour to minute)|	 & Čas hlasování
 		\\
 		
 		\hline 
 		
-		pro & int & Počet hlasujících pro
+		\lstinline|pro| & \lstinline|int| & Počet hlasujících pro
 		\\
 		
 		\hline 
 		
-		proti & int & Počet hlasujících proti
+		\lstinline|proti| & \lstinline|int| & Počet hlasujících proti
 		\\
 		
 		\hline 
 		
-		zdrzel & int & Počet hlasujících zdržel se, tj. stiskl tlačítko X
+		\lstinline|zdrzel| & \lstinline|int| & Počet hlasujících zdržel se
 		\\
 		
 		\hline 
 		
-		nehlasoval & int & Počet přihlášených, kteří nestiskli žádné tlačítko
+		\lstinline|nehlasoval| & \lstinline|int| & Počet přihlášených, kteří nestiskli žádné tlačítko
 		\\
 		
 		\hline 
 		
-		prihlaseno & int & Počet přihlášených poslanců
+		\lstinline|prihlaseno| & \lstinline|int| & Počet přihlášených poslanců
 		\\
 		
 		\hline 
 		
-		vysledek & char(X)	 & Výsledek: A -- přijato, R -- zamítnuto, jinak zmatečné hlasování
+		\lstinline|vysledek| & \lstinline|char(X)|	 & Výsledek: A -- přijato, R -- zamítnuto, jinak zmatečné hlasování
 		\\
 		
 		\hline 
 		
-		nazev\textunderscore dlouhy & char(X)	 & Dlouhý název bodu hlasování
+		\lstinline|nazev_dlouhy| & char(X)	 & Dlouhý název bodu hlasování
 		\\
 		
 		\hline 
@@ -370,7 +372,9 @@ Tabulka \textbf{hl\_hlasovani} obsahuje většinu potřebných informací o hlas
 
 \subsection*{hl\textunderscore poslanec}
 
-Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který poslanec v rámci kterého hlasování. Výsledky 'B' a 'N' jsou interpretovány stejně, oba znamenají hlasování proti. Výsledek 'Fb se používalo před rokem 1995. Po roce 1995 má vždy hodnotu 0. Výsledek 'W' je velmi ojedinělý a v případě, že nastane, sečte se do počtu nepřihlášených. U výsledku 'K' se mi nepodařilo zjistit, co přesně znamená zdržel se/nehlasoval. Ve zdrojových datech se vysktuje spíš méně, ale častěji než výsledek 'W'. Na webu PSP je tento výsledek u jednoho hlasování v roce 2013 interpretován jako nehlasoval. Z toho lze usoudit pouze to, že 'K' může znamenat nehlasoval. Není však z toho jasné, kdy může znamenat zdržel se. Na výsledek hlasování má vliv pouze počet pro a proti, a tudíž bylo rozhodnuto, že tento výsledek bude mobilní aplikaci ignorován. 
+Tabulka \textbf{hl\_poslanec} obsahuje výsledky hlasování poslanců o návrzích zákonů, tj. informace \linebreak o tom, jak hlasoval který poslanec o kterém návrhu zákona. Výsledky 'B' a 'N' jsou interpretovány stejně, oba znamenají hlasování proti. Výsledek 'F' znamená, že poslanec nehlasoval. Používal se pouze před rokem 1995, jak bylo popsáno v předchozí sekci \ref{subsec:hl-hlasovani}. Po roce 1995 má vždy hodnotu 0. Výsledek 'W' se v datech vyskytuje velmi málo a v případě, že nastane, se jeho počet přičte k počtu nepřihlášených. U výsledku 'K' se mi nepodařilo zjistit, co přesně znamená \linebreak zdržel se/nehlasoval. V datech se nevyskytuje moc často. Na webu PSP je tento výsledek hlasování u jednoho návrhu zákona v roce 2013 interpretován jako nehlasoval. Z toho lze usoudit pouze to, že 'K' může znamenat, že poslanec nehlasoval. Není však z toho jasné, kdy může znamenat to, že se poslanec zdržel. Na výsledek hlasování to nemá vliv. Na výsledek hlasování má pouze vliv počet pro a proti, a tudíž bylo rozhodnuto, že výsledek 'K' bude ignorován. 
+
+\newpage
 
 \begin{center}
 	\begin{longtable}{|l|l|p{9cm}|}
@@ -389,17 +393,17 @@ Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který posla
 		
 		\hline 
 		
-		id\textunderscore poslanec & int & Identifikátor poslance, viz poslanec:id\textunderscore poslanec
+		\lstinline|id_poslanec| & \lstinline|int| & Identifikátor poslance, viz poslanec:id\textunderscore poslanec
 		\\
 		
 		\hline 
 		
-		id\textunderscore hlasovani & int & Identifikátor hlasování, viz hl\textunderscore hlasovani:id\textunderscore hlasovani
+		\lstinline|id_hlasovani| & \lstinline|int| & Identifikátor hlasování, viz hl\textunderscore hlasovani:id\textunderscore hlasovani
 		\\
 		
 		\hline 
 		
-		vysledek & char(X) & Hlasování jednotlivého poslance. 'A' - ano, 'B' nebo 'N' -- ne, 'C' -- zdržel se, 'F' -- nehlasoval, '@' -- nepřihlášen, 'M' -- omluven, 'W' -- hlasování před složením slibu poslance, 'K' -- zdržel se/nehlasoval.
+		\lstinline|vysledek| & \lstinline|char(X)| & Hlasování jednotlivého poslance. 'A' - ano, 'B' nebo 'N' -- ne, 'C' -- zdržel se, 'F' -- nehlasoval, '@' -- nepřihlášen, 'M' -- omluven, 'W' -- hlasování před složením slibu poslance, 'K' -- zdržel se/nehlasoval.
 		\\
 		
 		\hline 
@@ -409,11 +413,7 @@ Tabulka \textbf{hl\_poslanec} obsahue informace o tom, jak hlasoval který posla
 
 \subsection*{omluvy}
 
-Tabulka \textbf{omluvy} \ref{table:omluvy} zaznamenává časové ohraničení omluv poslanců z jednání Poslanecké sněmovny. Slouží pouze po spočtení počtu omluvených poslanců během hlasování. Podáváme-li se na statistiky o hlasování poskytnuté tabulkou \textbf{hl\_hlasovani}, uvidíme, že poskytuje počet hlasování pro, proti, a počet zdržených, ale již ne počet nepřihlášených a omluvených. Počet omluvených byl přidán až po 1995, kdy pouze nahradil počet poslanců, kteří nehlasovali. Počet nehlasujících poslanců tedy nepomůže k odvození počtu nepřihlášených a omluvených. Jediná další informace v tabulce \textbf{hl\_hlasovani} je tedy počet přihlášených. Intuitivně by člověk čekal, že doplněk pro počet přihlášených je počet nepřihlášených, ale není tomu tak. Když jsem od počtu poslanců (200) odečetl počet přihlášených, nikdy to nevycházelo s počty nepřihlášených na webu, ať už jsem to zkoušel s jakýmkoliv hlasování. Z toho důvodu je počet omluvených počítáno z tabulky \textbf{omluvy}, kde na základě atributů \textbf{den}, \textbf{od} a \textbf{do} zjistíme, zda datum a čas omluvy poslance spadá do data a času daného hlasování.
-
-Podle popisu tabulky na webu data slouží pro nahrazení výsledku typu '@', tj. pokud výsledek hlasování jednotlivého poslance je nepřihlášen. Pokud čas hlasování spadá do časového intervalu omluvy, pak se za výsledek považuje 'M', tj. omluven.
-
-\newpage
+Tabulka \textbf{omluvy} \ref{table:omluvy} zaznamenává časově ohraničené omluvy poslanců z jednání PSP. Slouží pouze po spočtení počtu omluvených poslanců během hlasování. Používá se pro spočítání počtu omluvených poslanců, který v tabulce \ref{table:hl_hlasovani} nejsou. Podle webu PSP slouží tato tabulka pro nahrazení výsledku hlasování typu '@', tj. pokud výsledek hlasování jednotlivého poslance je nepřihlášen. Odůvodnění je, že počet omluvených je přidáván do dat se zpožděním. Dále pokud čas hlasování spadá do časového intervalu omluvy, pak se za výsledek považuje 'M', tj. omluven.
 
 \begin{center}
 	\begin{longtable}{|l|l|p{7cm}|}
@@ -432,30 +432,30 @@ Podle popisu tabulky na webu data slouží pro nahrazení výsledku typu '@', tj
 		
 		\hline 
 		
-		id\textunderscore organ & int & Identifikátor volebního období, viz organy:id\textunderscore organ
+		\lstinline|id_organ| & \lstinline|int| & Identifikátor volebního období, viz organy:id\textunderscore organ
 		\\
 		
 		\hline 
 		
-		id\textunderscore poslanec & int & Identifikátor poslance, viz poslanec:id\textunderscore poslanec
-		\\
-		
-		\hline 
-		
-		
-		den & date & Datum omluvy
+		\lstinline|id_poslanec| & \lstinline|int| & Identifikátor poslance, viz poslanec:id\textunderscore poslanec
 		\\
 		
 		\hline 
 		
 		
-		od & datetime(hour to minute)	 & Čas začátku omluvy, pokud je \lstinline|null|, pak i omluvy:do je \lstinline|null| a jedná se o omluvu na celý jednací den.
+		\lstinline|den| & \lstinline|date| & Datum omluvy
 		\\
 		
 		\hline 
 		
 		
-		do & datetime(hour to minute)	 & Čas konce omluvy, pokud je \lstinline|null|, pak i omluvy:od je \lstinline|null| a jedná se o omluvu na celý jednací den.	\\
+		\lstinline|od| & \lstinline|datetime(hour to minute)|	 & Čas začátku omluvy, pokud je \lstinline|null|, pak \linebreak i omluvy:do je \lstinline|null| a jedná se o omluvu na celý jednací den.
+		\\
+		
+		\hline 
+		
+		
+		\lstinline|do| & \lstinline|datetime(hour to minute)|	 & Čas konce omluvy, pokud je \lstinline|null|, pak \linebreak i omluvy:od je \lstinline|null| a jedná se o omluvu na celý jednací den.	\\
 		
 		\hline 
 		

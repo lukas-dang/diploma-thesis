@@ -1,7 +1,7 @@
 \chapter{Výběr architektury}
 
 \begin{chapterabstract}
-	V této kapitole budou popsány možné architektury pro mobilní aplikaci a backend. Cílem je rozdělit aplikaci do různých vrstev. Každá vrstva má na starosti jednu část zodpovědnosti aplikace. Vrstvy mezi sebou komunikují prostřednictvím pevně definovaného rozhraní. Díky tomu změna implementace jedné vrstvy neovlivní ostatní vrstvy, pokud rozhraní mezi vrstvami zůstane stejné.
+	V této kapitole budou popsány možné architektury pro mobilní aplikaci a backend. Cílem je rozdělit aplikaci do různých vrstev, kde každá vrstva bude mít na starosti jednu část zodpovědnosti aplikace. komunikují mezi sebou prostřednictvím pevně definovaného rozhraní. Díky tomu změna implementace jedné vrstvy neovlivní ostatní vrstvy, pokud rozhraní mezi vrstvami zůstane stejné.
 \end{chapterabstract}
 
 \section{Mobilní aplikace}
@@ -15,11 +15,11 @@ Softwarovou architekturu doporučenou Googlem \cite{android-architecture} ilustr
 	
 	\includegraphics[width=0.5\linewidth]{android-architecture-overall}
 	
-	\caption{Architektura pro mobilní aplikaci pro Android \cite{android-architecture}}
+	\caption{Architektura Android aplikaci \cite{android-architecture}}
 	\label{fig:android-architecture-overall}
 \end{figure}
 
-\noindent Architektura je rozdělená na UI vrstvu, doménovou vrstvu a datovou vrstvu. UI (také prezentační) vrstva má na starosti zobrazení dat do uživatelského rozhraní. Uživatelské rozhraní je aktualizováno na základě událostí (např. kliknutí na tlačítko) nebo externích vstupů (odpověď ze síťového volání). UI vrstva je složena z UI elementů a držitelů stavu, jak je ilustrováno na následujícím obrázku:
+\noindent Architektura je rozdělená na UI vrstvu, doménovou vrstvu a datovou vrstvu. UI (také prezentační) vrstva má na starosti zobrazování dat v UI. UI je aktualizováno na základě změn ve stavu UI. Stav UI je měněno prostřednictvím událostí (např. kliknutí na tlačítko) nebo externích vstupů (odpověď ze síťového volání). UI vrstva je složena z UI elementů a držitelů stavu, jak je ilustrováno na následujícím obrázku:
 
 \begin{figure}[H]
 	\centering
@@ -30,7 +30,9 @@ Softwarovou architekturu doporučenou Googlem \cite{android-architecture} ilustr
 	\label{fig:android-architecture-ui}
 \end{figure}
 
-\noindent UI elementy reprezentují elementy, které jsou vykreslovány obrazovku. Držitelé stavu mají na starosti správu dat a aplikační logiku. Změna dat v držiteli stavu způsobi změnu UI elementů a znovu vykreslení obrazovky. Datová vrstva, jak ilustruje následující obrázek, je složena z repozitářů \linebreak  a datových zdrojů. Repozitář má na starosti vystavení dat pro zbytek aplikace, abstrahování od konkrétního způsobu získávání dat (např. jestli jsou data získávána z lokální databáze nebo vzdálěně) a centralizaci dat.  Centralizace dat slouží pro vytvoření jednotného zdroje \linebreak pravdy, tj. data jsou zbytkem aplikace vždy čerpána přímo i nepřímo z toho zdroje. Datový zdroj pak reprezentuje konkrétní zdroj dat, z kterého jsou získávána data. Může to být \linebreak např. lokální soubor, backend nebo lokální databáze. 
+\noindent UI elementy reprezentují elementy, které jsou vykreslovány na obrazovku. Držitelé stavů mají na starosti správu stavu UI a obsluhu událostí vyvolaných z UI. Změna stavu v držiteli stavu způsobí změnu UI elementů a znovu vykreslení obrazovky. 
+
+Datová vrstva, jak ilustruje následující obrázek, je složena z repozitářů a datových zdrojů. Repozitář vystavuje data pro zbytek aplikace, čímž ho abstrahuje od konkrétního způsobu získávání dat (např. zda jsou data získávána lokálně nebo vzdáleně). Dále repozitář slouží pro centralizaci dat, což je způsob správy dat, kdy je vytvořen jednotný zdroj pravdy, tj. všechna data v aplikaci pochází vždy z tohoto zdroje, ať už přímo nebo nepřímo. Díky tomu jsou všechna data v aplikaci konzistentní. Datový zdroj pak reprezentuje konkrétní zdroj dat, z kterého jsou získávána data. Může to být např. lokální soubor, backend nebo lokální databáze. 
 
 \begin{figure}[H]
 	\centering
@@ -41,7 +43,7 @@ Softwarovou architekturu doporučenou Googlem \cite{android-architecture} ilustr
 	\label{fig:android-architecture-data}
 \end{figure}
 
-\noindent Doménová vrstva má na starosti zapouzdření složité business logiky nebo business logiky přepoužívané v několika držitelích stavu. Třídy v této vrstvě jsou obvykle pojmenovány jako \textit{use cases} nebo \textit{interactors}.
+\noindent Doménová vrstva má na starosti zapouzdření business logiky. Díky tomu je business logika přepoužitelná ve více držitelích stavů, pokud jich používáme několik. Třídám v této vrstvě říkáme \textit{use cases} nebo \textit{interactors}.
 
 \subsection{Zhodnocení}
 Architektura doporučená Googlem má následující výhody:
@@ -49,11 +51,11 @@ Architektura doporučená Googlem má následující výhody:
 \begin{itemize}
 	\item \textbf{Oddělení zodpovědnosti} -- Rozdělení aplikace do vrstev zlepšuje udržitelnost aplikace.  Vrstvy mají mezi sebou pevně definované rozhraní. Změna implementace jedné vrstvy bude mít minimální vliv na ostatní vrstvy.
 
-	\item \textbf{Řízení UI podle stavu dat} -- Uživatelské rozhraní automaticky reaguje na změnu stavu dat. 
+	\item \textbf{Řízení UI podle stavu dat} -- Uživatelské rozhraní automaticky reaguje na změnu stavu dat UI. 
 
 	\item \textbf{Jednotný zdroj pravdy} -- Zajišťuje konzistenci dat.
 
-	\item \textbf{Jednosměrný tok dat} -- Data putují pouze zeshora dolu (např. z datového zdroje k repozitáři, z repozitáře k držiteli stavu). Události putují pouze zezdola nahoru (např. z UI elementů k držitěli stavu, z držitele stavu k repoiztáři). Díky tomu je fungování aplikace predikovatelné a snadno debugovatelné.
+	\item \textbf{Jednosměrný tok dat} -- Data putují pouze zeshora dolu (např. z datového zdroje k repozitáři, z repozitáře k držiteli stavu). Události putují pouze zezdola nahoru (např. z UI elementů k držitěli stavu, z držitele stavu k repozitáři). Díky tomu je fungování aplikace predikovatelné a snadno debugovatelné.
 
 	\item \textbf{Je doporučený Googlem} -- Architektura je díky tomu obecně známá. Když by na této práce začal pracovat jiný Android vývojář, vyznal by se díky této architektuře v kódu lépe.
 \end{itemize}
@@ -73,32 +75,32 @@ Architektura doporučená Googlem má následující výhody:
 	
 	\item \textbf{Businessová} -- Obsahuje businessovou logiku aplikace. Definuje operace, které mohou být prováděny na datech, a implementuje businessové procesy. Komunikuje s perzistentní vrstvou pro ukládání a získání dat.	
 	
-	\item \textbf{Perzistentní} -- Tato vrstva má na starosti ukládání a získání dat z databáze. Slouží jako abstraktní rozhraní pro bussinessovou vrstvu pro přístup k datům. Data ukládá a získává komunikací s API databáze poskytované databázovou vrstvou.
+	\item \textbf{Perzistentní} -- Tato vrstva má na starosti ukládání a získávání dat z databáze. Funguje jako abstraktní rozhraní pro bussinessovou vrstvu pro přístup k datům. Data ukládá a získává prostřednictvím komunikace s API databáze v databázové vrstvě.
 	
-	\item \textbf{Databázová} -- Má na starosti ukládání dat. Může být implementovaná např. pomocí relační databáze. Poskytuje data perzistentní vrstvě.
+	\item \textbf{Databázová} -- Má na starosti ukládání dat. Může být implementována např. pomocí relační databáze. Poskytuje data perzistentní vrstvě.
 	
 \end{itemize}
 
-\noindent U větších projektů lze projekt také rozdělit podle funkcionalit (např. funkcionalita pro poskytování informací o hlasování a funkcionalita pro poskytování informací o poslancích) a v rámci těchto funkcionalit použít více vrstvou architekturu.
+\noindent U větších projektů lze projekt také rozdělit podle funkcionalit (např. funkcionalita pro poskytování informací o hlasování a funkcionalita pro poskytování informací o poslancích) a v rámci těchto funkcionalit použít 5-vrstvou architekturu.
 
 \subsection{Architektura mikroslužeb}
 Architektura mikroslužeb je architektonický styl, který rozděluje aplikaci do služeb, což jsou komponenty s následujícími vlastnostmi:
 
 \begin{itemize}
-	\item \textbf{Samostatně nasaditelné} -- Každou službu lze nasadit zvlášť od ostatních služeb
+	\item \textbf{Samostatně nasaditelné} -- Každou službu lze nasadit zvlášť od ostatních služeb.
 
-	\item \textbf{Volně propojené} -- Služby komunikují mezi sebou prostřednictvím API, a nejsou tedy závislé na implementaci ostatních služeb.
+	\item \textbf{Volně propojené} -- Služby komunikují mezi sebou prostřednictvím API, a nejsou tedy závislé na implementaci druhého.
 	
-	\item \textbf{Rozdělené podle domény} -- Každá služba má na starosti nějakou doménu v byznysu. \linebreak Např. jedna služba má na starosti účetnictví a jiná má na starosti objednávky.
+	\item \textbf{Rozdělené podle domény} -- Každá služba má na starosti určitou doménu v byznysu. \linebreak Např. jedna služba má na starosti účetnictví a jiná má na starosti objednávky.
 	
-	\item \textbf{Vývoj v několika týmech} -- Jednotlivé služby lze vyvjíet nezávisle na ostatních \linebreak službých, pokud je zachováno API mezi nima.
+	\item \textbf{Vývoj v několika týmech} -- Jednotlivé služby lze vyvíjet nezávisle na ostatních \linebreak službách, dokud je zachováno API mezi nima.
 	
-	\item \textbf{Dobře testovatelné a udržitelné} -- Každou službu lze testovat a udržovat zvlášť.
+	\item \textbf{Dobře testovatelné a udržitelné} -- Každou službu lze testovat a udržovat zvlášť od ostatních služeb.
 \end{itemize}
 
 \subsection{Zhodnocení}
-5-vrstvá architektura je pro účely této práce dostačující. Prezentační vrstvu bude použita pro vystavení endpointů REST API. Aplikační vrstva nebude pro jednoduchost \linebreak implementována, a místo toho budou její zodpovědnosti implementovány v rámci businessové vrstvy. Businessová vrstva bude sloužit pro abstrahování prezentační vrstvy od perzistentní vrstvy a validaci dat. Backend nebude mít téměř žádnou business logiku, bude pouze zpracovávat data z webu PSP a vystavovat je prostřednictvím REST API. Perzistentní vrstva bude použita pro abstrakci businessové vrstvy od databázové. To usnadní práce s databází. V rámci databázové vrstvy budou ukládáná data. Chybí tu však jedna další vrstva pro pravidelnou aktualizaci databázové vrstvy. Backend bude totiž pravidelně stahovat data z webu PSP a aktualizovat databázi. K této architektuře tedy bude navíc přidána \textbf{vrstva pro synchronizace databáze}.
+5-vrstvá architektura je pro účely této práce dostačující. Prezentační vrstva bude použita pro vytvoření endpointů REST API. Aplikační vrstva nebude pro jednoduchost \linebreak implementována, a místo toho budou její zodpovědnosti implementovány v rámci businessové vrstvy. Businessová vrstva bude sloužit pro abstrahování prezentační vrstvy od perzistentní vrstvy. Zároveň bude sloužit pro validaci dat. Backend nebude mít složitou business \linebreak logiku, bude pouze zpracovávat data z webu PSP a vystavovat je prostřednictvím REST API. Perzistentní vrstva bude použita pro abstrakci businessové vrstvy od databázové. To usnadní práce s databází. V rámci databázové vrstvy budou ukládáná data. Chybí tu však vrstva pro pravidelnou aktualizaci databáze. Backend bude totiž pravidelně stahovat data z webu PSP a aktualizovat databázi. K této architektuře tedy bude navíc přidána vrstva pro synchronizaci databáze se zdrojovými daty na web PSP.
 
-Architektura mikroslužeb se hodí pro velké projekty, kde je předpokládáno, že budou často přicházet nové požadavky o nové funkcionality v různých částech backendu. V takovém případě je dobré backend rozdělit do nezávislých částí a ty vyjíjet, testovat, nasazovat a udržovat zvlášť v několika týmech. Nevýhodou je větší komplexita projektu. Pro účely této práce stačí toto rozdělení není potřeba, jelikož požadavky jsou předem dané a nepředpokládá se, že se budou \linebreak v budoucnu měnit. Všechny části backendu tedy budou mezi sebou komunikovat prostřednictvím programového rozhraní, nikoliv API.
+Architektura mikroslužeb se hodí pro velké projekty, kde je předpokládáno, že budou často přicházet nové požadavky o nové funkcionality v různých částech backendu. V takovém případě je dobré backend rozdělit do nezávislých částí a ty vyjíjet, testovat, nasazovat a udržovat odděleně ve více týmech. Nevýhodou je větší komplexita projektu. Pro účely této práce toto rozdělení není potřeba, jelikož požadavky jsou předem dané a nepředpokládá se, že se budou \linebreak v budoucnu měnit. Všechny části backendu tedy budou mezi sebou komunikovat prostřednictvím programového rozhraní, nikoliv API.
 
 
