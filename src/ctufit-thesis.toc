@@ -41,14 +41,15 @@
 \contentsline {chapter}{\numberline {6}Implementace mobilní aplikace}{31}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Použité nástroje a technologie}{31}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Implementace prezentační vrstvy}{39}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{45}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Implementace datové vrstvy}{46}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Implementace síťové vrstvy}{47}{section.6.5}%
+\contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{44}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Implementace datové vrstvy}{45}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Implementace síťové vrstvy}{46}{section.6.5}%
 \contentsline {chapter}{\numberline {7}Implementace backendu}{49}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Prezentační vrstva}{50}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Doménová vrstva}{51}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Databázová vrstva}{53}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Zpracování dat}{54}{section.7.4}%
+\contentsline {section}{\numberline {7.1}Použité nástroje a technologie}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Prezentační vrstva}{50}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Doménová vrstva}{51}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Databázová vrstva}{53}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Zpracování dat}{54}{section.7.5}%
 \contentsline {chapter}{\numberline {8}Testování}{59}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Mobilní aplikace}{59}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Uživatelské testování}{59}{subsection.8.1.1}%
@@ -59,7 +60,9 @@
 \contentsline {section}{\numberline {9.1}Mobilní aplikace}{63}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Backend}{63}{section.9.2}%
 \contentsline {chapter}{\numberline {10}Závěr}{65}{chapter.10}%
-\contentsline {chapter}{\numberline {A}Příloha}{67}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Wireframes rozhraní aplikace}{67}{appendix.A}%
+\contentsline {chapter}{\numberline {B}REST API odpovědi}{73}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Databázový model}{79}{appendix.C}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -282,4 +285,46 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Obsah přiloženého média}{85}{appendix*.32}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Obsah přiloženého média}{87}{appendix*.32}%

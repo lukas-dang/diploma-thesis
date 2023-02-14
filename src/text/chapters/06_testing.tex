@@ -1,7 +1,7 @@
 \chapter{Testování}
 
 \begin{chapterabstract}
-V této kapitole bude popsána testování mobilní aplikace a backendu. Při testování mobilní aplikace byl kladen důraz na uživatelské testování, kdy je aplikace otestována reálným uživatelem. Dále byla otestována doménová a datová vrstva aplikace prostřednictvím automatizovaných unit testů. Na závěr byly přidány ještě UI testy které simulovali uživatelskou interakci s aplikací. V sekci pro popis testování backendu byl kladen důraz na testování prezentační vrstvy, tedy REST API.
+V této kapitole bude popsáno testování mobilní aplikace a backendu. Při testování mobilní aplikace byl kladen důraz na uživatelské testování, kdy je aplikace otestována reálným uživatelem. Dále byla otestována doménová a datová vrstva aplikace prostřednictvím automatizovaných unit testů. Na závěr byly přidány ještě UI testy které simulovali uživatelskou interakci s aplikací. Při testování backendu byl kladen důraz na testování prezentační vrstvy.
 \end{chapterabstract}
 
 
@@ -11,7 +11,7 @@ V této kapitole bude popsána testování mobilní aplikace a backendu. Při te
 Cílem uživatelského testování je sledovat chování uživatelů při používání aplikace, a odhalovat tím případné chyby nebo nedostatky. Testování se zúčastnili dva uživatelé, kteří dostali několik úkolů, přičemž se sledoval jejich postup řešení. Od účastníků byla na konci poskytnuta zpětná vazba k aplikaci. Účastníci používali následující mobilní zařízení:
 
 \begin{table}[!h]\centering
-	\caption[Použitá testovací zařízení]{Struktura agency}
+	\caption[Použitá testovací zařízení]{Uživatelé a konfigurace zařízení}
 	\begin{tabular}{|l|l|l|p{4cm}|}\hline
 		& Název zařízení	& Displej	& Verze OS \tabularnewline \hline \hline
 		\texttt{Uživatel 1} & \texttt{Poco X3}		& \texttt{2400 x 1080 6.67 "}	& 13.0		\tabularnewline \hline
@@ -60,7 +60,7 @@ Cílem uživatelského testování je sledovat chování uživatelů při použ�
 		\end{itemize}
 	
 	
-	\item \textbf{Nalezněte informace o tom, jak hlasoval poslanec hlasoval libovolný poslanec}
+	\item \textbf{Nalezněte informace o tom, jak hlasoval libovolný poslanec}
 	
 		\begin{itemize}
 				\item Uživatelovi 1 vykonal test bez problémů, na začátku však navigoval k detailu hlasování, kde si zobrazil výsledky hlasování členů klubu, jehož je daný poslanec členem. Poté si uvědomil, že k výsledku hlasování člena se lze dostat jednodušeji prostřednictvím detailu poslance.
@@ -95,38 +95,38 @@ Cílem uživatelského testování je sledovat chování uživatelů při použ�
 Uživatelské testování proběhlo v pořádku. Jediný zádrhel byl v úkolu při nalézání výsledku hlasování konkrétního poslance, jelikož se tato informace nachází na dvou různých místech. Poté co se uživatel však seznámil s aplikací, se mu již aplikace používala pohodlně. Od jednoho uživatele bylo oceněno, že při nalézání informací není potřeba se proklikat aplikací příliš hluboko.
 
 \subsection{Unit Testy}
-Unit testy jsou automatizované testy pro ověření funkčnosti dílčích částí zdrojového kódu (např. funkce a třídy). Tyto dílčí části jsou testovány v izolaci, tj. nejsou závislé na jiných částech. V praxi to znamená, že pokud testujeme např. třídu, která obsahuje referenci na objekt typu rozhraní, pak pro toto rozhraní vytvoříme dvě různé implementace. Jedna implementace bude obsahovat skutečnou funkcionalitu daného objektu. Druhá implementace bude testovací a bude funkcionalitu skutečného objektu pouze simulovat. Díky tomu můžeme třídy testovat nezávisle na sobě. Unit testy se nachází ve složce \texttt{test}. Byla testována základní funkčnost doménové (interactory a stránkovací mechanizmus) a datové vrstvy (datové zdroje). Pro interactory byly vytvořeny testovací implementace pro repozitáře. Pro datové zdroje byla vytvořena testovací implementace Retrofit rozhraní s HTTP dotazy pro komunikaci s databází. Závislosti byly vkládány pomocí DI knihovny Hilt. Zde je výčet testovacích souborů s unit testy:
+Unit testy jsou automatizované testy pro ověření funkčnosti dílčích částí zdrojového kódu (např. funkce a třídy). Tyto dílčí části jsou testovány v izolaci, tj. nejsou závislé na jiných částech. V praxi to znamená, že pokud testujeme např. třídu, která obsahuje referenci na objekt typu rozhraní, pak pro toto rozhraní vytvoříme dvě různé implementace. Jedna implementace bude obsahovat skutečnou funkcionalitu daného objektu. Druhá implementace bude testovací a bude funkcionalitu skutečného objektu pouze simulovat. Díky tomu můžeme třídy testovat nezávisle na sobě. Unit testy se nachází ve složce \texttt{test}. Byla testována základní funkčnost doménové (interactory a stránkovací mechanizmus) a datové vrstvy (datové zdroje). Pro interactory byly vytvořeny testovací implementace repozitářů. Pro datové zdroje byla vytvořena testovací implementace Retrofit rozhraní, které simulovalo síťové operace. Závislosti byly vkládány pomocí DI knihovny Hilt. Zde je výčet testovacích souborů s unit testy:
 
 \begin{itemize}
-	\item \textbf{PspRemoteDataSourceImplTest}
-	\item \textbf{MembersPagingSourceTest}
-	\item \textbf{MemberVotesPagingSourceTest}
-	\item \textbf{VotesPagingSourceTest}
-	\item \textbf{GetAppStateInteractorImplTest}
-	\item \textbf{GetMemberDetailsInteractorImplTest}
-	\item \textbf{GetPartyVotesInteractorImplTest}
-	\item \textbf{GetVoteDetailsInteractorImplTest}
+	\item \textbf{PspRemoteDataSourceImplTest} - Test vzdáleného datového zdroje.
+	\item \textbf{MembersPagingSourceTest} - Test stránkovacího mechanizmu pro seznam poslanců.
+	\item \textbf{MemberVotesPagingSourceTest} - Test stránkovacího mechanizmu pro seznam hlasování poslanců.
+	\item \textbf{VotesPagingSourceTest} - Test stránkovacího mechanizmu pro seznam hlasování.
+	\item \textbf{GetAppStateInteractorImplTest} - Test business logiky pro získání stavu aplikace.
+	\item \textbf{GetMemberDetailsInteractorImplTest} - Test business logiky pro získání detail poslance.
+	\item \textbf{GetPartyVotesInteractorImplTest} - Test business logiky pro získání hlasování klubů.
+	\item \textbf{GetVoteDetailsInteractorImplTest} - Test business logiky pro získání detailu hlasování.
 \end{itemize}
 
 \subsection{UI testy}
 UI testy jsou automatické testy pro testování uživatelského rozhraní. V této aplikaci vyžadují fyzické zařízení nebo emulátor. Pro toto testování byla použita knihovna Jetpack Compose , jelikož UI je implementováno taktéž pomocí knihovny Jetpack Compose \cite{compose-test}. Ta poskytuje objekty a metody pro dotazování se nad komponentami a jejich informace na obrazovce, a události jako kliknutí na tlačítko nebo scrollování. Tyto testy se nachází ve složce \texttt{androidTest}. Testovány byly komponenty reprezentující obrazovku. Zde je výčet testovacích souborů s UI testy:
 
 \begin{itemize}
-	\item \textbf{VoteListScreenTest}
-	\item \textbf{PartyVotesScreenTest}
-	\item \textbf{VoteDetailsScreenTest}
-	\item \textbf{MemberListScreenTest}
-	\item \textbf{MemberDetailsScreenTest}
-	\item \textbf{SettingsScreenKtTest}
+	\item \textbf{VoteListScreenTest} - Testování obrazovky pro seznam hlasování.
+	\item \textbf{PartyVotesScreenTest} - Testování obrazovky pro seznam hlasování klubů a jejich členů.
+	\item \textbf{VoteDetailsScreenTest} - Testování obrazovky pro seznam detail hlasování.
+	\item \textbf{MemberListScreenTest} - Testování obrazovky pro seznam poslanců.
+	\item \textbf{MemberDetailsScreenTest} - Testování obrazovky pro detail poslance.
+	\item \textbf{SettingsScreenKtTest} - Testování obrazovky pro nastavení.
 \end{itemize}
 
 \section{Backend}
-Na backendu byla testována prezentační vrstva, kde se především ověřovalo, zda JSON vracený z REST API je ve správném formátu. Testování bylo implementováno pomocí knihovny Spring Boot. Testování bylo prováděno podle návodu na stránkách Spring Bootu \cite{spring-boot-testing}, kde se jednotlivé controllery v prezentační vrstvě testují jako unit testy. Ty jsou závislé na komponentách service z doménové vrstvy a mapper pro mapování objektů. Místo vytvoření rozhraní a testovací implementace, jako se to dělalo u mobilní aplikace, jsou tyto komponenty mockovány, tj. jsou nahrazeny za jeho testovací imitaci, která neprovádí žádnou funkci a jen se tváří jako původní objekt \cite{mocking}. Aby prováděla nějakou funkci, musíme ji to explicitně nastavit. Nastavení probíhá tak, že zvolíme její funkci, a řekneme ji, že pro parametr X bude vracet výsledek Y. Pokud je tato funkce tedy zavolána s parametrem X, vrátí výsledek Y. V opačném případě vrací výchozí hodnotu návratového typu dané metody. Testy se nachází ve složce \texttt{test}:
+Na backendu byla testována prezentační vrstva, kde se především ověřovalo, zda JSON vracený z REST API je ve správném formátu a zda vrací korektní data. Testování bylo implementováno pomocí knihovny Spring Boot. Testování bylo prováděno podle návodu na stránkách Spring Bootu \cite{spring-boot-testing}, kde se jednotlivé controllery v prezentační vrstvě testují jako unit testy. Ty jsou závislé na komponentách service z doménové vrstvy a mapper pro mapování objektů. Místo vytvoření rozhraní pro ně a testovací implementace, jako se to dělalo u mobilní aplikace, jsou tyto komponenty mockovány, tj. jsou nahrazeny za jeho testovací imitaci, která neprovádí žádnou funkci a jen se tváří jako původní objekt \cite{mocking}. Aby prováděla nějakou funkci, musíme ji to explicitně nastavit prostřednictvím mockovací knihovny Mockito \cite{mockito}. Testy se nachází ve složce \texttt{test}:
 
 \begin{itemize}
-	\item \textbf{MemberControllerTest}
-	\item \textbf{PartyControllerTest}
-	\item \textbf{VoteControllerTest}
+	\item \textbf{MemberControllerTest} - Testy pro endpointy pro poslance.
+	\item \textbf{PartyControllerTest} - Testy pro endpointy pro kluby.
+	\item \textbf{VoteControllerTest} - Testy pro endpointy pro hlasování.
 \end{itemize}
 
 

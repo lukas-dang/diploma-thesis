@@ -657,6 +657,35 @@
       \verb https://developer.android.com/guide/components/fundamentals
       \endverb
     \endentry
+    \entry{hilt}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dependency injection with Hilt}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/training/dependency-injection/hilt-android
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/training/dependency-injection/hilt-android
+      \endverb
+    \endentry
     \entry{jetpack-compose}{misc}{}
       \name{author}{1}{}{%
         {{hash=8b36e9207c24c76e6719268e49201d94}{%
@@ -669,7 +698,7 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -698,7 +727,7 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{extraname}{5}
+      \field{extraname}{6}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -727,7 +756,7 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{extraname}{6}
+      \field{extraname}{7}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -756,7 +785,7 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{extraname}{7}
+      \field{extraname}{8}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -785,7 +814,7 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{extraname}{8}
+      \field{extraname}{9}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -802,6 +831,94 @@
       \verb https://developer.android.com/topic/libraries/architecture/datastore
       \endverb
     \endentry
+    \entry{protocol-buffers}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{10}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Protocol Buffers}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://protobuf.dev/
+      \endverb
+      \verb{url}
+      \verb https://protobuf.dev/
+      \endverb
+    \endentry
+    \entry{alorma}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2fb2182508e5ee3cccbd3ba692e438b7}{%
+           family={Paronella},
+           familyi={P\bibinitperiod},
+           given={Bernat\bibnamedelima Borrás},
+           giveni={B\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{2fb2182508e5ee3cccbd3ba692e438b7}
+      \strng{fullhash}{2fb2182508e5ee3cccbd3ba692e438b7}
+      \strng{bibnamehash}{2fb2182508e5ee3cccbd3ba692e438b7}
+      \strng{authorbibnamehash}{2fb2182508e5ee3cccbd3ba692e438b7}
+      \strng{authornamehash}{2fb2182508e5ee3cccbd3ba692e438b7}
+      \strng{authorfullhash}{2fb2182508e5ee3cccbd3ba692e438b7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{alorma/Compose-Settings}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/alorma/Compose-Settings
+      \endverb
+      \verb{url}
+      \verb https://github.com/alorma/Compose-Settings
+      \endverb
+    \endentry
+    \entry{compose-paging}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{11}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Paging library overview}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/topic/libraries/architecture/paging/v3-overview
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/topic/libraries/architecture/paging/v3-overview
+      \endverb
+    \endentry
     \entry{idea}{misc}{}
       \name{author}{1}{}{%
         {{hash=b6a77f3f5bead76a495a90d63703e1f9}{%
@@ -815,8 +932,8 @@
       \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{extraname}{4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Create dynamic lists with RecyclerView}
@@ -857,6 +974,34 @@
       \endverb
       \verb{url}
       \verb https://azure.microsoft.com/en-us
+      \endverb
+    \endentry
+    \entry{spring-web}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7da57f1962f18dcb73eba4178b672fed}{%
+           family={{VMware, Inc}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{fullhash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{bibnamehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authorbibnamehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authornamehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authorfullhash}{7da57f1962f18dcb73eba4178b672fed}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web applications}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://spring.io/web-applications
+      \endverb
+      \verb{url}
+      \verb https://spring.io/web-applications
       \endverb
     \endentry
     \entry{ktor}{misc}{}
@@ -947,6 +1092,34 @@
       \verb https://hibernate.org/
       \endverb
     \endentry
+    \entry{lombok}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d03d7b4bf78ad1ddcba2155e0359affb}{%
+           family={{The Project Lombok Authors}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d03d7b4bf78ad1ddcba2155e0359affb}
+      \strng{fullhash}{d03d7b4bf78ad1ddcba2155e0359affb}
+      \strng{bibnamehash}{d03d7b4bf78ad1ddcba2155e0359affb}
+      \strng{authorbibnamehash}{d03d7b4bf78ad1ddcba2155e0359affb}
+      \strng{authornamehash}{d03d7b4bf78ad1ddcba2155e0359affb}
+      \strng{authorfullhash}{d03d7b4bf78ad1ddcba2155e0359affb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Project Lombok}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://projectlombok.org/
+      \endverb
+      \verb{url}
+      \verb https://projectlombok.org/
+      \endverb
+    \endentry
     \entry{spring-jpa}{misc}{}
       \name{author}{1}{}{%
         {{hash=c3c359c6265f4efcfa9840ed07f7fdb4}{%
@@ -962,8 +1135,8 @@
       \strng{authornamehash}{c3c359c6265f4efcfa9840ed07f7fdb4}
       \strng{authorfullhash}{c3c359c6265f4efcfa9840ed07f7fdb4}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Spring Data JPA - Reference Documentation}
@@ -992,8 +1165,8 @@
       \strng{authorbibnamehash}{e87370c6a22ddad119a17645eb3f41b7}
       \strng{authornamehash}{e87370c6a22ddad119a17645eb3f41b7}
       \strng{authorfullhash}{e87370c6a22ddad119a17645eb3f41b7}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Apache Commons IO}
@@ -1022,8 +1195,8 @@
       \strng{authorbibnamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
       \strng{authornamehash}{fb59b84c9dfeff147cbd2397d30c1f1f}
       \strng{authorfullhash}{fb59b84c9dfeff147cbd2397d30c1f1f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{zip4j}
@@ -1052,8 +1225,8 @@
       \strng{authorbibnamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
       \strng{authornamehash}{a1b12f84a8d5bc5174155bc528a6a5b4}
       \strng{authorfullhash}{a1b12f84a8d5bc5174155bc528a6a5b4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{opencsv}
@@ -1080,9 +1253,9 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{extraname}{9}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extraname}{12}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Testing your Compose layout}
@@ -1151,6 +1324,34 @@
       \endverb
       \verb{url}
       \verb https://phpfashion.com/jak-mockovat-final-tridy#:~:text=Mockov%C3%A1n%C3%AD%20znamen%C3%A1%20nahrazen%C3%AD%20p%C5%AFvodn%C3%ADho%20objektu,chov%C3%A1n%C3%AD%2C%20kter%C3%A9%20pot%C5%99ebujeme%20kv%C5%AFli%20testov%C3%A1n%C3%AD.
+      \endverb
+    \endentry
+    \entry{mockito}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4d1142ca816eac3e33b383bc0b79b537}{%
+           family={{Mockito}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d1142ca816eac3e33b383bc0b79b537}
+      \strng{fullhash}{4d1142ca816eac3e33b383bc0b79b537}
+      \strng{bibnamehash}{4d1142ca816eac3e33b383bc0b79b537}
+      \strng{authorbibnamehash}{4d1142ca816eac3e33b383bc0b79b537}
+      \strng{authornamehash}{4d1142ca816eac3e33b383bc0b79b537}
+      \strng{authorfullhash}{4d1142ca816eac3e33b383bc0b79b537}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tasty mocking framework for unit tests in Java}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://site.mockito.org/
+      \endverb
+      \verb{url}
+      \verb https://site.mockito.org/
       \endverb
     \endentry
   \enddatalist

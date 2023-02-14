@@ -132,13 +132,20 @@
 \newlabel{ssec:design-settings}{{5.1}{26}{}{section.5.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}REST API}{26}{section.5.2}\protected@file@percent }
 \newlabel{sec:rest}{{5.2}{26}{REST API}{section.5.2}{}}
-\newlabel{lst:endpoint-app}{{5.2}{27}{}{lstlisting.5.-1}{}}
-\newlabel{lst:endpoint-votes}{{5.2}{27}{}{lstlisting.5.-2}{}}
-\newlabel{lst:endpoint-vote}{{5.2}{27}{}{lstlisting.5.-3}{}}
-\newlabel{lst:endpoint-party-votes}{{5.2}{28}{}{lstlisting.5.-4}{}}
-\newlabel{lst:endpoint-members}{{5.2}{28}{}{lstlisting.5.-5}{}}
-\newlabel{lst:endpoint-member}{{5.2}{28}{}{lstlisting.5.-6}{}}
-\newlabel{lst:endpoint-member-votes}{{5.2}{29}{}{lstlisting.5.-7}{}}
+\newlabel{lst:endpoint-app}{{5.1}{27}{HTTP dotaz pro stav aplikace}{lstlisting.5.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.1}{\ignorespaces HTTP dotaz pro stav aplikace}}{27}{lstlisting.5.1}\protected@file@percent }
+\newlabel{lst:endpoint-votes}{{5.2}{27}{HTTP dotaz pro seznam hlasování}{lstlisting.5.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.2}{\ignorespaces HTTP dotaz pro seznam hlasování}}{27}{lstlisting.5.2}\protected@file@percent }
+\newlabel{lst:endpoint-vote}{{5.3}{27}{HTTP dotaz pro detail hlasování}{lstlisting.5.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.3}{\ignorespaces HTTP dotaz pro detail hlasování}}{27}{lstlisting.5.3}\protected@file@percent }
+\newlabel{lst:endpoint-party-votes}{{5.4}{28}{HTTP dotaz pro výsledky hlasování klubů}{lstlisting.5.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.4}{\ignorespaces HTTP dotaz pro výsledky hlasování klubů}}{28}{lstlisting.5.4}\protected@file@percent }
+\newlabel{lst:endpoint-members}{{5.5}{28}{HTTP dotaz pro seznam poslanců}{lstlisting.5.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.5}{\ignorespaces HTTP dotaz pro seznam poslanců}}{28}{lstlisting.5.5}\protected@file@percent }
+\newlabel{lst:endpoint-member}{{5.6}{28}{HTTP dotaz pro detail poslance}{lstlisting.5.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.6}{\ignorespaces HTTP dotaz pro detail poslance}}{28}{lstlisting.5.6}\protected@file@percent }
+\newlabel{lst:endpoint-member-votes}{{5.7}{29}{HTTP dotaz pro hlasování poslance}{lstlisting.5.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.7}{\ignorespaces HTTP dotaz pro hlasování poslance}}{29}{lstlisting.5.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Databázový model}{29}{section.5.3}\protected@file@percent }
 \newlabel{sec:database_model}{{5.3}{29}{Databázový model}{section.5.3}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Implementace mobilní aplikace}{31}{chapter.6}\protected@file@percent }
@@ -150,45 +157,46 @@
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {6.1}{\ignorespaces Příklad použití coroutiny}}{33}{lstlisting.6.1}\protected@file@percent }
 \newlabel{lst:flow-general}{{6.2}{34}{Příklad použití flow}{lstlisting.6.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {6.2}{\ignorespaces Příklad použití flow}}{34}{lstlisting.6.2}\protected@file@percent }
-\newlabel{lst:hilt-di}{{6.3}{36}{Příklad použití DI pomocí knihovny Hilt}{lstlisting.6.3}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.3}{\ignorespaces Příklad použití DI pomocí knihovny Hilt}}{36}{lstlisting.6.3}\protected@file@percent }
-\newlabel{lst:hilt-config}{{6.4}{36}{Ukázka konfigurace DI pro Hilt}{lstlisting.6.4}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.4}{\ignorespaces Ukázka konfigurace DI pro Hilt}}{36}{lstlisting.6.4}\protected@file@percent }
-\newlabel{ssec:jetpack-compose}{{6.1}{37}{}{lstnumber.6.4.15}{}}
-\newlabel{lst:composable-example}{{6.5}{37}{Ukázka composable funkce}{lstlisting.6.5}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.5}{\ignorespaces Ukázka composable funkce}}{37}{lstlisting.6.5}\protected@file@percent }
-\newlabel{lst:composable-example}{{6.6}{38}{Ukázka composable funkce}{lstlisting.6.6}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.6}{\ignorespaces Ukázka composable funkce}}{38}{lstlisting.6.6}\protected@file@percent }
-\newlabel{lst:proto-datastore}{{6.7}{39}{Ukázka práce s Proto DataStore}{lstlisting.6.7}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.7}{\ignorespaces Ukázka práce s Proto DataStore}}{39}{lstlisting.6.7}\protected@file@percent }
+\newlabel{lst:hilt-di}{{6.3}{35}{Příklad použití DI pomocí knihovny Hilt}{lstlisting.6.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.3}{\ignorespaces Příklad použití DI pomocí knihovny Hilt}}{35}{lstlisting.6.3}\protected@file@percent }
+\newlabel{lst:hilt-config}{{6.4}{35}{Ukázka konfigurace DI pro Hilt}{lstlisting.6.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.4}{\ignorespaces Ukázka konfigurace DI pro Hilt}}{35}{lstlisting.6.4}\protected@file@percent }
+\newlabel{ssec:jetpack-compose}{{6.1}{36}{}{lstnumber.6.4.15}{}}
+\newlabel{lst:composable-example}{{6.5}{36}{Ukázka composable funkce}{lstlisting.6.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.5}{\ignorespaces Ukázka composable funkce}}{36}{lstlisting.6.5}\protected@file@percent }
+\newlabel{lst:composable-example}{{6.6}{37}{Ukázka composable funkce s vnitřním stavem}{lstlisting.6.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.6}{\ignorespaces Ukázka composable funkce s vnitřním stavem}}{37}{lstlisting.6.6}\protected@file@percent }
+\newlabel{lst:proto-datastore}{{6.7}{38}{Ukázka práce s Proto DataStore}{lstlisting.6.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.7}{\ignorespaces Ukázka práce s Proto DataStore}}{38}{lstlisting.6.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Implementace prezentační vrstvy}{39}{section.6.2}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.8}{\ignorespaces Třída activity}}{40}{lstlisting.6.8}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.9}{\ignorespaces Třída activity}}{41}{lstlisting.6.9}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.10}{\ignorespaces Komponenta pro seznam hlasování, language=Kotlin}}{43}{lstlisting.6.10}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.11}{\ignorespaces Komponenta pro navigaci}}{44}{lstlisting.6.11}\protected@file@percent }
-\newlabel{lst:view-model}{{6.12}{45}{Ukázka využití view modelu}{lstlisting.6.12}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.12}{\ignorespaces Ukázka využití view modelu}}{45}{lstlisting.6.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{45}{section.6.3}\protected@file@percent }
-\newlabel{lst:use-case-vote}{{6.13}{46}{Ukázka využití třídy doménové vrstvy pro získání stránkovaného seznamu hlasování}{lstlisting.6.13}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.13}{\ignorespaces Ukázka využití třídy doménové vrstvy pro získání stránkovaného seznamu hlasování}}{46}{lstlisting.6.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Implementace datové vrstvy}{46}{section.6.4}\protected@file@percent }
-\newlabel{lst:use-case-repository}{{6.14}{46}{Ukázka datové vrstvy pro data o stavu aplikace}{lstlisting.6.14}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.14}{\ignorespaces Ukázka datové vrstvy pro data o stavu aplikace}}{46}{lstlisting.6.14}\protected@file@percent }
-\newlabel{lst:data-source}{{6.15}{47}{Ukázka datového zdroje}{lstlisting.6.15}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.15}{\ignorespaces Ukázka datového zdroje}}{47}{lstlisting.6.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Implementace síťové vrstvy}{47}{section.6.5}\protected@file@percent }
-\newlabel{sec:impl-network}{{6.5}{47}{Implementace síťové vrstvy}{section.6.5}{}}
-\newlabel{lst:retrofit-votes}{{6.16}{47}{Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}{lstlisting.6.16}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.16}{\ignorespaces Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}}{47}{lstlisting.6.16}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.8}{\ignorespaces Třída activity}}{39}{lstlisting.6.8}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.9}{\ignorespaces Třída activity}}{40}{lstlisting.6.9}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.10}{\ignorespaces Komponenta pro seznam hlasování}}{42}{lstlisting.6.10}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.11}{\ignorespaces Komponenta pro navigaci}}{43}{lstlisting.6.11}\protected@file@percent }
+\newlabel{lst:view-model}{{6.12}{44}{Ukázka využití view modelu}{lstlisting.6.12}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.12}{\ignorespaces Ukázka využití view modelu}}{44}{lstlisting.6.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Implementace doménové vrstvy}{44}{section.6.3}\protected@file@percent }
+\newlabel{lst:use-case-vote}{{6.13}{45}{Ukázka využití třídy doménové vrstvy pro získání stránkovaného seznamu hlasování}{lstlisting.6.13}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.13}{\ignorespaces Ukázka využití třídy doménové vrstvy pro získání stránkovaného seznamu hlasování}}{45}{lstlisting.6.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Implementace datové vrstvy}{45}{section.6.4}\protected@file@percent }
+\newlabel{lst:use-case-repository}{{6.14}{45}{Ukázka datové vrstvy pro data o stavu aplikace}{lstlisting.6.14}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.14}{\ignorespaces Ukázka datové vrstvy pro data o stavu aplikace}}{45}{lstlisting.6.14}\protected@file@percent }
+\newlabel{lst:data-source}{{6.15}{46}{Ukázka datového zdroje}{lstlisting.6.15}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.15}{\ignorespaces Ukázka datového zdroje}}{46}{lstlisting.6.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Implementace síťové vrstvy}{46}{section.6.5}\protected@file@percent }
+\newlabel{sec:impl-network}{{6.5}{46}{Implementace síťové vrstvy}{section.6.5}{}}
+\newlabel{lst:retrofit-votes}{{6.16}{46}{Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}{lstlisting.6.16}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6.16}{\ignorespaces Ukázka použití knihovny Retrofit pro získání seznamu hlasování z backendu}}{46}{lstlisting.6.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {7}Implementace backendu}{49}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Prezentační vrstva}{50}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Použité nástroje a technologie}{49}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Prezentační vrstva}{50}{section.7.2}\protected@file@percent }
 \newlabel{lst:controller-votes}{{7.1}{51}{Ukázka kódu pro vytvoření endpointu}{lstlisting.7.1}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.1}{\ignorespaces Ukázka kódu pro vytvoření endpointu}}{51}{lstlisting.7.1}\protected@file@percent }
 \newlabel{lst:headers-paging}{{7.2}{51}{Ukázka nastavení hlaviček pro stránkování}{lstlisting.7.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.2}{\ignorespaces Ukázka nastavení hlaviček pro stránkování}}{51}{lstlisting.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Doménová vrstva}{51}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Doménová vrstva}{51}{section.7.3}\protected@file@percent }
 \newlabel{lst:headers-paging}{{7.3}{52}{Ukázka doménové vrstvy pro vrácení seznamu poslanců}{lstlisting.7.3}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.3}{\ignorespaces Ukázka doménové vrstvy pro vrácení seznamu poslanců}}{52}{lstlisting.7.3}\protected@file@percent }
 \newlabel{lst:paging-object}{{7.4}{52}{Ukázka kódu pro sestavení objektu pro stránkování}{lstlisting.7.4}{}}
@@ -196,12 +204,12 @@
 \newlabel{lst:excused-count}{{7.5}{52}{Ukázka dopočtu statistik pro detail hlasování za běhu v doménové vrstvě}{lstlisting.7.5}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.5}{\ignorespaces Ukázka dopočtu statistik pro detail hlasování za běhu v doménové vrstvě}}{52}{lstlisting.7.5}\protected@file@percent }
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.6}{\ignorespaces Ukázka použití streamu}}{52}{lstlisting.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Databázová vrstva}{53}{section.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Databázová vrstva}{53}{section.7.4}\protected@file@percent }
 \newlabel{lst:vote-entity}{{7.7}{53}{Entita Vote reprezentující hlasování}{lstlisting.7.7}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.7}{\ignorespaces Entita Vote reprezentující hlasování}}{53}{lstlisting.7.7}\protected@file@percent }
 \newlabel{lst:be-repository-vote}{{7.8}{53}{Repozitář pro hlasování}{lstlisting.7.8}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.8}{\ignorespaces Repozitář pro hlasování}}{53}{lstlisting.7.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Zpracování dat}{54}{section.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}Zpracování dat}{54}{section.7.5}\protected@file@percent }
 \newlabel{lst:psp-downloader}{{7.9}{54}{Třída pro stahování zdrojových souborů}{lstlisting.7.9}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7.9}{\ignorespaces Třída pro stahování zdrojových souborů}}{54}{lstlisting.7.9}\protected@file@percent }
 \newlabel{lst:common-io-downloader}{{7.10}{55}{Ukázka stahování dat pomocí knihovny \lstinline |commons-io|}{lstlisting.7.10}{}}
@@ -254,7 +262,7 @@
 \setcounter{section@level}{0}
 \setcounter{Item}{9}
 \setcounter{Hfootnote}{1}
-\setcounter{bookmark@seq@number}{59}
+\setcounter{bookmark@seq@number}{60}
 \setcounter{AM@survey}{0}
 \setcounter{float@type}{8}
 \setcounter{subfigure}{0}
@@ -268,7 +276,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{61}
+\setcounter{instcount}{68}
 \setcounter{maxnames}{99}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -282,7 +290,7 @@
 \setcounter{refsegment}{0}
 \setcounter{maxextratitle}{0}
 \setcounter{maxextratitleyear}{0}
-\setcounter{maxextraname}{9}
+\setcounter{maxextraname}{12}
 \setcounter{maxextradate}{0}
 \setcounter{maxextraalpha}{0}
 \setcounter{abbrvpenalty}{50}

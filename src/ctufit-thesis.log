@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  14 FEB 2023 01:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  14 FEB 2023 06:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1313,7 +1313,8 @@ LaTeX Warning: Label `lst:composable-example' multiply defined.
 
 LaTeX Warning: Label `lst:headers-paging' multiply defined.
 
-) (text/appendix.aux) (text/medium.aux))
+) (text/appendix-wireframes.aux) (text/appendix-rest.aux) (text/appendix.aux)
+(text/medium.aux))
 \openout1 = `ctufit-thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
@@ -1475,7 +1476,7 @@ Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 179.
 Package biblatex Info: Reference segment=0 on input line 179.
 \c@lstlisting=\count493
-<assignment-include.pdf, id=250, 597.23125pt x 844.15375pt>
+<assignment-include.pdf, id=262, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 182.
@@ -1484,7 +1485,7 @@ File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf>
 Package pdftex.def Info: assignment-include.pdf  used on input line 182.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<assignment-include.pdf, id=253, page=1, 597.23125pt x 844.15375pt>
+<assignment-include.pdf, id=265, page=1, 597.23125pt x 844.15375pt>
 File: assignment-include.pdf Graphic file (type pdf)
 <use assignment-include.pdf, page 1>
 Package pdftex.def Info: assignment-include.pdf , page1 used on input line 182.
@@ -1632,8 +1633,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout8 = `ctufit-thesis.lot'.
 
  (ctufit-thesis.lol
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-6.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+3.
 
 (C:\Users\lddan\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1701,12 +1702,12 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [6]
 [7]) (text/chapters/03_analysis.tex [8]
 Kapitola 2.
-<images//politiscope.png, id=643, 460.72125pt x 725.71124pt>
+<images//politiscope.png, id=671, 460.72125pt x 725.71124pt>
 File: images//politiscope.png Graphic file (type png)
 <use images//politiscope.png>
 Package pdftex.def Info: images//politiscope.png  used on input line 31.
 (pdftex.def)             Requested size: 167.2989pt x 263.51483pt.
-<images//politiscope2.jpg, id=644, 461.725pt x 739.76375pt>
+<images//politiscope2.jpg, id=672, 461.725pt x 739.76375pt>
 File: images//politiscope2.jpg Graphic file (type jpg)
 <use images//politiscope2.jpg>
 Package pdftex.def Info: images//politiscope2.jpg  used on input line 32.
@@ -1726,12 +1727,12 @@ a-so-vání, po-£et hla-so-vání
  []
 
 [10 <./images//politiscope.png> <./images//politiscope2.jpg>]
-<images//congress_1.jpg, id=659, 1084.05pt x 2348.775pt>
+<images//congress_1.jpg, id=687, 1084.05pt x 2348.775pt>
 File: images//congress_1.jpg Graphic file (type jpg)
 <use images//congress_1.jpg>
 Package pdftex.def Info: images//congress_1.jpg  used on input line 68.
 (pdftex.def)             Requested size: 167.2989pt x 362.47943pt.
-<images//congress_2.jpg, id=660, 1084.05pt x 2348.775pt>
+<images//congress_2.jpg, id=688, 1084.05pt x 2348.775pt>
 File: images//congress_2.jpg Graphic file (type jpg)
 <use images//congress_2.jpg>
 Package pdftex.def Info: images//congress_2.jpg  used on input line 69.
@@ -1786,14 +1787,14 @@ Underfull \hbox (badness 3312) in paragraph at lines 458--459
 
 ]
 Kapitola 4.
-<images//android-architecture-overall.png, id=727, 1731.46875pt x 1008.76875pt>
+<images//android-architecture-overall.png, id=755, 1731.46875pt x 1008.76875pt>
 
 File: images//android-architecture-overall.png Graphic file (type png)
 <use images//android-architecture-overall.png>
 Package pdftex.def Info: images//android-architecture-overall.png  used on inpu
 t line 16.
 (pdftex.def)             Requested size: 209.12683pt x 121.83205pt.
-<images//android-architecture-ui.png, id=730, 1703.36375pt x 1508.63625pt>
+<images//android-architecture-ui.png, id=758, 1703.36375pt x 1508.63625pt>
 File: images//android-architecture-ui.png Graphic file (type png)
 <use images//android-architecture-ui.png>
 Package pdftex.def Info: images//android-architecture-ui.png  used on input lin
@@ -1803,7 +1804,7 @@ e 27.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21 <./images//android-architecture-overall.png>]
-<images//android-architecture-data.png, id=737, 1699.34875pt x 1516.66624pt>
+<images//android-architecture-data.png, id=765, 1699.34875pt x 1516.66624pt>
 File: images//android-architecture-data.png Graphic file (type png)
 <use images//android-architecture-data.png>
 Package pdftex.def Info: images//android-architecture-data.png  used on input l
@@ -1832,87 +1833,208 @@ bude mít slo-ºi-tou busi-ness
 Kapitola 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
-\T1/lmr/m/n/10 Kaºdé hla-so-vání v se-znamu ob-sa-huje po-pis ná-vrhu zá-kona, 
-da-tum a £as
+\T1/lmr/m/n/10 vrhu zá-kona, da-tum a £as hla-so-vání, vý-sle-dek hla-so-vání v
+e form¥ ikonky
  []
 
 [25
 
-] [26] [27] [28]) (text/chapters/05_implementace.tex [29] [30
+]
+Underfull \hbox (badness 1394) in paragraph at lines 33--34
+\T1/lmr/m/n/10 Na ob-ra-zovce s de-tai-lem po-slance []A.8[] lze vi-d¥t údaje o
+ da-ném po-slanci a in-for-mace
+ []
+
+[26]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 69.
+ [27] [28]) (text/chapters/05_implementace.tex [29] [30
 
 ]
 Kapitola 6.
 [31] [32]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 55.
- [33] [34] [35] [36] [37]
-Underfull \hbox (badness 4242) in paragraph at lines 236--237
-\T1/lmr/m/n/10 funkce, kde do-²lo ke zm¥n¥ stavu. Dal²í po-znám-kou je, ºe ná-v
-ra-tový typ funkce
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+\T1/lmr/m/n/10 Jakmile pro-du-cent vy-pro-du-kuje no-vou hod-notu, kon-zu-ment 
+hod-notu au-to-ma-ticky
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+\T1/lmr/m/n/10 vzdá-len¥
+ []
+
+[33] [34] [35] [36] [37]
+Overfull \hbox (3.06897pt too wide) in paragraph at lines 247--248
+\T1/lmr/m/n/10 Knihovna [][][][] po-sky-tuje dv¥ r·zné im-ple-men-tace: [][][][
+][][][][] a [][][][][]
  []
 
 [38]
-Underfull \hbox (badness 3078) in paragraph at lines 279--280
+Underfull \hbox (badness 3078) in paragraph at lines 275--276
 \T1/lmr/m/n/10 Popis im-ple-men-tace pre-zen-ta£ní vrstvy bude roz-d¥-lena na p
 o-pis vstup-ního bodu do
  []
 
-[39] [40] [41]
-Underfull \hbox (badness 5359) in paragraph at lines 382--383
+[39] [40]
+Underfull \hbox (badness 5359) in paragraph at lines 378--379
 []\T1/lmr/bx/n/10 ListItemPicker \T1/lmr/m/n/10 - Com-posa-ble funkce z knihovn
 y Alorma re-pre-zen-tu-jící se-znam
  []
 
-[42] [43] [44] [45]
-Underfull \hbox (badness 2644) in paragraph at lines 572--573
-\T1/lmr/m/n/10 strán-ko-vaný se-znam (pak je lo-gika pro p°e-ve-dení na flow po
--ne-chána na strán-ko-vací
+[41] [42] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
+\T1/lmr/m/n/10 en-tit na da-tový typ flow, po-kud chceme pra-co-vat ve view mo-
+delu s flow
  []
 
-[46] [47] [48]
+[44] [45] [46] [47] [48
+
+]
 Kapitola 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 \T1/lmr/m/n/10 ºité ná-stroje a tech-no-lo-gie. Bac-kend je im-ple-men-to-vaný 
 po-mocí více vrstvé
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 647.
+(Font)              <8> on input line 642.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 647.
-
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
+(Font)              <6> on input line 642.
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
 \T1/lmr/m/n/10 kódu a nut-nost po-£á-te£ní kon-fi-gu-race. Toto re-a-li-zuje pr
 o-st°ed-nict-cvím
  []
 
-[49
-
-] [50] [51] [52] [53] [54] [55] [56]) (text/chapters/06_testing.tex [57]
-[58
+[50] [51] [52] [53] [54] [55] [56]) (text/chapters/06_testing.tex [57] [58
 
 ]
 Kapitola 8.
-[59] [60] [61]) (text/chapters/07_deploy.tex [62]
-Kapitola 9.
-) (text/chapters/09_conclusion.tex [63
+[59] [60]) (text/chapters/07_deploy.tex [61] [62
 
-] [64
+]
+Kapitola 9.
+) (text/chapters/09_conclusion.tex [63] [64
 
 ]
 Kapitola 10.
 )) [65]
-\openout2 = `text/appendix.aux'.
+\openout2 = `text/appendix-wireframes.aux'.
 
- (text/appendix.tex [66
+ (text/appendix-wireframes.tex [66
 
 
 
 
 ]
 P\v {r}\'{\i }loha A.
-<images//source_data_diagram.png, id=1555, 1014.79124pt x 1039.885pt>
+<images//vote_list.png, id=1591, 357.335pt x 727.71875pt>
+File: images//vote_list.png Graphic file (type png)
+<use images//vote_list.png>
+Package pdftex.def Info: images//vote_list.png  used on input line 6.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+<images//vote_list_search.png, id=1592, 357.335pt x 727.71875pt>
+File: images//vote_list_search.png Graphic file (type png)
+<use images//vote_list_search.png>
+Package pdftex.def Info: images//vote_list_search.png  used on input line 12.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+<images//vote_details_general.png, id=1593, 357.335pt x 727.71875pt>
+File: images//vote_details_general.png Graphic file (type png)
+<use images//vote_details_general.png>
+Package pdftex.def Info: images//vote_details_general.png  used on input line 2
+1.
+(pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
+<images//vote_details_party_votes.png, id=1594, 357.335pt x 727.71875pt>
+File: images//vote_details_party_votes.png Graphic file (type png)
+<use images//vote_details_party_votes.png>
+Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
+ne 27.
+(pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
+<images//vote_details_party_votes_expanded.png, id=1595, 357.335pt x 727.71875p
+t>
+File: images//vote_details_party_votes_expanded.png Graphic file (type png)
+<use images//vote_details_party_votes_expanded.png>
+Package pdftex.def Info: images//vote_details_party_votes_expanded.png  used on
+ input line 33.
+(pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--37
+[]$[]$$[]$
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67 <./images//vote_list.png> <./images//vote_list_search.png>]
+Overfull \vbox (6.3355pt too high) has occurred while \output is active []
+
+
+[68 <./images//vote_details_general.png> <./images//vote_details_party_votes.pn
+g> <./images//vote_details_party_votes_expanded.png>]
+<images//member_list.png, id=1609, 357.335pt x 727.71875pt>
+File: images//member_list.png Graphic file (type png)
+<use images//member_list.png>
+Package pdftex.def Info: images//member_list.png  used on input line 42.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+<images//member_list_search.png, id=1610, 357.335pt x 727.71875pt>
+File: images//member_list_search.png Graphic file (type png)
+<use images//member_list_search.png>
+Package pdftex.def Info: images//member_list_search.png  used on input line 48.
+
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+<images//member_details_general.png, id=1611, 357.335pt x 727.71875pt>
+File: images//member_details_general.png Graphic file (type png)
+<use images//member_details_general.png>
+Package pdftex.def Info: images//member_details_general.png  used on input line
+ 57.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+<images//member_details_votes.png, id=1612, 357.335pt x 727.71875pt>
+File: images//member_details_votes.png Graphic file (type png)
+<use images//member_details_votes.png>
+Package pdftex.def Info: images//member_details_votes.png  used on input line 6
+3.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69 <./images//member_list.png> <./images//member_list_search.png>]
+<images//settings.png, id=1619, 357.335pt x 727.71875pt>
+File: images//settings.png Graphic file (type png)
+<use images//settings.png>
+Package pdftex.def Info: images//settings.png  used on input line 72.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+<images//settings_opened.png, id=1620, 357.335pt x 727.71875pt>
+File: images//settings_opened.png Graphic file (type png)
+<use images//settings_opened.png>
+Package pdftex.def Info: images//settings_opened.png  used on input line 78.
+(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70 <./images//member_details_general.png> <./images//member_details_votes.png
+>] [71 <./images//settings.png> <./images//settings_opened.png>]
+\openout2 = `text/appendix-rest.aux'.
+
+ (text/appendix-rest.tex
+[72
+
+
+
+
+]
+P\v {r}\'{\i }loha B.
+[73] [74] [75] [76]) [77]
+\openout2 = `text/appendix.aux'.
+
+ (text/appendix.tex [78
+
+
+
+
+]
+P\v {r}\'{\i }loha C.
+<images//source_data_diagram.png, id=1787, 1014.79124pt x 1039.885pt>
 File: images//source_data_diagram.png Graphic file (type png)
 <use images//source_data_diagram.png>
 Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
@@ -1921,97 +2043,8 @@ Package pdftex.def Info: images//source_data_diagram.png  used on input line 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
-<images//vote_list.png, id=1560, 357.335pt x 727.71875pt>
-File: images//vote_list.png Graphic file (type png)
-<use images//vote_list.png>
-Package pdftex.def Info: images//vote_list.png  used on input line 12.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//vote_list_search.png, id=1561, 357.335pt x 727.71875pt>
-File: images//vote_list_search.png Graphic file (type png)
-<use images//vote_list_search.png>
-Package pdftex.def Info: images//vote_list_search.png  used on input line 18.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [68 <./images//source_data_diagram.png>]
-<images//vote_details_general.png, id=1567, 357.335pt x 727.71875pt>
-File: images//vote_details_general.png Graphic file (type png)
-<use images//vote_details_general.png>
-Package pdftex.def Info: images//vote_details_general.png  used on input line 2
-7.
-(pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes.png, id=1568, 357.335pt x 727.71875pt>
-File: images//vote_details_party_votes.png Graphic file (type png)
-<use images//vote_details_party_votes.png>
-Package pdftex.def Info: images//vote_details_party_votes.png  used on input li
-ne 33.
-(pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-<images//vote_details_party_votes_expanded.png, id=1569, 357.335pt x 727.71875p
-t>
-File: images//vote_details_party_votes_expanded.png Graphic file (type png)
-<use images//vote_details_party_votes_expanded.png>
-Package pdftex.def Info: images//vote_details_party_votes_expanded.png  used on
- input line 39.
-(pdftex.def)             Requested size: 142.93146pt x 291.08234pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--43
-[]$[]$$[]$
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69 <./images//vote_list.png> <./images//vote_list_search.png>]
-Overfull \vbox (6.3355pt too high) has occurred while \output is active []
-
-
-[70 <./images//vote_details_general.png> <./images//vote_details_party_votes.pn
-g> <./images//vote_details_party_votes_expanded.png>]
-<images//member_list.png, id=1583, 357.335pt x 727.71875pt>
-File: images//member_list.png Graphic file (type png)
-<use images//member_list.png>
-Package pdftex.def Info: images//member_list.png  used on input line 48.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_list_search.png, id=1584, 357.335pt x 727.71875pt>
-File: images//member_list_search.png Graphic file (type png)
-<use images//member_list_search.png>
-Package pdftex.def Info: images//member_list_search.png  used on input line 54.
-
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_general.png, id=1585, 357.335pt x 727.71875pt>
-File: images//member_details_general.png Graphic file (type png)
-<use images//member_details_general.png>
-Package pdftex.def Info: images//member_details_general.png  used on input line
- 64.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//member_details_votes.png, id=1586, 357.335pt x 727.71875pt>
-File: images//member_details_votes.png Graphic file (type png)
-<use images//member_details_votes.png>
-Package pdftex.def Info: images//member_details_votes.png  used on input line 7
-0.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [71 <./images//member_list.png> <./images//member_list_search.png>]
-<images//settings.png, id=1594, 357.335pt x 727.71875pt>
-File: images//settings.png Graphic file (type png)
-<use images//settings.png>
-Package pdftex.def Info: images//settings.png  used on input line 79.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-<images//settings_opened.png, id=1595, 357.335pt x 727.71875pt>
-File: images//settings_opened.png Graphic file (type png)
-<use images//settings_opened.png>
-Package pdftex.def Info: images//settings_opened.png  used on input line 85.
-(pdftex.def)             Requested size: 178.66705pt x 363.85847pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [72 <./images//member_details_general.png> <./images//member_details_votes.png
->] [73 <./images//settings.png> <./images//settings_opened.png>] [74] [75] [76]
-
+ [79]
+[80 <./images//source_data_diagram.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2021,82 +2054,89 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [77] [78] [79] [80
-
-
-
-]
-Overfull \hbox (11.07326pt too wide) in paragraph at lines 339--339
+) [81] [82]
+Overfull \hbox (11.07326pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 PRO PU-B-LICA INC. [][on-line][]. [B.r.]. [[]cit.[] 2023-01-26
 ]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 https : / / www . propublica .
  []
 
 
-Overfull \hbox (9.37918pt too wide) in paragraph at lines 339--339
+Overfull \hbox (9.37918pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 @UNITEDSTATES [][on-line][]. [B.r.]. [[]cit.[] 2023-01-26]. []
 Do-stupné z[]: []$\T1/lmtt/m/n/10 https : / / theunitedstates .
  []
 
 
-Overfull \hbox (2.10248pt too wide) in paragraph at lines 339--339
+Overfull \hbox (2.10248pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 FEDERAL ELECTION COM-MIS-SION [][on-line][]. [B.r.]. [[]cit.[]
  2023-01-26]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 https :
  []
 
-[81
+[83
+
+
+
 
 ]
-Overfull \hbox (6.00883pt too wide) in paragraph at lines 339--339
+Overfull \hbox (6.00883pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 GOOGLE. \T1/lmr/m/it/10 An-droid Stu-dio []\T1/lmr/m/n/10 [on-
 line][]. [B.r.]. [[]cit.[] 2023-02-09]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 htt
 ps : / / developer .
  []
 
 
-Overfull \hbox (4.19872pt too wide) in paragraph at lines 339--339
+Overfull \hbox (4.19872pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 GOOGLE. \T1/lmr/m/it/10 Lists and grids []\T1/lmr/m/n/10 [on-l
 ine][]. [B.r.]. [[]cit.[] 2023-02-10]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 http
 s : / / developer .
  []
 
 
-Overfull \hbox (15.12247pt too wide) in paragraph at lines 339--339
+Overfull \hbox (5.34882pt too wide) in paragraph at lines 343--343
+[]\T1/lmr/m/n/10 GOOGLE. \T1/lmr/m/it/10 Pro-to-col Bu-f-fers []\T1/lmr/m/n/10 
+[on-line][]. [B.r.]. [[]cit.[] 2023-02-14]. []Do-stupné z[]: []$\T1/lmtt/m/n/10
+ https : / / protobuf .
+ []
+
+
+Overfull \hbox (15.12247pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 MICROSOFT. \T1/lmr/m/it/10 Azure []\T1/lmr/m/n/10 [on-line][].
  [B.r.]. [[]cit.[] 2023-02-10]. []Do-stupné z[]: []$\T1/lmtt/m/n/10 https : / /
  azure . microsoft .
  []
 
-[82] [83]
+[84] [85]
 \openout2 = `text/medium.aux'.
 
- (text/medium.tex [84
+ (text/medium.tex [86
 
 
-]) [85] (ctufit-thesis.aux (text/text.aux)
-(text/appendix.aux) (text/medium.aux))
+]) [87] (ctufit-thesis.aux (text/text.aux)
+(text/appendix-wireframes.aux) (text/appendix-rest.aux) (text/appendix.aux)
+(text/medium.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: EC529EBAA6AEBAF891D876CBFD8EA825;8370.
+
+Package rerunfilecheck Warning: File `ctufit-thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ctufit-thesis.out':
+(rerunfilecheck)             Before: C9DA8DB2E5C72D5BC1699F20D693047C;8926
+(rerunfilecheck)             After:  80287C1155BBD9E0D33468E5A72031F0;8974.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39403 strings out of 476375
- 734635 string characters out of 5788976
- 2050299 words of memory out of 5000000
- 58186 multiletter control sequences out of 15000+600000
- 596090 words of font info for 83 fonts, out of 8000000 for 9000
+ 39495 strings out of 476375
+ 738178 string characters out of 5788976
+ 2051299 words of memory out of 5000000
+ 58251 multiletter control sequences out of 15000+600000
+ 595725 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,90p,2182b,3093s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,90p,1695b,3095s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/lddan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/lddan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/U
@@ -2114,9 +2154,9 @@ n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/lddan
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/ldd
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ldd
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on ctufit-thesis.pdf (99 pages, 2726738 bytes).
+Output written on ctufit-thesis.pdf (101 pages, 2738356 bytes).
 PDF statistics:
- 2100 PDF objects out of 2487 (max. 8388607)
- 906 named destinations out of 1000 (max. 500000)
- 616 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2157 PDF objects out of 2487 (max. 8388607)
+ 920 named destinations out of 1000 (max. 500000)
+ 640 words of extra memory for PDF output out of 10000 (max. 10000000)
 

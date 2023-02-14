@@ -2,7 +2,7 @@
 \label{ch:implementation}
 
 \begin{chapterabstract}
-	V rámci této kapitoly bude popsána implementace mobilní aplikace. V první podkapitole budou popsány použité nástroje a technologie. Mobilní aplikace je implementována pomocí Googlem doporučené architektury pro vývoj mobilních aplikací (\ref{subsec:architecture-google}). Následující sekce budou rozděleny tak, aby odpovídaly jednotlivým vrstvám této architektury.
+	V rámci této kapitoly bude popsána implementace mobilní aplikace. V první podkapitole budou popsány použité nástroje a technologie. Mobilní aplikace je implementována pomocí architektury popsanou v sekci \ref{subsec:architecture-google}. V dalších podkapitolách bude popsána implementace jednotlivých vrstev aplikace.
 \end{chapterabstract}
 
 \section{Použité nástroje a technologie}
@@ -12,11 +12,11 @@ V této sekci budou popsány hlavní nástroje a technologie použité pro imple
 Mobilní aplikace byla vytvořena ve vývojovém prostředí Android Studio, což je oficiální IDE pro vývoj mobilních aplikací pro Android \cite{androidstudio}. Výhody tohoto IDE jsou:
 
 \begin{itemize}
-	\item \textbf{Podpora pro Android} - Android Studio je IDE určené pro vývoj mobilních aplikací pro Android. Po spuštění IDE se hned zobrazí průvodce pro instalaci Android SDK obsahující nástroje potřebné pro vývoj aplikací. Po instalaci je SDK připravené k použití. Není tedy potřeba SDK manuálně instalovat z internetu a naimportovat do IDE. IDE Dále poskytuje průvodce pro vytvoření projektu, pomocí kterého lze vybrat jednu z existujích šablon pro různé typy projektů. Po zvolení šablony IDE vytvoří projektový adresář se zdrojovými \linebreak kódy, závislostmi a konfiguračními soubory pro danou šablonu. Po vytvoření projektu je aplikace prázndá, ale je ve spustitelném stavu.
+	\item \textbf{Podpora pro Android} - Android Studio je IDE určené pro vývoj mobilních aplikací pro Android. Po spuštění IDE se hned zobrazí průvodce pro instalaci Android SDK obsahující nástroje potřebné pro vývoj aplikace. Po instalaci je SDK připravené k použití. Není tedy potřeba SDK manuálně instalovat z internetu a naimportovat ho do IDE. IDE Dále poskytuje průvodce pro vytvoření projektu, pomocí kterého lze vybrat jednu z existujích šablon pro různé typy projektů. Po zvolení šablony se vytvoří projektový adresář se zdrojovými \linebreak kódy, závislostmi a konfiguračními soubory pro danou šablonu. Po vytvoření projektu je aplikace prázdná, avšak ve spustitelném stavu.
 	
 	\item \textbf{Emulátor} - Android Studio poskytuje vestavěný emulátor, který emuluje fyzické mobilní zařízení. Díky tomu může uživatel testovat své aplikace na různých zařízeních s různými konfiguracemi (např. různé rozměry zařízení, verze Androidu).
 		
-	\item \textbf{Klávesové zkratky} - Jeden z hlavních důvodů pro použití IDE založených od JetBrains jsou klávesové zkratky, které jsou stejné pro všechna IDE od JetBrains. Tyto zkratky zvyšují produktivitu vývojáře.
+	\item \textbf{Klávesové zkratky} - Jeden z hlavních důvodů pro použití IDE založených na IDE od JetBrains jsou klávesové zkratky, které jsou stejné pro všechna IDE od JetBrains. Tyto zkratky zvyšují produktivitu vývojáře.
 \end{itemize}
 
 \subsubsection *{Gradle}
@@ -25,21 +25,21 @@ Gradle je nástroj pro automatizaci sestavování programu, tj. automatizace kom
 \begin{itemize}
 	\item \textbf{Gradle Pluginy} - Poskytují Gradlu další nástroje jako např. možnost kompilovat programovací jazyk Kotlin, parsovat anotace nebo generovat kód na základě konfiguračního souboru. 
 	
-	\item \textbf{Externí knihovny} - Pomocí Gradlu lze do aplikace přidat knihovny, které se stáhnou \linebreak z předem definovaného vzdáleného repozitáře.
+	\item \textbf{Externí knihovny} - Pomocí Gradlu lze do aplikace přidat knihovny, které se stáhnou ze vzdáleného repozitáře.
 	
-	\item \textbf{Konfigurace} - Gradle umožňuje konfigurovat pluginy a aplikaci. U Androidu lze nakonfigurovat např. SDK verzi, verzi Kotlinu, aktivaci Jetpack Compose toolkitu (\ref{ssec:jetpack-compose}).
+	\item \textbf{Konfigurace} - Gradle umožňuje konfigurovat pluginy a aplikaci. U Androidu lze nakonfigurovat např. SDK verzi a verzi Kotlinu.
 \end{itemize}
 
-\noindent Alternativou je nástroj Maven, který lze také použít pro vývoj mobilní aplikace pro Android. Oba mají své výhody a nevýhody pro různé situace. Rozhodl jsem se však pro Gradle, jelikož při vytváření projektu v Android Studiu nebyla možnost výběru mezi Gradlem a Mavenem. Projekt byl automaticky nakonfigurován pomocí Gradlu. Předpokládám tedy, že Google preferuje Gradle jako nástroj pro vývoj v Androidích aplikací. Maven by se musel nakonfigurovat manuálně, což by pro zprovoznění aplikace bylo časově náročné, a nejspíš i zbytečné.
+\noindent Alternativou je nástroj Maven, který lze také použít pro vývoj mobilní aplikace pro Android. Oba mají své výhody a nevýhody pro různé situace. Rozhodl jsem se však pro Gradle, jelikož při vytváření projektu v Android Studiu nebyla možnost výběru mezi Gradlem a Mavenem. Projekt byl automaticky nakonfigurován pomocí Gradlu. Předpokládám tedy, že Google preferuje Gradle jako nástroj pro vývoj v Android aplikací. Maven by se musel nakonfigurovat manuálně, což by pro zprovoznění aplikace bylo časově náročné, a nejspíš i zbytečné.
 
 \subsection *{Kotlin}
-Pro mobilní aplikaci byl použit programovací jayzk Kotlin \cite{kotlin}, který je od roku 2017 preferovaným jazykem pro Android \cite{google-prefers-kotlin}. Původním programovacím jayzkem pro Android byla Java \cite{java}. Kotlin má však oproti němu několik výhod:
+Pro mobilní aplikaci byl použit programovací jayzk Kotlin \cite{kotlin}, který je od roku 2017 preferovaným jazykem pro Android \cite{google-prefers-kotlin}. Původním programovacím jazykem pro Android byla Java \cite{java}. Kotlin má však oproti němu několik výhod:
 
 \begin{itemize}
     \item \textbf{Je stručný} - Kotlin umožňuje např. vytvořit 
     singleton pomocí klíčového slova \lstinline{object} \cite{kotlin-object}.
     
-    \item \textbf{Je bezpečný} - Kotlin rozlišuje null a non-null datové typy. Non-null typy lze dereferencovat vždy, null typy pouze po kontrole výskytu hodnoty null. To je vynuceno typovým systémem Kotlinu. Díky tomu není možné zkompilovat kód, v kterém by se dereferencovala hodnota null, kvůli čemuž by aplikace spadla.
+    \item \textbf{Je bezpečný} - Kotlin rozlišuje \lstinline|null| a \lstinline|non-null| datové typy. \lstinline|non-null| typy lze dereferencovat vždy, \lstinline|null| typy pouze po kontrole výskytu hodnoty \lstinline|null|. To je vynuceno typovým systémem Kotlinu. Díky tomu není možné zkompilovat kód, v kterém by se dereferencovala hodnota \lstinline|null|, kvůli čemuž by aplikace spadla.
     
     \item \textbf{Je expresivní} - Kotlin byl navržen s důrazem na stručnost a výstižnost kódu.
 \end{itemize}
@@ -48,7 +48,7 @@ Pro mobilní aplikaci byl použit programovací jayzk Kotlin \cite{kotlin}, kter
 
 \noindent Dalším důvodem pro použití Kotlinu souvisí s dlouze běžícími blokujícími operacemi jako např. síťovými a databázovými operacemi. Android aplikace běží defaultně na hlavním vláknu, které má na starosti vykreslování obrazovky a obsluhu událostí. Pokud je na tomto vlákně provedena dlouze běžící blokující operaci, vlákno se zablokuje na delší dobu a nebude moct obsluhovat události. Uživatelovi se aplikace pak jeví jako zamrznutá. Jedním řešením pro tento problém je vytvořit nové vlákno a provést operaci na něm. Dvě různá vlákna běží paralelně, a tudíž operace běžící na nově vytvořeném vlákně nebude blokovat hlavní vlákno, a tudíž aplikace nezamrzne. Problémem však je, že tvorba vláken a jejich správa jsou drahé operace. 
 
-Alternativním řešením jsou Kotlin Coroutines - paměťově nenáročný způsob, jak psát paralelní kód. Přesné fungování coroutinů je nad rámec této práce, pro účely této práce však stačí vědět, že coroutines se chovají paměťově nenáročná vlákna. To znamená, že lze vytvořit několik coroutinů, z nichž každý reprezentuje nějaký kus paralelně běžícího výpočtu. Oproti vláknům lze coroutinů spustit mnohem více (na běžném počítači klidne v řádu stovek nebo tisíců). Zde je příklad použití coroutiny:
+Alternativním řešením jsou Kotlin Coroutines - paměťově nenáročný způsob, jak psát paralelní kód. Přesné fungování coroutinů je nad rámec této práce, pro účely této práce však stačí vědět, že coroutines se chovají jako paměťově nenáročná vlákna. Oproti vláknům lze coroutinů spustit mnohem více (klidně v řádu stovek nebo tisíců). Zde je příklad použití coroutiny:
 
 \newpage
 
@@ -72,9 +72,9 @@ class ListViewModel {
 }
 \end{lstlisting}
 
-\noindent V tomto kusu kódu je coroutina pro operaci 1 vytvářena zavoláním funkce \lstinline|launch| na objektu \lstinline|viewModelScope|. Funkce akceptuje callback funkci, která bude zavolána v rámci vytvořené couroutiny. To znamená, že callback funkce bude běžet paralelně vzhledem k ostatním  coroutinám, v tomto případě vzhledem ke coroutině spouštějící druhou operaci. Důležité je, že obě coroutiny běží paralelně, ale na stejném vlákně. Dále objekt \lstinline|viewModelScope| určuje scope, v kterém běží coroutina. Ten určuje životní cyklus dané coroutiny. Pokud skončí scope a coroutina ještě nedoběhla, coroutina automaticky ukončí svůj běh. Jednoduchým příkladem scopu je scope samotné aplikace. Pokud je aplikace spuštěna, pak scope existuje a coroutina může běžet. Pokud je aplikace zavřena, scope přestane existovat a coroutina přestane běžet. Díky tomu lze předejít únikům dat. Když by byla aplikace zavřena a scope by stále existoval, pak by coroutina stále \linebreak běžela, a až by doběhla, mohla by nějakým způsobem modifikovat data nebo data někám přidávat. při opětovném spuštění aplikace však jsou reference na tato data ztracena.
+\noindent V tomto kusu kódu je coroutina pro operaci 1 vytvořena zavoláním funkce \lstinline|launch| na objektu \lstinline|viewModelScope|. Funkce akceptuje callback funkci, která se zavolá v rámci vytvořené couroutiny. Díky coroutině bude funkce běžet paralelně k výpočtům spuštěných v jiných coroutinách. Obě coroutiny přitom běží na stejném vlákně. Objekt \lstinline|viewModelScope| určuje scope, v rámci které běží coroutina. Ten určuje životní cyklus dané coroutiny, díky čemuž lze předejít úniku dat. Pokud je nějakým způsobem ukončen scope, jsou ukončeny všechny coroutiny bežící v rámci tohoto scopu.
 
-Další důležitou vlastností coroutinů je to, že callback funkce, kterou volá, je suspendovatelná. To znamená několik věcí
+Další důležitou vlastností coroutinů je to, že callback funkce, kterou volá, je suspendovatelná. To znamená:
 
 \begin{itemize}
 	\item Deklare funkce je označená klíčovým slovem \lstinline|suspend|
@@ -82,10 +82,10 @@ Další důležitou vlastností coroutinů je to, že callback funkce, kterou vo
 	\item Suspendovatelná funkce může coroutinu suspendovat, tj. pozastavit ji, a uvolnit tím vlákno pro použití jinou coroutinou.
 \end{itemize}
 
-\noindent Důležitý je třetí bod. Díky mechanizmu pro suspendování coroutiny mohou coroutiny bežět paralelně. Příklad suspendovatelné funkce, která suspenduje coroutinu, je funkce \lstinline|delay()|, která coroutinu suspenduje na určitý počet milisekund. Během této doby je vlákno uvolněno pro použití jinou coroutinou. Jakmile uběhne daný časový interval, coroutina pokračuje ve svém běhu. Častějším případem použití je např. zavolání síťové operace prostřednictvím knihovny ze třetí \linebreak strany, která poskytuje suspendovatelné funkce, v rámci kterých je interně implementován suspendovací mechanizmus. Tedy jakmile se provede síťová operace a čeká se na výsledek, knihovna coroutinu sama suspenduje. Uživatel tím pádem nemusí manuálně suspendovat coroutinu po zavolání dlouze běžící operace, ale pouze zavolá funkci knihovny, a ta se postará o zbytek. Tato knihovna bude detailněji popsána v (\ref{sec:impl-network}).
+\noindent Důležitý je třetí bod. Díky mechanizmu pro suspendování coroutiny mohou coroutiny bežět navzájeem paralelně. Příklad suspendovatelné funkce, která suspenduje coroutinu, je funkce \linebreak \lstinline|delay()|, která coroutinu suspenduje na určitý počet milisekund. Během této doby je vlákno uvolněno pro použití jinou coroutinou. Jakmile uběhne daný časový interval, coroutina získá zpátky vlákno (ne nutně původní) a pokračuje dál ve svém běhu. Častějším případem použití je např. zavolání síťové operace prostřednictvím knihovny ze třetí strany, kde je tato operace poskytována prostřednictvím suspendovatelné funkce. Po zavolání této funkce knihovna coroutinu suspenduje, díky čemuž je vlákno uvolněno pro použití jinde.
 
 \subsection*{Kotlin Flow}
-Kotlin Flow \cite{kotlinflow} je datový typ, který reprezentuje asynchronní proud hodnot, který poskytuje data v čase. Funguje tak, že klientský kód se k proudu zaregistruje, a stane se konzumentem dané flow. Kód produkující nové hodnoty a vkládající je do tohoto proudu je producentem dané flow. Jakmile producent vyprodukuje novou hodnotu a vloží ji do proudu, konzument hodnotu automaticky zkonzumuje, a na základě ní provede nějakou akci. Produkce hodnot nezačíná \linebreak tehdy, když je vytvořena flow, ale až když se k ní konzument explicitně (pomocí funkce) zaregistruje a začne ji konzumovat. Flow je asynchronní proud hodnot, tj. hodnoty proudu jsou produkovány asynchronním způsobem (např. jsou získávány vzdáleně z backendu). Pro asynchronní produkci dat se používají coroutiny. Flow může být filtrována a transformována, tj. její hodnoty mohou být namapovány na jiné. Různé flow mohou být mezi sebou kombinovány, aby konzument mohl pracovat s hodnotami obou flowů zároveň. Lze nastavit, zda má konzument zareagovat na produkci nových hodnot v obou flowů zároveň nebo jenom jednoho z flowů. Všechny zmíněné operace na flowech lze provést zavoláním funkcí na dané flow a lze je řetězit. Zde je příklad flow, která produkuje seznam hlasování:
+Kotlin Flow \cite{kotlinflow} je datový typ, který reprezentuje asynchronní proud hodnot poskytující data v čase. Funguje tak, že klientský kód se k proudu zaregistruje, a stane se konzumentem dané flow. Kód produkující nové hodnoty a vkládající je do tohoto proudu je producentem dané flow. Jakmile producent vyprodukuje novou hodnotu, konzument hodnotu automaticky \linebreak zkonzumuje, a na základě ní provede nějakou akci. Produkce hodnot nezačíná tehdy, když je vytvořena flow, ale až když se k ní konzument zaregistruje. Flow je asynchronní proud \linebreak hodnot, tj. hodnoty proudu jsou produkovány asynchronním způsobem (např. jsou získávány vzdáleně \linebreak z backendu). Pro asynchronní produkci dat se používají coroutiny. Flow může být filtrována nebo transformována. Různé flow mohou být mezi sebou kombinovány, aby mohl konzument reagovat na produkci hodnot obout flowů. Všechny zmíněné operace na flowech lze provádět zavoláním funkcí na dané flow. Tyto funkce lze řetězit. Zde je příklad flow, která produkuje seznam hlasování:
 
 \begin{lstlisting}[caption={Příklad použití flow}, label={lst:flow-general}, tabsize=2, language=Kotlin]
 	
@@ -118,26 +118,24 @@ class VoteListViewModel: ViewModel() {
 }
 \end{lstlisting}
 
-\noindent Flow produkuje data asynchronně pomocí coroutinů a každá coroutina musí běžet v nějakém scopu, tudíž každá registrace konzumenta k flow musí proběhnout ve scopu. V tomto případě je použit scope \lstinline|viewModelScope|, což je scope jendoho z komponentu Androidu, view modelu, který bude vysvětlen později. V rámci coroutiny jsou kombinovány dvě flowy, \lstinline|currentElectionYear| \linebreak a \lstinline|searchText|, do jednoho flowu produkující pár hodnot. Toho je dosaženo pomocí funkce \lstinline|combine| s parametrem \lstinline|::Pair|, což je reference na konstruktor třídy \lstinline|Pair|, pomocí kterého se vytváří flow párů. Všimněme si, že datovými typy flowů je \lstinline|StateFlow|. Existence těchto flowů je závislé na životním cyklu Android komponenty, v kterém běží. V tomto případě běží ve view modelu, který ještě existuje v rámci životního cyklu jiné Android komponenty. Pokud jedna z těchto komponent je po konci svého životního cyklu, všechny \lstinline|StateFlow| přestanou produkovat hodnoty a jsou odebrány z paměti. Po zkombinování dvou různých flow do jedné je výsledné flow konzumováno pomocí funkce \lstinline|collectLatest|. V tuto chvíli může začít produkce hodnot. Jak jde však vidět, tak první flow produkuje na začátku pouze jednu hodnotu 2021 a druhá flow pouze prázdný řetězec "". Další produkce dat může proběhnout buď v reakci na nějakou událost (např. kliknutí na tlačítko nebo psaní) nebo na načtení dat ze sítě, databáze, lokálního úložiště atd. Příklad kódu produkující data pro flow je funkce \lstinline|onSearchTextChange|, která do dané flow jednoduše uloží novou hodnotu. V tuto chvíli chceme, aby se zavolala callback funkce uvnitř \lstinline|collectLatest|. Nemusíme ji však zavolat přímo, konzument totiž na změnu hodnoty ve flow zareaguje a spustí daný kód sám. Kotlin Flows mají tedy následující výhody:
+\noindent Flow produkuje data asynchronně pomocí coroutinů a každá coroutina musí běžet v nějakém scopu, tudíž každá registrace konzumenta k flow musí proběhnout ve scopu. V tomto případě je použit scope \lstinline|viewModelScope|, což je scope jedné z komponent Androidu, která bude vysvětlena později v implementaci. V rámci coroutiny jsou kombinovány dvě flowy, \lstinline|currentElectionYear| \linebreak a \lstinline|searchText|. Výstupem této kombinace je jediná flow produkující hodnoty v párech. Všimněme si, že datovými typy flowů je \lstinline|StateFlow|. Existence těchto flowů je závislé na životním cyklu Android komponenty, v rámci které flowy běží. Výsledná flow je zkonzumována pomocí funkce \lstinline|collectLatest|. V tuto chvíli začne produkce hodnot. Jak jde však vidět, tak první flow produkuje na začátku pouze jednu hodnotu 2021 a druhá flow pouze prázdný řetězec "". Další produkce dat může proběhnout buď v reakci na nějakou událost nebo na načtení dat ze sítě, databáze, lokálního úložiště atd. Příklad kódu produkující data pro flow je funkce \lstinline|onSearchTextChange|, která do dané flow jednoduše uloží novou hodnotu. Hodnota je poté v rámci \lstinline|collectLatest| zkonzumována. Použití Kotlin Flow přináší následující výhody:
 
 \begin{itemize}
 	\item Proud hodnot je asynchronní a založený na paměťově nenáročných coroutinech.
 	
 	\item Proudy lze elegantním způsobem filtrovat a transformovat. Tyto operace lze řetězit.
 	
-	\item Produkce nové hodnoty v proudu automaticky spustí kód konzumenta tohoto proudu.
+	\item Produkce nové hodnoty v proudu automaticky spustí kód konzumenta.
 	
 	\item Kód je čitelnější.
 \end{itemize}
 
 
 \subsection *{Activity a ViewModel}
-Android aplikace je složena z Android komponent \cite{android-components}, které jsou jejími základními stavebními kameny. V této práce je použita jedna z nich - \lstinline|Activity|. Tato Android komponenta slouží jako vstupní bod pro vytvoření UI. UI v rámci aktivity lze dynamicky měnit. Díky tomu lze všechny obrazovky aplikace vykreslovat v rámci jedné aktivity a při navigaci na jinou obrazovku se UI v aktiviě pouze překreslí. V rámci aktivity lze použít třídu \lstinline|ViewModel|, která reprezentuje držitele stavu, který byl popsán v kapitole \ref{fig:android-architecture-ui}. Ukládáme v něm stav UI a obsluhy událostí. UI reaguje a přeskresluje se v reakci na změny stavu v držiteli stavu. 
+Android aplikace je složena z Android komponent \cite{android-components}, které jsou jejími základními stavebními kameny. V této práce je použita jedna z nich - \lstinline|Activity|. Tato Android komponenta slouží jako vstupní bod pro vytvoření UI. UI lze v rámci aktivity dynamicky měnit. Díky tomu lze všechny obrazovky aplikace vykreslovat v rámci jedné aktivity a při navigaci na jinou obrazovku se UI \linebreak v aktivitě pouze překreslí. V rámci aktivity lze použít třídu \lstinline|ViewModel|, která reprezentuje držitele stavu, který byl popsán v kapitole \ref{fig:android-architecture-ui}. Ukládáme v něm stav UI a metody pro obsluhu událostí. UI se překresluje v reakci na změny ve stavu v držiteli stavu. 
 
 \subsection *{Hilt}
-Hilt je dependency injection (dále jen DI) knihovna pro Android, která umožňuje přidat závislosti (dále jen injektovat) objektům pomocí anotací. Vysvětlíme si na příkladě:
-
-\newpage
+Hilt je dependency injection (dále jen DI) knihovna pro Android, která umožňuje přidat závislosti (dále jen injektovat) objektům pomocí anotací \cite{hilt}. Vysvětlíme si na příkladě:
 
 \begin{lstlisting}[caption={Příklad použití DI pomocí knihovny Hilt}, label={lst:hilt-di}, tabsize=2, language=Kotlin]
 // Soubor VoteListViewModel.kt
@@ -150,7 +148,7 @@ class VoteListViewModel @Inject constructor(
 }
 \end{lstlisting}
 
-\noindent Tento kód reprezentuje view model s jednou závislostí ve svém konstruktoru. Díky anotacím  \lstinline|@HiltViewModel| a \lstinline|@Inject| z knihovny Hilt je uvedená závislost do tohoto objektu automaticky injektována Hiltem. Danou závislost nalezne Hilt ve svém interním kontejneru, který obsahuje všechny objekty a jejich závislostmi, které chceme, aby byly injektovatelné. Předpokladem pro DI je tedy existence tohoto interního kontejneru s grafem závislostí. Ten je nainicializován na základě konfiguračního souboru, v kterém specifikujeme objekty a jejich závislosti, které se mají do daného kontejneru přidat. Příkladem takové konfigurace je:
+\noindent Tento kód reprezentuje view model, který má nějaké závislosti ve svém konstruktoru. Díky anotacím \lstinline|@HiltViewModel| a \lstinline|@Inject| poskytovaným knihovnou Hilt jsou tyto závislosti automaticky dodány Hiltem. Předpokladem pro injektování závislostí je existence těchto závislostí v grafu závislostí spravovaném Hiltem. Tento graf je vytvořen na základě konfiguračního souboru, v kterém specifikujeme objekty a závislosti mezi nimi. Příkladem takové konfigurace je:
 
 \begin{lstlisting}[caption={Ukázka konfigurace DI pro Hilt}, label={lst:hilt-config}, tabsize=2, language=Kotlin]
 // Soubor UseCaseModule.kt
@@ -170,19 +168,19 @@ object UseCaseModule {
 }
 \end{lstlisting}
 
-\noindent Konfigurace je specifikována v rámci singletonu. Anotace \lstinline|@Module| říká, že daný objekt obsahuje konfigurace závislostí, která má Hilt přidat do svého grafu závislostí. Pomocí anotace \lstinline|@InstallIn| specifikujeme životní cyklus pro dané závislosti. V tomto případě jsou závislosti vázané na životní cyklus view modelu. Pomocí anotace \lstinline|Provides| specifikujeme již danou závislost. V tomto případě funkce vrací objekt typu \lstinline|GetVotesUseCase|, a tím pádem je tento objekt Hiltem přidán do grafu závislostí a může být injektován do kteréhokoliv objektu. Všimněme si, že tento objekt má závislost na objektu typu \lstinline|VoteRepository|. Tato závislost je také Hiltem injektována. Závislost je nakonfigurována podobným způsobem akorát v jiném souboru. Výhody DI jsou:
+\noindent Konfigurace je specifikována v rámci singletonu. Anotace \lstinline|@Module| říká, že daný objekt obsahuje konfiguraci objektů a jejich závislostí, které má Hilt přidat do svého grafu závislostí. Pomocí anotace \lstinline|@InstallIn| specifikujeme životní cyklus pro konfigurované objekty. V tomto případě jsou závislosti vázané na životní cyklus view modelu. Pomocí anotace \lstinline|Provides| specifikujeme konfiguraci objektu. Funkce v tomto případě vrací objekt typu \lstinline|GetVotesUseCase|, díky čemuž je Hiltem přidán do jeho grafu závislostí, a může být tím pádem injektován. Všimněme si, že tento objekt má závislost na objektu typu \lstinline|VoteRepository|. Tato závislost je také Hiltem injektována. Závislost je nakonfigurována podobným způsobem akorát v jiném souboru. Výhody DI jsou:
 
 \begin{itemize}
-	\item \textbf{Loose coupling} - Závislostí objektu nemusí být nutně třídá, ale nějaké rozhraní. Díky tomu objekt nezávisí na konkrétní implementaci třídy, ale akceptuje různé implementace daného rozhraní. Tyto implementace jsou dodány Hiltem a nakonfigurovány v konfiguračním souboru. Zdrojový kód aplikace je tedy upuštěn od nutnosti specifikovat konkrétní implementace rozhraní. Komponenty aplikace jsou díky tomu na sobě relativně nezávislé, protože závisí pouze na rozhraních. 
+	\item \textbf{Loose coupling} - Závislostí objektu nemusí být nutně třídá, ale nějaké rozhraní. Díky tomu objekt nezávisí na konkrétní implementaci třídy, ale akceptuje různé implementace daného rozhraní. Tyto implementace jsou dodány Hi\textit{}ltem a nakonfigurovány v konfiguračním souboru. Zdrojový kód aplikace je tedy upuštěn od nutnosti specifikovat konkrétní implementace rozhraní. Komponenty aplikace jsou díky tomu na sobě relativně nezávislé, protože závisí pouze na rozhraních. 
 	
 	\item \textbf{Znovupoužitelnost} - Komponenty, které závisí na rozhraních, jsou snadno znovupoužitelné.
 	
-	\item \textbf{Snazší testování} - Při testování funkčnosti aplikace jsou pro závislosti často používány mockovací objekty, které simulují chování skutečného objektu. Díky závislosti objektu pouze na rozhraní, lze za dané rozhraní snadno injektovat vlastní testovací implementaci. 
+	\item \textbf{Snazší testování} - Při testování funkčnosti aplikace jsou pro závislosti často používány testovací objekty, které jsou injektovány do rozhraní komponenty, kterou testujeme. 
 \end{itemize}
 
 \subsection*{Jetpack Compose}
 \label{ssec:jetpack-compose}
-Jetpack Compose je Googlem doporučený způsob pro implementaci uživatelského rozhraní \cite{jetpack-compose}. UI je implementováno pomocí programového kódu voláním \textit{composable} funkcí, které reprezentují a na základě kterých se vykreslí nějaký UI element na obrazovce, ať už to je pouze tlačítko nebo celá obrazovka. Jetpack Compose poskytuje nativní composable funkce např. pro tlačítko, text a obrázek, ale také funkce reprezentující kontejnery pro seskupení UI elementů např. do řádku nebo sloupce. Kombinací těchto funkcí lze vytvořit složitější funkce reprezentující složitější UI elementy. Jelikož UI elementy jsou reprezentovány funkcemi, lze je přepoužívat na více místech zavoláním dané funkce. Pomocí parametrů funkcí lze měnit vzhled a chování UI elementu. Lze mu např. změnit barvu, textový obsah, ale také přidat obsluhu pro události jako kliknutí na daný element a scrollování scrollovatelným kontejnerem. Jelikož je UI popisováno v programovým jazyce, lze využít jeho programové konstruktury jako cykly a podmínky. Zde je příklad composable funkce:
+Jetpack Compose je Googlem doporučený způsob pro implementaci uživatelského rozhraní \cite{jetpack-compose}. UI je implementováno pomocí programového kódu voláním \textit{composable} funkcí, které reprezentují nějaký UI element na obrazovce, ať už to je pouze tlačítko nebo celá obrazovka. Jetpack Compose poskytuje nativní composable funkce např. pro tlačítko, text a obrázek, ale také funkce reprezentující kontejnery pro seskupení UI elementů např. do řádku nebo sloupce. Kombinací těchto funkcí lze vytvořit složitější funkce reprezentující složitější UI elementy. Jelikož UI elementy jsou reprezentovány funkcemi, lze je přepoužívat na více místech zavoláním dané funkce. Pomocí parametrů funkcí lze měnit vzhled a chování UI elementu. Lze mu např. změnit \linebreak barvu, textový obsah, ale také přidat obsluhu pro události jako kliknutí na daný element a scrollování scrollovatelným kontejnerem. Jelikož je UI popisováno v programovým jazyce, lze využít jeho programové konstrukty jako např. cykly a podmínky. UI elementům, které jsou vytvářeny pomocí composable funkcí, se také říká UI komponenty. Zde je příklad composable funkce:
 
 \begin{lstlisting}[caption={Ukázka composable funkce}, label={lst:composable-example}, tabsize=2, language=Kotlin]
 // Soubor VoteListScreen.kt
@@ -211,11 +209,9 @@ fun Description(description: String) {
 
 \end{lstlisting}
 
-\noindent Composable funkce jsou označené anotací \lstinline|@Composable|, aby je mohl Jetpack Compose detekovat. Funkce \lstinline|Metadata| volá nativní composable funkci \lstinline|inline|, která repezentuje sloupec UI elementů. Parametr \lstinline|modifier| akceptuje objekt typu \lstinline|Modifier|, který obsahuje informace o vzhledu a chování dané komponenty. Nemusí to však být jediný parametr pro tento účel. V rámci funkce \lstinline|Column| jsou volány další tři composable funkce, které jsou vykreslovány pod sebou. \lstinline|Description| je vlastně definovaná composable funkce, která volá nativní composable funkci \lstinline|Text| repezentující textový obsah. \lstinline|Spacer| je nativní composable funkce, která vytvoří mezeru o velikosti 15 pixelů. Implementace composable funkce \lstinline|DateAndtime| zde pro stručnost není uvedena, ale je to stejně jako funkce \lstinline|Description| vlastně definovaná composable funkce. Všimněme si, že composable funkce můžeme pojmenovat podle jejich účelu. Např. funkce \lstinline|Description| reprezentuje popis a funkce \lstinline|DateAndTime| reprezentuje datum a čas. Dalšími důležitými koncepty composable funkcí jsou lokální stav a rekompozice composable funkcí, které budou vysvětleny na následujícím příkladu:
+\noindent Composable funkce jsou označené anotací \lstinline|@Composable|, aby je mohl Jetpack Compose detekovat. Funkce \lstinline|Metadata| volá nativní composable funkci \lstinline|Column|, která repezentuje sloupec UI elementů. Parametr \lstinline|modifier| akceptuje objekt typu \lstinline|Modifier|, který obsahuje informace o vzhledu a chování dané komponenty. Nemusí to však být jediný parametr pro tento účel. V rámci funkce \lstinline|Column| jsou volány další tři composable funkce, které jsou vykreslovány pod sebou. \lstinline|Description| je vlastně definovaná composable funkce, která volá nativní composable funkci \lstinline|Text| repezentující textový obsah. \lstinline|Spacer| je nativní composable funkce, která vytvoří mezeru o velikosti 15 pixelů. Implementace composable funkce \lstinline|DateAndtime| zde pro stručnost není uvedena, ale je to také vlastně definovaná composable funkce. Všimněme si, že composable funkce můžeme pojmenovat jak chceme. Většinou chceme funkci pojmenovat podle jejího účelu. Např. funkce \lstinline|Description| reprezentuje popis a funkce \lstinline|DateAndTime| reprezentuje datum a čas. Dalšími důležitými koncepty composable funkcí jsou lokální stav a rekompozice composable funkcí, které budou vysvětleny na následujícím příkladu:
 
-\newpage
-
-\begin{lstlisting}[caption={Ukázka composable funkce}, label={lst:composable-example}, tabsize=2, language=Kotlin]
+\begin{lstlisting}[caption={Ukázka composable funkce s vnitřním stavem}, label={lst:composable-example}, tabsize=2, language=Kotlin]
 // Soubor VoteDetailsScreen.kt
 
 @Composable
@@ -233,22 +229,22 @@ fun VoteDetailsScreen(
 }
 \end{lstlisting}
 
-\noindent Tento kód obsahuje composable funkci pro vykreslení obrazovky pro detail hlasování. Funkce obsahuje argument \lstinline|viewModel| a proměnnou \lstinline|voteDetailsUiState|. Nezávislě na tom, co tyto hodnoty přesně znamenají, dochází při jejich změně k rekompozici funkce. To znamená, že je funkce knihovnou Jetpack Compose znovu zavolána, ale tentokrát s novými daty. Důležitou vlastností composable funkcí je to, že k rekompozici dochází pouze ve všech funkcí v rámci podstromu \linebreak funkce, kde došlo ke změně stavu. Další poznámkou je, že návratový typ funkce \linebreak \lstinline|collectAsStateWithLifecycle()|, která bude vysvětlena v popisu implementace prezentační \linebreak vrstvy, je obecně \lstinline|State<T>|, kde T je nějaký argument datového typu. Aby změna lokální proměnné vyvolala rekompozici funkce, musí být tohoto datového typu. Ke konkrétní hodnotě typu \lstinline|T| se lze pak dostat prostřednictvím atributu \lstinline|value| třídy \lstinline|State|. Díky klíčovému slovu \lstinline|by| má proměnná \lstinline|voteDetailsUiState| datový typ \lstinline|T|, a tudíž lze k ní přistupovat přímo. Mechanizmus rekompozice je přitom zachována. Výhody použití knihovny Jetpack Compose jsou tedy následující:
+\noindent Tento kód obsahuje composable funkci pro vykreslení obrazovky pro detail hlasování. Funkce obsahuje argument \lstinline|viewModel| a proměnnou \lstinline|voteDetailsUiState|. Nezávislě na tom, co tyto hodnoty přesně znamenají, dochází při jejich změně k rekompozici funkce. To znamená, že je funkce knihovnou Jetpack Compose znovu zavolána, ale tentokrát s novými daty. Důležitou vlastností composable funkcí je to, že k rekompozici dochází pouze u funkcí, které se nachází v podstromu funkce, u které došlo ke změně jejího stavu. Další poznámkou je, že návratový typ funkce \linebreak \lstinline|collectAsStateWithLifecycle()| je obecně \lstinline|State<T>|, kde T je nějaký argument datového typu. Aby změna lokální proměnné vyvolala rekompozici funkce, musí být tohoto datového typu. Ke konkrétní hodnotě typu \lstinline|T| se lze dostat prostřednictvím atributu \lstinline|value| třídy \lstinline|State|. Díky klíčovému slovu \lstinline|by| se hodnota vrácená funkcí \lstinline|collectAsStateWithLifecycle()| ''rozbalí'', díky čemuž máme přímý přístup k vnitřní hodnotě typu \lstinline|T| prostřednictvím proměnné \lstinline|voteDetailsUiState|. Jinými slovy datovým typem proměnné \lstinline|voteDetailsUiState| je \lstinline|T| a ne \lstinline|State<T>|. Mechanizmus rekompozice je přitom zachován. Výhody použití knihovny Jetpack Compose jsou tedy následující:
 
 \begin{itemize}
-	\item \textbf{Deklarativní popis UI} -- Popisujeme, jak má vypada UI a jaké jsou jeho stavy. Nepopisujeme, jak se má vytvořit UI. Díky tomu je kód pro popis UI čitelnější a UI se automaticky znovu vykreslí v reakci na změnu stavu UI.
+	\item \textbf{Deklarativní popis UI} -- Popisujeme, jak má vypada UI a jaké jsou jeho stavy. Nepopisujeme, jak se má vytvořit UI. Díky tomu je kód pro popis UI čitelnější a UI se automaticky znovu znovu vykreslí v reakci na změnu stavu UI.
 	
 	\item \textbf{Stručnost a výstižnost} -- Kód je stručnější a výstižnější než při použití XML layoutů, který je popsán níže.
 	
 	\item \textbf{Efektivní vykreslování} -- Díky cílené rekompozici je znovu vykreslována pouze ta část \linebreak UI, u které se změnil stav dat.
 	
-	\item \textbf{Jednoduché testování} -- Jetpack Compose umožňuje jednoduše testovat UI, jak bude ukázáno v kapitole testování.
+	\item \textbf{Jednoduché testování} -- Jetpack Compose umožňuje jednoduše testovat UI.
 \end{itemize}
 
 \noindent Alternativou ke knihovně Jetpack Compose pro vytváření UI jsou XML layouty, pomocí kterých lze vytvářet UI prostřednictvím XML tagů v XML souborech. Hlavní myšlenkou tohoto přístupu je to, že oddělujeme popis uživatelského rozhraní od programového kódu, díky čemuž je kód čitelnější a udržitelnější. XML soubory obsahují pouze popis elementů. Programový kód pracuje pouze s částmi aplikace mimo UI. Míchání popisu UI a programového kódu se však nikdy nevyhneme, jelikož layoutům se musí minimálně předat aspoň data. Toho lze dosáhnout pouze propojením programového kódu s layoutem. Dále např. implementace dynamického seznamu pomocí XML layoutu vyžaduje hodně boilerplate kódu \cite{recycler-view}. Pro Jetpack Composu je vytvoření takového seznamu otázkou pár řádků kódu \cite{lazy-column}. Z toho důvodu jsem se rozhodl implementovat UI pomocí knihovny Jetpack Compose.
 
 \subsection*  {Proto DataStore}
-V aplikaci je možnost nastavit si aktuální volební období. Toto nastavení by si měla aplikace pamatovat i po vypnutí a opětovném aplikace. Z toho důvodu je tento údaj ukládán lokálně \linebreak v mobilním zařízení. Jsou dvě různé knihovny, které poskytují rozhraní pro ukládání do lokálního úložiště a čtení z něj: \lstinline|SharedPreferences| \cite{shared-preferences} a \lstinline|DataStore| \cite{data-store}. Knihovna \lstinline|DataStore| poskytuje asynchronní práci s lokálním úložištěm pomocí couroutinů, knihovna \lstinline|SharedPreferences| pouze synchronní. Z toho důvodu byl vybrán \lstinline|DataStore|. Knihovna \lstinline|DataStore| poslytuje dvě různé implementace: \lstinline|Preferences DataStore| a \lstinline|Proto DataStore|. Implementace \lstinline|Proto DataStore| ukládá data jako instance vlastně definované třídy, která je vytvořena na základě konfiguračního souboru napsaný v jazyce používaného v \lstinline|Protocol Buffers|. Díky implementace přes třídu je při ukládání a čtení dat poskytována typová kontrola. Implementace \lstinline|Preferences DataStore| umožňuje přistupovat k datům pomocí klíčů, nevyžaduje předem definované schéma pro data a neposkytuje typovou kontrolu. Kvůli absenci typové kontroly \lstinline|Preferences DataStore| byla zvolena implementace \lstinline|Proto DataStore|, která funguje následovně:
+V aplikaci je možnost nastavit si aktuální volební období. Toto nastavení by si měla aplikace pamatovat i po vypnutí a opětovném aplikace. Z toho důvodu je tento údaj ukládán do lokálního perzistentního úložiště v mobilním zařízení. Jsou dvě různé knihovny, které poskytují rozhraní pro ukládání do lokálního úložiště a čtení z něj: \lstinline|SharedPreferences| \cite{shared-preferences} a \lstinline|DataStore| \cite{data-store}. Knihovna \lstinline|DataStore| poskytuje asynchronní práci s lokálním úložištěm pomocí \linebreak couroutinů, knihovna \lstinline|SharedPreferences| pouze synchronní. Z toho důvodu byl vybrán \lstinline|DataStore|. Knihovna \lstinline|DataStore| poskytuje dvě různé implementace: \lstinline|Preferences DataStore| a \lstinline|Proto DataStore|. Implementace \lstinline|Proto DataStore| ukládá data jako instance vlastně definované třídy, která je vytvořena na základě konfiguračního souboru napsaného v jazyce používaného v \lstinline|Protocol Buffers| \cite{protocol-buffers}. Díky implementace přes třídu je při ukládání a čtení dat poskytována typová kontrola. Implementace \lstinline|Preferences DataStore| umožňuje přistupovat k datům pomocí klíčů, nevyžaduje předem definované schéma pro data a neposkytuje typovou kontrolu. Kvůli absenci typové kontroly \lstinline|Preferences DataStore| byla zvolena implementace \lstinline|Proto DataStore|, která funguje následovně:
 
 \begin{lstlisting}[caption={Ukázka práce s Proto DataStore}, label={lst:proto-datastore}, tabsize=2, language=Kotlin]
 // Soubor user_prefs.proto
@@ -273,7 +269,7 @@ class UserPreferencesRepository(
 }
 \end{lstlisting}
 
-\noindent Zpráva, jak ji nazývá Google, \lstinline|DataStore| repezentuje strukturu lokálního úložiště. Na základě ní se při sestavení aplikace vygeneruje třídá \lstinline|UserPreferences|. Třída \lstinline|DataStore| poskytuje rozhraní pro práci s lokálním úložištěm. Proměnná \lstinline|userPreferencesDataStore.data| je flow poskytující data z lokálního úložiště, tj. jakmile se data v úložišti změní, konzument dané flow na to zareaguje. Přes tuto proměnnou lze tedy získat aktuální volební rok. Pro aktualizaci volebního roku je pak použita funkce \lstinline|updateElectionYear|.
+\noindent Zpráva (angl. \textit{message}), jak ji nazývá Google, repezentuje strukturu lokálního úložiště. Na základě ní se při sestavení aplikace vygeneruje třídá \lstinline|UserPreferences|. Třída \lstinline|DataStore| poskytuje rozhraní pro práci s lokálním úložištěm. Proměnná \lstinline|userPreferencesDataStore.data| je flow poskytující data z lokálního úložiště. Přes tuto proměnnou lze získat aktuálně nastavené volební období. Pro aktualizaci volebního roku je použita funkce \lstinline|updateElectionYear|.
 
 \section {Implementace prezentační vrstvy}
 Popis implementace prezentační vrstvy bude rozdělena na popis vstupního bodu do \linebreak aplikace, popis implementace UI elementů a popis držitelů stavu.
@@ -303,7 +299,7 @@ class MainActivity : ComponentActivity() {
 }
 \end{lstlisting}
 
-\noindent Anotace \lstinline|@AndroidEntryPoint| je informace pro Hilt, aby dovoloval injectovat závislosti v rámci této třídy a všech komponent existujících v rámci této aktivity. Pomocí funkce \lstinline|setContent| je zavolána kořenová composable funkce \lstinline|PspApp|. V rámci funkce \lstinline|init| je z backendu získán seznam volebních roků a uložen do lokálního úložiště:
+\noindent Anotace \lstinline|@AndroidEntryPoint| je informace pro Hilt, že může injektovat závislosti do tříd vytvořených v rámci této Android komponenty. Pomocí funkce \lstinline|setContent| je zavolána kořenová composable funkce \lstinline|PspApp|. V rámci funkce \lstinline|init| je z backendu získán seznam volebních roků \linebreak a uložen do lokálního úložiště:
 
 \newpage
 
@@ -345,7 +341,7 @@ UI bylo implementováno pomocí knihovny Jetpack Compose. Zde je výčet někter
 
 
 \begin{itemize}
-	\item \textbf{Column} - Sloupcový kontejner pro elementy. Hodí se pro pozicování UI elementů do sloupce. Nehodí se pro dlouhé seznamy, jelikož při rekompozici této komponenty dojde k rekompzici všech jejích podkompoennt, včetně těch které nejsou na obrazovce viditelné kvůli velikosti seznamu. Kontejnerem nejde scrollovat. Používám ji pozicování všech elementů, které se nachází pod sebou.
+	\item \textbf{Column} - Sloupcový kontejner pro elementy. Hodí se pro pozicování UI elementů do sloupce. Nehodí se pro dlouhé seznamy, jelikož při rekompozici této komponenty dojde k rekompzici všech jejích podkomponent, včetně těch které nejsou na obrazovce viditelné kvůli velikosti seznamu. Kontejnerem nejde scrollovat. Používám ji pro pozicování všech elementů, které se nachází ve sloupci pod sebou.
 
 	\item \textbf{LazyColumn} - Sloupcový kontejner pro elementy, který je zoptimalizovaný pro dlouhé seznamy. Při rekompozici komponenty dojde k rekompozici pouze viditelných podkomponent. Kontejnerem lze scrollovat. Používám ji pro dlouhé seznamy, tj. seznam hlasování, seznam poslanců, hlasování jednotlivých klubů a hlasování poslance.
 
@@ -353,7 +349,7 @@ UI bylo implementováno pomocí knihovny Jetpack Compose. Zde je výčet někter
 
 	\item \textbf{Text} - Textový element. Používám ji pro zobrazení textového obsahu.
 
-	\item \textbf{Image} - Obrázkový element. Obrázek lze získat pomocí URL adresy. Používám ho pro zobrazení profilových fotek poslanců a logy klubů.
+	\item \textbf{Image} - Obrázkový element. Obrázek lze získat pomocí URL adresy. Používám ho pro zobrazení profilových fotek poslanců a logů klubů.
 
 	\item \textbf{Icon} - Komponenta pro ikonku. Používám ji např. pro ikonky v hlavičce a v dolní liště.
 
@@ -365,7 +361,7 @@ UI bylo implementováno pomocí knihovny Jetpack Compose. Zde je výčet někter
 
 	\item \textbf{FloatingActionButton} - Plovoucí tlačítko. Používám ho pro skok na začátek dlouhých seznamu.
 
-	\item \textbf{Scaffold} - Pomocný kontejner pro seskupení komponent na obrazovce. Umožňuje jednoduchým způsobem přidat plovoucí tlačítko a automaticky ho napozicovat. Používám jeden sdílený všemi mezi obrazovkami. Každá obrazovka s dlouhým seznamem má taktéž tuto komponentu pro přidání plovoucího tlačítka.
+	\item \textbf{Scaffold} - Pomocný kontejner pro seskupení komponent na obrazovce. Umožňuje jednoduchým způsobem přidat plovoucí tlačítko a automaticky ho napozicovat. Používám jeden sdílený mezi všemi obrazovkami. Každá obrazovka s dlouhým seznamem má taktéž tuto komponentu, pro přidání plovoucího tlačítka.
 
 	\item \textbf{TopAppBar} - Horní lišta.
 
@@ -375,11 +371,11 @@ UI bylo implementováno pomocí knihovny Jetpack Compose. Zde je výčet někter
 
 	\item \textbf{CompositionLocalProvider} - Umožňuje přepsat hodnotu v kontextu, který obsahuje globální hodnoty dostupné v rámci určitého podstromu komponent. Používám ji pro lokální přepsání globální barvy, a tím nastylování textů pro data a časy.
 
-	\item \textbf{Box} - Kontejner umožňující skládat UI elementy na sebe. Používám ho pro vytvoření popupu v nastavení. Na pozadí je seznam nastavení a na něm se leží daný popup.
+	\item \textbf{Box} - Kontejner umožňující skládat UI elementy na sebe. Používám ho pro vytvoření popupu v nastavení. Na pozadí je seznam nastavení a na popředí je daný popup.
 
-	\item \textbf{SettingsMenuLink} - Composable funkce z knihovny Alorma pro snadné vytvoření nastavení v seznamu nastavení s již nějakým defaultním nastylováním.
+	\item \textbf{SettingsMenuLink} - Composable funkce z knihovny Alorma \cite{alorma} pro snadné vytvoření nastavení s defaultním vzhledem.
 
-	\item \textbf{ListItemPicker} - Composable funkce z knihovny Alorma reprezentující seznam \linebreak hodnot, kterým lze scrollovat. Knihovna ji definuje defaultní vzhled.
+	\item \textbf{ListItemPicker} - Composable funkce z knihovny Alorma reprezentující seznam \linebreak hodnot, kterým lze táhnout. Knihovna jí definuje defaultní vzhled.
 
 	\item \textbf{Card} - Karta obsahující libovolný obsah a prvek pro akci. Používám ji např. pro elementy \linebreak v seznamu hlasování.
 
@@ -393,16 +389,16 @@ UI bylo implementováno pomocí knihovny Jetpack Compose. Zde je výčet někter
 \noindent Zde je seznam souborů, v kterých je vytvářeno UI. Každý z těchto souborů odpovídá jedné obrazovce:
 
 \begin{itemize}
-	\item \textbf{VoteListScreen.kt}
-	\item \textbf{VoteScreen.kt}
-	\item \textbf{MemberListScreen.kt}
-	\item \textbf{MemberScreen.kt}
-	\item \textbf{SettingsScreen.kt}
+	\item \textbf{VoteListScreen.kt} - Obrazovka pro seznam hlasování.
+	\item \textbf{VoteScreen.kt} - Obrazovka pro detail hlasování.
+	\item \textbf{MemberListScreen.kt} - Obrazovka pro seznam poslanců.
+	\item \textbf{MemberScreen.kt} - Obrazovka pro detail poslance.
+	\item \textbf{SettingsScreen.kt} - Obrazovka pro nastavení.
 \end{itemize}
 
-\noindent Všechny UI komponenty v jiných souborech jsou používány v rámci UI komponent v těchto souborů. Každá komponenta je implementována podobně. Nejdřív jsou definován stav funkce \linebreak a poté následuje popis UI. Např. UI komponenta pro seznam hlasování vypadá následovně:
+\noindent Všechny UI komponenty v jiných souborech jsou používány v rámci těchto souborů. Každá komponenta je implementována podobně. Nejdřív je definován stav funkce a poté následuje popis UI. Např. UI komponenta pro seznam hlasování vypadá následovně:
 
-\begin{lstlisting}[caption={Komponenta pro seznam hlasování, language=Kotlin}, tabsize=2, language=Kotlin]
+\begin{lstlisting}[caption={Komponenta pro seznam hlasování}, tabsize=2, language=Kotlin]
 // Soubor VoteListScreen.kt.kt
 	
 @Composable
@@ -434,11 +430,11 @@ fun VoteListScreen(
 \noindent Na začátku funkce je definován stav:
 
 \begin{itemize}
-	\item \textbf{fetchState} -- Příznak pro zjištění stavu, zda je přístup k backend v pořádku nebo zda nastal nějaký problém jako např. backend hází chybu 500 nebo mobilní zařízení není připojeno \linebreak k internetu.
+	\item \textbf{fetchState} -- Příznak pro zjištění, zda je přístup k backendu v pořádku nebo zda nastal nějaký problém jako např. backend hází chybu 500 nebo mobilní zařízení není připojeno \linebreak k internetu.
 	
 	\item \textbf{refreshing} -- Příznak, zda je seznam obnovován, tj. zda jsou data z backendu opětovně stahována. Toho lze dosáhnout táhnutím obrazovky dolu.
 	
-	\item \textbf{pullRefreshState} -- Stav pro obnovy. Tento objekt je z externí knihovny material a má na starosti sledování události pro táhnutí obrazovkou dolu.
+	\item \textbf{pullRefreshState} -- Stav pro obnovy. Tento objekt je z externí knihovny material a má na starosti sledování událostí pro táhnutí obrazovkou dolu.
 	
 	\item \textbf{votePagingItems} -- Stránkovaný seznam hlasování.
 	
@@ -449,7 +445,7 @@ fun VoteListScreen(
 	\item \textbf{electionYearRange} -- Textová reprezentace volebního období.
 \end{itemize}
 
-\noindent Po definici stavu je vytvářeno samotné UI využitím daných stavů. Komponenta pro seznam poslanců vypadá téměř stejně. Ostatní komponenty jsou psány stejným stylem. Navigace je implementována pomocí UI komponenty \lstinline|NavHost|:
+\noindent Po definici stavu je vytvořeno UI s využitím daných stavů. Komponenta pro seznam poslanců vypadá téměř stejně. Ostatní komponenty jsou psány stejným stylem. Navigace je implementována pomocí UI komponenty \lstinline|NavHost|:
 
 \begin{lstlisting}[caption={Komponenta pro navigaci}, tabsize=2, language=Kotlin]
 // Soubor PspNavHost.kt
@@ -489,10 +485,10 @@ fun PspNavHost(
 }
 \end{lstlisting}
 
-\noindent Pomocí funkce \lstinline|NavHost| vytváříme destinace pro navigaci. Každá destinace je vytvořena pomocí funkce \lstinline|composable|, která v prvním parametru akceptuje název identifikující danou destinaci \linebreak a v druhém callback funkci, která se zavolá,  když dojde k navigaci k této destinaci. Samotnou navigaci má na starosti objekt \lstinline|NavHostController|. Při navigaci na detail entity v seznamu specifikujeme navíc argumenty jak v definici destinace, tak i při navigaci.
+\noindent Pomocí funkce \lstinline|NavHost| vytváříme destinace pro navigaci. Každá destinace je vytvořena pomocí funkce \lstinline|composable|, která v prvním parametru akceptuje název identifikující danou destinaci \linebreak a v druhém callback funkci, která se zavolá,  když dojde k navigaci k této destinaci. Samotnou navigaci má na starosti objekt \lstinline|NavHostController|. Při navigaci na detail entity specifikujeme navíc argument s identifikátorem dané entity. Tento argument se musí vyskytovat v definici destinace a musí být specifikován během navigaci.
 
 \subsection*{Držitelé stavů}
-Držitel stavu obsahuje stav UI a metody pro obsluhu událostí z prezentační vrstvy. Data získává z doménové vrstvy. je implementován pomocí view modelů. Všechny stavy v modelech jsou buď definovaný pomocí datového typu \lstinline|State| nebo \lstinline|StateFlow|. Datový typ \lstinline|StateFlow| je \linebreak flow, jejíž životní cyklus se řídí podle životního cyklu Android komponenty, v které je vytvořena. \linebreak V tomto případě je Android komponentou view model. Composable funkce reagují pouze na změny proměnných typu \lstinline|State|. Proměnné typu \lstinline|StateFlow| se v composable funkcích musí převést na typ \lstinline|State| pomocí funkce \lstinline|collectAsStateWithLifecycle|. Pokud je stavem ve view modelu stránkovaný obsah, pak je typu \lstinline|StateFlow<PagingData<T>>|, a pro použití v composable funkci se musí převést na typ \lstinline|LazyPagingItems| pomocí funkce \lstinline|collectAsLazyPagingItems|, jelikož stránkování se používá pro dlouhé seznamy a ty jsou implementovány pomocí funkce \lstinline|LazyColumn|, která vyžaduje datový typ \lstinline|LazyPagingItems|. Zde je příklad view modelu pro seznam hlasování:
+Držitel stavu obsahuje stav UI a metody pro obsluhu událostí z UI. Data získává z doménové vrstvy. Je implementován pomocí view modelů. Všechny stavy v modelech jsou buď definovaný pomocí datového typu \lstinline|State| nebo \lstinline|StateFlow|. Datový typ \lstinline|StateFlow| je flow, jejíž životní cyklus se řídí podle životního cyklu Android komponenty, v rámci které je vytvořena. V tomto případě je Android komponentou view model. Composable funkce reagují pouze na změny proměnných typu \lstinline|State|. Proměnné typu \lstinline|StateFlow| se v composable funkcích musí převést na typ \lstinline|State| pomocí funkce \lstinline|collectAsStateWithLifecycle|. Pokud je stavem ve view modelu stránkovaný obsah, pak je typu \lstinline|StateFlow<PagingData<T>>|, a pro použití v composable funkci se musí převést na typ \lstinline|LazyPagingItems| pomocí funkce \lstinline|collectAsLazyPagingItems|, jelikož stránkování se používá pro dlouhé seznamy a ty jsou implementovány pomocí funkce \lstinline|LazyColumn|, která vyžaduje datový typ \lstinline|LazyPagingItems| \cite{compose-paging}. Zde je příklad view modelu pro seznam hlasování:
 
 \begin{lstlisting}[caption={Ukázka využití view modelu}, label={lst:view-model}, tabsize=2, language=Kotlin]
 // Soubor VoteListViewModel.kt
@@ -527,17 +523,16 @@ class VoteListViewModel(
 Doménová vrstva má na starosti business logiku aplikace. Jedinou business logikou aplikace je získávání dat různých typů. Zde je výčet souborů implementující doménovou vrstvu:
 
 \begin{itemize}
-	\item \textbf{GetAppStateUseCase.kt}
-	\item \textbf{GetMemberDetailUseCaseen.kt}
-	\item \textbf{GetMembersUseCase.kt}
-	\item \textbf{GetMemberVotesUseCase.kt}
-	\item \textbf{GetPartiesUseCase.kt}
-	\item \textbf{GetPartyVotesUseCase.kt}
-	\item \textbf{GetVoteDetailUseCase.kt}
-	\item \textbf{GetVotesUseCase.kt}
+	\item \textbf{GetAppStateInteractor.kt} - Pro získání stavu aplikace.
+	\item \textbf{GetMemberDetailInteractor.kt} - Pro získání detailu poslance.
+	\item \textbf{GetMembersInteractor.kt} - Pro získání seznamu poslanců.
+	\item \textbf{GetMemberVotesInteractor.kt} - Pro získání výsledků hlasování poslance.
+	\item \textbf{GetPartyVotesInteractor.kt} - Pro výsledků hlasování klubu a jeho členů.
+	\item \textbf{GetVoteDetailInteractor.kt} - Pro získání detail hlasování.
+	\item \textbf{GetVotesInteractor.kt} - Pro získání seznamu hlasování.
 \end{itemize}
 
-\noindent Doménová vrstva slouží jako abstrakce datové vrstvy od prezentační vrstvy. Třídy nesou název jejich účelu. Tyto třídy mohou vracet přímo data z datové vrstvy (GetAppStateUseCase.kt). Mohou také prevádět seznam entit na datový typ flow, pokud chceme pracovat ve view modelu s flow (GetPartyVotesUseCase.kt). Pokud má třída vracet stránkovaný obsah, pak kód vypadá následovně:
+\noindent Doménová vrstva slouží jako abstrakce datové vrstvy od prezentační vrstvy. Tyto třídy mohou vracet přímo data z datové vrstvy (\textbf{GetAppStateUseCase.kt}). Mohou také prevádět seznam entit na datový typ flow, pokud chceme pracovat ve view modelu s flow \linebreak (\textbf{GetPartyVotesUseCase.kt}). Pokud má třída vracet stránkovaný obsah, pak kód vypadá následovně:
 
 \begin{lstlisting}[caption={Ukázka využití třídy doménové vrstvy pro získání stránkovaného seznamu hlasování}, label={lst:use-case-vote}, tabsize=2, language=Kotlin]
 // Soubor GetVotesUseCase.kt
@@ -557,19 +552,19 @@ class GetVotesUseCase @Inject constructor(...) {
 }
 \end{lstlisting}
 
-\noindent Je vytvořen objekt typu \lstinline|Pager|, který na základě konfigurace v \lstinline|PagingConfig| a zdroje dat \linebreak v \lstinline|VotespagingSource| poskytne flow stránkovaných hodnot.  \lstinline|voteRepository| je repozitář z datové vrstvy, odkud budou získávána data. \lstinline|electionYear| je volební rok, aby se daly stahovat data pro určité volební období. \lstinline|searchText| ja řetězec pro případné filtrování seznamu.
+\noindent Je vytvořen objekt typu \lstinline|Pager|, který na základě konfigurace v \lstinline|PagingConfig| a zdroje dat \linebreak v \lstinline|VotespagingSource| poskytne flow stránkovaných hodnot.  \lstinline|voteRepository| je repozitář z datové vrstvy, odkud budou získávána data. \lstinline|electionYear| je volební rok, aby se daly stahovat data pro určité volební období. \lstinline|searchText| je řetězec pro případné filtrování seznamu.
 
 \section {Implementace datové vrstvy}
-Datová vrstva slouží pro abstrahování doménové vrstvy od konkrétních datových zdrojů. Datovým zdrojem může být např. backend nebo lokální databíze. V našem případě je použit pouze datový zdroj pro získávání data z backendu. Zde jsou soubory s repozitářemi implementujícími datovou vrstvu:
+Datová vrstva slouží pro abstrahování doménové vrstvy od konkrétních datových zdrojů. Datovým zdrojem může být např. backend nebo lokální databáze. V našem případě je použit pouze datový zdroj pro získávání data z backendu. Zde jsou soubory s repozitářemi implementujícími datovou vrstvu:
 
 \begin{itemize}
-	\item \textbf{AppStateRepositoryImpl.kt}
-	\item \textbf{MemberRepositoryImpl.kt}
-	\item \textbf{PartyRepositoryImpl.kt.kt}
-	\item \textbf{VoteRepositoryImpl.kt.kt}
+	\item \textbf{AppStateRepositoryImpl.kt} - Repozitář pro stav aplikace.
+	\item \textbf{MemberRepositoryImpl.kt} - Repozitář pro poslance.
+	\item \textbf{PartyRepositoryImpl.kt.kt} - Repozitář pro kluby.
+	\item \textbf{VoteRepositoryImpl.kt.kt} - Repozitář pro hlasování.
 \end{itemize}
 
-\noindent Repozitáře získávají data z konkrétních datových zdrojů a mapují seznamy na flowy, pokud se stránkovaný seznam (pak je logika pro převedení na flow ponechána na stránkovací \linebreak knihovně, která je popsána následně), a API entity na doménové entity:
+\noindent Repozitáře získávají data z konkrétních datových zdrojů a mapují seznamy na flowy, pokud se nejedná o stránkovaný seznam (pak je logika pro převedení na flow ponechána na stránkovací knihovně, která bude popsána níže), a API entity na doménové entity:
 
 \begin{lstlisting}[caption={Ukázka datové vrstvy pro data o stavu aplikace}, label={lst:use-case-repository}, tabsize=2, language=Kotlin]
 class AppStateRepositoryImpl @Inject constructor(
@@ -597,15 +592,15 @@ class PspRemoteDataSourceImpl @Inject constructor(
 }
 \end{lstlisting}
 
-\noindent Komunikuje se třídou \lstinline|PspApi|, která již obsahuje implementační detaily pro přístup k endpontům backendu. Specielním datovým zdrojem je stránkovací datový zdroj´, který není volán z repozitáře, ale z doménové vrstvy a repozitář je mu předán v parametru. Zde je seznam souborů se stránkovacími datovými zdroji:
+\noindent Komunikuje se třídou \lstinline|PspApi|, která již obsahuje implementační detaily pro přístup k endpontům backendu. Speciálním datovým zdrojem je stránkovací datový zdroj, který není volán z repozitáře, ale z doménové vrstvy a repozitář mu je předán v parametru. Zde je seznam souborů se stránkovacími datovými zdroji:
 
 \begin{itemize}
-	\item \textbf{VotesPagingSource.kt}
-	\item \textbf{MembersPagingSource.kt}
-	\item \textbf{MemberVotesPagingSource.kt}
+	\item \textbf{VotesPagingSource.kt} - Stránkování pro seznam hlasování.
+	\item \textbf{MembersPagingSource.kt} - Stránkování pro seznam poslanců.
+	\item \textbf{MemberVotesPagingSource.kt} - Stránkování pro seznam hlasování poslance.
 \end{itemize}
 
-\noindent Implementace stránkovacích zdrojů jsou příliš dlouhé, a proto zde nebude uvedena ukázka. Poskytuje funkci \lstinline|load|, kterou lze přepsat. V této funkci máme k dispozici aktuální stav scrollovatelného seznamu, tj. aktuální číslo a velikost stránky. Na základě toho jsou získána data z backendu skrz sítovou vrstvu. V případě, že získání dat proběhlo v pořádku a nedošlo k žádné síťové chybě, je vracen objekt typu \lstinline|LoadResult.Page|, kterému jsou předána data aktuální stránky, číslo předchozí stránky a číslo následující stránky. Pokud nastane chyba, pak je vracen objekt typu \lstinline|LoadResult| reprezentující chybnou stránku.
+\noindent Implementace stránkovacích zdrojů jsou příliš dlouhé, a proto zde nebude uvedena. Poskytuje funkci \lstinline|load|, kterou lze přepsat. V této funkci máme k dispozici aktuální stav scrollovatelného seznamu, tj. aktuální číslo a velikost stránky. Na základě toho jsou získána data z backendu skrz sítovou vrstvu. V případě, že získání dat proběhlo v pořádku a nedošlo k žádné síťové chybě, je vracen objekt typu \lstinline|LoadResult.Page|, kterému jsou předána data aktuální stránky, číslo předchozí stránky a číslo následující stránky. Pokud nastane chyba, pak je vracen objekt typu \lstinline|LoadResult| reprezentující chybnou stránku.
 
 \section{Implementace síťové vrstvy}
 \label{sec:impl-network}
@@ -637,7 +632,7 @@ interface PspApi {
 \chapter{Implementace backendu}
 V této kapitole bude popsána implementace backendu. V první podkapitole budou popsány použité nástroje a technologie. Backend je implementovaný pomocí více vrstvé \linebreak architektury: prezentační, doménova, databázová a vrstva pro synchronizaci dat. Sekce budou rozděleny tak, aby odpovídaly těmto vrstvám.
 
-section {Použité nástroje a technologie}
+\section {Použité nástroje a technologie}
 V této sekci budou popsány hlavní nástroje a technologie použité pro implementaci backendu.
 
 \subsection*{Intellij IDEA}
@@ -650,12 +645,12 @@ Backend byl vyvíjen ve vývojovém prostředí Intellij IDEA \cite{idea}. Výho
 \end{itemize}
 
 \subsection*{Maven}
-Maven je nástroj pro automatizaci sestavování programu. Maven byl zvolen kvůli tomu, že původně bylo v plánu backend nasadit na Cloud Azure \cite{azure}. Ten poskytoval plugin pro maven, který umožňoval backend nasadit a zprovoznit pomocí jednoho příkazu. Avšak kvůli omezené možnosti využití výpočetního výkonu byl backend nakonec nasazen na jiný CloudFIT (více v kapitole \ref{ch:deploy}). Gradle má čitelnější syntaxi, nicméně výběr mezi Mavenem a Gradlem neměl na funkčnost backendu a vývoj zásadní vliv, a proto se zůstalo u Mavenu.
+Maven je nástroj pro automatizaci sestavování programu. Maven byl zvolen kvůli tomu, že původně bylo v plánu backend nasadit na Cloud Azure \cite{azure}. Ten poskytoval plugin pro maven, který umožňoval backend nasadit a zprovoznit pomocí jednoho příkazu. Avšak kvůli omezené možnosti využití výpočetního výkonu byl backend nakonec nasazen na CloudFIT (více v kapitole \ref{ch:deploy}). Gradle má čitelnější syntaxi, nicméně výběr mezi Mavenem a Gradlem neměl na funkčnost backendu \linebreak a rychlost vývoje zásadní vliv, a proto se ke Gradlu již nepřecházelo a zůstalo se u Mavenu.
 
 \subsection*{Spring Boot}
-Spring je open-source framework pro vývoj enterprise aplikací. Obshauje nástroje pro řešení různorodých problémů. Pro účely této práce byly využity nástroje pro vytvoření webových \linebreak aplikací, které lze používat i pro implementaci REST API. Nástroje Springu jsou založeny na návrhovém vzoru dependency injection.
+Spring je open-source framework pro vývoj enterprise aplikací. Obsahuje nástroje pro řešení různorodých problémů. Pro účely této práce byly využity nástroje pro vytvoření webových \linebreak aplikací \cite{spring-web}, které lze používat i pro implementaci REST API. Nástroje Springu jsou založeny na návrhovém vzoru dependency injection.
 
-Spring Boot je framework, který je postavený na Springu a který má za cíl redukci boilerplate kódu a nutnost počáteční konfigurace. Toto realizuje prostřednictcvím \linebreak autokonfigurace, což je vlastnost, kdy jsou jednotlivé komponenty Spring Bootu (např. rozhraní pro komunikaci s databází, webový server, ORM) automaticky nakonfigurovány pomocí defaultních hodnot. Defaultní hodnoty jsou Spring Bootem zvoleny, tak aby cílilo na nejčastější použití. Díky tomu lze nainstalovat závislost a s minimálním zásahem do konfigurace ji lze rovnou použít. Např. po instalaci knihovny JDBC a MySQL konektoru staří v konfiguračním souboru nastavit URL adresu a název databáze a databázi lze v kódu rovnou použít. Není potřeba nic navíc konfigurovat. Konfigurace lze vždy přenastavit, pokud je to bude potřeba. Další výhodou Spring Bootu je to, že objekty, které se mají přidat do jejího kontejneru s grafem závislostí pro injektování, lze specifikovat anotováním tříd. Na základě určitých anotací dokáže Spring Boot tyto třídy detekovat, vytvořit z nich instanci, a uložit instanci do kontejneru s grafem závislostí.
+Spring Boot je framework, který je postavený na Springu a který má za cíl redukci boilerplate kódu a nutnost počáteční konfigurace. Toto realizuje prostřednictcvím \linebreak autokonfigurace, což je vlastnost, kdy jsou jednotlivé komponenty Spring Bootu (např. rozhraní pro komunikaci s databází, webový server, ORM) automaticky nakonfigurovány pomocí defaultních hodnot. Defaultní hodnoty jsou Spring Bootem zvoleny tak, aby cílily na nejčastější použití. Díky tomu lze nainstalovat závislost a s minimálním zásahem do konfigurace ji lze rovnou použít. Např. po instalaci knihovny JDBC a MySQL konektoru stačí v konfiguračním souboru nastavit URL adresu a název databáze a databázi lze v kódu rovnou použít. Není potřeba nic navíc konfigurovat. Konfigurace lze vždy přenastavit, pokud to bude potřeba. Další výhodou Spring Bootu je to, že objekty, které se mají přidat do jejího kontejneru s grafem závislostí pro injektování, lze specifikovat anotováním tříd. Na základě určitých anotací dokáže Spring Boot tyto třídy detekovat, vytvořit z nich instanci, a uložit instanci do svého kontejneru.
 
 Alternativou ke knihovně Spring Boot je knihovna Ktor \cite{ktor}. Výhodou této knihovny je, že vývoj v ní je určený pro psaní v Kotlinu. Lze tedy využít všechny výhody tohoto jazyka. Nevýhodou je, že nepodporuje defaultně dependency injection. Musí se tedy dodatečně nainstalovat a nakonfigurovat. Další nevýhodou je chybějící autokonfigurace. Mnoho závislostí se tedy musí manuálně nakonfigurovat.
 
@@ -663,16 +658,16 @@ Alternativou ke knihovně Spring Boot je knihovna Ktor \cite{ktor}. Výhodou té
 Java byla od začátku hlavním programovacím jazykem pro vývoj aplikací ve Spring Bootu. Od roku 2017 přišla integrace jazyka Kotlin do Spring Bootu \cite{kotlin-support} a v dokumentaci jsou ukázkové kódy psány jak v Javě tak i Kotlinu. Podle mého názoru má Java oproti Kotlinu větší podporu v komunitě, co se týče vývoje ve Spring Bootu. Nalezení řešení pro problém ve Spring Bootu \linebreak s Javou bylo jednodušší než ve Spring Bootu s Kotlinem. Intellij IDEA však poskytuje nástroje pro automatickou trasnformaci souboru v jazyce Java do souboru v Kotlinu. Výsledný kód bylo však potřeba vždy pročistit, jelikož u všech proměnných vždy obsahoval datové typy, které lze \linebreak v Kotlinu v některých případech pro čitelnost vynechat. Zároveň výstupní kód někdy nebyl kvůli drobnosti kompilovatelný. Z toho důvodu jsem se rozhodl pro použití Javy. Zdá se však, že podpora pro psaní aplikací Spring Boot pomocí Kotlinu je čím dál tím větší. Když bych měl možnost backend napsat znovu, pouvažoval bych znovu o použití Kotlinu, jelikož je to velmi dobrý programovací jazyk.
 
 \section {Prezentační vrstva}
-V prezentační vrstvě jsou implementovány endpointy REST API v rámci \textit{controllerů}, což je třída obsahující definice endpointů. Endpointy lze tedy seskupit do různých tříd. Controllery získávají data z doménové vrstvy. Zde je seznam souborů s controllery:
+V prezentační vrstvě jsou implementovány endpointy REST API v rámci \textit{controllerů}, což jsou třídy obsahující definice endpointů. Endpointy lze tedy seskupit do různých tříd. Controllery získávají data z doménové vrstvy. Zde je seznam souborů s controllery:
 
 \begin{itemize}
-	\item \textbf{VoteController}
-	\item \textbf{PartyController}
-	\item \textbf{MemberController}
-	\item \textbf{AppStateController}
+	\item \textbf{VoteController} - Obsahuje endpointy pro hlasování.
+	\item \textbf{PartyController} - Obsahuje endpointy pro kluby.
+	\item \textbf{MemberController} - Obsahuje endpointy pro poslance.
+	\item \textbf{AppStateController} - Obsahuje endpointy pro stav aplikace.
 \end{itemize}
 
-\noindent Zde je kus kódu pro implementaci controlleru pro endpointy související s hlasováním:
+\noindent Zde je kus kódu pro implementaci controlleru s endpointy související s hlasováním:
 
 \newpage
 
@@ -692,7 +687,7 @@ public class VoteController {
 	}
 \end{lstlisting}
 
-\noindent Podle anotace \lstinline|@RestController| Spring Boot pozná, že se jedná o controller a vytvoří implementaci endpointů vevnitř. Anotace \lstinline|@GetMapping| definuje URL adresu endpointu. V parametru lze specifikovat URL id parametry pomocí \lstinline{@PathVariable} a query parametry pomocí \lstinline|@RequestParam|. Data získané z doménové vrstvy (service) jsou případně transformována (mapper). U stránkovaného obsahu jsou navíc přidány HTTP hlavičky pro informace o stránkování:
+\noindent Podle anotace \lstinline|@RestController| Spring Boot pozná, že se jedná o controller a na pozadí nám vytvoří implementaci endpointů. Anotace \lstinline|@GetMapping| definuje URL adresu endpointu. V parametru metody lze specifikovat URL parametr pomocí anotace \lstinline|@PathVariable| a query parametry pomocí \lstinline|@RequestParam|. Data získaná z doménové vrstvy (proměnná service) jsou případně transformována (proměnná mapper). U stránkovaného obsahu jsou navíc přidány HTTP hlavičky pro informace o stránkování:
 
 \begin{lstlisting}[caption={Ukázka nastavení hlaviček pro stránkování}, label={lst:headers-paging}, tabsize=2]
 // Soubor PaginationHeaderGenerator.java
@@ -715,9 +710,9 @@ public static HttpHeaders buildHeaders(int totalPages, int page) {
 Doménová vrstva má na starosti business logiku aplikace a abstrahování prezentační vrstvy od implementačních detailů databázové vrstvy. V našem případě backend neobsahuje téměř žádnou business logoiku, pouze filtruje data nebo dozpracovává data, která nebyla z časových důvodů zpracována předem. Zde jsou soubory implementující doménovou vrstvu:
 
 \begin{itemize}
-	\item \textbf{MemberService}
-	\item \textbf{PartyService}
-	\item \textbf{VoteService}
+	\item \textbf{MemberService} - Obsahuje business logiku pro získání seznamu poslanců a detailu poslance.
+	\item \textbf{PartyService} - Obsahuje business logiku pro získání seznamu poslaneckých klub. a výsledků hlasování klubu a jeho členů.
+	\item \textbf{VoteService} - Obsahuje business logiku pro získání seznamu hlasování a detail hlasování poslance.
 \end{itemize}
 
 \noindent Pro získání seznamů je použito stránkování, které je implementováno pomocí třídy \lstinline|Pageable|. Ta je předána repozitáři, který bude popsán v následující sekci:
@@ -807,9 +802,9 @@ public class Vote {
 	
 \end{lstlisting}
 
-\noindent Pomocí anotace \lstinline|Entity| Hibernate pozná, že se jedná databázovou entitu a vytvoří mapování na tabulku v databázi. Anotace \lstinline|@Getter| je z knihovny Lombok a slouží pro vygenerování getterů. Anotací \lstinline|@Id| specifikujeme atribut, který má být primárním klíčem v tabulce. 
+\noindent Pomocí anotace \lstinline|Entity| Hibernate pozná, že se jedná databázovou entitu a vytvoří mapování na tabulku v databázi. Anotace \lstinline|@Getter| je z knihovny Lombok \cite{lombok} a slouží pro vygenerování getterů. Anotací \lstinline|@Id| specifikujeme atribut, který má být primárním klíčem v tabulce. 
 
-Pro implementaci repozitářů je použita knihiovna spring-data-jpa \cite{spring-jpa}, která poskytuje rozhraní \lstinline|JpaRepository|, který obsahuje základní metody pro manipulaci s danou entitou jako \linebreak např. \lstinline|findAll()| pro získání všech záznamů z tabulky nebo \lstinline|findById()| pro získání záznamu s daným id. Výhodou této knihovny je možnost vytvoření vlastních metod, kterým se říká query metody. Implementace dotazu se vygeneruje na základě pojmenování query metody. Toto pojmenování se řídí podle určitých pravidel, které jsou popsány v dokumentaci \cite{spring-jpa}. Např. následující metoda vrací seznam hlasování v daném volebním období:
+Pro implementaci repozitářů je použita knihovna spring-data-jpa \cite{spring-jpa}, která poskytuje rozhraní \lstinline|JpaRepository|, který obsahuje základní metody pro manipulaci s danou entitou jako \linebreak např. \lstinline|findAll()| pro získání všech záznamů z tabulky nebo \lstinline|findById()| pro získání záznamu \linebreak s daným id. Výhodou této knihovny je možnost vytvoření vlastních metod, kterým se říká query metody. Implementace dotazu se vygeneruje na základě pojmenování query metody. Toto pojmenování se řídí podle určitých pravidel, které jsou popsány v dokumentaci \cite{spring-jpa}. Např. následující metoda vrací seznam hlasování v daném volebním období:
 
 \begin{lstlisting}[caption={Repozitář pro hlasování}, label={lst:be-repository-vote}, tabsize=2]
 // Soubor VoteRepository.java
@@ -826,13 +821,13 @@ public interface VoteRepository extends JpaRepository<Vote, Integer> {
 \noindent Zde je seznam souborů s repozitáři:
 
 \begin{itemize}
-	\item \textbf{VoteRepository.java}
-	\item \textbf{MemberRepository.java}
-	\item \textbf{MemberVoteRepository.java}
-	\item \textbf{AgencyRepository.java}
-	\item \textbf{ExcuseRepository.java}
-	\item \textbf{MembershipRepository.java}
-	\item \textbf{PartyRepository.java}
+	\item \textbf{VoteRepository.java} - Repozitář pro dotazování se nad hlasováními.
+	\item \textbf{MemberRepository.java} - Repozitář pro dotazování se nad poslanci.
+	\item \textbf{MemberVoteRepository.java} - Repozitář pro dotazování se nad hlasováními poslance.
+	\item \textbf{AgencyRepository.java} - Repozitář pro dotazování se nad orgány.
+	\item \textbf{ExcuseRepository.java} - Repozitář pro dotazování se nad omluvami.
+	\item \textbf{MembershipRepository.java} - Repozitář pro dotazování se nad zařazeními.
+	\item \textbf{PartyRepository.java} - Repozitář pro dotazování se nad kluby.
 \end{itemize}
 
 \section{Zpracování dat}
@@ -885,7 +880,7 @@ public class FileDownloader {
 \end{lstlisting}
 
 \subsection*{Extrakce datových souborů}
-Pro extrakci souborů ze zip byla použita funkce funkce \lstinline|extractFile| třídy \lstinline|ZipFile| z knihovny \lstinline|zip4j| \cite{zip4j}. Ta na základě názvu souboru, který se má vyextrahovat, vyextrahuje daný soubor do dané složky a soubor bude mít daný název:
+Pro extrakci souborů ze zipu byla použita funkce \lstinline|extractFile| třídy \lstinline|ZipFile| z knihovny \lstinline|zip4j| \cite{zip4j}. Ta na základě názvu souboru, který se má vyextrahovat, vyextrahuje daný soubor do dané složky a soubor bude mít daný název:
 
 \begin{lstlisting}[caption={Ukázka extrakce souborů ze zipu}, label={lst:zip4j}, tabsize=2]
 // Soubor ZipExtractor.java
@@ -919,7 +914,7 @@ done
 \noindent Skript funguje následovně:
 
 \begin{itemize}
-	\item Skript předpokládá ve svém prvním argumentu cestu ke adresáři, kde se nachází datové soubory.
+	\item Skript očekává ve svém prvním argumentu cestu k adresáři s datovými soubory.
 	
 	\item Na začátku se iteruje přes všechny soubory v daném adresáři.
 	
@@ -927,10 +922,10 @@ done
 	
 	\item Ze seřazeného souboru se odstraní duplicitní řádky jdoucí za sebou pomocí příkazu \lstinline|uniq|. Vy tuto chvíli jsou ze souboru odstraněny všechny duplicity.
 	
-	\item Zbytek kódu již je pouze přesouvání obsahů souborů tak, aby datové soubory s odstraněnými duplicity měly jejich originální název.
+	\item Zbytek kódu již je pouze přesouvání obsahů souborů tak, aby datové soubory s odstraněnými duplicitami měly jejich originální název.
 \end{itemize}
 
-\noindent Skript je volán ze souboru \lstinline|PspFilesCleaner|. Důvodem pro odstranění duplicit pomocí jazyka Bash a ne přímo pomocí Javy je rychlost Bashe pro tento účel a jednoduchá manipulace se soubory.
+\noindent Skript je volán ze souboru \lstinline|PspFilesCleaner|. Důvodem pro odstraňování duplicit pomocí jazyka Bash a ne přímo pomocí Javy je rychlost Bashe pro tento účel a jednoduchá manipulace se soubory.
 
 \subsection*{Parsování dat}
 Pro parsování zdrojových dat používám knihovnu \lstinline|opencsv|. Ta umožňuje parsovat CSV přidáním anotací k atributům třídy. Tyto anotace specifikují pozici sloupce v CSV souboru, na který se atribut namapuje:
@@ -948,7 +943,7 @@ public class Omluva {
 }
 \end{lstlisting}
 
-\noindent Všechny parsery se nachází ve složce \lstinline|parsers|. Pro parsování je použita knihovna \textit{opencsv} \cite{opencsv}. Ta poskytuje třídu \lstinline|CsvToBeanBuilder|, pomocí které lze parsovat CSV soubory a namapovat je na objekty vytvořené s anotacemi, jak popsáno výše. Dále poskytuje metody pro nastavení oddělovače, detekci nullové hodnoty a možnost ignorování uvozovek:
+\noindent Všechny parsery se nachází ve složce \lstinline|parsers|. Pro parsování je použita knihovna \textit{opencsv} \cite{opencsv}. Ta poskytuje třídu \lstinline|CsvToBeanBuilder|, pomocí které lze parsovat CSV soubory a namapovat je na objekty vytvořené pomocí anotací, jak je popsáno výše. Dále poskytuje metody pro nastavení oddělovače, detekci nullové hodnoty a možnost ignorovat uvozovky
 
 \begin{lstlisting}[caption={Parsování datového souboru omluvy.unl}, tabsize=2]
 // Soubor OmluvyParser.java
@@ -971,7 +966,7 @@ public class OmluvyParser extends UnlParser {
 \end{lstlisting}
 
 \subsection*{Transformace a uložení dat}
-Po zpasrování datových souborů a namapování záznamů na objekty lze tyto objekty začít ztransformovat do databázového modelu. Všechny soubory pro transformaci se nachází ve složce \lstinline|loaders|. V rámci transformátoru se vždy zavolá příslušný parser, který vrátí data, ty se ztranformují \linebreak a následně uloží do databáze:
+Po zparsování datových souborů a namapování záznamů na objekty lze tyto objekty začít ztransformovat do databázového modelu. Všechny soubory pro transformaci zdrojových dat do databázového modelu se nachází ve složce \lstinline|loaders|. V rámci transformátoru se vždy zavolá příslušný parser, který vrátí data, ty se ztranformují a následně uloží do databáze:
 
 \begin{lstlisting}[caption={Transformace objektu Omluva na databázový objekt Excuse}, tabsize=2]
 // Soubor ExcuseLoader.java
